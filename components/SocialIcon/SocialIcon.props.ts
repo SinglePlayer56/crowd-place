@@ -1,0 +1,3 @@
+interface SocialIconProps {
+    iconPath: string;
+}
