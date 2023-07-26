@@ -1,14 +1,12 @@
 import {CrowdfundingCardValues} from "@/consts";
-import {CrowdfundingCard} from "@/components";
+import {CrowdfundingCard, CustomButton} from "@/components";
 
 const Main = () => {
 
     return (
         <div className={'container'}>
             <div className={'test-container'}>
-                {CrowdfundingCardValues.map((card) => (
-                    <CrowdfundingCard iconPath={card.iconPath} title={card.title} />
-                ))}
+                <CustomButton text={'View'} color={'blue'}/>
             </div>
         </div>
     );
