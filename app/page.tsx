@@ -1,12 +1,12 @@
 import {CrowdfundingCardValues} from "@/consts";
-import {CrowdfundingCard, CustomButton} from "@/components";
+import {CrowdfundingCard, CustomButton, Tag} from "@/components";
 
 const Main = () => {
 
     return (
         <div className={'container'}>
             <div className={'test-container'}>
-                <CustomButton text={'View'} color={'blue'}/>
+                <Tag title={'Crowdfunding business'}/>
             </div>
         </div>
     );

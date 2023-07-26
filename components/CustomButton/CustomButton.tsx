@@ -1,4 +1,4 @@
-import {CustomButtonProps} from "@/components/Button/CustomButton.props";
+import {CustomButtonProps} from "@/components/CustomButton/CustomButton.props";
 import styles from './CustomButton.module.css';
 import cn from 'classnames';
 
