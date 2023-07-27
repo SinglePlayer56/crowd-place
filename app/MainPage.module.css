@@ -1,0 +1,166 @@
+.start {
+    background-color: #ffffff;
+    padding: 35px 0 55px 0;
+}
+
+.start__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 55px;
+}
+
+.start__logo {
+    margin-bottom: 84px;
+}
+
+.start__content {
+    margin-left: 100px;
+}
+
+.start__title {
+    margin-bottom: 35px;
+}
+
+.start__text {
+    margin-bottom: 40px;
+}
+
+.start__logo,
+.start__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.start__logo {
+    max-width: 231px;
+    height: auto;
+}
+
+.start__image {
+    max-width: 501px;
+    height: auto;
+}
+
+.start__imageSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.crowdfundingCards {
+    background-color: #f1f8fb;
+    padding: 55px 0;
+}
+
+.crowdfundingCards__wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 19px;
+}
+
+
+
+
+
+.latestBlog {
+    background-color: #f1f8fb;
+    padding: 55px 0 100px;
+}
+
+.latestBlog__title {
+    margin-bottom: 55px;
+}
+
+.latestBlog__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+
+
+@media screen and (max-width: 1400px) {
+    .start__content {
+        margin-left: 0;
+    }
+
+    .latestBlog__list {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .crowdfundingCards__wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .start__imageSection {
+        display: none;
+    }
+
+    .start__wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .start__left {
+        position: relative;
+        z-index: 10;
+        background-color: transparent;
+    }
+
+    .start__logo {
+        margin-bottom: 50px;
+    }
+
+    /*.start__left:before {*/
+    /*    position: absolute;*/
+    /*    content: '';*/
+    /*    top: 0;*/
+    /*    left: 0;*/
+    /*    width: 100%;*/
+    /*    height: 100%;*/
+    /*    background: url('/img/main_page_image_retina.png') center / cover no-repeat;*/
+    /*    filter: blur(50px);*/
+    /*    z-index: -1;*/
+    /*}*/
+
+    .crowdfundingCards__wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .start__title {
+        font-size: 34px;
+        line-height: 40px;
+    }
+
+    .latestBlog__list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 525px){
+    .start__title {
+        font-size: 26px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+
+    .start__text {
+        margin-bottom: 30px;
+    }
+
+    .start__wrapper {
+        gap: 35px;
+    }
+
+    .crowdfundingCards__wrapper {
+        grid-template-columns: 1fr;
+    }
+}

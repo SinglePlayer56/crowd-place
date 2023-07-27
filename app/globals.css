@@ -41,7 +41,6 @@ body {
   width: 100%;
   font-size: 100%;
   line-height: 1;
-  font-size: 14px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -114,11 +113,4 @@ h6 {
 .full-height {
   display: grid;
   grid-template-rows: auto 1fr auto;
-}
-
-.test-container {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
 }

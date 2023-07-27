@@ -1,6 +1,5 @@
 import styles from './FooterMainPage.module.css';
 import Image from 'next/image';
-import {SocialIcon} from "@/components";
 import Link from "next/link";
 
 const FooterMainPage = () => {
@@ -9,22 +8,25 @@ const FooterMainPage = () => {
         <footer className={styles.footer}>
             <div className={'container'}>
                 <div className={styles.footer__content}>
-                    <Image
-                        src={'/icons/logo.svg'}
-                        alt={'logo'}
-                        width={162}
-                        height={21}
-                    />
+                    <Link href={'/'}>
+                        <Image
+                            src={'/icons/logo.svg'}
+                            alt={'logo'}
+                            width={162}
+                            height={21}
+                            className={styles.footer__logo}
+                        />
+                    </Link>
 
-                    <div className={styles.footer__socials}>
-                        <Link href={'#'}>
-                            <SocialIcon iconPath={'/icons/instagram.svg'} />
-                        </Link>
-                        <Link href={'#'}>
-                            <SocialIcon iconPath={'/icons/linkedin.svg'} />
-                        </Link>
-                        <span className={styles.footer__link}>English version</span>
-                    </div>
+                    {/*<div className={styles.footer__socials}>*/}
+                    {/*    <Link href={'#'}>*/}
+                    {/*        <SocialIcon iconPath={'/icons/instagram.svg'} />*/}
+                    {/*    </Link>*/}
+                    {/*    <Link href={'#'}>*/}
+                    {/*        <SocialIcon iconPath={'/icons/linkedin.svg'} />*/}
+                    {/*    </Link>*/}
+                    {/*    <span className={styles.footer__link}>English version</span>*/}
+                    {/*</div>*/}
 
                     <div className={styles.footer__nav}>
                         <Link className={styles.footer__link} href={'/contact'}>Contact</Link>
