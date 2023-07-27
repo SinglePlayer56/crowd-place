@@ -4,6 +4,7 @@ import SocialIcon from "./SocialIcon/SocialIcon";
 import CrowdfundingCard from "./CrowdfundingCard/CrowdfundingCard";
 import CustomButton from "./CustomButton/CustomButton";
 import Tag from "./Tag/Tag";
+import PTag from "./PTag/PTag";
 
 export {
     FooterMainPage,
@@ -11,5 +12,6 @@ export {
     SocialIcon,
     CrowdfundingCard,
     CustomButton,
-    Tag
+    Tag,
+    PTag
 }
