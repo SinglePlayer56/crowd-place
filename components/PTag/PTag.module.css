@@ -2,10 +2,6 @@
     font-family: var(--inter-font);
     font-weight: 400;
     color: #686b6f;
-    /*display: -webkit-box;*/
-    /*-webkit-line-clamp: 4;*/
-    /*overflow: hidden;*/
-    /*-webkit-box-orient: vertical;*/
 }
 
 .font20 {

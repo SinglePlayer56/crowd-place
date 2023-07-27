@@ -1,14 +1,13 @@
 import {CrowdfundingCardValues} from "@/consts";
-import {CrowdfundingCard, CustomButton, HTag, PTag, Tag} from "@/components";
+import {BlogCard, CrowdfundingCard, CustomButton, Filter, HTag, PTag, Tag} from "@/components";
 
 const Main = () => {
+    const option = ['123', '456']
 
     return (
         <div className={'container'}>
             <div className={'test-container'}>
-                <HTag tag={'h1'}>
-                    Crowdfunding platform aggregator. Explore and find the best match for you.
-                </HTag>
+                <Filter options={option} placeholder={'Select investment type'} />
             </div>
         </div>
     );

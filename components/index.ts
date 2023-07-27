@@ -6,6 +6,9 @@ import CustomButton from "./CustomButton/CustomButton";
 import Tag from "./Tag/Tag";
 import PTag from "./PTag/PTag";
 import HTag from "./HTag/HTag";
+import BlogCard from "./BlogCard/BlogCard";
+import Date from "./Date/Date";
+import Filter from "./Filter/Filter";
 
 export {
     FooterMainPage,
@@ -15,5 +18,8 @@ export {
     CustomButton,
     Tag,
     PTag,
-    HTag
+    HTag,
+    BlogCard,
+    Date,
+    Filter
 }
