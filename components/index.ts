@@ -5,6 +5,7 @@ import CrowdfundingCard from "./CrowdfundingCard/CrowdfundingCard";
 import CustomButton from "./CustomButton/CustomButton";
 import Tag from "./Tag/Tag";
 import PTag from "./PTag/PTag";
+import HTag from "./HTag/HTag";
 
 export {
     FooterMainPage,
@@ -13,5 +14,6 @@ export {
     CrowdfundingCard,
     CustomButton,
     Tag,
-    PTag
+    PTag,
+    HTag
 }

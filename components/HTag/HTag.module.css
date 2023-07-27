@@ -1,0 +1,20 @@
+.hTag {
+    font-family: var(--montserrat-font);
+    font-weight: 700;
+    color: #000000;
+}
+
+.h1 {
+    font-size: 44px;
+    line-height: 60px;
+}
+
+.h2 {
+    font-size: 30px;
+    line-height: 72px;
+}
+
+.h3 {
+    font-size: 20px;
+    line-height: 30px;
+}
