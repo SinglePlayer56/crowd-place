@@ -1,11 +1,19 @@
 import styles from './MainPage.module.css';
-import {BlogCard, CountryList, CrowdfundingCard, CustomButton, HTag, PTag, SelectFilters} from "@/components";
+import {
+    BlogCard,
+    CountryList,
+    CrowdfundingCard,
+    CustomButton,
+    HTag, MainPageLayout,
+    PTag,
+    SelectFilters
+} from "@/components";
 import Image from 'next/image';
 import {BlogCardsValues, CrowdfundingCardValues, SelectFiltersValues} from "@/consts";
 
 const Main = () => {
     return (
-        <>
+        <MainPageLayout>
             <section className={styles.start}>
                 <div className={'container'}>
                     <div className={styles.start__wrapper}>
@@ -22,7 +30,8 @@ const Main = () => {
                                     Crowdfunding platform aggregator. Explore and find the best match for you.
                                 </HTag>
                                 <PTag className={styles.start__text} fontSize={'20px'}>
-                                    Search the best crowdfunding platform aggregator to discover alternative investment
+                                    Search the best crowdfunding platform aggregator to discover alternative
+                                    investment
                                     opportunities or get your crowdfunding platform listed to get discovered.
                                 </PTag>
                                 <CustomButton
@@ -47,18 +56,22 @@ const Main = () => {
             <section className={styles.crowdfundingCards}>
                 <div className={'container'}>
                     <div className={styles.crowdfundingCards__wrapper}>
-                        {CrowdfundingCardValues.map((valueCard) => <CrowdfundingCard iconPath={valueCard.iconPath} title={valueCard.title}/>)}
+                        {CrowdfundingCardValues.map((valueCard) => (
+                            <CrowdfundingCard
+                                iconPath={valueCard.iconPath}
+                                title={valueCard.title}
+                            />))}
                     </div>
                 </div>
             </section>
-            <CountryList />
+            <CountryList/>
             <section className={styles.latestBlog}>
                 <div className={'container'}>
                     <HTag className={styles.latestBlog__title} tag={'h2'}>
                         Latest from blog
                     </HTag>
                     <div className={styles.latestBlog__list}>
-                        {BlogCardsValues. map((cardValue) => (
+                        {BlogCardsValues.map((cardValue) => (
                             <BlogCard
                                 pathImage={cardValue.pathImage}
                                 title={cardValue.title}
@@ -70,9 +83,10 @@ const Main = () => {
                     </div>
                 </div>
             </section>
-
-        </>
+        </MainPageLayout>
     );
 };
 
 export default Main;
+
+

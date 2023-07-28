@@ -1,0 +1,27 @@
+.breadCrumbs {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.text {
+    font-family: var(--inter-font);
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 600;
+    color: #009dee;
+}
+
+.dash {
+    width: 20px;
+    height: 2px;
+    background-color: #aeddf5;
+}
+
+.dash:last-child {
+    display: none;
+}
+
+.text.active {
+    color: #acb8c0;
+}

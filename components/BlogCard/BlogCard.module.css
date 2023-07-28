@@ -1,15 +1,12 @@
 .card {
     box-shadow: 0 14px 20px 0 rgba(139,167,183,0.2);
     border-radius: 9px;
-    max-width: 511px;
     width: 100%;
     display: grid;
     grid-template-rows: auto 1fr;
 }
 
 .card__image {
-    max-width: 511px;
-    max-height: 215px;
     height: 100%;
     width: 100%;
     object-fit: contain;

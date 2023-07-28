@@ -1,4 +1,4 @@
-import FooterMainPage from "./FooterMainPage/FooterMainPage";
+import Footer from "@/components/Footer/Footer";
 import HeaderMainPage from "./HeaderMainPage/HeaderMainPage";
 import SocialIcon from "./SocialIcon/SocialIcon";
 import CrowdfundingCard from "./CrowdfundingCard/CrowdfundingCard";
@@ -11,9 +11,13 @@ import Date from "./Date/Date";
 import Filter from "./Filter/Filter";
 import SelectFilters from "./SelectFilters/SelectFilters";
 import CountryList from "./CountryList/CountryList";
+import MainPageLayout from "./MainPageLayout/MainPageLayout";
+import Header from "./Header/Header";
+import PageLayout from "./PageLayout/PageLayout";
+import BreadCrumbs from "./BreadCrumbs/BreadCrumbs";
 
 export {
-    FooterMainPage,
+    Footer,
     HeaderMainPage,
     SocialIcon,
     CrowdfundingCard,
@@ -25,5 +29,9 @@ export {
     Date,
     Filter,
     SelectFilters,
-    CountryList
+    CountryList,
+    MainPageLayout,
+    Header,
+    PageLayout,
+    BreadCrumbs
 }
