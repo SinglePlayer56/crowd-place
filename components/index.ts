@@ -15,6 +15,7 @@ import MainPageLayout from "./MainPageLayout/MainPageLayout";
 import Header from "./Header/Header";
 import PageLayout from "./PageLayout/PageLayout";
 import BreadCrumbs from "./BreadCrumbs/BreadCrumbs";
+import SearchButton from "./SearchButton/SearchButton";
 
 export {
     Footer,
@@ -33,5 +34,6 @@ export {
     MainPageLayout,
     Header,
     PageLayout,
-    BreadCrumbs
+    BreadCrumbs,
+    SearchButton
 }

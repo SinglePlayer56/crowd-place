@@ -9,7 +9,13 @@
     font-size: 18px;
     line-height: 32px;
     font-weight: 600;
+    color: #acb8c0;
+    cursor: default;
+}
+
+.text:hover {
     color: #009dee;
+    cursor: pointer;
 }
 
 .dash {
@@ -22,6 +28,7 @@
     display: none;
 }
 
-.text.active {
+.text:last-of-type:hover {
     color: #acb8c0;
+    cursor: default;
 }

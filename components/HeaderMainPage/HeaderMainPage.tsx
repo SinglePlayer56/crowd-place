@@ -1,6 +1,7 @@
 import styles from './HeaderMainPage.module.css';
 import Image from 'next/image';
 import Link from "next/link";
+import {SearchButton} from "@/components";
 
 const HeaderMainPage = () => {
 
@@ -9,14 +10,7 @@ const HeaderMainPage = () => {
             <div className="container">
                 <div className={styles.header__content}>
                     <div className={styles.searchBar}>
-                        <button className={styles.searchButton}>
-                            <Image
-                                src={'/icons/search-white.svg'}
-                                alt={'search button'}
-                                width={21}
-                                height={21}
-                            />
-                        </button>
+                        <SearchButton color={"white"} />
                     </div>
 
                     <div className={styles.navMenu}>

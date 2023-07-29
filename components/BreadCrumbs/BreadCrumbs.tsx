@@ -6,6 +6,7 @@ import cn from 'classnames';
 import {usePathname} from "next/navigation";
 import {isActiveLink} from "@/helpers";
 import Link from "next/link";
+import {Fragment} from "react";
 
 const BreadCrumbs = ({className}: BreadCrumbsProps) => {
     const pathName = usePathname();
@@ -46,12 +47,15 @@ const BreadCrumbs = ({className}: BreadCrumbsProps) => {
     return (
         <div className={cn(styles.breadCrumbs, className)}>
             {linkDataList.map((item) => (
-                <>
-                    <Link href={item.href} className={cn(styles.text, {
-                        [styles.active]: isActiveLink(item.href)
-                    })}>{item.name}</Link>
+                <Fragment key={item.href}>
+                    <Link
+                        href={item.href}
+                        className={styles.text}
+                    >
+                        {item.name}
+                    </Link>
                     <div className={styles.dash}/>
-                </>
+                </Fragment>
             ))}
         </div>
     );

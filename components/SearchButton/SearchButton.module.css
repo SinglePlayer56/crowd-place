@@ -1,0 +1,24 @@
+.searchButton {
+    width: 52px;
+    height: 43px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchButton.white {
+    border-radius: 8px;
+    background-color: transparent;
+    border: 2px solid #42bdfc;
+}
+
+.searchButton.blue {
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: 2px solid #00b4f4;
+}
+
+.searchButton:hover {
+    transform: scale(1.05);
+}
