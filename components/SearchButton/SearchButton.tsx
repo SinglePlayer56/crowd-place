@@ -1,12 +1,18 @@
+'use client';
+
 import styles from "./SearchButton.module.css";
 import Image from "next/image";
 import {SearchButtonProps} from "./SearchButton.props";
 import cn from 'classnames';
+import {ForwardedRef, forwardRef} from "react";
+import {motion} from "framer-motion";
 
-const SearchButton = ({color, className}: SearchButtonProps) => {
+const SearchButton =  forwardRef(({color, className}: SearchButtonProps, ref: ForwardedRef<HTMLButtonElement>) => {
 
     return (
-        <button className={cn(styles.searchButton, className, {
+        <button
+            ref={ref}
+            className={cn(styles.searchButton, className, {
             [styles.white]: color === 'white',
             [styles.blue]: color === 'blue'
         })}>
@@ -18,6 +24,6 @@ const SearchButton = ({color, className}: SearchButtonProps) => {
             />
         </button>
     );
-};
+});
 
-export default SearchButton;
+export default motion(SearchButton, {forwardMotionProps: true});

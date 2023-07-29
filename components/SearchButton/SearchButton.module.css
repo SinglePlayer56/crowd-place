@@ -18,7 +18,3 @@
     background-color: #ffffff;
     border: 2px solid #00b4f4;
 }
-
-.searchButton:hover {
-    transform: scale(1.05);
-}
