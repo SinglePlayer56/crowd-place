@@ -6,7 +6,8 @@ const PTag = ({fontSize, children, className}: PTagProps) => {
 
     return (
         <p className={cn(styles.pTag, className, {
-            [styles.font20]: fontSize === '20px'
+            [styles.font20]: fontSize === '20px',
+            [styles.font17]: fontSize === '17px'
         })}>
             {children}
         </p>

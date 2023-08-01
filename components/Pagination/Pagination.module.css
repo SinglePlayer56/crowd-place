@@ -1,0 +1,36 @@
+.button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #009cee;
+    border-radius: 4px;
+    background-color: transparent;
+    font-family: var(--inter-font);
+    font-size: 18px;
+    line-height: 29px;
+    font-weight: 400;
+    color: #009cee;
+}
+
+.active {
+    color: #ffffff;
+    background-color: #009cee;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.dashed {
+    font-family: var(--inter-font);
+    font-size: 18px;
+    line-height: 29px;
+    font-weight: 400;
+    color: #009cee;
+}
+

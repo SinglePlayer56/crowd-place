@@ -42,6 +42,7 @@ const Filter = ({options, placeholder}: FilterProps) => {
                 id={'filter-toggle'}
                 aria-controls={'filter-list'}
                 checked={isOpen}
+                onChange={() => {}}
             />
             <ul className={styles.filterList}>
                 {options.map((option) => (

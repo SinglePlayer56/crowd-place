@@ -1,4 +1,4 @@
-import {HTag, Date, Tag, PTag, BlogCard, BreadCrumbs} from "@/components";
+import {HTag, Date, Tag, PTag, BlogCard} from "@/components";
 import styles from './blog.module.css';
 import {BlogCardsValues} from "@/consts";
 
@@ -10,7 +10,6 @@ const Blog = () => {
         <>
             <section className={styles.startSection__start}>
                 <div className='container'>
-                    <BreadCrumbs className={styles.breadCrumbs}/>
                     <HTag className={styles.startSection__title} tag={"h1"}>
                         Blog H1
                     </HTag>

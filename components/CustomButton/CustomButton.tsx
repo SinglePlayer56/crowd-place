@@ -7,7 +7,8 @@ const CustomButton = ({text, color, className}: CustomButtonProps) => {
     return (
         <button className={cn(styles.button, className, {
             [styles.white]: color === 'white',
-            [styles.blue]: color === 'blue'
+            [styles.blue]: color === 'blue',
+            [styles.transparent]: color === 'transparent'
         })}>
             {text}
         </button>

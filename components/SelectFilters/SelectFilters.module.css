@@ -1,3 +1,7 @@
+.filters {
+    grid-column: 1 / -1;
+}
+
 .filtersWrapper {
     border: 1px solid #deedf4;
     border-radius: 20px;
@@ -6,13 +10,16 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     padding: 40px 100px;
-    grid-column: 1 / -1;
 }
 
 .filters__button {
     padding-top: 0;
     padding-bottom: 0;
     height: 100%;
+}
+
+.filters__resetButton {
+    margin: 30px auto 0 auto;
 }
 
 @media screen and (max-width: 1400px) {

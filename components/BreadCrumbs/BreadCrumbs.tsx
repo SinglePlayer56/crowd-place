@@ -4,7 +4,6 @@ import styles from './BreadCrumbs.module.css'
 import {BreadCrumbsProps} from "./BreadCrumbs.props";
 import cn from 'classnames';
 import {usePathname} from "next/navigation";
-import {isActiveLink} from "@/helpers";
 import Link from "next/link";
 import {Fragment} from "react";
 
@@ -30,8 +29,10 @@ const BreadCrumbs = ({className}: BreadCrumbsProps) => {
 
     function getName(href: string) {
         const hrefSplit = href.split('/');
-        return hrefSplit[hrefSplit.length - 1];
+        const nameLink = hrefSplit[hrefSplit.length-1].split('-').join(' ');
+        return nameLink;
     }
+
 
     const linkDataList = hrefList.map((href) => {
         const nameHref = getName(href);
@@ -45,19 +46,23 @@ const BreadCrumbs = ({className}: BreadCrumbsProps) => {
     });
 
     return (
-        <div className={cn(styles.breadCrumbs, className)}>
-            {linkDataList.map((item) => (
-                <Fragment key={item.href}>
-                    <Link
-                        href={item.href}
-                        className={styles.text}
-                    >
-                        {item.name}
-                    </Link>
-                    <div className={styles.dash}/>
-                </Fragment>
-            ))}
-        </div>
+        <section>
+            <div className={'container'}>
+                <div className={cn(styles.breadCrumbs, className)}>
+                    {linkDataList.map((item) => (
+                        <Fragment key={item.href}>
+                            <Link
+                                href={item.href}
+                                className={styles.text}
+                            >
+                                {item.name}
+                            </Link>
+                            <div className={styles.dash}/>
+                        </Fragment>
+                    ))}
+                </div>
+            </div>
+        </section>
     );
 };
 

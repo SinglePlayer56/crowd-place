@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     gap: 15px;
+    margin: 45px 0;
 }
 
 .text {
@@ -9,12 +10,11 @@
     font-size: 18px;
     line-height: 32px;
     font-weight: 600;
-    color: #acb8c0;
+    color: #009dee;
     cursor: default;
 }
 
 .text:hover {
-    color: #009dee;
     cursor: pointer;
 }
 
@@ -28,7 +28,10 @@
     display: none;
 }
 
-.text:last-of-type:hover {
+.text:last-of-type {
     color: #acb8c0;
+}
+
+.text:last-of-type:hover {
     cursor: default;
 }
