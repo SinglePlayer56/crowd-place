@@ -20,6 +20,9 @@ import ReviewCard from "./ReviewCard/ReviewCard";
 import PlatformCard from "./PlatformCard/PlatformCard";
 import PlatformCardTags from "./PlatformCardTags/PlatformCardTags";
 import CustomList from "./CustomList/CustomList";
+import ContactForm from "./ContactForm/ContactForm";
+import Input from "./Input/Input";
+import TextArea from "./TextArea/TextArea";
 
 export {
     Footer,
@@ -43,5 +46,8 @@ export {
     ReviewCard,
     PlatformCard,
     PlatformCardTags,
-    CustomList
+    CustomList,
+    ContactForm,
+    Input,
+    TextArea
 }

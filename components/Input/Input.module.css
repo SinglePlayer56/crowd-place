@@ -1,0 +1,39 @@
+.input__label {
+    font-family: var(--inter-font);
+    font-size: 18px;
+    font-weight: 400;
+    color: #90a8b3;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.input__input {
+    border: 2px solid #cbdbe4;
+    box-shadow: inset 0px 3px 7px 0px rgba(180,198,205,0.34);
+    border-radius: 6px;
+    transition: border 0.3s ease;
+    height: 63px;
+    width: 100%;
+    font-family: var(--inter-font);
+    font-size: 20px;
+    font-weight: 400;
+    color: #000000;
+    padding: 20px;
+    background-color: #f1f8fb;
+}
+
+.input__input:focus {
+    border: 2px solid #009dee;
+}
+
+.input__input.error__input {
+    border: 2px solid red;
+}
+
+.error {
+    font-family: var(--inter-font);
+    font-size: 14px;
+    line-height: 31px;
+    font-weight: 400;
+    color: red;
+}

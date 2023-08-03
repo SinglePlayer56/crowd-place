@@ -10,6 +10,7 @@ import {
 } from "@/components";
 import Image from 'next/image';
 import {BlogCardsValues, CrowdfundingCardValues, SelectFiltersValues} from "@/consts";
+import Link from "next/link";
 
 const Main = () => {
     return (
@@ -34,10 +35,12 @@ const Main = () => {
                                     investment
                                     opportunities or get your crowdfunding platform listed to get discovered.
                                 </PTag>
-                                <CustomButton
-                                    text={'Add platform'}
-                                    color={'white'}
-                                />
+                                <Link href={'/add-platform'}>
+                                    <CustomButton
+                                        text={'Add platform'}
+                                        color={'white'}
+                                    />
+                                </Link>
                             </div>
                         </div>
                         <div className={styles.start__imageSection}>

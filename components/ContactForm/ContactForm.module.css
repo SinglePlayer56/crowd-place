@@ -1,0 +1,14 @@
+.form {
+    max-width: 532px;
+    background-color: #ffffff;
+}
+
+.form__item {
+    margin-bottom: 20px;
+}
+
+.form__textArea {
+    margin-bottom: 50px;
+}
+
+
