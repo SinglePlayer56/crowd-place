@@ -1,0 +1,47 @@
+.list__container {
+    margin: 50px 0;
+}
+
+.list__title {
+    margin-bottom: 20px;
+}
+
+.ulList > li,
+.olList > li {
+    font-family: var(--inter-font);
+    font-size: 20px;
+    line-height: 44px;
+    font-weight: 500;
+    color: #686b6f;
+    position: relative;
+}
+
+.ulList > li {
+    margin-left: 40px;
+}
+
+.olList > li {
+    margin-left: 38px;
+}
+
+.ulList > li:before {
+    position: absolute;
+    content: '';
+    border-radius: 2px;
+    width: 8px;
+    height: 8px;
+    background-color: #009dee;
+    top: 17px;
+    left: -22px;
+}
+
+.olList > li::marker {
+    font-family: var(--inter-font);
+    font-size: 18px;
+    font-weight: 800;
+    color: #009dee;
+}
+
+.olList {
+    text-indent: 4px;
+}

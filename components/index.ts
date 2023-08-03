@@ -16,6 +16,10 @@ import Header from "./Header/Header";
 import PageLayout from "./PageLayout/PageLayout";
 import BreadCrumbs from "./BreadCrumbs/BreadCrumbs";
 import SearchButton from "./SearchButton/SearchButton";
+import ReviewCard from "./ReviewCard/ReviewCard";
+import PlatformCard from "./PlatformCard/PlatformCard";
+import PlatformCardTags from "./PlatformCardTags/PlatformCardTags";
+import CustomList from "./CustomList/CustomList";
 
 export {
     Footer,
@@ -35,5 +39,9 @@ export {
     Header,
     PageLayout,
     BreadCrumbs,
-    SearchButton
+    SearchButton,
+    ReviewCard,
+    PlatformCard,
+    PlatformCardTags,
+    CustomList
 }

@@ -1,12 +1,11 @@
 import styles from './platforms.module.css'
-import {BreadCrumbs, CustomButton, HTag, PTag, SelectFilters} from "@/components";
+import {BreadCrumbs, CustomButton, HTag, PlatformCard, PTag, SelectFilters} from "@/components";
 import {PlatformDataValue, SelectFiltersValues} from "@/consts";
-import ReviewCard from "@/components/ReviewCard/ReviewCard";
 import {searchParams} from "@/types";
 import Pagination from "@/components/Pagination/Pagination";
 import {redirect} from "next/navigation";
 
-const Platforms = ({searchParams, params}: searchParams) => {
+const Platforms = ({searchParams}: searchParams) => {
     const totalCount = PlatformDataValue.length;
     const perPage = 4;
     let currentPage = 1;
@@ -26,9 +25,9 @@ const Platforms = ({searchParams, params}: searchParams) => {
     return (
         <>
             <> </>
-            <BreadCrumbs/>
             <section className={styles.head}>
                 <div className={'container'}>
+                    <BreadCrumbs/>
                     <HTag className={styles.head__title} tag={'h1'}>
                         Environmental impact H1
                     </HTag>
@@ -61,13 +60,15 @@ const Platforms = ({searchParams, params}: searchParams) => {
                     </HTag>
                     <div className={styles.reviews__list}>
                         {platformData.map((platform) => (
-                            <ReviewCard
+                            <PlatformCard
                                 key={platform.name}
                                 pathLogo={platform.pathLogo}
                                 title={platform.name}
                                 countries={platform.country}
                                 description={platform.description}
-                                href={`/platforms/${platform.slug}`}/>
+                                type={platform.type}
+                                industry={platform.industry}
+                                href={`/platforms/${platform.name}`}/>
                         ))}
                     </div>
                     <Pagination

@@ -1,0 +1,30 @@
+.tags {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.tags:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.tags__name {
+    font-family: var(--inter-font);
+    font-size: 14px;
+    font-weight: 400;
+    color: #686b6f;
+}
+
+.seeMore {
+    font-family: var(--inter-font);
+    font-size: 16px;
+    font-weight: 600;
+    color: #009dee;
+    background-color: transparent;
+}
+
+.hidden {
+    display: none;
+}

@@ -1,37 +1,29 @@
-.card {
-    padding: 38px 38px 30px 38px;
+.review__item {
     border: 1px solid #deedf4;
     box-shadow: 0 14px 20px 0 rgba(139,167,183,0.11);
     border-radius: 9px;
     background-color: #ffffff;
+    padding: 30px 35px;
+    max-width: 384px;
+    width: 100%;
 }
 
-.card__header {
+.review__item_content {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 15px;
-    margin-bottom: 28px;
+    margin-bottom: 50px;
 }
 
-.card__image {
-    border-radius: 5px;
+.review__item_text {
+    font-family: var(--montserrat-font);
+    font-weight: 700;
+    color: #000000;
+    font-size: 32px;
+    margin-top: 10px;
 }
 
-.card__countryList {
-    margin-top: 5px;
-}
-
-.card__country {
-    font-family: var(--inter-font);
-    font-size: 15px;
-    font-weight: 400;
-    color: #686b6f;
-}
-
-.card__description {
-    margin-bottom: 35px;
-}
-
-.card__button {
-    margin: 0 auto;
+.review__item_button {
+    width: 100%;
 }

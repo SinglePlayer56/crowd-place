@@ -6,14 +6,24 @@
     background-color: #ffffff;
 }
 
-.card__icon {
-    margin-bottom: 30px;
-}
-
-.card__title {
+.card__title,
+.card__text {
     font-family: var(--montserrat-font);
     font-size: 20px;
     line-height: 30px;
     font-weight: 600;
     color: #000000;
+}
+
+.card__container {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    gap: 10px;
+}
+
+.card__text {
+    font-weight: 700;
+    font-size: 26px;
 }

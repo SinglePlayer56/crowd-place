@@ -1,9 +1,5 @@
 export interface ReviewCardProps {
-    pathLogo: string;
     title: string;
-    countries: string[];
-    description: string;
-    industry?: string[];
-    type?: string[];
+    pathImg: string;
     href: string;
 }

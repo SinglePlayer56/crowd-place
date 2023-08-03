@@ -65,7 +65,49 @@ export const SelectFiltersValues: FilterProps[] = [
 export const BlogCardsValues: BlogCardProps[] = [
     {
         pathImage: '/img/blog_card_1.png',
-        title: 'Making a difference: the power and potential of impact investing',
+        title: 'Making a difference: the power and potential of impact investing1',
+        text: 'Impact investing is one of the emerging yet steady trends in the crowdfunding sector. It’s becoming increasingly widespread for investors to be interested not only in the possible returns but the collateral social or environmental impact. In other words people want their investment choices to be aligned with their values.',
+        tag: 'Investing',
+        date: 'June 12, 2023'
+    },
+    {
+        pathImage: '/img/blog_card_2.png',
+        title: 'P2P mortgage loans: unlocking opportunities in the accommodation market',
+        text: 'The demand for accommodation and prices are growing, so many people worldwide opt for mortgage loans. Getting a mortgage loan from a bank is a long and demanding procedure that’s why peer-to-peer lending alternatives is increasing in popularity.',
+        tag: 'P2P lending',
+        date: 'June 12, 2023'
+    },
+    {
+        pathImage: '/img/blog_card_3.png',
+        title: 'Most common equity crowdfunding mistakes: unveiling the pitfalls',
+        text: 'Crowdfunding, particularly equity crowdfunding, has already shown that it’s a viable alternative for startups and early-stage businesses to raise funding. As straightforward as it may seem, there are quite a few intricacies that, when overlooked, can damage your campaign.',
+        tag: 'Crowdfunding business',
+        date: 'June 12, 2023'
+    },
+    {
+        pathImage: '/img/blog_card_1.png',
+        title: 'Making a difference: the power and potential of impact investing2',
+        text: 'Impact investing is one of the emerging yet steady trends in the crowdfunding sector. It’s becoming increasingly widespread for investors to be interested not only in the possible returns but the collateral social or environmental impact. In other words people want their investment choices to be aligned with their values.',
+        tag: 'Investing',
+        date: 'June 12, 2023'
+    },
+    {
+        pathImage: '/img/blog_card_2.png',
+        title: 'P2P mortgage loans: unlocking opportunities in the accommodation market',
+        text: 'The demand for accommodation and prices are growing, so many people worldwide opt for mortgage loans. Getting a mortgage loan from a bank is a long and demanding procedure that’s why peer-to-peer lending alternatives is increasing in popularity.',
+        tag: 'P2P lending',
+        date: 'June 12, 2023'
+    },
+    {
+        pathImage: '/img/blog_card_3.png',
+        title: 'Most common equity crowdfunding mistakes: unveiling the pitfalls',
+        text: 'Crowdfunding, particularly equity crowdfunding, has already shown that it’s a viable alternative for startups and early-stage businesses to raise funding. As straightforward as it may seem, there are quite a few intricacies that, when overlooked, can damage your campaign.',
+        tag: 'Crowdfunding business',
+        date: 'June 12, 2023'
+    },
+    {
+        pathImage: '/img/blog_card_1.png',
+        title: 'Making a difference: the power and potential of impact investing3',
         text: 'Impact investing is one of the emerging yet steady trends in the crowdfunding sector. It’s becoming increasingly widespread for investors to be interested not only in the possible returns but the collateral social or environmental impact. In other words people want their investment choices to be aligned with their values.',
         tag: 'Investing',
         date: 'June 12, 2023'
@@ -142,7 +184,7 @@ export const PlatformDataValue: PlatformData[] = [
         signupBonus: false,
         secondaryMarket: true,
         autoInvest: false,
-        slug: 'crowd1',
+        slug: 'Crowd2Fund1',
         whoCanInvest: 'Retail Investors, Accredited Investors'
     },
     {
@@ -169,7 +211,7 @@ export const PlatformDataValue: PlatformData[] = [
         signupBonus: false,
         secondaryMarket: true,
         autoInvest: false,
-        slug: 'crowd2',
+        slug: 'Crowd2Fund2',
         whoCanInvest: 'Retail Investors, Accredited Investors'
     },
     {

@@ -24,3 +24,8 @@
     font-size: 20px;
     line-height: 30px;
 }
+
+.h6 {
+    font-family: var(--inter-font);
+    font-size: 20px;
+}

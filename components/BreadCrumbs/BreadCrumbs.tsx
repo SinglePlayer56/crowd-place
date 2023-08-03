@@ -40,7 +40,7 @@ const BreadCrumbs = ({className}: BreadCrumbsProps) => {
         return (
             {
                 href: href.length > 0 ? href : '/',
-                name: nameHref.length > 0 ? nameHref.replace(nameHref[0], nameHref[0].toUpperCase()) : 'Main'
+                name:  nameHref.length > 0 ? nameHref.replace(nameHref[0], nameHref[0].toUpperCase()) : 'Main'
             }
         )
     });

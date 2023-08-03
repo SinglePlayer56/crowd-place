@@ -27,11 +27,11 @@ const Pagination = ({ page, itemCount, perPage }: Props) => {
         totalPages: Math.ceil(itemCount / perPage)
     });
 
-    const firstPage = 1;
+    // const firstPage = 1;
     // calculate the next page
-    const nextPage = Math.min(page + 1, totalPages);
+    // const nextPage = Math.min(page + 1, totalPages);
     // calculate the previous page
-    const prevPage = Math.max(page - 1, firstPage);
+    // const prevPage = Math.max(page - 1, firstPage);
     // create a new array based on the total pages
     const arr = new Array(totalPages);
 
@@ -40,7 +40,7 @@ const Pagination = ({ page, itemCount, perPage }: Props) => {
             {[...arr].map((_, i) => {
                 // getPageItem function returns the type of page based on the index.
                 // it also automatically calculates if the page is disabled.
-                const { page, disabled } = getPageItem(i);
+                const { page } = getPageItem(i);
 
 
                 if (page === "gap") {
@@ -62,7 +62,6 @@ type PaginationLinkProps = {
 } & PropsWithChildren;
 
 function PaginationLink({ page, children, ...props }: PaginationLinkProps) {
-    console.log(page)
     const pathName = usePathname();
     // we use existing data from router query, we just modify the page.
     const q = { page };

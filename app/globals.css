@@ -99,6 +99,10 @@ h6 {
   padding: 0 20px;
 }
 
+.container-1200 {
+  max-width: 1200px;
+}
+
 .inter {
   font-family: var(--inter-font);
 }
@@ -113,4 +117,8 @@ h6 {
 .full-height {
   display: grid;
   grid-template-rows: auto 1fr auto;
+}
+
+.link {
+  color: #009dee;
 }
