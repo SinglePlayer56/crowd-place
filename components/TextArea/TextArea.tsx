@@ -3,11 +3,15 @@
 import styles from "./TextArea.module.css";
 import {TextAreaProps} from "./TextArea.props";
 import cn from 'classnames';
-import {useState} from "react";
-import {RegisterOptions} from "react-hook-form";
+import {useEffect, useState} from "react";
+import {RegisterOptions, useWatch} from "react-hook-form";
 
-const TextArea = ({register, errors, maxLength, required = false, label, placeholder, className}: TextAreaProps) => {
-    const [value, setValue] = useState<string>('');
+const TextArea = ({register, control, errors, maxLength, required = false, label, placeholder, className}: TextAreaProps) => {
+    // const [value, setValue] = useState<string>('');
+    const fieldValue = useWatch({
+        control,
+        name: label
+    });
 
     const errorField = errors[label];
 
@@ -18,7 +22,7 @@ const TextArea = ({register, errors, maxLength, required = false, label, placeho
         },
         maxLength: {
            value: maxLength,
-           message: 'No more than 500 characters'
+           message: `No more than ${maxLength} characters`
         }
     }
 
@@ -26,15 +30,13 @@ const TextArea = ({register, errors, maxLength, required = false, label, placeho
         <div className={cn(styles.textArea, className)}>
             <label className={styles.textArea__label} >{label}</label>
             <textarea
-                value={value}
                 {...register(label, errorOption)}
-                onChange={(e) => setValue(e.target.value)}
                 className={cn(styles.textArea__input,
                     {
                         [styles.error__input]: errorField
                     })}
             />
-            <span className={styles.textArea__number}>{value.length}/{maxLength}</span>
+            <span className={styles.textArea__number}>{fieldValue.length.toString()}/{maxLength}</span>
             {errorField && <span className={styles.error}>{errorField.message?.toString()}</span>}
         </div>
     );
