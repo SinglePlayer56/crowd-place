@@ -1,8 +1,8 @@
-import {NextResponse} from "next/server";
+import {NextRequest, NextResponse} from "next/server";
 
 const legacyPrefixes = ['/contacts', '/blog']
 
-export default async function middleware(req:any) {
+export default async function middleware(req: NextRequest) {
     // const { pathname } = req.nextUrl;
     //
     // if (legacyPrefixes.some((prefix) => pathname.startsWith(prefix))) {
@@ -19,6 +19,7 @@ export default async function middleware(req:any) {
     // }
 
     if (req.nextUrl.pathname === '/platforms') {
-        return NextResponse.redirect(new URL('/platforms/', req.url))
+
+        return NextResponse.redirect(new URL('/platforms/', req.url), 308)
     }
 }
