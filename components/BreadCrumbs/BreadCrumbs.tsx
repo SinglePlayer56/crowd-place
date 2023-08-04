@@ -9,8 +9,12 @@ import {Fragment} from "react";
 
 const BreadCrumbs = ({className}: BreadCrumbsProps) => {
     const pathName = usePathname();
+    let splitPathName: string[] = pathName.split('/');
 
-    const splitPathName = pathName.split('/');
+    if (splitPathName.length > 1) {
+        splitPathName.pop();
+    }
+
 
     let count = 0;
     const hrefList: string[] = []

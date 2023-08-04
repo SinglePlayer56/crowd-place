@@ -15,7 +15,7 @@ const Platforms = ({searchParams}: searchParams) => {
     }
 
     if (searchParams.page === '1') {
-        redirect('/platforms')
+        redirect('/platforms/')
     }
 
     let offset = (currentPage - 1) * perPage;

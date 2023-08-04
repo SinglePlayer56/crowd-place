@@ -1,6 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    trailingSlash: true
+    trailingSlash: true,
+    redirects() {
+        return [
+            {
+                source: '/platform/:page(\\\\d+)',
+                destination: '/platforms/',
+                permanent: true
+            }
+        ]
+    }
 };
 
 module.exports = nextConfig;
