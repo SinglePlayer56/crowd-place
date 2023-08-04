@@ -38,9 +38,26 @@ export interface PlatformData {
     slug: string;
 }
 
+export type formData<T> = {
+    [K in keyof T]: T[K]
+}
+
+export type FormField = {
+    tag: 'input' | 'textArea';
+    label: string;
+    type?: 'text' | 'email';
+    required: boolean;
+}
+
 export interface AddFormData {
     'Platform name': string;
     'Website': string;
+    'E-mail': string;
+    'Message': string;
+}
+
+export interface ContactsFormData {
+    'Name': string;
     'E-mail': string;
     'Message': string;
 }

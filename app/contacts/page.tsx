@@ -1,11 +1,10 @@
 import {BreadCrumbs, Form, HTag} from "@/components";
-import styles from './AddPlatform.module.css';
-import {AddFormData, FormField} from "@/types";
+import styles from './Contacts.module.css';
+import {ContactsFormData, FormField} from "@/types";
 
-const AddPlatform = () => {
-    const defaultState: AddFormData = {
-        'Platform name': '',
-        'Website': '',
+const Contacts = () => {
+    const defaultState: ContactsFormData = {
+        'Name': '',
         'E-mail': '',
         'Message': ''
     }
@@ -13,13 +12,7 @@ const AddPlatform = () => {
     const inputFields: FormField[] = [
         {
             tag: 'input',
-            label: 'Platform name',
-            type: 'text',
-            required: true
-        },
-        {
-            tag: 'input',
-            label: 'Website',
+            label: 'Name',
             type: 'text',
             required: true
         },
@@ -35,14 +28,13 @@ const AddPlatform = () => {
             required: true
         },
     ];
-
     return (
         <>
             <BreadCrumbs/>
             <section className={styles.contact}>
                 <div className={'container'}>
                     <HTag className={styles.contact__title} tag={'h1'}>
-                        Add platform
+                        Contacts
                     </HTag>
                     <Form
                         defaultState={defaultState}
@@ -54,4 +46,4 @@ const AddPlatform = () => {
     );
 };
 
-export default AddPlatform;
+export default Contacts;

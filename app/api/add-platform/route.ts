@@ -1,18 +1,30 @@
 import {generateEmailContent, mailOptions, transporter} from "@/nodemailerConfig";
-import {AddFormData} from "@/types";
+import {AddFormData, ContactsFormData} from "@/types";
+import {mailDataType} from "@/helpers";
+
+
 
 export const POST = async (req: any) => {
-    const data: AddFormData = await req.json();
+    const data: AddFormData | ContactsFormData = await req.json();
 
-    if (!data || !data['Platform name'] || !data['Website'] || !data['E-mail'] || !data['Message']) {
-        return new Response(JSON.stringify({message: 'Bad request'}), {status: 400});
+    if (mailDataType(data)) {
+        if (!data || !data['Platform name'] || !data['Website'] || !data['E-mail'] || !data['Message']) {
+            return new Response(JSON.stringify({message: 'Bad request'}), {status: 400});
+        }
+    } else {
+        if (!data || !data['Name'] || !data['E-mail'] || !data['Message']) {
+            return new Response(JSON.stringify({message: 'Bad request'}), {status: 400});
+        }
     }
 
+
     try {
+        const subject = mailDataType(data) ? data['Platform name']: data["Name"];
+
         await transporter.sendMail({
             ...mailOptions,
             ...generateEmailContent(data),
-            subject: data['Platform name'],
+            subject: subject,
         });
 
         return new Response(JSON.stringify({success: true}), {status: 200});

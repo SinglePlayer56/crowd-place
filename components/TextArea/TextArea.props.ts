@@ -1,13 +1,13 @@
 import {DetailedHTMLProps, HTMLAttributes} from "react";
 import {Control, FieldErrors, Path, UseFormRegister} from "react-hook-form";
-import {AddFormData} from "@/types";
+import {AddFormData, ContactsFormData, formData} from "@/types";
 
 export interface TextAreaProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-    label: Path<AddFormData>;
-    register: UseFormRegister<AddFormData>
+    label: Path<string>;
+    register: UseFormRegister<formData<AddFormData | ContactsFormData>>
     placeholder?: string;
     required?: boolean;
     errors: FieldErrors;
     maxLength: number;
-    control?: Control<AddFormData>
+    control?: Control<formData<AddFormData | ContactsFormData>>
 }

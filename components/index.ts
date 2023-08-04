@@ -20,7 +20,7 @@ import ReviewCard from "./ReviewCard/ReviewCard";
 import PlatformCard from "./PlatformCard/PlatformCard";
 import PlatformCardTags from "./PlatformCardTags/PlatformCardTags";
 import CustomList from "./CustomList/CustomList";
-import ContactForm from "./ContactForm/ContactForm";
+import Form from "@/components/Form/Form";
 import Input from "./Input/Input";
 import TextArea from "./TextArea/TextArea";
 
@@ -47,7 +47,7 @@ export {
     PlatformCard,
     PlatformCardTags,
     CustomList,
-    ContactForm,
     Input,
-    TextArea
+    TextArea,
+    Form
 }
