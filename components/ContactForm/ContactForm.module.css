@@ -1,6 +1,7 @@
 .form {
     max-width: 532px;
     background-color: #ffffff;
+    position: relative;
 }
 
 .form__item {
@@ -9,6 +10,25 @@
 
 .form__textArea {
     margin-bottom: 50px;
+}
+
+.form__sendMessage {
+    font-family: var(--inter-font);
+    font-size: 24px;
+    line-height: 38px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.form__loader_container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: inherit;
+    /*backdrop-filter: blur(1px);*/
 }
 
 

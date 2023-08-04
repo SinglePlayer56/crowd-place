@@ -37,3 +37,10 @@ export interface PlatformData {
     whoCanInvest: string;
     slug: string;
 }
+
+export interface AddFormData {
+    'Platform name': string;
+    'Website': string;
+    'E-mail': string;
+    'Message': string;
+}
