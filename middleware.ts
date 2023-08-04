@@ -18,7 +18,7 @@ export default async function middleware(req: NextRequest) {
     //     return NextResponse.redirect(req.nextUrl)
     // }
 
-    if (req.nextUrl.pathname === '/platforms') {
+    if (req.nextUrl.pathname === '/platforms?page=1') {
 
         return NextResponse.redirect(new URL('/platforms/', req.url), 308)
     }
