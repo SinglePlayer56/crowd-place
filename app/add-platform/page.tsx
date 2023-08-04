@@ -1,8 +1,10 @@
 import {BreadCrumbs, Form, HTag} from "@/components";
 import styles from './AddPlatform.module.css';
 import {AddFormData, FormField} from "@/types";
+import {redirect} from "next/navigation";
 
 const AddPlatform = () => {
+
     const defaultState: AddFormData = {
         'Platform name': '',
         'Website': '',
