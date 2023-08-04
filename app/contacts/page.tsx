@@ -9,7 +9,7 @@ const Contacts = () => {
         'Message': ''
     }
 
-    const inputFields: FormField[] = [
+    const inputFields: FormField<ContactsFormData>[] = [
         {
             tag: 'input',
             label: 'Name',

@@ -6,8 +6,7 @@
     background-color: #ffffff;
 }
 
-.card__title,
-.card__text {
+.card__title {
     font-family: var(--montserrat-font);
     font-size: 20px;
     line-height: 30px;
@@ -17,7 +16,7 @@
 
 .card__container {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 25px;
     gap: 10px;
@@ -26,4 +25,7 @@
 .card__text {
     font-weight: 700;
     font-size: 26px;
+    font-family: var(--montserrat-font);
+    line-height: 30px;
+    color: #000000;
 }

@@ -12,7 +12,6 @@ const CrowdfundingCard = ({title, iconPath, value}: CrowdfundingCardProps) => {
                     alt={'card icon'}
                     width={62}
                     height={62}
-                    className={styles.card__icon}
                 />
                 {value && Array.isArray(value) ?
                     value.map((item) => (<span className={styles.card__text}>{item}</span>)):

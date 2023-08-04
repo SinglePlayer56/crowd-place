@@ -3,7 +3,7 @@ import {Control, FieldErrors, Path, UseFormRegister} from "react-hook-form";
 import {AddFormData, ContactsFormData, formData} from "@/types";
 
 export interface TextAreaProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-    label: Path<string>;
+    label: Path<formData<AddFormData | ContactsFormData>>;
     register: UseFormRegister<formData<AddFormData | ContactsFormData>>
     placeholder?: string;
     required?: boolean;

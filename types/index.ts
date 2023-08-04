@@ -42,9 +42,9 @@ export type formData<T> = {
     [K in keyof T]: T[K]
 }
 
-export type FormField = {
+export type FormField<T> = {
     tag: 'input' | 'textArea';
-    label: string;
+    label: keyof T;
     type?: 'text' | 'email';
     required: boolean;
 }

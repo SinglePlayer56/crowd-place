@@ -10,7 +10,7 @@ const AddPlatform = () => {
         'Message': ''
     }
 
-    const inputFields: FormField[] = [
+    const inputFields: FormField<AddFormData>[] = [
         {
             tag: 'input',
             label: 'Platform name',
