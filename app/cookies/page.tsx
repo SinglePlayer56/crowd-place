@@ -1,16 +1,16 @@
 import {BreadCrumbs, CustomList, HTag, PTag} from "@/components";
-import styles from './Cookie.module.css';
+import styles from './Cookies.module.css';
 import cn from 'classnames';
 
-const Cookie = () => {
+const Cookies = () => {
 
     return (
         <>
             <BreadCrumbs/>
-            <section className={styles.cookie}>
+            <section className={styles.cookies}>
                 <div className={'container'}>
-                    <HTag className={styles.cookie__title} tag={'h1'}>
-                        Cookie
+                    <HTag className={styles.cookies__title} tag={'h1'}>
+                        Cookies
                     </HTag>
                     <PTag fontSize={'20px'} className={cn('container-1200', styles.paragraph)}>
                         Impact investing is one of the emerging yet steady trends in the crowdfunding sector. It’s
@@ -61,4 +61,4 @@ const Cookie = () => {
     );
 };
 
-export default Cookie;
+export default Cookies;

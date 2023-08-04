@@ -2,11 +2,11 @@ import type {Metadata} from 'next'
 import {PageLayout} from "@/components";
 
 export const metadata: Metadata = {
-    title: 'Cookie | Crowd Place',
-    description: 'Cookie | Crowd Place',
+    title: 'Cookies | Crowd Place',
+    description: 'Cookies | Crowd Place',
 }
 
-export default function CookieLayout({
+export default function CookiesLayout({
                                        children,
                                    }: {
     children: React.ReactNode
