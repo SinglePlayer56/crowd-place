@@ -20,7 +20,7 @@ export function generateMetadata({params}: Props): Metadata {
 }
 
 export async function generateStaticParams() {
-    const response = await fetch(`http://localhost:3000/api/add-platform`);
+    const response = await fetch(`${process.env.DOMAIN}/api/add-platform`);
 
     const platforms: IPlatform[] = await response.json();
 
@@ -30,7 +30,7 @@ export async function generateStaticParams() {
 }
 
 async function getPlatform(slug: any) {
-    const response = await fetch(`http://localhost:3000/api/add-platform/${slug}`,
+    const response = await fetch(`${process.env.DOMAIN}/api/add-platform/${slug}`,
         {
             method: 'GET'
         })
@@ -41,7 +41,7 @@ async function getPlatform(slug: any) {
 }
 
 async function getRelatedPlatform(industry: string) {
-    const response = await fetch(`http://localhost:3000/api/get-related/${industry}`, {
+    const response = await fetch(`${process.env.DOMAIN}/api/get-related/${industry}`, {
         method: 'GET'
     });
 

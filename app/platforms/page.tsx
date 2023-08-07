@@ -7,7 +7,7 @@ import {redirect} from "next/navigation";
 
 
 async function getPlatformsAll() {
-    const res = await fetch('http://localhost:3000/api/add-platform', {
+    const res = await fetch(`${process.env.DOMAIN}/api/add-platform`, {
         method: 'GET'
     });
 
