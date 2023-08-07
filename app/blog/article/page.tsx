@@ -16,7 +16,7 @@ const Blog = () => {
                     <div className={styles.startSection__dateTags}>
                         <Date date={'23.05.2023'}/>
                         <div className={styles.startSection__tags}>
-                            {tags.map((tag) => <Tag title={tag}/>)}
+                            {tags.map((tag) => <Tag key={tag} title={tag}/>)}
                         </div>
                     </div>
                     <PTag className={styles.startSection__text} fontSize={'20px'}>
@@ -47,6 +47,7 @@ const Blog = () => {
                     <div className={styles.blogList__list}>
                         {blogListValue.map((blogCardValue) => (
                             <BlogCard
+                                key={blogCardValue.title}
                                 pathImage={blogCardValue.pathImage}
                                 title={blogCardValue.title}
                                 text={blogCardValue.text}

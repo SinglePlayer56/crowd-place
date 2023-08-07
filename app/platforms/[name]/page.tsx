@@ -5,74 +5,73 @@ import Image from 'next/image';
 import {PlatformDataValue} from "@/consts";
 import {CrowdfundingCardProps} from "@/components/CrowdfundingCard/CrowdfundingCard.props";
 import cn from 'classnames';
+import {IPlatform} from "@/types";
 
 type Props = {
-    params: { name: string }
+    params: { name: string, slug: string }
 }
 
 export function generateMetadata({params}: Props): Metadata {
+
     return {
         title: `${params.name} | | Crowd Place`,
         description: `${params.name} | | Crowd Place`
     }
 }
 
-interface PlatformProps {
-    name: string;
-    pathLogo: string;
-    country?: string[];
-    type?: string[];
-    industry: string[];
-    year?: string;
-    license?: string;
-    language?: string[];
-    reviewLink?: string;
-    website?: string;
-    minimumInvestment?: string;
-    advertisedReturn?: string;
-    investors?: string;
-    paymentOptions?: string[];
-    totalFundingVolume?: string;
-    averageLoanDuration?: string;
-    description: string;
-    regulated?: boolean;
-    buyBack?: boolean;
-    publicStatistics?: boolean;
-    signupBonus?: boolean;
-    secondaryMarket?: boolean;
-    autoInvest?: boolean;
-    whoCanInvest?: string;
-    slug?: string;
+export async function generateStaticParams() {
+    const response = await fetch(`http://localhost:3000/api/add-platform`);
+
+    const platforms: IPlatform[] = await response.json();
+
+    return platforms.map((platform) => ({
+        slug: platform.slug,
+    }))
 }
 
-const Platform = ({params}: Props) => {
+async function getPlatform(slug: any) {
+    const response = await fetch(`http://localhost:3000/api/add-platform/${slug}`,
+        {
+            method: 'GET'
+        })
+
+    const platform = response.json();
+
+    return platform;
+}
+
+async function getRelatedPlatform(industry: string) {
+    const response = await fetch(`http://localhost:3000/api/get-related/${industry}`, {
+        method: 'GET'
+    });
+
+    const platforms = response.json();
+
+    return platforms;
+}
+
+const Platform = async ({params}: Props) => {
+
     const {
-        whoCanInvest,
         autoInvest,
         advertisedReturn,
-        buyBack,
-        averageLoanDuration,
-        type,
-        year,
+        buybackGuarantee,
+        yearFounded,
         description,
         industry,
-        language,
-        license,
+        languages,
+        licenseNumber,
         minimumInvestment,
         name,
-        paymentOptions,
         publicStatistics,
         regulated,
         secondaryMarket,
-        reviewLink,
-        totalFundingVolume,
+        reviews,
         website,
         signupBonus,
-        investors,
-        slug,
-        pathLogo,
-        country
-    } = PlatformDataValue.find((item) => item.name === params.name) as PlatformProps;
+        logo,
+    }: IPlatform = await getPlatform(params.name);
+
 
     const overviewData: CrowdfundingCardProps[] = [
         {
@@ -88,17 +87,17 @@ const Platform = ({params}: Props) => {
         {
             title: 'Year founded',
             iconPath: '/icons/calendar.svg',
-            value: year
+            value: yearFounded
         },
         {
             title: 'Languages',
             iconPath: '/icons/earth.svg',
-            value: language
+            value: languages
         },
         {
             title: 'License Number',
             iconPath: '/icons/frame.svg',
-            value: license
+            value: licenseNumber
         }
     ];
 
@@ -109,7 +108,7 @@ const Platform = ({params}: Props) => {
         },
         {
             title: 'Buyback guarantee',
-            value: buyBack,
+            value: buybackGuarantee,
         },
         {
             title: 'Public statistics',
@@ -125,14 +124,21 @@ const Platform = ({params}: Props) => {
         },
         {
             title: 'Auto-invest',
-            value: autoInvest
+            value: autoInvest ? autoInvest : ''
         }
     ]
 
-    const relatedPlatforms = PlatformDataValue
-        .filter((item) => item.name !== name)
-        .slice(0, 4);
+    // useEffect(() => {
+    //     getPlatform()
+    //         .then((res) => setPlatform(res));
+    //
+    // }, [])
 
+
+    const relatedPlatforms: IPlatform[] | IPlatform = await getRelatedPlatform(industry[0]);
+
+    console.log(industry[0])
+    console.log(relatedPlatforms);
 
     return (
         <>
@@ -144,7 +150,7 @@ const Platform = ({params}: Props) => {
                     </HTag>
                     <div className={styles.head__content}>
                         <Image
-                            src={pathLogo}
+                            src={logo}
                             alt={'platform logo'}
                             width={80}
                             height={80}
@@ -163,7 +169,7 @@ const Platform = ({params}: Props) => {
                             </PTag>
                         </div>
                         <div className={styles.head__tags}>
-                            {industry?.map((tagName) => <Tag title={tagName}/>)}
+                            {industry?.map((tagName) => <Tag key={tagName} title={tagName}/>)}
                         </div>
                     </div>
                 </div>
@@ -177,6 +183,7 @@ const Platform = ({params}: Props) => {
                         <div className={styles.overview__list}>
                             {overviewData.map((card) => (
                                 <CrowdfundingCard
+                                    key={card.title}
                                     iconPath={card.iconPath}
                                     title={card.title}
                                     value={card.value}
@@ -185,7 +192,7 @@ const Platform = ({params}: Props) => {
                         </div>
                         <div className={styles.overview__checkList}>
                             {checkListData.map((item) => (
-                                <div className={styles.checkList__item}>
+                                <div key={item.title} className={styles.checkList__item}>
                                     <Image
                                         src={item.value ? '/icons/yes.svg' : '/icons/no.svg'}
                                         alt={'checkbox'}
@@ -219,17 +226,17 @@ const Platform = ({params}: Props) => {
                         Reviews
                     </HTag>
                     <div className={styles.review__list}>
-                        {reviewLink &&
+                        {reviews &&
                             <ReviewCard
                                 title={'Trustpilot'}
-                                href={reviewLink}
+                                href={reviews}
                                 pathImg={'/icons/trustpilot-icon.svg'}
                             />
                         }
                         {website &&
                             <ReviewCard
                                 title={name}
-                                pathImg={pathLogo}
+                                pathImg={logo}
                                 href={website}
                             />
                         }
@@ -239,18 +246,30 @@ const Platform = ({params}: Props) => {
             <section className={styles.relatedPlatforms}>
                 <div className={'container'}>
                     <div className={styles.reviews__list}>
-                        {relatedPlatforms.map((platform) => (
+                        {Array.isArray(relatedPlatforms) ? relatedPlatforms.map((platform: IPlatform) => (
                             <PlatformCard
                                 key={platform.name}
-                                pathLogo={platform.pathLogo}
+                                pathLogo={platform.logo}
                                 title={platform.name}
                                 countries={platform.country}
                                 description={platform.description}
-                                href={`/platforms/${platform.name}`}
-                                type={platform.type}
+                                href={`/platforms/${platform.slug}`}
+                                type={platform.investmentType}
                                 industry={platform.industry}
                             />
-                        ))}
+                        ))
+                        :
+                            <PlatformCard
+                                key={relatedPlatforms.name}
+                                pathLogo={relatedPlatforms.logo}
+                                title={relatedPlatforms.name}
+                                countries={relatedPlatforms.country}
+                                description={relatedPlatforms.description}
+                                href={`/platforms/${relatedPlatforms.slug}`}
+                                type={relatedPlatforms.investmentType}
+                                industry={relatedPlatforms.industry}
+                            />
+                        }
                     </div>
                 </div>
             </section>

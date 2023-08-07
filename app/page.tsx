@@ -61,6 +61,7 @@ const Main = () => {
                     <div className={styles.crowdfundingCards__wrapper}>
                         {CrowdfundingCardValues.map((valueCard) => (
                             <CrowdfundingCard
+                                key={valueCard.title}
                                 iconPath={valueCard.iconPath}
                                 title={valueCard.title}
                             />))}
@@ -76,6 +77,7 @@ const Main = () => {
                     <div className={styles.latestBlog__list}>
                         {BlogCardsValues.map((cardValue) => (
                             <BlogCard
+                                key={cardValue.title}
                                 pathImage={cardValue.pathImage}
                                 title={cardValue.title}
                                 text={cardValue.text}

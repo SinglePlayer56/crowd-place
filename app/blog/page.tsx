@@ -15,7 +15,7 @@ const BlogListing = ({searchParams}: searchParams) => {
     }
 
     if (searchParams.page === '1') {
-        redirect('/blog')
+        redirect('/blog/')
     }
 
     let offset = (currentPage - 1) * perPage;

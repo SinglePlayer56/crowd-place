@@ -1,11 +1,22 @@
 import styles from './platforms.module.css'
 import {BreadCrumbs, CustomButton, HTag, PlatformCard, PTag, SelectFilters} from "@/components";
 import {PlatformDataValue, SelectFiltersValues} from "@/consts";
-import {searchParams} from "@/types";
+import {IPlatform, searchParams} from "@/types";
 import Pagination from "@/components/Pagination/Pagination";
 import {redirect} from "next/navigation";
 
-const Platforms = ({searchParams}: searchParams) => {
+
+async function getPlatformsAll() {
+    const res = await fetch('http://localhost:3000/api/add-platform', {
+        method: 'GET'
+    });
+
+    const platforms = res.json();
+
+    return platforms;
+}
+
+const Platforms = async ({searchParams}: searchParams) => {
     const totalCount = PlatformDataValue.length;
     const perPage = 4;
     let currentPage = 1;
@@ -21,6 +32,8 @@ const Platforms = ({searchParams}: searchParams) => {
     let offset = (currentPage - 1) * perPage;
 
     const platformData = PlatformDataValue.slice(offset, offset + perPage);
+
+    const users: IPlatform[] = await getPlatformsAll();
 
     return (
         <>
@@ -59,16 +72,16 @@ const Platforms = ({searchParams}: searchParams) => {
                         Reviews
                     </HTag>
                     <div className={styles.reviews__list}>
-                        {platformData.map((platform) => (
+                        {users?.map((platform) => (
                             <PlatformCard
                                 key={platform.name}
-                                pathLogo={platform.pathLogo}
+                                pathLogo={platform.logo}
                                 title={platform.name}
                                 countries={platform.country}
                                 description={platform.description}
-                                type={platform.type}
+                                type={platform.investmentType}
                                 industry={platform.industry}
-                                href={`/platforms/${platform.name}`}/>
+                                href={`/platforms/${platform.name.split(' ').join('').toLowerCase()}`}/>
                         ))}
                     </div>
                     <Pagination

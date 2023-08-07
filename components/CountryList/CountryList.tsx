@@ -13,7 +13,7 @@ const CountryList = () => {
                 </HTag>
                 <div className={styles.countryList__list}>
                     {CountryListValue.map((countryValue) => (
-                        <div className={styles.countryList__item}>
+                        <div key={countryValue.country} className={styles.countryList__item}>
                             <Image
                                 src={countryValue.pathFlag}
                                 alt={'lag icon'}

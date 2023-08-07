@@ -4,7 +4,7 @@ const nextConfig = {
     redirects() {
         return [
             {
-                source: '/platform/:page(\\\\d+)',
+                source: `/platforms\\/\\?page\\=1/`,
                 destination: '/platforms/',
                 permanent: true
             }

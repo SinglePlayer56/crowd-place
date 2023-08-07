@@ -1,10 +1,12 @@
+import {DataTypes} from "sequelize";
+
 export interface HeaderLink {
     name: string;
     href: string;
 }
 
 export interface searchParams {
-    params?: {page: string},
+    params?: { page: string },
     searchParams: {
         [key: string]: string | string[] | undefined
     }
@@ -47,6 +49,34 @@ export type FormField<T> = {
     label: keyof T;
     type?: 'text' | 'email';
     required: boolean;
+}
+
+export interface IPlatform {
+    name: string,
+    logo: string,
+    country: string[],
+    investmentType: string[],
+    industry: string[],
+    yearFounded: string,
+    licenseNumber: string,
+    languages: string[],
+    reviews: string,
+    website: string,
+    minimumInvestment: string,
+    advertisedReturn: string,
+    investors: string,
+    paymentOptions: string[],
+    totalFundingVolume: string,
+    averageLoanDuration: string,
+    description: string,
+    regulated: boolean,
+    buybackGuarantee: boolean,
+    publicStatistics: boolean,
+    signupBonus: boolean,
+    secondaryMarket: boolean,
+    autoInvest: boolean,
+    whoCanInvest: string,
+    slug: string
 }
 
 export interface AddFormData {
