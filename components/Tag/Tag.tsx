@@ -1,14 +1,15 @@
 import {TagProps} from "./Tag.props";
 import styles from './Tag.module.css';
 import cn from 'classnames';
+import {ForwardedRef, forwardRef} from "react";
 
-const Tag = ({title, className}: TagProps) => {
+const Tag = forwardRef<HTMLSpanElement, TagProps>(({title, className}: TagProps, ref: ForwardedRef<HTMLSpanElement>) => {
 
     return (
-        <span className={cn(styles.tag, className)}>
+        <span ref={ref} className={cn(styles.tag, className)}>
             {title}
         </span>
     );
-};
+});
 
 export default Tag;

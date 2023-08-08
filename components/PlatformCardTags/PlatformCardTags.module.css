@@ -2,8 +2,11 @@
     display: flex;
     gap: 8px;
     align-items: center;
+    flex-wrap: nowrap;
+}
+
+.tags.wrap {
     flex-wrap: wrap;
-    overflow: hidden;
 }
 
 .tags:not(:last-child) {
@@ -23,6 +26,7 @@
     font-weight: 600;
     color: #009dee;
     background-color: transparent;
+    white-space: nowrap;
 }
 
 .hidden {

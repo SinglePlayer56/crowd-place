@@ -47,4 +47,22 @@
     margin: 0 auto;
 }
 
+@media screen and (max-width: 1650px) {
+    .reviews__list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .reviews__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .reviews__list {
+        grid-template-columns: 1fr;
+    }
+}
+
 

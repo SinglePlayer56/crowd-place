@@ -31,17 +31,15 @@ const Platforms = async ({searchParams}: searchParams) => {
 
     let offset = (currentPage - 1) * perPage;
 
-    const platformData = PlatformDataValue.slice(offset, offset + perPage);
 
     let users: IPlatform[] = await getPlatformsAll();
-    // console.log(users);
 
     return (
         <>
             <> </>
+            <BreadCrumbs/>
             <section className={styles.head}>
                 <div className={'container'}>
-                    <BreadCrumbs/>
                     <HTag className={styles.head__title} tag={'h1'}>
                         Environmental impact H1
                     </HTag>
