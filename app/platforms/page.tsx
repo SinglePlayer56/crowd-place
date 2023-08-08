@@ -5,21 +5,17 @@ import {IPlatform, searchParams} from "@/types";
 import Pagination from "@/components/Pagination/Pagination";
 import {redirect} from "next/navigation";
 
+async function getSlicePlatform(page: number, perPage?: number) {
+    const res = await fetch(`${process.env.DOMAIN}/api/get-all/?page=${page}&perPage=${perPage}`);
 
-async function getPlatformsAll() {
-    const res = await fetch(`${process.env.DOMAIN}/api/add-platform`, {
-        method: 'GET'
-    });
 
-    const platforms = await res.json();
-
-    return platforms;
+    return  await res.json();
 }
 
 const Platforms = async ({searchParams}: searchParams) => {
-    const totalCount = PlatformDataValue.length;
-    const perPage = 4;
+    const perPage = 12;
     let currentPage = 1;
+
 
     if (Number(searchParams.page) >= 1) {
         currentPage = Number(searchParams.page);
@@ -29,10 +25,8 @@ const Platforms = async ({searchParams}: searchParams) => {
         redirect('/platforms/')
     }
 
-    let offset = (currentPage - 1) * perPage;
+    const {count: totalCount, rows: platforms}: {count:number, rows: IPlatform[]} = await getSlicePlatform(currentPage, perPage);
 
-
-    let users: IPlatform[] = await getPlatformsAll();
 
     return (
         <>
@@ -71,7 +65,7 @@ const Platforms = async ({searchParams}: searchParams) => {
                         Reviews
                     </HTag>
                     <div className={styles.reviews__list}>
-                        {users.map((platform) => (
+                        {platforms.map((platform) => (
                             <PlatformCard
                                 key={platform.name}
                                 pathLogo={platform.logo}

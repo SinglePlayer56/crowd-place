@@ -4,10 +4,12 @@ import {mailDataType} from "@/helpers";
 
 import db from '../../../utils/index';
 import Platform from '../../../models/platform';
+import {NextResponse} from "next/server";
 
 
-export const GET = async (req: any) => {
-       const count = await Platform.findAll({limit: 40});
+export const GET = async (req: any, res: any) => {
+
+       const count = await Platform.findAll({limit: 1});
 
        return new Response(JSON.stringify(count), {status: 200});
 
