@@ -16,6 +16,9 @@
     padding: 32px 40px 22px 40px;
     display: grid;
     grid-template-rows: auto auto 1fr;
+    background-color: #ffffff;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
 }
 
 .card__footer {
@@ -30,7 +33,7 @@
 }
 
 .card__text {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     display: -webkit-box;
     -webkit-line-clamp: 5;
     text-overflow: ellipsis;
@@ -51,6 +54,10 @@
 }
 
 @media screen and (max-width: 768px){
+    .card {
+        max-width: 500px;
+    }
+
     .card__text {
         margin-bottom: 30px;
     }
