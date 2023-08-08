@@ -11,7 +11,7 @@ async function getPlatformsAll() {
         method: 'GET'
     });
 
-    const platforms = res.json();
+    const platforms = await res.json();
 
     return platforms;
 }
@@ -33,7 +33,8 @@ const Platforms = async ({searchParams}: searchParams) => {
 
     const platformData = PlatformDataValue.slice(offset, offset + perPage);
 
-    const users: IPlatform[] = await getPlatformsAll();
+    let users: IPlatform[] = await getPlatformsAll();
+    console.log(users);
 
     return (
         <>
@@ -72,7 +73,7 @@ const Platforms = async ({searchParams}: searchParams) => {
                         Reviews
                     </HTag>
                     <div className={styles.reviews__list}>
-                        {users?.map((platform) => (
+                        {users.map((platform) => (
                             <PlatformCard
                                 key={platform.name}
                                 pathLogo={platform.logo}
