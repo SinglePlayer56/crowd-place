@@ -40,8 +40,8 @@ async function getPlatform(slug: any) {
     return platform;
 }
 
-async function getRelatedPlatform(industry: string) {
-    const response = await fetch(`${process.env.DOMAIN}/api/get-related/${industry}`, {
+async function getRelatedPlatform(industry: string, name?: string) {
+    const response = await fetch(`${process.env.DOMAIN}/api/get-related/${industry}/?name=${name}`, {
         method: 'GET'
     });
 
@@ -71,6 +71,8 @@ const Platform = async ({params}: Props) => {
         signupBonus,
         logo,
     }: IPlatform = await getPlatform(params.name);
+
+    const relatedPlatforms: IPlatform[] | IPlatform = await getRelatedPlatform(industry[0], params.name);
 
 
     const overviewData: CrowdfundingCardProps[] = [
@@ -127,17 +129,6 @@ const Platform = async ({params}: Props) => {
             value: autoInvest ? autoInvest : ''
         }
     ]
-
-    // useEffect(() => {
-    //     getPlatform()
-    //         .then((res) => setPlatform(res));
-    //
-    // }, [])
-
-
-    const relatedPlatforms: IPlatform[] | IPlatform = await getRelatedPlatform(industry[0]);
-
-    // console.log(relatedPlatforms);
 
     return (
         <>

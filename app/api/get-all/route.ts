@@ -11,7 +11,10 @@ export const GET = async (req: NextRequest, res: any) => {
     const {count, rows} = await Platform.findAndCountAll(
         {
             limit: perPage ? perPage : 4,
-            offset
+            offset,
+            order: [
+                ['id', 'DESC']
+            ]
         });
 
     return new Response(JSON.stringify({count, rows}), {status: 200});
