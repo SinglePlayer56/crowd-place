@@ -34,7 +34,7 @@ const Platforms = async ({searchParams}: searchParams) => {
     const platformData = PlatformDataValue.slice(offset, offset + perPage);
 
     let users: IPlatform[] = await getPlatformsAll();
-    console.log(users);
+    // console.log(users);
 
     return (
         <>
