@@ -4,6 +4,9 @@ import {PageLayout} from "@/components";
 export const metadata: Metadata = {
     title: 'Platforms | Crowd Place',
     description: 'Platforms | Crowd Place',
+    alternates: {
+        canonical: `${process.env.DOMAIN}/platforms/`
+    }
 }
 
 export default function PlatformsLayout({

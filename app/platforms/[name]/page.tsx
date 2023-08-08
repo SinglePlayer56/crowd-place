@@ -11,44 +11,20 @@ type Props = {
     params: { name: string, slug: string }
 }
 
-export function generateMetadata({params}: Props): Metadata {
+export async function generateMetadata({params}: Props): Promise<Metadata> {
+
+    const data: IPlatform = await getPlatform(params.name);
+
 
     return {
-        title: `${params.name} | | Crowd Place`,
-        description: `${params.name} | | Crowd Place`
+        title: `${data.name} | Crowd Place`,
+        description: `${data.description}`,
+        alternates: {
+            canonical: `${process.env.DOMAIN}/platforms/${params.name}/`
+        }
     }
 }
 
-export async function generateStaticParams() {
-    const response = await fetch(`${process.env.DOMAIN}/api/add-platform`);
-
-    const platforms: IPlatform[] = await response.json();
-
-    return platforms.map((platform) => ({
-        slug: platform.slug,
-    }))
-}
-
-async function getPlatform(slug: any) {
-    const response = await fetch(`${process.env.DOMAIN}/api/add-platform/${slug}`,
-        {
-            method: 'GET'
-        })
-
-    const platform = response.json();
-
-    return platform;
-}
-
-async function getRelatedPlatform(industry: string, name?: string) {
-    const response = await fetch(`${process.env.DOMAIN}/api/get-related/${industry}/?name=${name}`, {
-        method: 'GET'
-    });
-
-    const platforms = response.json();
-
-    return platforms;
-}
 
 const Platform = async ({params}: Props) => {
 
@@ -268,3 +244,34 @@ const Platform = async ({params}: Props) => {
 };
 
 export default Platform;
+
+export async function generateStaticParams() {
+    const response = await fetch(`${process.env.DOMAIN}/api/add-platform`);
+
+    const platforms: IPlatform[] = await response.json();
+
+    return platforms.map((platform) => ({
+        slug: platform.slug,
+    }))
+}
+
+async function getPlatform(slug: string): Promise<IPlatform> {
+    const response = await fetch(`${process.env.DOMAIN}/api/add-platform/${slug}`,
+        {
+            method: 'GET'
+        })
+
+    const platform: Promise<IPlatform> = response.json();
+
+    return platform;
+}
+
+async function getRelatedPlatform(industry: string, name?: string): Promise<IPlatform[] | IPlatform> {
+    const response = await fetch(`${process.env.DOMAIN}/api/get-related/${industry}/?name=${name}`, {
+        method: 'GET'
+    });
+
+    const platforms: Promise<IPlatform[] | IPlatform> = response.json();
+
+    return platforms;
+}
