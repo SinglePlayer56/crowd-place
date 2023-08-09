@@ -6,6 +6,8 @@ import {NextRequest} from "next/server";
 export const GET = async (req: NextRequest, {params}: any) => {
     const slugPlatform = req.nextUrl.searchParams.get('name')!;
 
+    console.log(params,)
+
     const response = await Platform.findAll({
         limit: 4,
         order: [
@@ -16,7 +18,7 @@ export const GET = async (req: NextRequest, {params}: any) => {
                 [Op.ne]: slugPlatform
             },
             industry: {
-                [Op.like]: `%${params.industry}%`
+                [Op.regexp]: `${params.industry}`
             }
         }
     });
