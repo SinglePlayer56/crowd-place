@@ -39,7 +39,7 @@ export const CrowdfundingCardValues: CrowdfundingCardProps[] = [
     }
 ]
 
-export const SelectFiltersValues: FilterProps[] = [
+export const SelectFiltersValues: {options: string[], placeholder: string}[] = [
     {
         options: ['Equity', 'Debt', 'P2P lending', 'Reward', 'Donation', 'Buy-to-let', 'Mini-bonds'],
         placeholder: 'Select investment type'

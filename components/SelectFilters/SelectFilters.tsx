@@ -1,5 +1,4 @@
 'use client';
-
 import {SelectFiltersProps} from "./SelectFilters.props";
 import styles from './SelectFilters.module.css';
 import {CustomButton, Filter} from "@/components";
