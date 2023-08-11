@@ -23,6 +23,7 @@ import CustomList from "./CustomList/CustomList";
 import Form from "@/components/Form/Form";
 import Input from "./Input/Input";
 import TextArea from "./TextArea/TextArea";
+import Checkbox from "./Checkbox/Checkbox";
 
 export {
     Footer,
@@ -49,5 +50,6 @@ export {
     CustomList,
     Input,
     TextArea,
-    Form
+    Form,
+    Checkbox
 }

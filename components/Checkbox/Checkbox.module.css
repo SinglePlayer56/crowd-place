@@ -1,0 +1,42 @@
+.checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: var(--inter-font);
+    position: relative;
+}
+
+.checkbox .checkbox__input {
+    position: absolute;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.checkbox__checkmark {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #eee;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.checkbox__checkmark:after {
+    content: "";
+    position: absolute;
+    display: block;
+    opacity: 0;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 0;
+    background: url('/icons/yes.svg') center / cover no-repeat;
+    transition: opacity 0.3s ease;
+}
+
+.checkbox .checkbox__input:checked ~ .checkbox__checkmark:after {
+    opacity: 1;
+}

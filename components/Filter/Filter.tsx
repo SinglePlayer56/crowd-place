@@ -1,63 +1,65 @@
-'use client';
-
 import {FilterProps} from "./Filter.props";
 import styles from './Filter.module.css';
-import {useState} from "react";
 import cn from 'classnames';
 import Image from 'next/image';
+import {Checkbox} from "@/components";
 
-const Filter = ({options, placeholder}: FilterProps) => {
-    const [isOpen, setIsOpen] = useState<boolean>(false);
-    const [selectedOption, setSelectedOption] = useState<string>('');
+const Filter = ({options, placeholder, expanded, setExpanded, index}: FilterProps) => {
+    const isOpen = expanded === index;
 
-    const handleToggle = () => {
-        setIsOpen((prev) => !prev);
-    }
-
-    const handleOptionClick = (option: string) => {
-        setSelectedOption(option);
-        setIsOpen(false);
-    }
 
     return (
-        <div className={styles.filter} data-open={isOpen}>
-            <label htmlFor="filter-toggle" className={styles.filterActive}>
-                <span id={'filter-selected'}>{selectedOption !== '' ? selectedOption : placeholder}</span>
+        <div className={styles.filter}>
+            <label
+                className={styles.filterActive}
+
+            >
+                <span>{placeholder}</span>
                 <button
                     className={styles.filter__button}
-                    onClick={handleToggle}
+                    onClick={() => setExpanded(isOpen ? false : index)}
                 >
                     <Image
                         src={'/icons/triangle-arrow.svg'}
                         alt={'toggle arrow'}
                         width={14}
                         height={7}
+                        className={cn({
+                            [styles.arrowUp]: isOpen,
+                            [styles.arrowDown]: !isOpen
+                        })}
                     />
                 </button>
             </label>
-            <input
-                className={styles.filterToggle}
-                type="checkbox"
-                name={'filter-toggle'}
-                id={'filter-toggle'}
-                aria-controls={'filter-list'}
-                checked={isOpen}
-                onChange={() => {}}
-            />
-            <ul className={styles.filterList}>
-                {options.map((option) => (
-                    <li
-                        key={option}
-                        data-option={option}
-                        className={cn({[styles.active]: selectedOption === option})}
-                        onClick={() => handleOptionClick(option)}
-                    >
-                        {option}
-                    </li>
-                ))}
-            </ul>
+            <div className={cn(styles.filterList,
+                {
+                    [styles.active]: isOpen
+                })}
+            >
+                <div className={styles.filterList__checkboxes}>
+                    {
+                        options.map((option) => (
+                            <Checkbox
+                                key={option}
+                                value={option}
+                                title={option}
+                            />
+                        ))
+                    }
+                </div>
+                <div className={styles.filterList__buttons}>
+                    <button className={cn(styles.filterList__button, styles.filterList__button_clear)}>
+                        Clear
+                    </button>
+                    <button className={cn(styles.filterList__button, styles.filterList__button_add)}>
+                        Add
+                    </button>
+                </div>
+            </div>
         </div>
+
     );
 };
 
 export default Filter;
+
