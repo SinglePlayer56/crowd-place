@@ -2,7 +2,6 @@ import {Metadata} from "next";
 import {BreadCrumbs, CrowdfundingCard, HTag, PlatformCard, PTag, ReviewCard, Tag} from "@/components";
 import styles from './Platform.module.css';
 import Image from 'next/image';
-import {PlatformDataValue} from "@/consts";
 import {CrowdfundingCardProps} from "@/components/CrowdfundingCard/CrowdfundingCard.props";
 import cn from 'classnames';
 import {IPlatform} from "@/types";
@@ -251,12 +250,12 @@ export async function generateStaticParams() {
     const platforms: IPlatform[] = await response.json();
 
     return platforms.map((platform) => ({
-        slug: platform.slug,
+        name: platform.slug,
     }))
 }
 
-async function getPlatform(slug: string): Promise<IPlatform> {
-    const response = await fetch(`${process.env.DOMAIN}/api/add-platform/${slug}`,
+async function getPlatform(name: string): Promise<IPlatform> {
+    const response = await fetch(`${process.env.DOMAIN}/api/add-platform/${name}`,
         {
             method: 'GET'
         })

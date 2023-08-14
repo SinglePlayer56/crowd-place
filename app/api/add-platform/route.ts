@@ -2,16 +2,14 @@ import {generateEmailContent, mailOptions, transporter} from "@/nodemailerConfig
 import {AddFormData, ContactsFormData} from "@/types";
 import {mailDataType} from "@/helpers";
 
-import db from '../../../utils/index';
 import Platform from '../../../models/platform';
-import {NextResponse} from "next/server";
 
 
 export const GET = async (req: any, res: any) => {
 
-       const count = await Platform.findAll({limit: 1});
+       const allPlatform = await Platform.findAll();
 
-       return new Response(JSON.stringify(count), {status: 200});
+       return new Response(JSON.stringify(allPlatform), {status: 200});
 
 }
 
