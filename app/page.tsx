@@ -9,10 +9,11 @@ import {
     SelectFilters
 } from "@/components";
 import Image from 'next/image';
-import {BlogCardsValues, CrowdfundingCardValues, SelectFiltersValues} from "@/consts";
+import {BlogCardsValues, CrowdfundingCardValues} from "@/consts";
 import Link from "next/link";
 
 const Main = () => {
+
     return (
         <MainPageLayout>
             <section className={styles.start}>
@@ -52,7 +53,7 @@ const Main = () => {
                                 height={501}
                             />
                         </div>
-                        <SelectFilters className={styles.start__filters} filters={SelectFiltersValues}/>
+                        <SelectFilters className={styles.start__filters}/>
                     </div>
                 </div>
             </section>

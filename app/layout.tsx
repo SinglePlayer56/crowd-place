@@ -1,5 +1,6 @@
 import './globals.css';
 import type {Metadata} from 'next';
+import {ContextRedux} from "@/components";
 
 export const metadata: Metadata = {
     title: 'Crowd Place',
@@ -14,7 +15,9 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body className={'full-height'}>
-            {children}
+            <ContextRedux>
+                {children}
+            </ContextRedux>
         </body>
         </html>
     )

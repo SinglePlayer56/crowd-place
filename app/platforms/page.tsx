@@ -1,6 +1,5 @@
 import styles from './platforms.module.css'
 import {BreadCrumbs, CustomButton, HTag, PlatformCard, PTag, SelectFilters} from "@/components";
-import {PlatformDataValue, SelectFiltersValues} from "@/consts";
 import {IPlatform, searchParams} from "@/types";
 import Pagination from "@/components/Pagination/Pagination";
 import {redirect} from "next/navigation";
@@ -26,7 +25,6 @@ const Platforms = async ({searchParams}: searchParams) => {
     }
 
     const {count: totalCount, rows: platforms}: {count:number, rows: IPlatform[]} = await getSlicePlatform(currentPage, perPage);
-
 
     return (
         <>
@@ -54,7 +52,6 @@ const Platforms = async ({searchParams}: searchParams) => {
                     </PTag>
                     <SelectFilters
                         className={styles.start__filters}
-                        filters={SelectFiltersValues}
                         resetButton
                     />
                 </div>

@@ -24,6 +24,7 @@ import Form from "@/components/Form/Form";
 import Input from "./Input/Input";
 import TextArea from "./TextArea/TextArea";
 import Checkbox from "./Checkbox/Checkbox";
+import ContextRedux from "@/components/ContextRedux/ContextRedux";
 
 export {
     Footer,
@@ -51,5 +52,6 @@ export {
     Input,
     TextArea,
     Form,
-    Checkbox
+    Checkbox,
+    ContextRedux
 }

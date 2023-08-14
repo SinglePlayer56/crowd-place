@@ -1,6 +1,6 @@
 import styles from './blog.module.css'
 import {BlogCard, BreadCrumbs, HTag, PTag, SelectFilters} from "@/components";
-import {BlogCardsValues, SelectFiltersValues} from "@/consts";
+import {BlogCardsValues} from "@/consts";
 import {searchParams} from "@/types";
 import Pagination from "@/components/Pagination/Pagination";
 import {redirect} from "next/navigation";
@@ -48,7 +48,6 @@ const BlogListing = ({searchParams}: searchParams) => {
                     </PTag>
                     <SelectFilters
                         className={styles.start__filters}
-                        filters={SelectFiltersValues}
                         resetButton
                     />
                 </div>
