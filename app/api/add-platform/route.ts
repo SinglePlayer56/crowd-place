@@ -7,9 +7,13 @@ import Platform from '../../../models/platform';
 
 export const GET = async (req: any, res: any) => {
 
-       const allPlatform = await Platform.findAll();
-
-       return new Response(JSON.stringify(allPlatform), {status: 200});
+    const allPlatform = await Platform.findAll({
+        order: [
+            ['id', 'DESC']
+        ]
+    });
+    console.log(allPlatform.length);
+    return new Response(JSON.stringify(allPlatform), {status: 200});
 
 }
 
@@ -29,7 +33,7 @@ export const POST = async (req: any) => {
 
 
     try {
-        const subject = mailDataType(data) ? data['Platform name']: data["Name"];
+        const subject = mailDataType(data) ? data['Platform name'] : data["Name"];
 
         await transporter.sendMail({
             ...mailOptions,
