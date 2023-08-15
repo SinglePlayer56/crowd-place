@@ -4,6 +4,7 @@ import {IPlatform} from "@/types";
 import Pagination from "@/components/Pagination/Pagination";
 import {redirect} from "next/navigation";
 import {convertToObjectValue, extractValuesByKeyArray, generateQueryParams, searchTypeFilter} from "@/helpers";
+import {store} from "@/store";
 
 async function getType(params: string, page: number, perPage: number) {
     const paramsValue = decodeURIComponent(params).split('+');
@@ -13,10 +14,30 @@ async function getType(params: string, page: number, perPage: number) {
     if (investObj) {
         const queryParams = generateQueryParams(investObj);
 
-        const res = await fetch(`${process.env.DOMAIN}/api/get-type/investment/?${queryParams}&page=${page}&perPage=${perPage}&typeFilter=${filter}`);
+        try {
+            const res = await fetch(`${process.env.DOMAIN}/api/get-type/investment/?${queryParams}&page=${page}&perPage=${perPage}&typeFilter=${filter}`);
 
-        return await res.json();
+            return await res.json();
+        } catch (e) {
+            if (e instanceof Error) {
+                console.log(e.message);
+            }
+        }
     }
+}
+
+export async function generateStaticParams() {
+    return [
+        {
+            investmentType: 'equity'
+        },
+        {
+            investmentType: 'debt'
+        },
+        {
+            investmentType: 'p2p-lending'
+        },
+    ]
 }
 
 interface PageProps {

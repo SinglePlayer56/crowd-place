@@ -4,6 +4,7 @@ import {IPlatform} from "@/types";
 import Pagination from "@/components/Pagination/Pagination";
 import {redirect} from "next/navigation";
 import {convertToObjectValue, extractValuesByKeyArray, generateQueryParams, searchTypeFilter} from "@/helpers";
+import {store} from "@/store";
 
 async function getType(params: PageParams, page: number, perPage: number) {
     const paramsValueFirst = decodeURIComponent(params.investmentType).split('+');
