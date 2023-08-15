@@ -3,7 +3,7 @@ import {BreadCrumbs, CustomButton, HTag, PlatformCard, PTag, SelectFilters} from
 import {IPlatform} from "@/types";
 import Pagination from "@/components/Pagination/Pagination";
 import {redirect} from "next/navigation";
-import {convertToObjectValue, extractValuesByKeyArray, searchTypeFilter} from "@/helpers";
+import {convertToObjectValue, extractValuesByKeyArray, generateQueryParams, searchTypeFilter} from "@/helpers";
 
 async function getType(params: string, page: number, perPage: number) {
     const paramsValue = decodeURIComponent(params).split('+');
@@ -11,11 +11,7 @@ async function getType(params: string, page: number, perPage: number) {
     const filter = searchTypeFilter(paramsValue);
 
     if (investObj) {
-        const queryParams = Object.entries(investObj)
-            .filter(([_, value]) => value !== undefined)
-            .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
-            .join('&');
-
+        const queryParams = generateQueryParams(investObj);
 
         const res = await fetch(`${process.env.DOMAIN}/api/get-type/investment/?${queryParams}&page=${page}&perPage=${perPage}&typeFilter=${filter}`);
 

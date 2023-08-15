@@ -3,21 +3,34 @@ import {BreadCrumbs, CustomButton, HTag, PlatformCard, PTag, SelectFilters} from
 import {IPlatform} from "@/types";
 import Pagination from "@/components/Pagination/Pagination";
 import {redirect} from "next/navigation";
-import {convertToObjectValue, extractValuesByKeyArray, searchTypeFilter} from "@/helpers";
+import {convertToObjectValue, extractValuesByKeyArray, generateQueryParams, searchTypeFilter} from "@/helpers";
 
-async function getType(params: string, page: number, perPage: number) {
-    const paramsValue = decodeURIComponent(params).split('+');
-    const investObj = convertToObjectValue(paramsValue);
-    const filter = searchTypeFilter(paramsValue);
+async function getType(params: PageParams, page: number, perPage: number) {
+    const paramsValueFirst = decodeURIComponent(params.investmentType).split('+');
+    const paramsValueSecond = decodeURIComponent(params.industry).split('+');
+    const paramsValueThird = decodeURIComponent(params.country).split('+');
+    const paramsValueFour = decodeURIComponent(params.yearFounded).split('+');
 
-    if (investObj) {
-        const queryParams = Object.entries(investObj)
-            .filter(([_, value]) => value !== undefined)
-            .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
-            .join('&');
+    const investObjFirst = convertToObjectValue(paramsValueFirst);
+    const investObjSecond = convertToObjectValue(paramsValueSecond);
+    const investObjThird = convertToObjectValue(paramsValueThird);
+    const investObjFour = convertToObjectValue(paramsValueFour);
 
+    const filterFirst = searchTypeFilter(paramsValueFirst);
+    const filterSecond = searchTypeFilter(paramsValueSecond);
+    const filterThird = searchTypeFilter(paramsValueThird);
+    const filterFour = searchTypeFilter(paramsValueFour);
+    const allFilters = `${filterFirst}-${filterSecond}-${filterThird}-${filterFour}`;
 
-        const res = await fetch(`${process.env.DOMAIN}/api/get-type/investment/?${queryParams}&page=${page}&perPage=${perPage}&typeFilter=${filter}`);
+    if (investObjFirst && investObjSecond && investObjThird && investObjFour) {
+        const firstQueryParams = generateQueryParams(investObjFirst);
+        const secondQueryParams = generateQueryParams(investObjSecond)
+        const thirdQueryParams = generateQueryParams(investObjThird)
+        const fourQueryParams = generateQueryParams(investObjFour)
+
+        const queryParams = `${firstQueryParams}&and&${secondQueryParams}&and&${thirdQueryParams}&and&${fourQueryParams}`;
+
+        const res = await fetch(`${process.env.DOMAIN}/api/get-type/investment/?${queryParams}&page=${page}&perPage=${perPage}&typeFilter=${allFilters}`);
 
         return await res.json();
     }
@@ -27,9 +40,14 @@ interface PageProps {
     searchParams: {
         page: string
     },
-    params: {
-        yearFounded: string
-    }
+    params: PageParams
+}
+
+interface PageParams {
+    country: string;
+    industry: string;
+    investmentType: string;
+    yearFounded: string;
 }
 
 
@@ -46,7 +64,7 @@ const Platforms = async ({searchParams, params}: PageProps) => {
     // }
 
 
-    const {count: totalCount, rows: platforms}: { count: number, rows: IPlatform[] } = await getType(params.yearFounded, currentPage, perPage);
+    const {count: totalCount, rows: platforms}: { count: number, rows: IPlatform[] } = await getType(params, currentPage, perPage);
 
 
     // const {count: totalCount, rows: platforms}: {count:number, rows: IPlatform[]} = await getSlicePlatform(currentPage, perPage);

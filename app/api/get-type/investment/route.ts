@@ -10,28 +10,38 @@ export const GET = async (req: NextRequest, {params}: any) => {
     const offset = (currentPage - 1) * perPage;
     const typeFilters = req.nextUrl.searchParams.get('typeFilter')!.split('-');
 
-    const typeOne = typeFilters[0];
-
-    const queryParams  = new URLSearchParams(req.nextUrl.toString());
-    const currentValues: string[] = [];
+    const queryParams = new URLSearchParams(req.nextUrl.toString());
+    let currentValues: string[] = [];
 
     for (const value of queryParams.values()) {
         currentValues.push(value)
     }
 
-    const whereClauses = typeFilters.map((filterType) => generateDynamicFilter(filterType as FilterType, currentValues));
+    currentValues = currentValues.slice(0, currentValues.length - 3);
 
-    // const where = {
-    //     [Op.and]: currentValues.slice(0, currentValues.length - 3).map(value => ({
-    //         [typeOne!]: {
-    //             [Op.regexp]: value,
-    //         }
-    //     })),
-    // }
+    // Находим индексы пустых строк
+    let emptyIndices = currentValues.reduce((indices, item, index) => {
+        if (item === "") { // @ts-ignore
+            indices.push(index);
+        }
+        return indices;
+    }, []);
+
+// Добавляем начальный и конечный индексы для разделения
+    // @ts-ignore
+    emptyIndices.unshift(-1);
+    // @ts-ignore
+    emptyIndices.push(currentValues.length);
+
+// Разделяем массив на части
+    const parts = emptyIndices.map((value, index, array) => currentValues.slice(array[index] + 1, array[index + 1]));
+
+    const whereClauses = typeFilters.map((filterType, index) => generateDynamicFilter(filterType as FilterType, parts[index]));
+
 
     function generateDynamicFilter(type: FilterType, currentValues: string[]) {
         return {
-            [Op.and]: currentValues.slice(0, currentValues.length - 3).map(value => ({
+            [Op.and]: currentValues.map(value => ({
                 [type]: {
                     [Op.regexp]: value,
                 },
@@ -43,7 +53,7 @@ export const GET = async (req: NextRequest, {params}: any) => {
         order: [
             ['id', 'DESC']
         ],
-        limit: perPage ? perPage: 4,
+        limit: perPage ? perPage : 4,
         offset,
         where: {
             [Op.and]: whereClauses

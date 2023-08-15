@@ -3,11 +3,11 @@ import {BreadCrumbs, CustomButton, HTag, PlatformCard, PTag, SelectFilters} from
 import {IPlatform} from "@/types";
 import Pagination from "@/components/Pagination/Pagination";
 import {redirect} from "next/navigation";
-import {convertToObjectValue, extractValuesByKeyArray, searchTypeFilter} from "@/helpers";
+import {convertToObjectValue, extractValuesByKeyArray, generateQueryParams, searchTypeFilter} from "@/helpers";
 
 async function getType(params: PageParams, page: number, perPage: number) {
-    const paramsValueFirst = decodeURIComponent(params.industry).split('+');
-    const paramsValueSecond = decodeURIComponent(params.investmentType).split('+');
+    const paramsValueFirst = decodeURIComponent(params.investmentType).split('+');
+    const paramsValueSecond = decodeURIComponent(params.industry).split('+');
 
     const investObjFirst = convertToObjectValue(paramsValueFirst);
     const investObjSecond = convertToObjectValue(paramsValueSecond);
@@ -16,18 +16,18 @@ async function getType(params: PageParams, page: number, perPage: number) {
     const filterSecond = searchTypeFilter(paramsValueSecond);
     const allFilters = `${filterFirst}-${filterSecond}`;
 
-    const allObj = {...investObjFirst, ...investObjSecond};
+    if (investObjFirst && investObjSecond) {
+        const firstQueryParams = generateQueryParams(investObjFirst);
 
-    if (allObj) {
-        const queryParams = Object.entries(allObj)
-            .filter(([_, value]) => value !== undefined)
-            .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
-            .join('&');
+        const secondQueryParams = generateQueryParams(investObjSecond)
+
+        const queryParams = `${firstQueryParams}&and&${secondQueryParams}`;
 
         const res = await fetch(`${process.env.DOMAIN}/api/get-type/investment/?${queryParams}&page=${page}&perPage=${perPage}&typeFilter=${allFilters}`);
 
         return await res.json();
     }
+
 }
 
 interface PageProps {

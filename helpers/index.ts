@@ -43,6 +43,13 @@ export function searchTypeFilter(arrayParams: string[]) {
     return filterType;
 }
 
+export function generateQueryParams(object: Record<string, string>) {
+    return Object.entries(object)
+        .filter(([_, value]) => value !== undefined)
+        .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
+        .join('&');
+}
+
 export function searchTypeFilters(arrayParams: string[]) {
     let filterType: string[] = [];
 

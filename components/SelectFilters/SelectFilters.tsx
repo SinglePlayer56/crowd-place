@@ -94,10 +94,22 @@ const SelectFilters = ({className, resetButton}: SelectFiltersProps) => {
                 <CustomButton onClick={routeHandler} className={styles.filters__button} color={'blue'} text={'View'}/>
             </div>
             {resetButton &&
-                <CustomButton onClick={resetHandler} className={styles.filters__resetButton} color={'white'}
-                              text={'Reset filters'}/>}
+                <CustomButton
+                    onClick={resetHandler}
+                    className={styles.filters__resetButton}
+                    color={'white'}
+                    text={'Reset filters'}
+                />}
             <div>
-                {JSON.stringify(path)}
+                {JSON.stringify(investmentTypePath)}
+                <br/>
+                {JSON.stringify(industryPath)}
+                <br/>
+                {JSON.stringify(countryPath)}
+                <br/>
+                {JSON.stringify(yearFoundedPath)}
+                <br/>
+                {JSON.stringify(licenseNumberPath)}
             </div>
         </div>
     );
