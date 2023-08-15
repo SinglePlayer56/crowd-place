@@ -257,7 +257,8 @@ export async function generateStaticParams() {
 async function getPlatform(name: string): Promise<IPlatform> {
     const response = await fetch(`${process.env.DOMAIN}/api/add-platform/${name}`,
         {
-            method: 'GET'
+            method: 'GET',
+
         })
 
     const platform: Promise<IPlatform> = response.json();
@@ -267,7 +268,8 @@ async function getPlatform(name: string): Promise<IPlatform> {
 
 async function getRelatedPlatform(industry: string, name?: string): Promise<IPlatform[] | IPlatform> {
     const response = await fetch(`${process.env.DOMAIN}/api/get-related/${industry}/?name=${name}`, {
-        method: 'GET'
+        method: 'GET',
+
     });
 
     const platforms: Promise<IPlatform[] | IPlatform> = response.json();

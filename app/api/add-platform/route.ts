@@ -12,7 +12,6 @@ export const GET = async (req: any, res: any) => {
             ['id', 'DESC']
         ]
     });
-    console.log(allPlatform.length);
     return new Response(JSON.stringify(allPlatform), {status: 200});
 
 }

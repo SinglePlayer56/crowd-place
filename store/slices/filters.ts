@@ -9,6 +9,7 @@ export interface IFilterField {
 export interface ICheckboxValues {
     title: string;
     checked: boolean;
+    slug: string;
 }
 
 export interface ISelectedFilter {
@@ -21,11 +22,11 @@ interface IFiltersState {
     investmentType: ISelectedFilter,
     industry: ISelectedFilter,
     country: ISelectedFilter,
-    years: ISelectedFilter,
-    license: ISelectedFilter,
+    yearFounded: ISelectedFilter,
+    licenseNumber: ISelectedFilter,
 }
 
-export type FilterType = 'investmentType' | 'industry' | 'country' | 'years' | 'license';
+export type FilterType = 'investmentType' | 'industry' | 'country' | 'yearFounded' | 'licenseNumber';
 
 export interface IPayloadFilterField {
     type: FilterType,
@@ -37,35 +38,35 @@ const initialState: IFiltersState = {
     filtersFields: [
         {
             options: [
-                {title: 'Equity', checked: false},
-                {title: 'Debt', checked: false},
-                {title: 'P2P lending', checked: false},
-                {title: 'Reward', checked: false},
-                {title: 'Donation', checked: false},
-                {title: 'Buy-to-let', checked: false},
-                {title: 'Mini-bonds', checked: false}
+                {title: 'Equity', checked: false, slug: 'equity'},
+                {title: 'Debt', checked: false, slug: 'debt'},
+                {title: 'P2P lending', checked: false, slug: 'p2p-lending'},
+                {title: 'Reward', checked: false, slug: 'reward'},
+                {title: 'Donation', checked: false, slug: 'donation'},
+                {title: 'Buy-to-let', checked: false, slug: 'buy-to-let'},
+                {title: 'Mini-bonds', checked: false, slug: 'mini-bonds'}
             ],
             placeholder: 'Select investment type',
             type: "investmentType"
         },
         {
             options: [
-                {title: 'Real estate', checked: false},
-                {title: 'Startups', checked: false},
-                {title: 'SME', checked: false},
-                {title: 'Sustainability', checked: false},
-                {title: 'Litigation', checked: false},
-                {title: 'Green energy', checked: false},
-                {title: 'Health & Science', checked: false},
-                {title: 'Logistics', checked: false},
-                {title: 'Personal loans', checked: false},
-                {title: 'Art', checked: false},
-                {title: 'Mortgages', checked: false},
-                {title: 'Social cause', checked: false},
-                {title: 'Education', checked: false},
-                {title: 'Farming', checked: false},
-                {title: 'Sport', checked: false},
-                {title: 'Maritime', checked: false}
+                { title: 'Real estate', checked: false, slug: 'real-estate' },
+                { title: 'Startups', checked: false, slug: 'startups' },
+                { title: 'SME', checked: false, slug: 'sme' },
+                { title: 'Sustainability', checked: false, slug: 'sustainability' },
+                { title: 'Litigation', checked: false, slug: 'litigation' },
+                { title: 'Green energy', checked: false, slug: 'green-energy' },
+                { title: 'Health & Science', checked: false, slug: 'health-science' },
+                { title: 'Logistics', checked: false, slug: 'logistics' },
+                { title: 'Personal loans', checked: false, slug: 'personal-loans' },
+                { title: 'Art', checked: false, slug: 'art' },
+                { title: 'Mortgages', checked: false, slug: 'mortgages' },
+                { title: 'Social cause', checked: false, slug: 'social-cause' },
+                { title: 'Education', checked: false, slug: 'education' },
+                { title: 'Farming', checked: false, slug: 'farming' },
+                { title: 'Sport', checked: false, slug: 'sport' },
+                { title: 'Maritime', checked: false, slug: 'maritime' }
             ]
             ,
             placeholder: 'Select industry',
@@ -73,68 +74,68 @@ const initialState: IFiltersState = {
         },
         {
             options: [
-                {title: 'Andorra', checked: false},
-                {title: 'Albania', checked: false},
-                {title: 'Austria', checked: false},
-                {title: 'Belgium', checked: false},
-                {title: 'Bulgaria', checked: false},
-                {title: 'Croatia', checked: false},
-                {title: 'Cyprus', checked: false},
-                {title: 'Czech Republic', checked: false},
-                {title: 'Denmark', checked: false},
-                {title: 'Estonia', checked: false},
-                {title: 'Finland', checked: false},
-                {title: 'France', checked: false},
-                {title: 'Germany', checked: false},
-                {title: 'Greece', checked: false},
-                {title: 'Hungary', checked: false},
-                {title: 'Iceland', checked: false},
-                {title: 'Ireland', checked: false},
-                {title: 'Israel', checked: false},
-                {title: 'Italy', checked: false},
-                {title: 'Latvia', checked: false},
-                {title: 'Liechtenstein', checked: false},
-                {title: 'Lithuania', checked: false},
-                {title: 'Luxembourg', checked: false},
-                {title: 'Macedonia', checked: false},
-                {title: 'Malta', checked: false},
-                {title: 'Moldova', checked: false},
-                {title: 'Monaco', checked: false},
-                {title: 'Netherlands', checked: false},
-                {title: 'Norway', checked: false},
-                {title: 'Poland', checked: false},
-                {title: 'Portugal', checked: false},
-                {title: 'Romania', checked: false},
-                {title: 'Turkey', checked: false},
-                {title: 'Serbia', checked: false},
-                {title: 'Slovakia', checked: false},
-                {title: 'Slovenia', checked: false},
-                {title: 'Spain', checked: false},
-                {title: 'Sweden', checked: false},
-                {title: 'Switzerland', checked: false},
-                {title: 'United Kingdom', checked: false},
-                {title: 'Ukraine', checked: false}
+                { title: 'Andorra', checked: false, slug: 'andorra' },
+                { title: 'Albania', checked: false, slug: 'albania' },
+                { title: 'Austria', checked: false, slug: 'austria' },
+                { title: 'Belgium', checked: false, slug: 'belgium' },
+                { title: 'Bulgaria', checked: false, slug: 'bulgaria' },
+                { title: 'Croatia', checked: false, slug: 'croatia' },
+                { title: 'Cyprus', checked: false, slug: 'cyprus' },
+                { title: 'Czech Republic', checked: false, slug: 'czech-republic' },
+                { title: 'Denmark', checked: false, slug: 'denmark' },
+                { title: 'Estonia', checked: false, slug: 'estonia' },
+                { title: 'Finland', checked: false, slug: 'finland' },
+                { title: 'France', checked: false, slug: 'france' },
+                { title: 'Germany', checked: false, slug: 'germany' },
+                { title: 'Greece', checked: false, slug: 'greece' },
+                { title: 'Hungary', checked: false, slug: 'hungary' },
+                { title: 'Iceland', checked: false, slug: 'iceland' },
+                { title: 'Ireland', checked: false, slug: 'ireland' },
+                { title: 'Israel', checked: false, slug: 'israel' },
+                { title: 'Italy', checked: false, slug: 'italy' },
+                { title: 'Latvia', checked: false, slug: 'latvia' },
+                { title: 'Liechtenstein', checked: false, slug: 'liechtenstein' },
+                { title: 'Lithuania', checked: false, slug: 'lithuania' },
+                { title: 'Luxembourg', checked: false, slug: 'luxembourg' },
+                { title: 'Macedonia', checked: false, slug: 'macedonia' },
+                { title: 'Malta', checked: false, slug: 'malta' },
+                { title: 'Moldova', checked: false, slug: 'moldova' },
+                { title: 'Monaco', checked: false, slug: 'monaco' },
+                { title: 'Netherlands', checked: false, slug: 'netherlands' },
+                { title: 'Norway', checked: false, slug: 'norway' },
+                { title: 'Poland', checked: false, slug: 'poland' },
+                { title: 'Portugal', checked: false, slug: 'portugal' },
+                { title: 'Romania', checked: false, slug: 'romania' },
+                { title: 'Turkey', checked: false, slug: 'turkey' },
+                { title: 'Serbia', checked: false, slug: 'serbia' },
+                { title: 'Slovakia', checked: false, slug: 'slovakia' },
+                { title: 'Slovenia', checked: false, slug: 'slovenia' },
+                { title: 'Spain', checked: false, slug: 'spain' },
+                { title: 'Sweden', checked: false, slug: 'sweden' },
+                { title: 'Switzerland', checked: false, slug: 'switzerland' },
+                { title: 'United Kingdom', checked: false, slug: 'united-kingdom' },
+                { title: 'Ukraine', checked: false, slug: 'ukraine' }
             ],
             placeholder: 'Select country of operation',
             type: "country"
         },
         {
             options: [
-                {title: '1 year', checked: false},
-                {title: '2-3 years', checked: false},
-                {title: '4-5 years', checked: false},
-                {title: 'more than 5', checked: false}
+                {title: '1 year', checked: false, slug: '1-year'},
+                {title: '2-3 years', checked: false, slug: '2-3-years'},
+                {title: '4-5 years', checked: false, slug: '4-5-years'},
+                {title: 'more than 5', checked: false, slug: 'more-than-5'}
             ]
             ,
             placeholder: 'Years on market',
-            type: "years"
+            type: "yearFounded"
         },
         {
             options: [
-                {title: 'Yes', checked: false}
+                {title: 'Yes', checked: false, slug: 'yes'}
             ],
             placeholder: 'ECSP license',
-            type: "license"
+            type: "licenseNumber"
         },
     ],
     investmentType: {
@@ -149,11 +150,11 @@ const initialState: IFiltersState = {
         final: [],
         middle: []
     },
-    years: {
+    yearFounded: {
         final: [],
         middle: []
     },
-    license: {
+    licenseNumber: {
         final: [],
         middle: []
     }
@@ -203,11 +204,11 @@ const filtersSlice = createSlice({
             state.country.middle = [];
             state.country.final = [];
 
-            state.years.middle = [];
-            state.years.final = [];
+            state.yearFounded.middle = [];
+            state.yearFounded.final = [];
 
-            state.license.middle = [];
-            state.license.final = [];
+            state.licenseNumber.middle = [];
+            state.licenseNumber.final = [];
 
             state.filtersFields = state.filtersFields.map((filterField) => {
                 return {
