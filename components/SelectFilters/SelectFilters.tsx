@@ -70,7 +70,6 @@ const SelectFilters = ({className, resetButton}: SelectFiltersProps) => {
     const routeHandler = () => {
 
         const url = generateFilterUrl(investmentTypePath, industryPath, countryPath, yearFoundedPath, licenseNumberPath);
-        console.log(url);
         router.push(url);
     }
 
