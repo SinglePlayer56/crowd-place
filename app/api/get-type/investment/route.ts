@@ -110,5 +110,7 @@ export const GET = async (req: NextRequest, {params}: any) => {
         }
     });
 
+    console.log(response)
+
     return new Response(JSON.stringify({platformsData: response, serverState: updateState}), {status: 200});
 }
