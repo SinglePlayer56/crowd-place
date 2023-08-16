@@ -66,10 +66,10 @@ const Platforms = async ({searchParams, params}: PageProps) => {
     // }
 
 
-    const {count: totalCount, rows: platforms}: { count: number, rows: IPlatform[] } = await getType(params.investmentType, currentPage, perPage);
+    const {platformsData, serverState} = await getType(params.investmentType, currentPage, perPage);
 
+    const {count: totalCount, rows: platforms}: { count: number, rows: IPlatform[] } = platformsData;
 
-    // const {count: totalCount, rows: platforms}: {count:number, rows: IPlatform[]} = await getSlicePlatform(currentPage, perPage);
 
 
     return (
@@ -97,6 +97,7 @@ const Platforms = async ({searchParams, params}: PageProps) => {
                         of the companies.
                     </PTag>
                     <SelectFilters
+                        serverState={serverState}
                         className={styles.start__filters}
                         resetButton
                     />

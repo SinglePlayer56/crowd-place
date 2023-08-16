@@ -1,6 +1,8 @@
 import {usePathname} from "next/navigation";
 import {AddFormData, ContactsFormData} from "@/types";
 import {store} from "@/store";
+import {FilterType} from "@/store/slices/filters";
+import {Op} from "sequelize";
 
 export function extractValuesByKeyArray(obj: Record<string, string>, keysArray: string[]) {
     const result = [];
@@ -129,4 +131,5 @@ export function generateCombinations(arr: string[]): string[] {
 
     return result;
 }
+
 

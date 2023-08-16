@@ -6,7 +6,7 @@ import cn from 'classnames';
 import {useCallback, useEffect, useState} from "react";
 import {useAppDispatch, useAppSelector} from "@/hooks/redux";
 import {
-    acceptSelectFilterType, clearSelectFilterType,
+    acceptSelectFilterType, addServerState, clearSelectFilterType,
     FilterType,
     IPayloadFilterField,
     resetFilters,
@@ -14,11 +14,17 @@ import {
 } from "@/store/slices/filters";
 import {useRouter} from "next/navigation";
 
-const SelectFilters = ({className, resetButton}: SelectFiltersProps) => {
+const SelectFilters = ({className, resetButton, serverState}: SelectFiltersProps) => {
     const [expanded, setExpanded] = useState<false | number>(false);
 
     const clientFilters = useAppSelector((state) => state.filters.filtersFields);
     const dispatch = useAppDispatch();
+
+    useEffect(() => {
+        if (serverState) {
+            dispatch(addServerState(serverState))
+        }
+    }, []);
 
     const toggleCheckboxValue = useCallback((value: IPayloadFilterField) => {
         dispatch(toggleCheckbox(value));
@@ -68,7 +74,6 @@ const SelectFilters = ({className, resetButton}: SelectFiltersProps) => {
         console.log(url);
         router.push(url, {scroll: false});
     }
-
 
     return (
         <div className={styles.filters}>
