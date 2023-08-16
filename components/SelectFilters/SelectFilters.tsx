@@ -39,24 +39,19 @@ const SelectFilters = ({className, resetButton}: SelectFiltersProps) => {
     const allFilters = useAppSelector((state) => state.filters);
 
     const investmentTypeFilter = allFilters.investmentType.final.map((item) => item.toLowerCase().replace(' ', '-'));
-    const investmentTypePath = [...investmentTypeFilter].reverse().join('+');
+    const investmentTypePath = [...investmentTypeFilter].sort().join('+');
 
     const industryFilter = allFilters.industry.final.map((item) => item.toLowerCase().replace(' ', '-'));
-    const industryPath = [...industryFilter].reverse().join('+');
+    const industryPath = [...industryFilter].sort().join('+');
 
     const countryFilter = allFilters.country.final.map((item) => item.toLowerCase().replace(' ', '-'));
-    const countryPath = [...countryFilter].reverse().join('+');
+    const countryPath = [...countryFilter].sort().join('+');
 
     const yearFoundedFilter = allFilters.yearFounded.final.map((item) => item.toLowerCase().replace(' ', '-'));
-    const yearFoundedPath = [...yearFoundedFilter].reverse().join('+');
+    const yearFoundedPath = [...yearFoundedFilter].sort().join('+');
 
     const licenseNumberFilter = allFilters.licenseNumber.final.map((item) => item.toLowerCase().replace(' ', '-'));
-    const licenseNumberPath = [...licenseNumberFilter].reverse().join('+');
-
-    const filters = useAppSelector((state) => state.filters.country.final)
-        .map((item) => item.toLowerCase().replace(' ', '-'));
-
-    const path = [...filters].reverse().join('+');
+    const licenseNumberPath = [...licenseNumberFilter].sort().join('+');
 
     const router = useRouter();
 
@@ -70,8 +65,10 @@ const SelectFilters = ({className, resetButton}: SelectFiltersProps) => {
     const routeHandler = () => {
 
         const url = generateFilterUrl(investmentTypePath, industryPath, countryPath, yearFoundedPath, licenseNumberPath);
-        router.push(url);
+        console.log(url);
+        router.push(url, {scroll: false});
     }
+
 
     return (
         <div className={styles.filters}>

@@ -3,7 +3,13 @@ import {BreadCrumbs, CustomButton, HTag, PlatformCard, PTag, SelectFilters} from
 import {IPlatform} from "@/types";
 import Pagination from "@/components/Pagination/Pagination";
 import {redirect} from "next/navigation";
-import {convertToObjectValue, extractValuesByKeyArray, generateQueryParams, searchTypeFilter} from "@/helpers";
+import {
+    convertToObjectValue,
+    extractValuesByKeyArray,
+    generateCombinations,
+    generateQueryParams,
+    searchTypeFilter
+} from "@/helpers";
 import {store} from "@/store";
 
 async function getType(params: string, page: number, perPage: number) {
@@ -26,18 +32,15 @@ async function getType(params: string, page: number, perPage: number) {
     }
 }
 
+export const dynamicParams = false;
+export const dynamic = 'force-static';
+
 export async function generateStaticParams() {
-    return [
-        {
-            investmentType: 'equity'
-        },
-        {
-            investmentType: 'debt'
-        },
-        {
-            investmentType: 'p2p-lending'
-        },
-    ]
+    const words: string[] = ['buy-to-let', 'debt', 'donation', 'equity', 'mini-bonds', 'p2p-lending', 'reward'];
+
+    const combinations: string[] = generateCombinations(words);
+
+    return combinations.slice(1).map((url) => ({investmentType: url}))
 }
 
 interface PageProps {

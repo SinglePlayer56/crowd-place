@@ -40,13 +40,30 @@ export const GET = async (req: NextRequest, {params}: any) => {
 
 
     function generateDynamicFilter(type: FilterType, currentValues: string[]) {
-        return {
-            [Op.and]: currentValues.map(value => ({
-                [type]: {
-                    [Op.regexp]: value,
-                },
-            })),
-        };
+        if (type === 'licenseNumber') {
+            return {
+                [Op.and]: [
+                    {
+                        [type]: {
+                            [Op.ne]: 'N/A',
+                        },
+                    },
+                    {
+                        [type]: {
+                            [Op.ne]: null,
+                        },
+                    },
+                ]
+            }
+        } else {
+            return {
+                [Op.and]: currentValues.map(value => ({
+                    [type]: {
+                        [Op.regexp]: value,
+                    },
+                })),
+            };
+        }
     }
 
     const response = await Platform.findAndCountAll({

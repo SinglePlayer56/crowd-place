@@ -114,3 +114,19 @@ export async function sendMail(route: string, data: AddFormData | ContactsFormDa
 
     return await response.json();
 }
+
+export function generateCombinations(arr: string[]): string[] {
+    const result: string[] = [];
+
+    function backtrack(start: number, current: string) {
+        result.push(current);
+        for (let i = start; i < arr.length; i++) {
+            backtrack(i + 1, current === '' ? arr[i] : current + '+' + arr[i]);
+        }
+    }
+
+    backtrack(0, '');
+
+    return result;
+}
+

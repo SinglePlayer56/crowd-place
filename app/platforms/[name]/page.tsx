@@ -151,7 +151,7 @@ const Platform = async ({params}: Props) => {
                                     key={card.title}
                                     iconPath={card.iconPath}
                                     title={card.title}
-                                    value={card.value}
+                                    value={card.value ? card.value : 'N/A'}
                                 />
                             ))}
                         </div>
