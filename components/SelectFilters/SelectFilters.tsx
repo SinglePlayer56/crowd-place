@@ -1,14 +1,14 @@
 'use client';
 import {SelectFiltersProps} from "./SelectFilters.props";
 import styles from './SelectFilters.module.css';
-import {CustomButton, Filter, Tag} from "@/components";
+import {CustomButton, Filter, Tag, TagFilters} from "@/components";
 import cn from 'classnames';
 import {useCallback, useEffect, useState} from "react";
 import {useAppDispatch, useAppSelector} from "@/hooks/redux";
 import {
     acceptSelectFilterType, addServerState, clearSelectFilterType,
     FilterType,
-    IPayloadFilterField,
+    IPayloadFilterField, removeFilter,
     resetFilters,
     toggleCheckbox,
 } from "@/store/slices/filters";
@@ -40,26 +40,36 @@ const SelectFilters = ({className, resetButton, serverState}: SelectFiltersProps
 
     const clearFilterHandler = useCallback((type: FilterType) => {
         dispatch(clearSelectFilterType(type))
-    }, [dispatch])
+    }, [dispatch]);
+
+    const removeTagHandler = useCallback(({type, value}: {type: string, value: string}) => {
+        dispatch(removeFilter({type, value}))
+    }, [dispatch]);
 
     const allFilters = useAppSelector((state) => state.filters);
 
-    const test = allFilters.investmentType.final;
-    const investmentTypeFilter = allFilters.investmentType.final.map((item) => item.toLowerCase().replaceAll(' ', '-'));
-    const investmentTypePath = [...investmentTypeFilter].sort().join('+');
+    const investmentTypeFinal = allFilters.investmentType.final;
+    const investmentTypeFilter = investmentTypeFinal.map((item) => item.toLowerCase().replaceAll(' ', '-'));
+    const investmentTypePath = investmentTypeFilter.sort().join('+');
 
-    const industryFilter = allFilters.industry.final.map((item) => item.toLowerCase().replaceAll(' ', '-'));
-    const industryPath = [...industryFilter].sort().join('+');
+    const industryFinal = allFilters.industry.final;
+    const industryFilter = industryFinal.map((item) => item.toLowerCase().replaceAll(' ', '-'));
+    const industryPath = industryFilter.sort().join('+');
 
-    const countryFilter = allFilters.country.final.map((item) => item.toLowerCase().replaceAll(' ', '-'));
-    const countryPath = [...countryFilter].sort().join('+');
+    const countryFinal = allFilters.country.final;
+    const countryFilter = countryFinal.map((item) => item.toLowerCase().replaceAll(' ', '-'));
+    const countryPath = countryFilter.sort().join('+');
 
-    const yearFoundedFilter = allFilters.yearFounded.final.map((item) => item.toLowerCase().replaceAll(' ', '-'));
-    const yearFoundedPath = [...yearFoundedFilter].sort().join('+');
+    const yearFoundedFinal = allFilters.yearFounded.final;
+    const yearFoundedFilter = yearFoundedFinal.map((item) => item.toLowerCase().replaceAll(' ', '-'));
+    const yearFoundedPath = yearFoundedFilter.sort().join('+');
 
-    const licenseNumberFilter = allFilters.licenseNumber.final.map((item) => item.toLowerCase().replaceAll(' ', '-'));
-    const licenseNumberPath = [...licenseNumberFilter].sort().join('+');
+    const licenseNumberFinal = allFilters.licenseNumber.final;
+    const licenseNumberFilter = licenseNumberFinal.map((item) => item.toLowerCase().replaceAll(' ', '-'));
+    const licenseNumberPath = licenseNumberFilter.sort().join('+');
 
+
+    console.log(countryFinal)
     function generateFilterUrl(filter1: string, filter2: string, filter3: string, filter4: string, filter5: string) {
         const filters = [filter1, filter2, filter3, filter4, filter5].filter((filter) => filter.length !== 0);
 
@@ -94,6 +104,13 @@ const SelectFilters = ({className, resetButton, serverState}: SelectFiltersProps
                     <CustomButton className={styles.filters__button} color={'blue'} text={'View'}/>
                 </Link>
             </div>
+            <div className={styles.filters__tag_wrapper}>
+                {investmentTypeFinal.length > 0 && <TagFilters removeFilter={removeTagHandler} title={'Investment type'} options={investmentTypeFinal}/>}
+                {industryFinal.length > 0 && <TagFilters removeFilter={removeTagHandler} title={'Industry'} options={industryFinal}/>}
+                {countryFinal.length > 0 && <TagFilters removeFilter={removeTagHandler} title={'Country'} options={countryFinal}/>}
+                {yearFoundedFinal.length > 0 && <TagFilters removeFilter={removeTagHandler} title={'Years on market'} options={yearFoundedFinal}/>}
+                {licenseNumberFinal.length > 0 && <TagFilters removeFilter={removeTagHandler} title={'ECSP license'} options={licenseNumberFinal}/>}
+            </div>
             {resetButton &&
                 <CustomButton
                     onClick={resetHandler}
@@ -101,23 +118,6 @@ const SelectFilters = ({className, resetButton, serverState}: SelectFiltersProps
                     color={'white'}
                     text={'Reset filters'}
                 />}
-            <div>
-                <div className={styles.filters__tags}>
-                    <span className={styles.filters__tag_title}>Investment type:</span> <span className={styles.filters__tag}>
-                    {test[0]}
-                    <span className={styles.filters__tag_delete}>+</span>
-                </span>
-                </div>
-                {JSON.stringify(investmentTypePath)}
-                <br/>
-                {JSON.stringify(industryPath)}
-                <br/>
-                {JSON.stringify(countryPath)}
-                <br/>
-                {JSON.stringify(yearFoundedPath)}
-                <br/>
-                {JSON.stringify(licenseNumberPath)}
-            </div>
         </div>
     );
 };

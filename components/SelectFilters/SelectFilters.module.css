@@ -49,36 +49,12 @@
     }
 }
 
-.filters__tags {
+.filters__tag_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 30px;
+    max-width: 900px;
     margin-top: 20px;
-}
-
-.filters__tag {
-    font-family: var(--inter-font);
-    font-size: 16px;
-    padding: 10px 35px 10px 10px;
-    background-color: #24b2fc;
-    border-radius: 5px;
-    position: relative;
-    font-weight: 600;
-    color: #ffffff;
-}
-
-.filters__tag_title {
-    font-family: var(--inter-font);
-    font-weight: 400;
-    color: #686b6f;
-    font-size: 20px;
-}
-
-.filters__tag_delete {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%) rotate(45deg);
-    right: 7px;
-    font-size: 30px;
-    font-family: var(--inter-font);
-    margin-top: -1px;
 }
 
 

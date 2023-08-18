@@ -25,6 +25,8 @@ import Input from "./Input/Input";
 import TextArea from "./TextArea/TextArea";
 import Checkbox from "./Checkbox/Checkbox";
 import ContextRedux from "@/components/ContextRedux/ContextRedux";
+import TagFilters from "@/components/TagFilters/TagFilters";
+import TagFilter from "@/components/TagFilter/TagFilter";
 
 export {
     Footer,
@@ -53,5 +55,7 @@ export {
     TextArea,
     Form,
     Checkbox,
-    ContextRedux
+    ContextRedux,
+    TagFilters,
+    TagFilter
 }

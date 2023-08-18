@@ -207,8 +207,54 @@ const filtersSlice = createSlice({
                 state.filtersFields[currentIndex].options = [...action.payload.options];
             }
         },
-        removeFilter: (state, action: PayloadAction<{type: FilterType, value: string}>) => {
+        removeFilter: (state, action: PayloadAction<{type: string, value: string}>) => {
+            switch (action.payload.type) {
+                case 'Investment type': {
+                    const filterIndex = state.filtersFields.findIndex((options) => options.type === 'investmentType');
+                    const currentOption = state.filtersFields[filterIndex].options.findIndex((option) => option.title === action.payload.value);
+                    state.filtersFields[filterIndex].options[currentOption].checked = false;
 
+                    state.investmentType.middle = state.investmentType.middle.filter((value) => value !== action.payload.value);
+                    state.investmentType.final = state.investmentType.final.filter((value) => value !== action.payload.value);
+                    break;
+                }
+                case 'Industry': {
+                    const filterIndex = state.filtersFields.findIndex((options) => options.type === 'industry');
+                    const currentOption = state.filtersFields[filterIndex].options.findIndex((option) => option.title === action.payload.value);
+                    state.filtersFields[filterIndex].options[currentOption].checked = false;
+
+                    state.industry.middle = state.industry.middle.filter((value) => value !== action.payload.value);
+                    state.industry.final = state.industry.final.filter((value) => value !== action.payload.value);
+                    break;
+                }
+                case 'Country': {
+                    const filterIndex = state.filtersFields.findIndex((options) => options.type === 'country');
+                    const currentOption = state.filtersFields[filterIndex].options.findIndex((option) => option.title === action.payload.value);
+                    state.filtersFields[filterIndex].options[currentOption].checked = false;
+
+                    state.country.middle = state.country.middle.filter((value) => value !== action.payload.value);
+                    state.country.final = state.country.final.filter((value) => value !== action.payload.value);
+                    break;
+                }
+                case 'Years on market': {
+                    const filterIndex = state.filtersFields.findIndex((options) => options.type === 'yearFounded');
+                    const currentOption = state.filtersFields[filterIndex].options.findIndex((option) => option.title === action.payload.value);
+                    state.filtersFields[filterIndex].options[currentOption].checked = false;
+
+                    state.yearFounded.middle = state.yearFounded.middle.filter((value) => value !== action.payload.value);
+                    state.yearFounded.final = state.yearFounded.final.filter((value) => value !== action.payload.value);
+                    break;
+                }
+                case 'ECSP license': {
+                    const filterIndex = state.filtersFields.findIndex((options) => options.type === 'licenseNumber');
+                    const currentOption = state.filtersFields[filterIndex].options.findIndex((option) => option.title === action.payload.value);
+                    state.filtersFields[filterIndex].options[currentOption].checked = false;
+
+                    state.licenseNumber.middle = state.licenseNumber.middle.filter((value) => value !== action.payload.value);
+                    state.licenseNumber.final = state.licenseNumber.final.filter((value) => value !== action.payload.value);
+                    break;
+                }
+            }
         },
         resetFilters: (state) => {
             state.investmentType.middle = [];
@@ -243,7 +289,8 @@ export const {
     toggleCheckbox,
     addMiddleFilter,
     addServerState,
-    addServerOptions
+    addServerOptions,
+    removeFilter
 } = filtersSlice.actions;
 
 export default filtersSlice.reducer;
