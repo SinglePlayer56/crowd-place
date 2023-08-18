@@ -1,7 +1,7 @@
 'use client';
 import {SelectFiltersProps} from "./SelectFilters.props";
 import styles from './SelectFilters.module.css';
-import {CustomButton, Filter} from "@/components";
+import {CustomButton, Filter, Tag} from "@/components";
 import cn from 'classnames';
 import {useCallback, useEffect, useState} from "react";
 import {useAppDispatch, useAppSelector} from "@/hooks/redux";
@@ -44,6 +44,7 @@ const SelectFilters = ({className, resetButton, serverState}: SelectFiltersProps
 
     const allFilters = useAppSelector((state) => state.filters);
 
+    const test = allFilters.investmentType.final;
     const investmentTypeFilter = allFilters.investmentType.final.map((item) => item.toLowerCase().replaceAll(' ', '-'));
     const investmentTypePath = [...investmentTypeFilter].sort().join('+');
 
@@ -101,6 +102,12 @@ const SelectFilters = ({className, resetButton, serverState}: SelectFiltersProps
                     text={'Reset filters'}
                 />}
             <div>
+                <div className={styles.filters__tags}>
+                    <span className={styles.filters__tag_title}>Investment type:</span> <span className={styles.filters__tag}>
+                    {test[0]}
+                    <span className={styles.filters__tag_delete}>+</span>
+                </span>
+                </div>
                 {JSON.stringify(investmentTypePath)}
                 <br/>
                 {JSON.stringify(industryPath)}

@@ -37,7 +37,5 @@ next-env.d.ts
 #webstorm
 .idea
 
-#env
-.env
-.env.local
+
 

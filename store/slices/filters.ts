@@ -207,6 +207,9 @@ const filtersSlice = createSlice({
                 state.filtersFields[currentIndex].options = [...action.payload.options];
             }
         },
+        removeFilter: (state, action: PayloadAction<{type: FilterType, value: string}>) => {
+
+        },
         resetFilters: (state) => {
             state.investmentType.middle = [];
             state.investmentType.final = [];
