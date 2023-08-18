@@ -60,18 +60,53 @@ export const GET = async (req: NextRequest, {params}: any) => {
         const valuesFilter = parts[index];
         const updatedOptions = currentFilter.options.map((option) => {
             const checked = valuesFilter.includes(option.title);
-            return { ...option, checked };
+            return {...option, checked};
         });
 
-        return { type: filterType, options: updatedOptions};
+        return {type: filterType, options: updatedOptions};
     });
 
     updatedOptions.forEach((options) => {
-        store.dispatch(addServerOptions(options as {type: FilterType, options: ICheckboxValues[]}))
+        store.dispatch(addServerOptions(options as { type: FilterType, options: ICheckboxValues[] }))
     })
 
     function generateDynamicFilter(type: FilterType, currentValues: string[]) {
-        if (type === 'licenseNumber') {
+        if (type === 'yearFounded') {
+            const currentYear = new Date().getFullYear();
+            const filters: any = [];
+
+            currentValues.forEach(value => {
+                if (value === '1 year') {
+                    filters.push({
+                        [type]: {
+                            [Op.gte]: currentYear - 1,
+                        },
+                    });
+                } else if (value === '2-3 years') {
+                    filters.push({
+                        [type]: {
+                            [Op.between]: [currentYear - 3, currentYear - 2],
+                        },
+                    });
+                } else if (value === '4-5 years') {
+                    filters.push({
+                        [type]: {
+                            [Op.between]: [currentYear - 5, currentYear - 4],
+                        },
+                    });
+                } else if (value === 'more than 5') {
+                    filters.push({
+                        [type]: {
+                            [Op.lt]: currentYear - 5,
+                        },
+                    });
+                }
+            });
+
+            return {
+                [Op.or]: filters,
+            };
+        } else if (type === 'licenseNumber') {
             return {
                 [Op.and]: [
                     {
@@ -109,8 +144,6 @@ export const GET = async (req: NextRequest, {params}: any) => {
             [Op.and]: whereClauses
         }
     });
-
-    console.log(response)
 
     return new Response(JSON.stringify({platformsData: response, serverState: updateState}), {status: 200});
 }

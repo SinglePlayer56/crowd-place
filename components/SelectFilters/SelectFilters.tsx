@@ -12,7 +12,7 @@ import {
     resetFilters,
     toggleCheckbox,
 } from "@/store/slices/filters";
-import {useRouter} from "next/navigation";
+import Link from "next/link";
 
 const SelectFilters = ({className, resetButton, serverState}: SelectFiltersProps) => {
     const [expanded, setExpanded] = useState<false | number>(false);
@@ -44,36 +44,33 @@ const SelectFilters = ({className, resetButton, serverState}: SelectFiltersProps
 
     const allFilters = useAppSelector((state) => state.filters);
 
-    const investmentTypeFilter = allFilters.investmentType.final.map((item) => item.toLowerCase().replace(' ', '-'));
+    const investmentTypeFilter = allFilters.investmentType.final.map((item) => item.toLowerCase().replaceAll(' ', '-'));
     const investmentTypePath = [...investmentTypeFilter].sort().join('+');
 
-    const industryFilter = allFilters.industry.final.map((item) => item.toLowerCase().replace(' ', '-'));
+    const industryFilter = allFilters.industry.final.map((item) => item.toLowerCase().replaceAll(' ', '-'));
     const industryPath = [...industryFilter].sort().join('+');
 
-    const countryFilter = allFilters.country.final.map((item) => item.toLowerCase().replace(' ', '-'));
+    const countryFilter = allFilters.country.final.map((item) => item.toLowerCase().replaceAll(' ', '-'));
     const countryPath = [...countryFilter].sort().join('+');
 
-    const yearFoundedFilter = allFilters.yearFounded.final.map((item) => item.toLowerCase().replace(' ', '-'));
+    const yearFoundedFilter = allFilters.yearFounded.final.map((item) => item.toLowerCase().replaceAll(' ', '-'));
     const yearFoundedPath = [...yearFoundedFilter].sort().join('+');
 
-    const licenseNumberFilter = allFilters.licenseNumber.final.map((item) => item.toLowerCase().replace(' ', '-'));
+    const licenseNumberFilter = allFilters.licenseNumber.final.map((item) => item.toLowerCase().replaceAll(' ', '-'));
     const licenseNumberPath = [...licenseNumberFilter].sort().join('+');
-
-    const router = useRouter();
 
     function generateFilterUrl(filter1: string, filter2: string, filter3: string, filter4: string, filter5: string) {
         const filters = [filter1, filter2, filter3, filter4, filter5].filter((filter) => filter.length !== 0);
+
+        if (!filters.join('/').length) {
+            return `/platforms/`
+        }
 
         return `/platform/${filters.join('/')}/`
 
     }
 
-    const routeHandler = () => {
-
         const url = generateFilterUrl(investmentTypePath, industryPath, countryPath, yearFoundedPath, licenseNumberPath);
-        console.log(url);
-        router.push(url, {scroll: false});
-    }
 
     return (
         <div className={styles.filters}>
@@ -92,7 +89,9 @@ const SelectFilters = ({className, resetButton, serverState}: SelectFiltersProps
                         clearFilters={clearFilterHandler}
                     />
                 ))}
-                <CustomButton onClick={routeHandler} className={styles.filters__button} color={'blue'} text={'View'}/>
+                <Link href={url.length !== 0 ? url : '/platforms/'} scroll={false}>
+                    <CustomButton className={styles.filters__button} color={'blue'} text={'View'}/>
+                </Link>
             </div>
             {resetButton &&
                 <CustomButton

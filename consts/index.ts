@@ -39,7 +39,7 @@ export const CrowdfundingCardValues: CrowdfundingCardProps[] = [
     }
 ]
 
-export const SelectFiltersValues: {options: string[], placeholder: string}[] = [
+export const SelectFiltersValues: { options: string[], placeholder: string }[] = [
     {
         options: ['Equity', 'Debt', 'P2P lending', 'Reward', 'Donation', 'Buy-to-let', 'Mini-bonds'],
         placeholder: 'Select investment type'
@@ -158,3 +158,15 @@ export const CountryListValue: CountryListProps[] = [
     {country: 'Ukraine', pathFlag: '/flags/Ukraine.svg'},
     {country: 'United Kingdom', pathFlag: '/flags/United_Kingdom.svg'}
 ]
+
+// const investmentTypeSlugs = ['buy-to-let', 'debt', 'donation', 'equity', 'mini-bonds', 'p2p-lending', 'reward'];
+// const industrySlugs = ['real-estate', 'startups', 'sme', 'sustainability', 'litigation', 'green-energy', 'health-science', 'logistics', 'personal-loans', 'art', 'mortgages', 'social-cause', 'education', 'farming', 'sport', 'maritime'];
+// const countrySlugs = ['andorra', 'albania', 'austria', 'belgium', 'bulgaria', 'croatia', 'cyprus', 'czech-republic', 'denmark', 'estonia', 'finland', 'france', 'germany', 'greece', 'hungary', 'iceland', 'ireland', 'israel', 'italy', 'latvia', 'liechtenstein', 'lithuania', 'luxembourg', 'macedonia', 'malta', 'moldova', 'monaco', 'netherlands', 'norway', 'poland', 'portugal', 'romania', 'turkey', 'serbia', 'slovakia', 'slovenia', 'spain', 'sweden', 'switzerland', 'united-kingdom', 'ukraine'];
+// const yearFoundedSlugs = ['1-year', '2-3-years', '4-5-years', 'more-than-5'];
+// const licenseNumberSlugs = ['yes'];
+
+
+// export const industryCombinationPaths = generateCombinations(industrySlugs).slice(1);
+// export const countryCombinationPaths = generateCombinations(countrySlugs).slice(1);
+// export const yearFoundedCombinationPaths = generateCombinations(yearFoundedSlugs).slice(1);
+// export const licenseNumberCombinationPaths = generateCombinations(licenseNumberSlugs).slice(1);
