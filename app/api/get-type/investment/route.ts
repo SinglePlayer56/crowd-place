@@ -33,6 +33,7 @@ export const GET = async (req: NextRequest, {params}: any) => {
         }
         return indices;
     }, []);
+    // console.log(emptyIndices);
 
 // Добавляем начальный и конечный индексы для разделения
     // @ts-ignore
@@ -44,31 +45,7 @@ export const GET = async (req: NextRequest, {params}: any) => {
     const parts = emptyIndices.map((value, index, array) => currentValues.slice(array[index] + 1, array[index + 1]));
 
     const whereClauses = typeFilters.map((filterType, index) => generateDynamicFilter(filterType as FilterType, parts[index]));
-    typeFilters.forEach((filterType: string, index: number) => {
-        store.dispatch(addMiddleFilter({type: filterType as FilterType, valueArray: parts[index]}));
-        store.dispatch(acceptSelectFilterType(filterType as FilterType));
-    })
 
-    const filtersState = store.getState().filters;
-
-    const updatedOptions = typeFilters.map((filterType, index) => {
-        const currentFilter = filtersState.filtersFields.find((filter) => filter.type === filterType);
-        if (!currentFilter) {
-            return null;
-        }
-
-        const valuesFilter = parts[index];
-        const updatedOptions = currentFilter.options.map((option) => {
-            const checked = valuesFilter.includes(option.title);
-            return {...option, checked};
-        });
-
-        return {type: filterType, options: updatedOptions};
-    });
-
-    updatedOptions.forEach((options) => {
-        store.dispatch(addServerOptions(options as { type: FilterType, options: ICheckboxValues[] }))
-    })
 
     function generateDynamicFilter(type: FilterType, currentValues: string[]) {
         if (type === 'yearFounded') {
@@ -132,8 +109,6 @@ export const GET = async (req: NextRequest, {params}: any) => {
         }
     }
 
-    const updateState = store.getState().filters;
-
     const response = await Platform.findAndCountAll({
         order: [
             ['id', 'DESC']
@@ -145,5 +120,5 @@ export const GET = async (req: NextRequest, {params}: any) => {
         }
     });
 
-    return new Response(JSON.stringify({platformsData: response, serverState: updateState}), {status: 200});
+    return new Response(JSON.stringify(response), {status: 200});
 }

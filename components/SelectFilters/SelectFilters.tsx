@@ -6,23 +6,26 @@ import cn from 'classnames';
 import {useCallback, useEffect, useState} from "react";
 import {useAppDispatch, useAppSelector} from "@/hooks/redux";
 import {
-    acceptSelectFilterType, addServerState, clearSelectFilterType,
+    acceptSelectFilterType, addServerState, addTag, clearSelectFilterType,
     FilterType,
     IPayloadFilterField, removeFilter,
     resetFilters,
     toggleCheckbox,
 } from "@/store/slices/filters";
 import Link from "next/link";
+import {useParams} from "next/navigation";
 
-const SelectFilters = ({className, resetButton, serverState}: SelectFiltersProps) => {
+const SelectFilters = ({className, resetButton}: SelectFiltersProps) => {
+    const params = useParams();
+    const dispatch = useAppDispatch();
+
     const [expanded, setExpanded] = useState<false | number>(false);
 
     const clientFilters = useAppSelector((state) => state.filters.filtersFields);
-    const dispatch = useAppDispatch();
 
     useEffect(() => {
-        if (serverState) {
-            dispatch(addServerState(serverState))
+        for (const key in params) {
+            dispatch(addTag(decodeURIComponent(params[key] as string).split('+')));
         }
     }, []);
 
@@ -69,7 +72,6 @@ const SelectFilters = ({className, resetButton, serverState}: SelectFiltersProps
     const licenseNumberPath = licenseNumberFilter.sort().join('+');
 
 
-    console.log(countryFinal)
     function generateFilterUrl(filter1: string, filter2: string, filter3: string, filter4: string, filter5: string) {
         const filters = [filter1, filter2, filter3, filter4, filter5].filter((filter) => filter.length !== 0);
 

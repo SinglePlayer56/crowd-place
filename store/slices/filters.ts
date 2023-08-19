@@ -1,4 +1,5 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import filter from "@/components/Filter/Filter";
 
 export interface IFilterField {
     options: ICheckboxValues[];
@@ -194,7 +195,10 @@ const filtersSlice = createSlice({
 
             const currentFilterIndex = state.filtersFields.findIndex((filter) => filter.type === action.payload);
             if (currentFilterIndex !== -1) {
-                state.filtersFields[currentFilterIndex].options = state.filtersFields[currentFilterIndex].options.map((item) => ({...item, checked: false}));
+                state.filtersFields[currentFilterIndex].options = state.filtersFields[currentFilterIndex].options.map((item) => ({
+                    ...item,
+                    checked: false
+                }));
             }
         },
         addServerState: (state, action: PayloadAction<IFiltersState>) => {
@@ -203,11 +207,34 @@ const filtersSlice = createSlice({
         addServerOptions: (state, action: PayloadAction<{ type: FilterType, options: ICheckboxValues[] }>) => {
             const currentIndex = state.filtersFields.findIndex((field) => field.type === action.payload.type);
 
-            if (currentIndex !== -1){
+            if (currentIndex !== -1) {
                 state.filtersFields[currentIndex].options = [...action.payload.options];
             }
         },
-        removeFilter: (state, action: PayloadAction<{type: string, value: string}>) => {
+        addTag: (state, action: PayloadAction<string[] >) => {
+            const currentFilterIndex = state.filtersFields.findIndex((filter) => {
+                const isNull = filter.options.findIndex((option) => option.slug === action.payload[0]);
+                return isNull !== -1;
+            })
+            const currentType = state.filtersFields[currentFilterIndex].type;
+
+            const updateFilter = state.filtersFields[currentFilterIndex].options.map((option) => {
+                if (action.payload.includes(option.slug)) {
+                    return {...option, checked: true}
+                } else {
+                    return option
+                }
+            });
+
+            const optionsValues = updateFilter
+                .filter((option) => action.payload.includes(option.slug))
+                .map((option) => option.title);
+
+            state.filtersFields[currentFilterIndex].options = updateFilter;
+            state[currentType].middle = optionsValues;
+            state[currentType].final = optionsValues;
+        },
+        removeFilter: (state, action: PayloadAction<{ type: string, value: string }>) => {
             switch (action.payload.type) {
                 case 'Investment type': {
                     const filterIndex = state.filtersFields.findIndex((options) => options.type === 'investmentType');
@@ -290,7 +317,8 @@ export const {
     addMiddleFilter,
     addServerState,
     addServerOptions,
-    removeFilter
+    removeFilter,
+    addTag
 } = filtersSlice.actions;
 
 export default filtersSlice.reducer;
