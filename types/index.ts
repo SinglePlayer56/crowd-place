@@ -5,10 +5,10 @@ export interface HeaderLink {
     href: string;
 }
 
-export interface searchParams {
-    params?: { page: string },
+export interface searchParams<T> {
+    params: T,
     searchParams: {
-        [key: string]: string | string[] | undefined
+        page: string;
     }
 }
 
@@ -90,4 +90,13 @@ export interface ContactsFormData {
     'Name': string;
     'E-mail': string;
     'Message': string;
+}
+
+
+export interface FilterPageParams {
+    country?: string;
+    industry?: string;
+    investmentType?: string;
+    yearFounded?: string;
+    licenseNumber?: string;
 }

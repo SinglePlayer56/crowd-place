@@ -1,9 +1,23 @@
-import styles from './platforms.module.css'
-import {BreadCrumbs, CustomButton, HTag, ListingPlatforms, PlatformCard, PTag, SelectFilters} from "@/components";
-import {FilterPageParams, searchParams} from "@/types";
+import {BreadCrumbs, HTag, ListingPlatforms, PTag, SelectFilters} from "@/components";
+import {FilterPageParams} from "@/types";
+import {getMetadataValues} from "@/helpers";
+import {Metadata} from "next";
+import styles from '@/app/platforms/[investmentType]/platforms.module.css';
+
+export async function generateMetadata({params}: PageProps): Promise<Metadata> {
+    return getMetadataValues(params);
+}
+
+interface PageProps {
+    searchParams: {
+        page: string
+    },
+    params: FilterPageParams
+}
 
 
-const Platforms = async ({searchParams, params}: searchParams<FilterPageParams>) => {
+const Platforms = async ({searchParams, params}: PageProps) => {
+
 
     return (
         <>
@@ -35,26 +49,19 @@ const Platforms = async ({searchParams, params}: searchParams<FilterPageParams>)
                     />
                 </div>
             </section>
-            <ListingPlatforms params={params} searchParams={searchParams}/>
+            <ListingPlatforms params={params} searchParams={searchParams} />
             <section className={styles.whoCan}>
                 <div className={'container'}>
                     <HTag className={styles.whoCan__title} tag={'h2'}>
                         Who can invest
                     </HTag>
                     <PTag className={styles.whoCan__text} fontSize={'20px'}>
-                        Impact investing is one of the emerging yet steady trends in the crowdfunding sector. It’s becoming increasingly widespread for investors to be interested not only in the possible returns but the collateral social or environmental impact. In other words people want their investment choices to be aligned with their values. CrowdPlace is probably one of the best crowdfunding aggregators in Europe.
+                        Impact investing is one of the emerging yet steady trends in the crowdfunding sector. It’s
+                        becoming increasingly widespread for investors to be interested not only in the possible returns
+                        but the collateral social or environmental impact. In other words people want their investment
+                        choices to be aligned with their values. CrowdPlace is probably one of the best crowdfunding
+                        aggregators in Europe.
                     </PTag>
-                </div>
-            </section>
-            <section className={styles.links}>
-                <div className={'container'}>
-                    <HTag className={styles.links__title} tag={'h2'}>
-                        Links
-                    </HTag>
-                    <div className={styles.links__list}>
-
-                    </div>
-                    <CustomButton className={styles.links__button} text={'See all'} color={'transparent'} />
                 </div>
             </section>
         </>

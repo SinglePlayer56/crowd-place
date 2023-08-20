@@ -23,7 +23,7 @@ const Form = ({defaultState, inputFields}: FormProps) => {
     const onSubmit: SubmitHandler<formData<AddFormData | ContactsFormData>> = async data => {
         try {
             setIsLoading(true);
-            await sendMail('/add-platform', data);
+            await sendMail(data);
             setIsLoading(false);
             reset(defaultState);
             setIsSendMessage(true);

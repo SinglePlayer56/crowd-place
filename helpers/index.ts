@@ -1,5 +1,5 @@
 import {redirect, usePathname} from "next/navigation";
-import {AddFormData, ContactsFormData} from "@/types";
+import {AddFormData, ContactsFormData, FilterPageParams} from "@/types";
 import {store} from "@/store";
 import {FilterType} from "@/store/slices/filters";
 import {Op} from "sequelize";
@@ -82,7 +82,7 @@ export function convertToObjectValue(arrayValue: string[]) {
             return acc;
         }, {});
 
-        return  createFilterObject(slugTitleObject, arrayValue);
+        return createFilterObject(slugTitleObject, arrayValue);
     }
 
 }
@@ -93,13 +93,9 @@ export function isActiveLink(href: string) {
     return pathName === href;
 }
 
-export function mailDataType(data: AddFormData | ContactsFormData): data is AddFormData {
-    return (data as AddFormData)['Platform name'] !== undefined;
-}
 
-
-export async function sendMail(route: string, data: AddFormData | ContactsFormData) {
-    const response = await fetch(`/api${route}`, {
+export async function sendMail(data: AddFormData | ContactsFormData) {
+    const response = await fetch(`http://1864875-cn27374.twc1.net:3001/api/send-mail`, {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -135,4 +131,42 @@ export async function sendMail(route: string, data: AddFormData | ContactsFormDa
 //     }
 // }
 
+export async function getType(params: FilterPageParams, page: number, perPage: number) {
+    const paramsValues = Object.values(params).map(param => decodeURIComponent(param).split('+'));
+    const investObjects = paramsValues.map(convertToObjectValue);
+    const filters = paramsValues.map(searchTypeFilter);
+    const queryParams = investObjects
+        .map((object) => {
+            if (object) {
+                return generateQueryParams(object);
+            }
+        })
+        .join('&and&');
+    const allFilters = filters.join('-');
+
+    const res = await fetch(`${process.env.SERVER}/api/select-platforms?${queryParams}&page=${page}&perPage=${perPage}&typeFilter=${allFilters}`);
+
+    return await res.json();
+}
+
+export function getMetadataValues(params: FilterPageParams) {
+    const paramsValues = Object.values(params).map((param) => decodeURIComponent(param).split('+'))
+    const valueObjects = paramsValues.map(convertToObjectValue);
+    const sortedValues = valueObjects.map((obj) => {
+        if (obj) {
+            return Object.values(obj).sort().join(' ');
+        }
+    })
+
+    const allValue = sortedValues.join('+');
+    const allPath = Object.values(params).map((value) => decodeURIComponent(value)).join('/')
+
+    return {
+        title: `${allValue} | Crowd Place`,
+        description: `${allValue} | Crowd Place`,
+        alternates: {
+            canonical: `${process.env.DOMAIN}/platform/${allPath}/`
+        }
+    }
+}
 

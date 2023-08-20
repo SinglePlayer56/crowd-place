@@ -27,6 +27,7 @@ import Checkbox from "./Checkbox/Checkbox";
 import ContextRedux from "@/components/ContextRedux/ContextRedux";
 import TagFilters from "@/components/TagFilters/TagFilters";
 import TagFilter from "@/components/TagFilter/TagFilter";
+import ListingPlatforms from "@/components/ListingPlatforms/ListingPlatforms";
 
 export {
     Footer,
@@ -57,5 +58,6 @@ export {
     Checkbox,
     ContextRedux,
     TagFilters,
-    TagFilter
+    TagFilter,
+    ListingPlatforms
 }

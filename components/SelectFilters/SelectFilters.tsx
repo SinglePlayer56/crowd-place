@@ -3,7 +3,7 @@ import {SelectFiltersProps} from "./SelectFilters.props";
 import styles from './SelectFilters.module.css';
 import {CustomButton, Filter, Tag, TagFilters} from "@/components";
 import cn from 'classnames';
-import {useCallback, useEffect, useState} from "react";
+import {useCallback, useEffect, useMemo, useState} from "react";
 import {useAppDispatch, useAppSelector} from "@/hooks/redux";
 import {
     acceptSelectFilterType, addServerState, addTag, clearSelectFilterType,
@@ -15,6 +15,24 @@ import {
 import Link from "next/link";
 import {redirect, useParams, useRouter} from "next/navigation";
 
+
+function processFilterArray(filterArray: string[]) {
+    return filterArray
+        .map(item => item.toLowerCase().replaceAll(' ', '-'))
+        .sort()
+        .join('+');
+}
+
+function generateFilterUrl(...filters: string[]) {
+    const validFilters = filters.filter(filter => filter.length !== 0);
+
+    if (validFilters.length === 0) {
+        return '/platforms/';
+    }
+
+    return `/platforms/${validFilters.join('/')}/`;
+}
+
 const SelectFilters = ({className, resetButton}: SelectFiltersProps) => {
     const params = useParams();
     const dispatch = useAppDispatch();
@@ -22,14 +40,12 @@ const SelectFilters = ({className, resetButton}: SelectFiltersProps) => {
     const [expanded, setExpanded] = useState<false | number>(false);
 
     const clientFilters = useAppSelector((state) => state.filters.filtersFields);
-    const filters = useAppSelector((state) => state.filters.filtersFields);
 
     useEffect(() => {
         for (const key in params) {
-            // console.log(decodeURIComponent(params[key] as string).split('+'));
             dispatch(addTag(decodeURIComponent(params[key] as string).split('+')));
         }
-    }, []);
+    }, [dispatch]);
 
     const toggleCheckboxValue = useCallback((value: IPayloadFilterField) => {
         dispatch(toggleCheckbox(value));
@@ -47,46 +63,39 @@ const SelectFilters = ({className, resetButton}: SelectFiltersProps) => {
         dispatch(clearSelectFilterType(type))
     }, [dispatch]);
 
-    const removeTagHandler = useCallback(({type, value}: {type: string, value: string}) => {
+    const removeTagHandler = useCallback(({type, value}: { type: string, value: string }) => {
         dispatch(removeFilter({type, value}))
     }, [dispatch]);
 
     const allFilters = useAppSelector((state) => state.filters);
 
-    const investmentTypeFinal = allFilters.investmentType.final;
-    const investmentTypeFilter = investmentTypeFinal.map((item) => item.toLowerCase().replaceAll(' ', '-'));
-    const investmentTypePath = investmentTypeFilter.sort().join('+');
+    const investmentTypePath = useMemo(() => processFilterArray(allFilters.investmentType.final), [allFilters.investmentType.final]);
+    const industryPath = useMemo(() => processFilterArray(allFilters.industry.final), [allFilters.industry.final]);
+    const countryPath = useMemo(() => processFilterArray(allFilters.country.final), [allFilters.country.final]);
+    const yearFoundedPath = useMemo(() => processFilterArray(allFilters.yearFounded.final), [allFilters.yearFounded.final]);
+    const licenseNumberPath = useMemo(() => processFilterArray(allFilters.licenseNumber.final), [allFilters.licenseNumber.final]);
 
-    const industryFinal = allFilters.industry.final;
-    const industryFilter = industryFinal.map((item) => item.toLowerCase().replaceAll(' ', '-'));
-    const industryPath = industryFilter.sort().join('+');
+    const tagFiltersList = useMemo(() => [
+        { title: 'Investment type', options: allFilters.investmentType.final },
+        { title: 'Industry', options: allFilters.industry.final },
+        { title: 'Country', options: allFilters.country.final },
+        { title: 'Years on market', options: allFilters.yearFounded.final },
+        { title: 'ECSP license', options: allFilters.licenseNumber.final }
+    ], [
+        allFilters.investmentType.final,
+        allFilters.industry.final,
+        allFilters.country.final,
+        allFilters.yearFounded.final,
+        allFilters.licenseNumber.final
+    ]);
 
-    const countryFinal = allFilters.country.final;
-    const countryFilter = countryFinal.map((item) => item.toLowerCase().replaceAll(' ', '-'));
-    const countryPath = countryFilter.sort().join('+');
-
-    const yearFoundedFinal = allFilters.yearFounded.final;
-    const yearFoundedFilter = yearFoundedFinal.map((item) => item.toLowerCase().replaceAll(' ', '-'));
-    const yearFoundedPath = yearFoundedFilter.sort().join('+');
-
-    const licenseNumberFinal = allFilters.licenseNumber.final;
-    const licenseNumberFilter = licenseNumberFinal.map((item) => item.toLowerCase().replaceAll(' ', '-'));
-    const licenseNumberPath = licenseNumberFilter.sort().join('+');
-
-
-    function generateFilterUrl(filter1: string, filter2: string, filter3: string, filter4: string, filter5: string) {
-        const filters = [filter1, filter2, filter3, filter4, filter5].filter((filter) => filter.length !== 0);
-
-        if (!filters.join('/').length) {
-            return `/platforms/`
-        }
-
-        return `/platform/${filters.join('/')}/`
-
-    }
-
-        const url = generateFilterUrl(investmentTypePath, industryPath, countryPath, yearFoundedPath, licenseNumberPath);
-
+    const url = useMemo(() => generateFilterUrl(investmentTypePath, industryPath, countryPath, yearFoundedPath, licenseNumberPath), [
+        investmentTypePath,
+        industryPath,
+        countryPath,
+        yearFoundedPath,
+        licenseNumberPath
+    ]);
     return (
         <div className={styles.filters}>
             <div className={cn(styles.filtersWrapper, className)}>
@@ -104,16 +113,20 @@ const SelectFilters = ({className, resetButton}: SelectFiltersProps) => {
                         clearFilters={clearFilterHandler}
                     />
                 ))}
-                <Link href={url.length !== 0 ? url : '/platforms/'} scroll={false}>
+                <Link href={url} scroll={false}>
                     <CustomButton className={styles.filters__button} color={'blue'} text={'View'}/>
                 </Link>
             </div>
             <div className={styles.filters__tag_wrapper}>
-                {investmentTypeFinal.length > 0 && <TagFilters removeFilter={removeTagHandler} title={'Investment type'} options={investmentTypeFinal}/>}
-                {industryFinal.length > 0 && <TagFilters removeFilter={removeTagHandler} title={'Industry'} options={industryFinal}/>}
-                {countryFinal.length > 0 && <TagFilters removeFilter={removeTagHandler} title={'Country'} options={countryFinal}/>}
-                {yearFoundedFinal.length > 0 && <TagFilters removeFilter={removeTagHandler} title={'Years on market'} options={yearFoundedFinal}/>}
-                {licenseNumberFinal.length > 0 && <TagFilters removeFilter={removeTagHandler} title={'ECSP license'} options={licenseNumberFinal}/>}
+                {tagFiltersList.map(({title, options}) => (
+                    options.length > 0
+                    && <TagFilters
+                        key={title}
+                        removeFilter={removeTagHandler}
+                        title={title}
+                        options={options}
+                    />
+                ))}
             </div>
             {resetButton &&
                 <CustomButton

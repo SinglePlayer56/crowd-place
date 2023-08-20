@@ -1,0 +1,33 @@
+.head {
+    padding-bottom: 50px;
+    background-color: #ffffff;
+}
+
+.head__title {
+    margin-bottom: 40px;
+}
+
+.head__text {
+    margin-bottom: 45px;
+    max-width: 1180px;
+}
+
+.whoCan {
+    padding: 50px 0 70px;
+    background-color: #ffffff;
+}
+
+.whoCan__title {
+    margin-bottom: 45px;
+}
+
+.links {
+    background-color: #f1f8fb;
+    padding: 55px 0;
+}
+
+.links__button {
+    margin: 0 auto;
+}
+
+
