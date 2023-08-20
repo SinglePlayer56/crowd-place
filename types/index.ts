@@ -1,5 +1,3 @@
-import {DataTypes} from "sequelize";
-
 export interface HeaderLink {
     name: string;
     href: string;

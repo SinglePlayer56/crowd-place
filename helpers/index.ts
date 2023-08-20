@@ -93,9 +93,12 @@ export function isActiveLink(href: string) {
     return pathName === href;
 }
 
+export function mailDataType(data: AddFormData | ContactsFormData): data is AddFormData {
+    return (data as AddFormData)['Platform name'] !== undefined;
+}
 
 export async function sendMail(data: AddFormData | ContactsFormData) {
-    const response = await fetch(`http://1864875-cn27374.twc1.net:3001/api/send-mail`, {
+    const response = await fetch(`/api/send-mail`, {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
