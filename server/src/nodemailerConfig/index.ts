@@ -11,14 +11,14 @@ const pass = envVariable.EMAIL_PASSWORD;
 export const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-        user: email,
-        pass,
+        user: 'viktor.korchagin.corp@gmail.com',
+        pass: 'rgpsosrcvolmsoyq',
     },
 });
 
 export const mailOptions = {
-    from: email,
-    to: email,
+    from: 'viktor.korchagin.corp@gmail.com',
+    to: 'viktor.korchagin.corp@gmail.com',
 };
 
 const ADD_PLATFORM_MESSAGE_FIELDS: AddFormData & {[key: string]: string} = {
