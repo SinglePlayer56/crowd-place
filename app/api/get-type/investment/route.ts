@@ -2,14 +2,7 @@ import db from "@/utils";
 import Platform from "@/models/platform";
 import {Op} from "sequelize";
 import {NextRequest} from "next/server";
-import {
-    acceptSelectFilterType,
-    addMiddleFilter,
-    addServerOptions,
-    FilterType,
-    ICheckboxValues
-} from "@/store/slices/filters";
-import {store} from "@/store";
+import { FilterType } from "@/store/slices/filters";
 
 export const GET = async (req: NextRequest, {params}: any) => {
     const currentPage = Number(req.nextUrl.searchParams.get('page'));

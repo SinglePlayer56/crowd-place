@@ -13,7 +13,7 @@ import {
     toggleCheckbox,
 } from "@/store/slices/filters";
 import Link from "next/link";
-import {useParams} from "next/navigation";
+import {redirect, useParams, useRouter} from "next/navigation";
 
 const SelectFilters = ({className, resetButton}: SelectFiltersProps) => {
     const params = useParams();
@@ -22,9 +22,11 @@ const SelectFilters = ({className, resetButton}: SelectFiltersProps) => {
     const [expanded, setExpanded] = useState<false | number>(false);
 
     const clientFilters = useAppSelector((state) => state.filters.filtersFields);
+    const filters = useAppSelector((state) => state.filters.filtersFields);
 
     useEffect(() => {
         for (const key in params) {
+            // console.log(decodeURIComponent(params[key] as string).split('+'));
             dispatch(addTag(decodeURIComponent(params[key] as string).split('+')));
         }
     }, []);

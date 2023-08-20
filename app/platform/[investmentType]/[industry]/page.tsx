@@ -44,7 +44,7 @@ async function getType(params: PageParams, page: number, perPage: number) {
 
         const queryParams = `${firstQueryParams}&and&${secondQueryParams}`;
 
-        const res = await fetch(`${process.env.DOMAIN}/api/get-type/investment/?${queryParams}&page=${page}&perPage=${perPage}&typeFilter=${allFilters}`);
+        const res = await fetch(`${process.env.SERVER}/api/get-type/investment/?${queryParams}&page=${page}&perPage=${perPage}&typeFilter=${allFilters}`);
 
         return await res.json();
     }
@@ -83,7 +83,7 @@ const Platforms = async ({searchParams, params}: PageProps) => {
 
 
     const {count: totalCount, rows: platforms}: { count: number, rows: IPlatform[] } = await getType(params, currentPage, perPage);
-    
+
 
     return (
         <>

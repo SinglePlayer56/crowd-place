@@ -5,7 +5,7 @@ import Pagination from "@/components/Pagination/Pagination";
 import {redirect} from "next/navigation";
 
 async function getSlicePlatform(page: number, perPage?: number) {
-    const res = await fetch(`${process.env.DOMAIN}/api/get-all/?page=${page}&perPage=${perPage}`);
+    const res = await fetch(`${process.env.SERVER}/api/get-all/?page=${page}&perPage=${perPage}`);
 
 
     return  await res.json();

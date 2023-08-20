@@ -1,4 +1,4 @@
-import {usePathname} from "next/navigation";
+import {redirect, usePathname} from "next/navigation";
 import {AddFormData, ContactsFormData} from "@/types";
 import {store} from "@/store";
 import {FilterType} from "@/store/slices/filters";
@@ -52,24 +52,24 @@ export function generateQueryParams(object: Record<string, string>) {
         .join('&');
 }
 
-export function searchTypeFilters(arrayParams: string[]) {
-    let filterType: string[] = [];
-
-    arrayParams.forEach((value) => {
-        store.getState().filters.filtersFields.forEach((filter, index) => {
-            filter.options.forEach((option) => {
-                if (option.slug.includes(value)) {
-                    const type = store.getState().filters.filtersFields[index].type;
-                    if (!filterType.includes(type)) {
-                        filterType.push();
-                    }
-                }
-            })
-        })
-    })
-
-    return filterType;
-}
+// export function searchTypeFilters(arrayParams: string[]) {
+//     let filterType: string[] = [];
+//
+//     arrayParams.forEach((value) => {
+//         store.getState().filters.filtersFields.forEach((filter, index) => {
+//             filter.options.forEach((option) => {
+//                 if (option.slug.includes(value)) {
+//                     const type = store.getState().filters.filtersFields[index].type;
+//                     if (!filterType.includes(type)) {
+//                         filterType.push();
+//                     }
+//                 }
+//             })
+//         })
+//     })
+//
+//     return filterType;
+// }
 
 export function convertToObjectValue(arrayValue: string[]) {
     const filterType = searchTypeFilter(arrayValue);
@@ -117,19 +117,22 @@ export async function sendMail(route: string, data: AddFormData | ContactsFormDa
     return await response.json();
 }
 
-// export function generateCombinations(arr: string[]): string[] {
-//     const result: string[] = [];
+// Filter params validation
+// function filterParamsValidation(params: Record<FilterType, string>) {
+//     const filters = store.getState().filters.filtersFields;
 //
-//     function backtrack(start: number, current: string) {
-//         result.push(current);
-//         for (let i = start; i < arr.length; i++) {
-//             backtrack(i + 1, current === '' ? arr[i] : current + '+' + arr[i]);
+//     for (const key in params) {
+//         const filterIndex = filters.findIndex((filter) => filter.type === key);
+//         let count = 0;
+//         filters[filterIndex].options.forEach((option) => {
+//             if (decodeURIComponent(params[key] as string).split('+').includes(option.slug)) {
+//                 count++;
+//             }
+//         });
+//         if (count !==  decodeURIComponent(params[key] as string).split('+').length) {
+//             redirect('/platforms/')
 //         }
 //     }
-//
-//     backtrack(0, '');
-//
-//     return result;
 // }
 
 

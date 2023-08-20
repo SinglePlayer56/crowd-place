@@ -245,7 +245,7 @@ const Platform = async ({params}: Props) => {
 export default Platform;
 
 export async function generateStaticParams() {
-    const response = await fetch(`${process.env.DOMAIN}/api/add-platform`);
+    const response = await fetch(`${process.env.SERVER}/api/add-platform`);
 
     const platforms: IPlatform[] = await response.json();
 
@@ -255,7 +255,7 @@ export async function generateStaticParams() {
 }
 
 async function getPlatform(name: string): Promise<IPlatform> {
-    const response = await fetch(`${process.env.DOMAIN}/api/add-platform/${name}`,
+    const response = await fetch(`${process.env.SERVER}/api/add-platform/${name}`,
         {
             method: 'GET',
 
@@ -267,7 +267,7 @@ async function getPlatform(name: string): Promise<IPlatform> {
 }
 
 async function getRelatedPlatform(industry: string, name?: string): Promise<IPlatform[] | IPlatform> {
-    const response = await fetch(`${process.env.DOMAIN}/api/get-related/${industry}/?name=${name}`, {
+    const response = await fetch(`${process.env.SERVER}/api/get-related/${industry}/?name=${name}`, {
         method: 'GET',
 
     });

@@ -10,6 +10,7 @@ import {
 } from "@/helpers";
 import {Metadata} from "next";
 import {investmentTypeCombinationPaths} from "@/consts/paths/investmentTypePaths";
+import {store} from "@/store";
 
 export async function generateMetadata({params}: PageProps): Promise<Metadata> {
     const paramsValue = decodeURIComponent(params.investmentType).split('+');
@@ -25,8 +26,8 @@ export async function generateMetadata({params}: PageProps): Promise<Metadata> {
     }
 }
 
-async function getType(params: string, page: number, perPage: number) {
-    const paramsValue = decodeURIComponent(params).split('+');
+async function getType(params: PageParams, page: number, perPage: number) {
+    const paramsValue = decodeURIComponent(params.investmentType).split('+');
     const investObj = convertToObjectValue(paramsValue);
     const filter = searchTypeFilter(paramsValue);
 
@@ -34,7 +35,7 @@ async function getType(params: string, page: number, perPage: number) {
         const queryParams = generateQueryParams(investObj);
 
         try {
-            const res = await fetch(`${process.env.DOMAIN}/api/get-type/investment/?${queryParams}&page=${page}&perPage=${perPage}&typeFilter=${filter}`);
+            const res = await fetch(`${process.env.SERVER}/api/get-type/investment/?${queryParams}&page=${page}&perPage=${perPage}&typeFilter=${filter}`);
 
             return await res.json();
         } catch (e) {
@@ -55,18 +56,14 @@ interface PageProps {
     searchParams: {
         page: string
     },
-    params: {
-        investmentType: string;
-    }
+    params: PageParams
 }
 
+interface PageParams {
+    investmentType: string;
+}
 
 const Platforms = async ({searchParams, params}: PageProps) => {
-    // if (!investmentTypeCombinationPaths.includes(params.investmentType)) notFound();
-    // if (!industryCombinationPaths.includes(params.investmentType)) notFound();
-    // if (!countryCombinationPaths.includes(params.investmentType)) notFound();
-    // if (!yearFoundedCombinationPaths.includes(params.investmentType)) notFound();
-    // if (!licenseNumberCombinationPaths.includes(params.investmentType)) notFound();
 
     const perPage = 12;
     let currentPage = 1;
@@ -80,10 +77,7 @@ const Platforms = async ({searchParams, params}: PageProps) => {
     }
 
 
-    const {count: totalCount, rows: platforms}: { count: number, rows: IPlatform[] } = await getType(params.investmentType, currentPage, perPage);
-    
-
-
+    const {count: totalCount, rows: platforms}: { count: number, rows: IPlatform[] } = await getType(params, currentPage, perPage);
 
     return (
         <>

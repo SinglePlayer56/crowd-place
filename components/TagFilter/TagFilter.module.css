@@ -11,13 +11,7 @@
     position: relative;
     font-weight: 600;
     color: #ffffff;
-}
-
-.filters__tag_title {
-    font-family: var(--inter-font);
-    font-weight: 400;
-    color: #686b6f;
-    font-size: 20px;
+    white-space: nowrap;
 }
 
 .filters__tag_delete {

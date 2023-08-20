@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .filters__tag_title {
@@ -10,4 +11,5 @@
     font-weight: 400;
     color: #686b6f;
     font-size: 20px;
+    white-space: nowrap;
 }
