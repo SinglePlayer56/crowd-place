@@ -10,7 +10,7 @@
     "express": "node server/src/build/index.js",
     "devServer": "concurrently \"npm run express\" \"npm run dev\"",
     "devBuild": "concurrently \"npm run express\" \"npm run build\"",
-    "devStart": "concurrently \"npm run express\" \"npm run start\""
+    "devStart": "concurrently \"npm run express\" \"PORT=3002 npm run start\""
   },
   "dependencies": {
     "@lucasmogari/react-pagination": "^1.1.3",
