@@ -5,7 +5,7 @@ import {searchParams} from "@/types";
 import Pagination from "@/components/Pagination/Pagination";
 import {redirect} from "next/navigation";
 
-const BlogListing = ({searchParams}: searchParams) => {
+const BlogListing = ({searchParams}: any) => {
     const totalCount = BlogCardsValues.length;
     const perPage = 6;
     let currentPage = 1;
