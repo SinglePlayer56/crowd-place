@@ -14,7 +14,7 @@ const port = envVariable.PORT || 3001;
 app.use(express.json());
 
 app.use(cors({
-    origin: 'http://1864875-cn27374.twc1.net', // Разрешить запросы с этого домена
+    origin: 'http://1864875-cn27374.twc1.net:3000', // Разрешить запросы с этого домена
     methods: ['GET', 'POST'], // Разрешенные HTTP-методы
     allowedHeaders: ['Content-Type'], // Разрешенные заголовки
 }));
