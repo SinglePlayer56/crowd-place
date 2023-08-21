@@ -1,0 +1,20 @@
+{
+  "/favicon.ico/route": "/favicon.ico",
+  "/page": "/",
+  "/about-us/page": "/about-us",
+  "/add-platform/page": "/add-platform",
+  "/blog/page": "/blog",
+  "/contacts/page": "/contacts",
+  "/cookies/page": "/cookies",
+  "/privacy/page": "/privacy",
+  "/platforms/page": "/platforms",
+  "/api/send-mail/route": "/api/send-mail",
+  "/terms/page": "/terms",
+  "/blog/article/page": "/blog/article",
+  "/platform/[name]/page": "/platform/[name]",
+  "/platforms/[investmentType]/page": "/platforms/[investmentType]",
+  "/platforms/[investmentType]/[industry]/page": "/platforms/[investmentType]/[industry]",
+  "/platforms/[investmentType]/[industry]/[country]/page": "/platforms/[investmentType]/[industry]/[country]",
+  "/platforms/[investmentType]/[industry]/[country]/[yearFounded]/page": "/platforms/[investmentType]/[industry]/[country]/[yearFounded]",
+  "/platforms/[investmentType]/[industry]/[country]/[yearFounded]/[licenseNumber]/page": "/platforms/[investmentType]/[industry]/[country]/[yearFounded]/[licenseNumber]"
+}
