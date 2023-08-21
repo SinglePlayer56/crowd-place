@@ -17,12 +17,15 @@ interface PageProps {
 
 
 const Platforms = async ({searchParams, params}: PageProps) => {
-
+    const paramsBreadCrumbs = [
+        {name: 'Main', href: ''},
+        {name: 'Platforms', href: 'platforms'}
+    ];
 
     return (
         <>
             <> </>
-            <BreadCrumbs/>
+            <BreadCrumbs paramsPath={paramsBreadCrumbs}/>
             <section className={styles.head}>
                 <div className={'container'}>
                     <HTag className={styles.head__title} tag={'h1'}>

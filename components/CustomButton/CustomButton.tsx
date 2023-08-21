@@ -12,6 +12,7 @@ const CustomButton = memo(
                 [styles.blue]: color === 'blue',
                 [styles.transparent]: color === 'transparent'
             })}>
+                <div className={styles.circle}></div>
                 {children ? children : text}
             </button>
         );

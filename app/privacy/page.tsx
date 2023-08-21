@@ -3,10 +3,14 @@ import styles from './Privacy.module.css';
 import cn from 'classnames';
 
 const Privacy = () => {
+    const paramsBreadCrumbs = [
+        {name: 'Main', href: ''},
+        {name: 'Privacy', href: 'privacy'},
+    ];
 
     return (
         <>
-            <BreadCrumbs/>
+            <BreadCrumbs paramsPath={paramsBreadCrumbs}/>
             <section className={styles.privacy}>
                 <div className={'container'}>
                     <HTag className={styles.privacy__title} tag={'h1'}>

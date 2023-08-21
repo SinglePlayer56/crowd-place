@@ -17,11 +17,15 @@ interface PageProps {
 
 
 const Platforms = async ({searchParams, params}: PageProps) => {
+    const paramsBreadCrumbs = [
+        {name: 'Main', href: ''},
+        {name: 'Platforms', href: 'platforms'}
+    ];
 
     return (
         <>
             <> </>
-            {/*<BreadCrumbs/>*/}
+            <BreadCrumbs paramsPath={paramsBreadCrumbs}/>
             <section className={styles.head}>
                 <div className={'container'}>
                     <HTag className={styles.head__title} tag={'h1'}>
@@ -48,7 +52,7 @@ const Platforms = async ({searchParams, params}: PageProps) => {
                     />
                 </div>
             </section>
-            <ListingPlatforms params={params} searchParams={searchParams} />
+            <ListingPlatforms params={params} searchParams={searchParams}/>
             <section className={styles.whoCan}>
                 <div className={'container'}>
                     <HTag className={styles.whoCan__title} tag={'h2'}>

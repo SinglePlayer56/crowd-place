@@ -28,6 +28,8 @@ import ContextRedux from "@/components/ContextRedux/ContextRedux";
 import TagFilters from "@/components/TagFilters/TagFilters";
 import TagFilter from "@/components/TagFilter/TagFilter";
 import ListingPlatforms from "@/components/ListingPlatforms/ListingPlatforms";
+import RelatedSwiper from "@/components/RelatedSwiper/RelatedSwiper";
+import HiddenDescription from "@/components/HiddenDescription/HiddenDescription";
 
 export {
     Footer,
@@ -59,5 +61,7 @@ export {
     ContextRedux,
     TagFilters,
     TagFilter,
-    ListingPlatforms
+    ListingPlatforms,
+    RelatedSwiper,
+    HiddenDescription
 }

@@ -2,6 +2,7 @@
     cursor: pointer;
     font-family: var(--inter-font);
     display: block;
+    transition: all 0.3s ease;
 }
 
 .white,
@@ -16,6 +17,7 @@
 }
 
 .blue {
+    border: 2px solid rgba(0, 156, 238, 0);
     box-shadow: 0 14px 26px 0 rgba(50,156,211,0.4);
     border-radius: 12px;
     font-size: 24px;
@@ -24,6 +26,18 @@
     padding: 19px 10px;
     width: 100%;
     background-color: #24b2fc;
+}
+
+.white:active {
+    background-color: #24b2fc;
+    border: 2px solid rgba(0, 156, 238, 0);
+    color: #fefefe;
+}
+
+.blue:active {
+    border: 2px solid rgba(0, 156, 238, 0.21);
+    background-color: #f1f8fb;
+    color: #009dee;
 }
 
 .transparent {

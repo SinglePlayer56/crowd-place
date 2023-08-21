@@ -3,8 +3,9 @@ import styles from './PlatformCard.module.css';
 import Image from 'next/image';
 import {CustomButton, HTag, PlatformCardTags, PTag} from "@/components";
 import Link from "next/link";
+import {memo} from "react";
 
-const PlatformCard = ({pathLogo, title, countries, description, industry, type, href}: PlatformCardProps) => {
+const PlatformCard = memo(({pathLogo, title, countries, description, industry, type, href}: PlatformCardProps) => {
 
     return (
         <div className={styles.card}>
@@ -44,6 +45,6 @@ const PlatformCard = ({pathLogo, title, countries, description, industry, type, 
             </Link>
         </div>
     );
-};
+});
 
 export default PlatformCard;

@@ -37,9 +37,14 @@ const AddPlatform = () => {
         },
     ];
 
+    const paramsBreadCrumbs = [
+        {name: 'Main', href: ''},
+        {name: 'Add platform', href: 'add-platform'},
+    ];
+
     return (
         <>
-            <BreadCrumbs/>
+            <BreadCrumbs paramsPath={paramsBreadCrumbs}/>
             <section className={styles.contact}>
                 <div className={'container'}>
                     <HTag className={styles.contact__title} tag={'h1'}>

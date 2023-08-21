@@ -1,19 +1,19 @@
 'use client';
 import {SelectFiltersProps} from "./SelectFilters.props";
 import styles from './SelectFilters.module.css';
-import {CustomButton, Filter, Tag, TagFilters} from "@/components";
+import {CustomButton, Filter, TagFilters} from "@/components";
 import cn from 'classnames';
-import {useCallback, useEffect, useMemo, useState} from "react";
+import {memo, useCallback, useEffect, useMemo, useState} from "react";
 import {useAppDispatch, useAppSelector} from "@/hooks/redux";
 import {
-    acceptSelectFilterType, addServerState, addTag, clearSelectFilterType,
+    acceptSelectFilterType, addTag, clearSelectFilterType,
     FilterType,
     IPayloadFilterField, removeFilter,
     resetFilters,
     toggleCheckbox,
 } from "@/store/slices/filters";
 import Link from "next/link";
-import {redirect, useParams, useRouter} from "next/navigation";
+import {useParams} from "next/navigation";
 
 
 function processFilterArray(filterArray: string[]) {
@@ -33,12 +33,11 @@ function generateFilterUrl(...filters: string[]) {
     return `/platforms/${validFilters.join('/')}/`;
 }
 
-const SelectFilters = ({className, resetButton}: SelectFiltersProps) => {
+const SelectFilters = memo(({className}: SelectFiltersProps) => {
     const params = useParams();
     const dispatch = useAppDispatch();
 
     const [expanded, setExpanded] = useState<false | number>(false);
-
     const clientFilters = useAppSelector((state) => state.filters.filtersFields);
 
     useEffect(() => {
@@ -51,9 +50,9 @@ const SelectFilters = ({className, resetButton}: SelectFiltersProps) => {
         dispatch(toggleCheckbox(value));
     }, [dispatch]);
 
-    const resetHandler = () => {
-        dispatch(resetFilters());
-    }
+    const resetHandler = useCallback(() => {
+        dispatch(resetFilters())
+    }, [dispatch]);
 
     const acceptFilterHandler = useCallback((type: FilterType) => {
         dispatch(acceptSelectFilterType(type))
@@ -96,6 +95,7 @@ const SelectFilters = ({className, resetButton}: SelectFiltersProps) => {
         yearFoundedPath,
         licenseNumberPath
     ]);
+
     return (
         <div className={styles.filters}>
             <div className={cn(styles.filtersWrapper, className)}>
@@ -128,7 +128,7 @@ const SelectFilters = ({className, resetButton}: SelectFiltersProps) => {
                     />
                 ))}
             </div>
-            {resetButton &&
+            {url.length > 11 &&
                 <CustomButton
                     onClick={resetHandler}
                     className={styles.filters__resetButton}
@@ -137,6 +137,6 @@ const SelectFilters = ({className, resetButton}: SelectFiltersProps) => {
                 />}
         </div>
     );
-};
+});
 
 export default SelectFilters;

@@ -1,8 +1,9 @@
 .breadCrumbs {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 0 15px;
     margin: 45px 0;
+    flex-wrap: wrap;
 }
 
 .text {
@@ -34,4 +35,10 @@
 
 .text:last-of-type:hover {
     cursor: default;
+}
+
+@media screen and (max-width: 425px) {
+    .breadCrumbs {
+        margin: 20px 0;
+    }
 }

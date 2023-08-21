@@ -1,7 +1,6 @@
 import styles from './blog.module.css'
 import {BlogCard, BreadCrumbs, HTag, PTag, SelectFilters} from "@/components";
 import {BlogCardsValues} from "@/consts";
-import {searchParams} from "@/types";
 import Pagination from "@/components/Pagination/Pagination";
 import {redirect} from "next/navigation";
 
@@ -22,12 +21,17 @@ const BlogListing = ({searchParams}: any) => {
 
     const blogCardData = BlogCardsValues.slice(offset, offset + perPage);
 
+
+    const paramsBreadCrumbs = [
+        {name: 'Main', href: ''},
+        {name: 'Blog', href: 'blog'},
+    ];
     return (
         <>
             <> </>
             <section className={styles.head}>
                 <div className={'container'}>
-                    <BreadCrumbs/>
+                    <BreadCrumbs paramsPath={paramsBreadCrumbs}/>
                     <HTag className={styles.head__title} tag={'h1'}>
                         Blog Listing
                     </HTag>

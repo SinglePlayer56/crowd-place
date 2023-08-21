@@ -3,21 +3,9 @@
     background-color: #ffffff;
 }
 
-.head__title {
-    margin-bottom: 35px;
-}
-
 .head__logo {
     border: 2px solid #d5edfd;
     border-radius: 9px;
-}
-
-.description__title {
-    font-family: var(--inter-font);
-    font-size: 20px;
-    font-weight: 700;
-    color: #000000;
-    margin-bottom: 20px;
 }
 
 .description__hidden {
@@ -25,11 +13,6 @@
     -webkit-line-clamp: 2;
     overflow: hidden;
     -webkit-box-orient: vertical;
-}
-
-.description__full {
-    color: #009dee;
-    cursor: pointer;
 }
 
 .head__tags {
@@ -49,14 +32,19 @@
     grid-area: tags;
 }
 
+.head__title {
+    grid-area: title;
+}
+
 .head__content {
     max-width: 1200px;
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-areas: 'logo description'
-                        'logo tags';
-    gap: 30px;
-    align-items: start;
+    grid-template-areas: 'logo title'
+                        'description description'
+                        'tags tags';
+    gap: 20px 20px;
+    align-items: center;
 }
 
 .overview {
@@ -87,6 +75,7 @@
     border-radius: 9px;
     max-width: 392px;
     width: 100%;
+    justify-self: end;
 }
 
 .checkList__item {
@@ -144,8 +133,56 @@
 }
 
 .reviews__list {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    margin-bottom: 50px;
+    /*padding: 0 20px;*/
+    /*display: grid;*/
+    /*grid-template-columns: repeat(4, 1fr);*/
+    /*gap: 25px;*/
+    /*margin-bottom: 50px;*/
+    /*display: flex;*/
 }
+
+@media screen and (max-width: 1500px) {
+    .overview__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 1130px) {
+    .overview__content {
+        grid-template-columns: 1fr;
+    }
+
+    .overview__checkList {
+        justify-self: start;
+        max-width: none;
+    }
+
+    .checkList__text {
+        font-size: 22px;
+    }
+
+    .checkList__item img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .overview__list {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    .head__content {
+        grid-template-areas: 'title title'
+                        'logo tags'
+                        'description description';
+        align-items: end;
+    }
+
+}
+
+

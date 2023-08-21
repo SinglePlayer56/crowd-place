@@ -28,9 +28,15 @@ const Contacts = () => {
             required: true
         },
     ];
+
+    const paramsBreadCrumbs = [
+        {name: 'Main', href: ''},
+        {name: 'Contacts', href: 'contacts'},
+    ];
+
     return (
         <>
-            <BreadCrumbs/>
+            <BreadCrumbs paramsPath={paramsBreadCrumbs}/>
             <section className={styles.contact}>
                 <div className={'container'}>
                     <HTag className={styles.contact__title} tag={'h1'}>

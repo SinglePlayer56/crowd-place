@@ -27,3 +27,17 @@
 .review__item_button {
     width: 100%;
 }
+
+@media screen and (max-width: 425px) {
+    .review__item_text {
+        font-size: 26px;
+    }
+
+    .review__item_content {
+        margin-bottom: 30px;
+    }
+
+    .review__item {
+        padding: 30px 20px;
+    }
+}

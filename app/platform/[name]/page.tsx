@@ -1,9 +1,17 @@
 import {Metadata} from "next";
-import {BreadCrumbs, CrowdfundingCard, HTag, PlatformCard, PTag, ReviewCard, Tag} from "@/components";
+import {
+    BreadCrumbs,
+    CrowdfundingCard,
+    HiddenDescription,
+    HTag,
+    PTag,
+    RelatedSwiper,
+    ReviewCard,
+    Tag
+} from "@/components";
 import styles from './Platform.module.css';
 import Image from 'next/image';
 import {CrowdfundingCardProps} from "@/components/CrowdfundingCard/CrowdfundingCard.props";
-import cn from 'classnames';
 import {IPlatform} from "@/types";
 
 type Props = {
@@ -45,9 +53,10 @@ const Platform = async ({params}: Props) => {
         website,
         signupBonus,
         logo,
+        slug
     }: IPlatform = await getPlatform(params.name);
 
-    const relatedPlatforms: IPlatform[] | IPlatform = await getRelatedPlatform(industry[0], params.name);
+    const relatedPlatforms: IPlatform[] = await getRelatedPlatform(industry[0], params.name);
 
 
     const overviewData: CrowdfundingCardProps[] = [
@@ -78,6 +87,8 @@ const Platform = async ({params}: Props) => {
         }
     ];
 
+    console.log(languages);
+
     const checkListData = [
         {
             title: 'Regulated',
@@ -103,16 +114,20 @@ const Platform = async ({params}: Props) => {
             title: 'Auto-invest',
             value: autoInvest ? autoInvest : ''
         }
-    ]
+    ];
+
+    const paramsBreadCrumbs = [
+        {name: 'Main', href: ''},
+        {name: 'Platforms', href: 'platforms'},
+        {name: name, href: slug},
+    ];
 
     return (
         <>
             <section className={styles.head}>
                 <div className={'container'}>
-                    <BreadCrumbs/>
-                    <HTag className={styles.head__title} tag={'h1'}>
-                        {name}
-                    </HTag>
+                    <BreadCrumbs paramsPath={paramsBreadCrumbs}/>
+
                     <div className={styles.head__content}>
                         <Image
                             src={logo}
@@ -121,18 +136,13 @@ const Platform = async ({params}: Props) => {
                             height={80}
                             className={styles.head__logo}
                         />
-                        <div className={styles.head__description}>
-                            <p className={styles.description__title}>Description</p>
-                            <PTag
-                                className={cn(styles.description__text,
-                                    {
-                                        [styles.decription__fullText]: ''
-                                    })}
-                                fontSize={'20px'}>
-                                {description}
-                                <span className={styles.description__full}>Read full</span>
-                            </PTag>
-                        </div>
+                        <HTag className={styles.head__title} tag={'h1'}>
+                            {name}
+                        </HTag>
+                        <HiddenDescription
+                            className={styles.head__description}
+                            description={description}
+                        />
                         <div className={styles.head__tags}>
                             {industry?.map((tagName) => <Tag key={tagName} title={tagName}/>)}
                         </div>
@@ -211,30 +221,7 @@ const Platform = async ({params}: Props) => {
             <section className={styles.relatedPlatforms}>
                 <div className={'container'}>
                     <div className={styles.reviews__list}>
-                        {Array.isArray(relatedPlatforms) ? relatedPlatforms.map((platform: IPlatform) => (
-                            <PlatformCard
-                                key={platform.name}
-                                pathLogo={platform.logo}
-                                title={platform.name}
-                                countries={platform.country}
-                                description={platform.description}
-                                href={`/platform/${platform.slug}`}
-                                type={platform.investmentType}
-                                industry={platform.industry}
-                            />
-                        ))
-                        :
-                            <PlatformCard
-                                key={relatedPlatforms.name}
-                                pathLogo={relatedPlatforms.logo}
-                                title={relatedPlatforms.name}
-                                countries={relatedPlatforms.country}
-                                description={relatedPlatforms.description}
-                                href={`/platform/${relatedPlatforms.slug}`}
-                                type={relatedPlatforms.investmentType}
-                                industry={relatedPlatforms.industry}
-                            />
-                        }
+                        <RelatedSwiper platforms={relatedPlatforms}/>
                     </div>
                 </div>
             </section>
@@ -261,18 +248,15 @@ async function getPlatform(name: string): Promise<IPlatform> {
 
         })
 
-    const platform: Promise<IPlatform> = response.json();
 
-    return platform;
+    return await response.json() as Promise<IPlatform>;
 }
 
-async function getRelatedPlatform(industry: string, name?: string): Promise<IPlatform[] | IPlatform> {
+async function getRelatedPlatform(industry: string, name?: string): Promise<IPlatform[]> {
     const response = await fetch(`${process.env.SERVER}/api/get-related/${industry}/?name=${name}`, {
         method: 'GET',
 
     });
 
-    const platforms: Promise<IPlatform[] | IPlatform> = response.json();
-
-    return platforms;
+    return await response.json() as Promise<IPlatform[]>;
 }

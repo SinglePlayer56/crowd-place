@@ -1,8 +1,23 @@
+'use client';
+
 import {CrowdfundingCardProps} from "./CrowdfundingCard.props";
 import styles from './CrowdfundingCard.module.css';
 import Image from 'next/image';
+import {useEffect, useState} from "react";
+import cn from 'classnames';
 
 const CrowdfundingCard = ({title, iconPath, value}: CrowdfundingCardProps) => {
+    const [isVisible, setIsVisible] = useState<boolean>(false);
+
+    useEffect(() => {
+        const timeoutId = setTimeout(() => {
+            setIsVisible(false);
+        }, 4000);
+
+        return () => {
+            clearTimeout(timeoutId);
+        };
+    }, [isVisible]);
 
     return (
         <div className={styles.card}>
@@ -14,8 +29,20 @@ const CrowdfundingCard = ({title, iconPath, value}: CrowdfundingCardProps) => {
                     height={62}
                 />
                 {value && Array.isArray(value) ?
-                    value.map((item) => (<span key={item} className={styles.card__text}>{item}</span>)):
+                    <div className={styles.card__items}>
+                        <span className={styles.card__text}>{value[0]}</span>
+                        {value.length > 1 && <span className={styles.seeMore} onClick={() => setIsVisible(true)}>+see more</span>}
+                    </div>
+                    :
                     <span className={styles.card__text}>{value}</span>
+                }
+                {Array.isArray(value) && value.length > 1 &&
+                    <div className={cn(styles.card__hiddenList, {
+                        [styles.visibleList]: isVisible,
+                        [styles.fadeOut]: !isVisible
+                    })}>
+                        {value.map((item, index) => index > 0 && (<span key={item} className={styles.card__hiddenList_text}>{value.length - 1 !== index ? `${item} | ` : item}</span>))}
+                    </div>
                 }
             </div>
             <h3 className={styles.card__title}>

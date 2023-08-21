@@ -3,10 +3,13 @@ import styles from './Cookies.module.css';
 import cn from 'classnames';
 
 const Cookies = () => {
-
+    const paramsBreadCrumbs = [
+        {name: 'Main', href: ''},
+        {name: 'Cookies', href: 'cookies'},
+    ];
     return (
         <>
-            <BreadCrumbs/>
+            <BreadCrumbs paramsPath={paramsBreadCrumbs}/>
             <section className={styles.cookies}>
                 <div className={'container'}>
                     <HTag className={styles.cookies__title} tag={'h1'}>

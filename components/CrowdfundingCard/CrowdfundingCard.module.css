@@ -4,6 +4,7 @@
     border-radius: 9px;
     padding: 35px;
     background-color: #ffffff;
+    position: relative;
 }
 
 .card__title {
@@ -28,4 +29,56 @@
     font-family: var(--montserrat-font);
     line-height: 30px;
     color: #000000;
+}
+
+.card__hiddenList {
+    position: absolute;
+    top: -20px;
+    right: -40px;
+    background-color: #ffffff;
+    border-radius: 9px;
+    padding: 10px;
+    border: 1px solid #deedf4;
+    box-shadow: 0 14px 20px 0 rgba(139,167,183,0.11);
+    z-index: 20;
+    cursor: default;
+    transition: opacity 0.3s ease;
+}
+
+.card__hiddenList.visibleList {
+    opacity: 1;
+}
+.card__hiddenList.fadeOut {
+    opacity: 0;
+}
+
+.card__hiddenList_text {
+    font-weight: 600;
+    font-size: 16px;
+    font-family: var(--montserrat-font);
+    line-height: 20px;
+    color: #000000;
+}
+
+.seeMore {
+    font-family: var(--inter-font);
+    font-size: 16px;
+    font-weight: 600;
+    color: #009dee;
+    background-color: transparent;
+    white-space: nowrap;
+    cursor: pointer;
+    text-align: right;
+}
+
+.card__items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+@media screen and (max-width: 1130px) {
+    .card__hiddenList {
+        right: 20px;
+    }
 }

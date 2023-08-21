@@ -3,10 +3,14 @@ import styles from './Terms.module.css';
 import cn from 'classnames';
 
 const Terms = () => {
+    const paramsBreadCrumbs = [
+        {name: 'Main', href: ''},
+        {name: 'Terms', href: 'terms'},
+    ];
 
     return (
         <>
-            <BreadCrumbs/>
+            <BreadCrumbs paramsPath={paramsBreadCrumbs}/>
             <section className={styles.terms}>
                 <div className={'container'}>
                     <HTag className={styles.terms__title} tag={'h1'}>

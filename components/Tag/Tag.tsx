@@ -1,7 +1,10 @@
+'use client';
+
 import {TagProps} from "./Tag.props";
 import styles from './Tag.module.css';
 import cn from 'classnames';
 import {ForwardedRef, forwardRef} from "react";
+import {motion} from "framer-motion";
 
 const Tag = forwardRef<HTMLSpanElement, TagProps>(({title, className}: TagProps, ref: ForwardedRef<HTMLSpanElement>) => {
 
@@ -12,4 +15,4 @@ const Tag = forwardRef<HTMLSpanElement, TagProps>(({title, className}: TagProps,
     );
 });
 
-export default Tag;
+export default motion(Tag, {forwardMotionProps: true});
