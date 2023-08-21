@@ -1,0 +1,20 @@
+{
+  "/page": "app/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/add-platform/page": "app/add-platform/page.js",
+  "/about-us/page": "app/about-us/page.js",
+  "/blog/page": "app/blog/page.js",
+  "/cookies/page": "app/cookies/page.js",
+  "/contacts/page": "app/contacts/page.js",
+  "/privacy/page": "app/privacy/page.js",
+  "/terms/page": "app/terms/page.js",
+  "/platforms/page": "app/platforms/page.js",
+  "/api/send-mail/route": "app/api/send-mail/route.js",
+  "/blog/article/page": "app/blog/article/page.js",
+  "/platform/[name]/page": "app/platform/[name]/page.js",
+  "/platforms/[investmentType]/page": "app/platforms/[investmentType]/page.js",
+  "/platforms/[investmentType]/[industry]/page": "app/platforms/[investmentType]/[industry]/page.js",
+  "/platforms/[investmentType]/[industry]/[country]/page": "app/platforms/[investmentType]/[industry]/[country]/page.js",
+  "/platforms/[investmentType]/[industry]/[country]/[yearFounded]/page": "app/platforms/[investmentType]/[industry]/[country]/[yearFounded]/page.js",
+  "/platforms/[investmentType]/[industry]/[country]/[yearFounded]/[licenseNumber]/page": "app/platforms/[investmentType]/[industry]/[country]/[yearFounded]/[licenseNumber]/page.js"
+}
