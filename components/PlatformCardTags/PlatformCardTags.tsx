@@ -4,30 +4,33 @@ import styles from "./PlatformCardTags.module.css";
 import {Tag} from "@/components";
 import cn from "classnames";
 import {PlatformCardTagsProps} from "@/components/PlatformCardTags/PlatformCardTags.props";
-import {useLayoutEffect, useRef, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {motion, AnimatePresence} from 'framer-motion';
+import {useSearchParams} from "next/navigation";
 
 const PlatformCardTags = ({tags, title, className}: PlatformCardTagsProps) => {
+    const searchParams = useSearchParams();
+    const pageParams = searchParams.get('page');
+
     const [isVisible, setIsVisible] = useState<boolean>(false);
     const [containerWidth, setContainerWidth] = useState<number>(0);
     const [parentWidth, setParentWidth] = useState<number>(0);
     const [renderElem, setRenderElem] = useState<number>(2);
 
     const contentRef = useRef<HTMLDivElement>(null);
-    const tagRef = useRef<HTMLSpanElement>(null);
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         if (contentRef.current) {
-            const containerWidth = contentRef.current.clientWidth;
-            const parentWidth = contentRef.current.parentElement?.parentElement?.clientWidth;
+            const containerWidth = Number(contentRef.current.getBoundingClientRect().width.toFixed(2));
+            const parentWidth = Number(contentRef.current.parentElement?.parentElement?.getBoundingClientRect().width.toFixed(2));
 
-            if (containerWidth > parentWidth! - 60) {
+            if (containerWidth > parentWidth! - 61.33) {
                 setContainerWidth(containerWidth);
-                setParentWidth(parentWidth! - 60);
+                setParentWidth(parentWidth! - 61.33);
                 setRenderElem(1);
             }
         }
-    }, [isVisible]);
+    }, [pageParams]);
 
     return (
         <AnimatePresence>
@@ -37,26 +40,21 @@ const PlatformCardTags = ({tags, title, className}: PlatformCardTagsProps) => {
                 className={cn(styles.tags, className, {
                     [styles.wrap]: isVisible
                 })}
-
             >
                 <span className={styles.tags__name}>{title}:</span>
-
                 {tags.map((item, index) => {
                     if (index < renderElem) {
                         return (
                             <Tag
-                                ref={tagRef}
-                                className={cn({
-                                    [styles.hidden]: !isVisible && containerWidth > parentWidth && index > renderElem
-                                })}
                                 key={item}
                                 title={item}
+                                initial={false}
+                                animate={{opacity: 1, y: 0}}
                             />
                         )
                     } else {
                         return (
                             <Tag
-                                ref={tagRef}
                                 key={item}
                                 className={cn({
                                     [styles.hidden]: !isVisible
@@ -70,8 +68,7 @@ const PlatformCardTags = ({tags, title, className}: PlatformCardTagsProps) => {
                     }
                 })}
 
-
-                {(containerWidth > parentWidth || tags.length > 2) &&
+                {(containerWidth > parentWidth || tags.length > renderElem) && tags.length > renderElem &&
                     <button
                         className={cn(styles.seeMore, {
                             [styles.hidden]: isVisible

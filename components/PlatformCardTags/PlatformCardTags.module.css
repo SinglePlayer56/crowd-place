@@ -1,5 +1,5 @@
 .tags {
-    display: flex;
+    display: inline-flex;
     gap: 8px;
     align-items: center;
     flex-wrap: nowrap;

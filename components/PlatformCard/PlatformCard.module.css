@@ -47,6 +47,9 @@
 
 .card__tags {
     margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 
 @media screen and (max-width: 1650px){
