@@ -8,6 +8,8 @@ import {HeaderLink} from "@/types";
 import {isActiveLink} from "@/helpers";
 import {SearchButton} from "@/components";
 import {useScrollPosition} from "@/hooks";
+import React from "react";
+import Burger from "@/components/Burger/Burger";
 
 const Header = () => {
     const headerLinkHref: HeaderLink[] = [
@@ -66,6 +68,7 @@ const Header = () => {
                             </Link>
                         ))}
                     </div>
+                    <Burger className={styles.header__burger}/>
                 </div>
             </div>
         </header>

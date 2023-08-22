@@ -55,5 +55,16 @@
 @media screen and (max-width: 768px) {
     .header__searchButton {
         position: sticky;
+        margin-right: 50px;
+    }
+}
+
+.header__burger {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .header__burger {
+        display: block;
     }
 }

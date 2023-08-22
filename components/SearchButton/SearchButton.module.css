@@ -18,3 +18,16 @@
     background-color: #ffffff;
     border: 2px solid #00b4f4;
 }
+
+
+@media screen and (max-width: 425px) {
+    .searchButton {
+        width: 42px;
+        height: 33px;
+    }
+
+    .searchButton img {
+        width: 15px;
+        height: 15px;
+    }
+}

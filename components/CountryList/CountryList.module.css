@@ -12,6 +12,7 @@
     grid-template-columns: repeat(5, 1fr);
     align-items: center;
     margin-bottom: 40px;
+    overflow: hidden;
 }
 
 .countryList__item {
