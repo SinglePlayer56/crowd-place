@@ -32,6 +32,8 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
     }
 }
 
+export const dynamic = 'force-static';
+
 
 const Platform = async ({params}: Props) => {
 
