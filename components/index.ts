@@ -30,6 +30,7 @@ import TagFilter from "@/components/TagFilter/TagFilter";
 import ListingPlatforms from "@/components/ListingPlatforms/ListingPlatforms";
 import RelatedSwiper from "@/components/RelatedSwiper/RelatedSwiper";
 import HiddenDescription from "@/components/HiddenDescription/HiddenDescription";
+import PlatformCardCountryList from "@/components/PlatformCardCountryList/PlatformCardCountryList";
 
 export {
     Footer,
@@ -63,5 +64,6 @@ export {
     TagFilter,
     ListingPlatforms,
     RelatedSwiper,
-    HiddenDescription
+    HiddenDescription,
+    PlatformCardCountryList
 }

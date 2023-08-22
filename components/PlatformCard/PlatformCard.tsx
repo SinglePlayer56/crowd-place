@@ -1,7 +1,7 @@
 import {PlatformCardProps} from "./PlatformCard.props";
 import styles from './PlatformCard.module.css';
 import Image from 'next/image';
-import {CustomButton, HTag, PlatformCardTags, PTag} from "@/components";
+import {CustomButton, HTag, PlatformCardCountryList, PlatformCardTags, PTag} from "@/components";
 import Link from "next/link";
 import {memo} from "react";
 
@@ -21,16 +21,10 @@ const PlatformCard = memo(({pathLogo, title, countries, description, industry, t
                     <HTag tag={'h4'}>
                         {title}
                     </HTag>
-                    <p className={styles.card__countryList}>
-                        {countries.map((country, index) => {
-                            const lastIndex = countries.length - 1;
-                            return (
-                                <span className={styles.card__country} key={country}>
-                                    {index === lastIndex ? country.trim() : `${country.trim()}, `}
-                                </span>
-                            )
-                        })}
-                    </p>
+                    <PlatformCardCountryList
+                        countries={countries}
+                        className={styles.card__countryList}
+                    />
                 </div>
             </div>
             <PTag fontSize={'17px'} className={styles.card__description}>
