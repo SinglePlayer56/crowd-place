@@ -89,8 +89,6 @@ const Platform = async ({params}: Props) => {
         }
     ];
 
-    console.log(languages);
-
     const checkListData = [
         {
             title: 'Regulated',
