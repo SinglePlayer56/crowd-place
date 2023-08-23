@@ -33,6 +33,7 @@ import HiddenDescription from "@/components/HiddenDescription/HiddenDescription"
 import PlatformCardCountryList from "@/components/PlatformCardCountryList/PlatformCardCountryList";
 import ArticleNote from "@/components/ArticleNote/ArticleNote";
 import ArticleImage from "@/components/ArticleImage/ArticleImage";
+import FilterPosts from "@/components/FilterPosts/FilterPosts";
 
 export {
     Footer,
@@ -69,5 +70,6 @@ export {
     HiddenDescription,
     PlatformCardCountryList,
     ArticleNote,
-    ArticleImage
+    ArticleImage,
+    FilterPosts
 }

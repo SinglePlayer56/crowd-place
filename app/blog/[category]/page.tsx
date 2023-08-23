@@ -1,10 +1,10 @@
-import styles from './blog.module.css'
+import styles from '../blog.module.css'
 import {BlogCard, BreadCrumbs, FilterPosts, HTag, PTag} from "@/components";
 import {BlogCardsValues} from "@/consts";
 import Pagination from "@/components/Pagination/Pagination";
 import {redirect} from "next/navigation";
 
-const BlogListing = ({searchParams}: any) => {
+const CategoryListing = ({searchParams}: any) => {
     const totalCount = BlogCardsValues.length;
     const perPage = 6;
     let currentPage = 1;
@@ -92,4 +92,4 @@ const BlogListing = ({searchParams}: any) => {
     );
 };
 
-export default BlogListing;
+export default CategoryListing;

@@ -1,0 +1,33 @@
+.filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding: 10px 16px;
+}
+.tag a {
+    font-size: 20px;
+}
+
+.tagNotActive,
+.tagNotActive a {
+    transition: all 0.3s ease;
+}
+
+.tagNotActive a {
+    color: rgba(70,69,121,.56);
+}
+
+.tagNotActive {
+    border: 2px solid rgba(135, 137, 140, 0.15);
+}
+
+.tagNotActive:hover {
+    border: 2px solid #d5edfd;
+}
+
+.tagNotActive:hover a {
+    color: #009dee;
+}
