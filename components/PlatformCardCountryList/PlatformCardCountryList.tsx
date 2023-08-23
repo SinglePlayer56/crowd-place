@@ -5,6 +5,7 @@ import {PlatformCardCountryListProps} from "./PlatformCardCountryList.props";
 import cn from 'classnames';
 import {useEffect, useState} from "react";
 import {motion, AnimatePresence} from "framer-motion";
+import Link from "next/link";
 
 const PlatformCardCountryList = ({countries, className}: PlatformCardCountryListProps) => {
     const [isVisible, setIsVisible] = useState<boolean>(false)
@@ -21,24 +22,34 @@ const PlatformCardCountryList = ({countries, className}: PlatformCardCountryList
 
     return (
         <div className={cn(styles.countryList, className)}>
-            <span className={styles.card__country}>{countries[0]}</span>
+            <Link
+                href={`/platforms/${countries[0].toLowerCase().split(' ').join('-')}/`}
+                className={styles.card__country}
+            >
+                {countries[0]}
+            </Link>
             {countries.length > 1 &&
                 <span className={styles.seeMore} onClick={() => setIsVisible(true)}>+seeMore</span>}
             <AnimatePresence>
                 <motion.div
                     initial={false}
-                    animate={{opacity: isVisible ? 1 : 0, display:'flex'}}
-                    exit={{opacity: 0, display: 'none'}}
+                    animate={{opacity: isVisible ? 1 : 0, display: 'flex'}}
                     transition={{duration: 0.3}}
-                    className={cn(styles.countryList__modal)}
+                    className={cn(styles.countryList__modal, {
+                        [styles.hidden]: !isVisible
+                    })}
                 >
                     {countries.map((country, index) => {
                         if (index > 0) {
                             const lastIndex = countries.length - 1;
                             return (
-                                <span className={cn(styles.card__country, styles.modal)} key={country}>
-                                    {lastIndex !== index ? `${country} | ` : country}
-                                </span>
+                                <Link
+                                    className={cn(styles.card__country, styles.modal)}
+                                    key={country}
+                                    href={`/platforms/${country.toLowerCase().split(' ').join('-')}/`}
+                                >
+                                    {lastIndex !== index ? `${country} |\u00A0` : country}
+                                </Link>
                             )
                         }
                     })}

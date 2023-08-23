@@ -3,11 +3,10 @@ import {
     BreadCrumbs,
     CrowdfundingCard,
     HiddenDescription,
-    HTag,
+    HTag, PlatformCardTags,
     PTag,
     RelatedSwiper,
-    ReviewCard,
-    Tag
+    ReviewCard
 } from "@/components";
 import styles from './Platform.module.css';
 import Image from 'next/image';
@@ -143,9 +142,7 @@ const Platform = async ({params}: Props) => {
                             className={styles.head__description}
                             description={description}
                         />
-                        <div className={styles.head__tags}>
-                            {industry?.map((tagName) => <Tag key={tagName} title={tagName}/>)}
-                        </div>
+                        <PlatformCardTags className={styles.head__tags} tags={industry}/>
                     </div>
                 </div>
             </section>

@@ -60,3 +60,34 @@
     }
 }
 
+.article {
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.article__text {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.article__list {
+    margin-bottom: 20px;
+}
+
+.article__section {
+    margin-bottom: 20px;
+}
+
+.article__section_title {
+    margin-bottom: 10px;
+}
+
+.article__section_subtitle {
+    margin-bottom: 5px;
+}
+
+.article__section p:last-child {
+    margin: 0;
+}
+
+

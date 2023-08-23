@@ -8,3 +8,11 @@
     color: #009dee;
     white-space: nowrap;
 }
+
+.tag a {
+    font-family: var(--inter-font);
+    font-size: 16px;
+    font-weight: 400;
+    color: #009dee;
+    white-space: nowrap;
+}

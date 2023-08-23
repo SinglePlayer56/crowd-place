@@ -27,6 +27,38 @@
 }
 
 @font-face {
+    font-family: Inter;
+    src: url('../public/fonts/Inter-Italic.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url('../public/fonts/Inter-MediumItalic.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url('../public/fonts/Inter-SemiBoldItalic.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url('../public/fonts/Inter-BoldItalic.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+    font-style: italic;
+}
+
+@font-face {
     font-family: Montserrat;
     src: url('../public/fonts/Montserrat-Regular.woff2') format('woff2');
     font-weight: 400;

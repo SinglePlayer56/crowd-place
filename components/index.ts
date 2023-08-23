@@ -31,6 +31,8 @@ import ListingPlatforms from "@/components/ListingPlatforms/ListingPlatforms";
 import RelatedSwiper from "@/components/RelatedSwiper/RelatedSwiper";
 import HiddenDescription from "@/components/HiddenDescription/HiddenDescription";
 import PlatformCardCountryList from "@/components/PlatformCardCountryList/PlatformCardCountryList";
+import ArticleNote from "@/components/ArticleNote/ArticleNote";
+import ArticleImage from "@/components/ArticleImage/ArticleImage";
 
 export {
     Footer,
@@ -65,5 +67,7 @@ export {
     ListingPlatforms,
     RelatedSwiper,
     HiddenDescription,
-    PlatformCardCountryList
+    PlatformCardCountryList,
+    ArticleNote,
+    ArticleImage
 }

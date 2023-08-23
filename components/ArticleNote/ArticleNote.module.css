@@ -1,0 +1,44 @@
+.article__note {
+    border: 1px solid #deedf4;
+    border-radius: 20px;
+    background: linear-gradient(131deg,#e3ffe7 0%,#d9e7ff 100%);
+    gap: 40px;
+    padding: 40px;
+    margin: 40px;
+}
+
+.article__note_text {
+    font-family: var(--inter-font);
+    color: #009cee;
+    font-size: 30px;
+    line-height: 34px;
+    font-style: italic;
+    font-weight: 400;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .article__note {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .article__note_text {
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .article__note {
+        margin: 20px 0;
+        padding: 15px;
+    }
+
+    .article__note_text {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}

@@ -3,7 +3,7 @@
     font-size: 15px;
     font-weight: 400;
     color: #686b6f;
-    cursor: default;
+    cursor: pointer;
 }
 
 .card__country.modal {
@@ -24,7 +24,8 @@
     border: 1px solid #deedf4;
     box-shadow: 0 14px 20px 0 rgba(139,167,183,0.11);
     padding: 15px;
-    width: 80%;
+    max-width: 80%;
+    /*width: 100%;*/
     z-index: 100;
     display: none;
     align-items: center;
@@ -32,7 +33,10 @@
     gap: 5px 0;
     transition: opacity 0.3s ease;
     cursor: default;
-    /*pointer-events: none;*/
+}
+
+.hidden {
+    pointer-events: none;
 }
 
 .seeMore {

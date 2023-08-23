@@ -2,17 +2,20 @@ import nodemailer from "nodemailer";
 import {AddFormData, ContactsFormData} from "@/types";
 import {mailDataType} from "@/helpers";
 
+const email = process.env.EMAIL;
+const pass = process.env.EMAIL_PASSWORD;
+
 export const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-        user: 'viktor.korchagin.corp@gmail.com',
-        pass: 'rgpsosrcvolmsoyq',
+        user: email,
+        pass: pass,
     },
 });
 
 export const mailOptions = {
-    from: 'viktor.korchagin.corp@gmail.com',
-    to: 'viktor.korchagin.corp@gmail.com',
+    from: email,
+    to: email,
 };
 
 const ADD_PLATFORM_MESSAGE_FIELDS: AddFormData & {[key: string]: string} = {

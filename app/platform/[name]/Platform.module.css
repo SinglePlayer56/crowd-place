@@ -17,7 +17,8 @@
 
 .head__tags {
     display: flex;
-    gap: 20px;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .head__logo {
@@ -180,7 +181,7 @@
         grid-template-areas: 'title title'
                         'logo tags'
                         'description description';
-        align-items: end;
+        align-items: start;
     }
 
 }
