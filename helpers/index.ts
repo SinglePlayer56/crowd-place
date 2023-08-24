@@ -187,3 +187,11 @@ export async function getPost(postLink: string) {
     return post;
 }
 
+export async function getInterestingPosts(excludePostSlug: string, postCategory: string) {
+    const response = await fetch(`${process.env.SERVER}/api/get-interesting-posts?post=${excludePostSlug}&category=${postCategory}`);
+
+    const posts: IPost[] = await response.json();
+
+    return posts;
+}
+

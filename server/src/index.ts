@@ -7,6 +7,8 @@ import cors from 'cors';
 import {envVariable} from "./envLoader.js";
 import {selectPostsHandler} from "./handlers/select-posts.js";
 import {getPostHandler} from "./handlers/get-post.js";
+import {getInterestingPostsHandler} from "./handlers/get-interesting-posts.js";
+import {searchHandler} from "./handlers/search.js";
 
 
 const app = express();
@@ -44,6 +46,10 @@ app.get('/api/select-platforms', selectPlatformHandler);
 app.get('/api/select-posts', selectPostsHandler);
 
 app.get('/api/get-post/:postSlug', getPostHandler);
+
+app.get('/api/get-interesting-posts', getInterestingPostsHandler);
+
+app.get('/api/search', searchHandler);
 
 // app.post('/api/send-mail', sendMailHandler);
 

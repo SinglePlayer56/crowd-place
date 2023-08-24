@@ -425,7 +425,7 @@ const ArticlePage = async () => {
                     </div>
                 </div>
             </section>
-            <InterestingPosts postsCategory={post.slugCategory}/>
+            <InterestingPosts excludeSlugPost={post.slugHref} postsCategory={post.slugCategory}/>
         </>
     );
 };

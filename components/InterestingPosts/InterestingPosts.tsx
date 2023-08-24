@@ -1,10 +1,10 @@
 import styles from './InterestingPosts.module.css'
 import {HTag, RelatedSwiperPost} from "@/components";
-import {getPosts} from "@/helpers";
+import {getInterestingPosts} from "@/helpers";
 import {InterestingPostsProps} from "./InterestingPosts.props";
 
-const InterestingPosts = async ({postsCategory}: InterestingPostsProps) => {
-    const {rows: relatedPosts} = await getPosts(postsCategory);
+const InterestingPosts = async ({postsCategory, excludeSlugPost}: InterestingPostsProps) => {
+    const relatedPosts = await getInterestingPosts(excludeSlugPost, postsCategory);
 
     return (
         <section className={styles.interesting}>
