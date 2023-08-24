@@ -5,7 +5,7 @@ import {
     HiddenDescription,
     HTag, PlatformCardTags,
     PTag,
-    RelatedSwiper,
+    RelatedSwiperPlatform,
     ReviewCard
 } from "@/components";
 import styles from './Platform.module.css';
@@ -218,7 +218,7 @@ const Platform = async ({params}: Props) => {
             <section className={styles.relatedPlatforms}>
                 <div className={'container'}>
                     <div className={styles.reviews__list}>
-                        <RelatedSwiper platforms={relatedPlatforms}/>
+                        <RelatedSwiperPlatform platforms={relatedPlatforms}/>
                     </div>
                 </div>
             </section>

@@ -5,13 +5,13 @@ import { Swiper, SwiperSlide} from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-import './RelatedSwiper.css';
+import './RelatedSwiperPlatform.css';
 
 import {IPlatform} from "@/types";
 import {PlatformCard} from "@/components";
 import {Pagination} from "swiper/modules";
 
-const RelatedSwiper = ({platforms}: {platforms: IPlatform[]}) => {
+const RelatedSwiperPlatform = ({platforms}: {platforms: IPlatform[]}) => {
 
     const breakpoints = {
         320: {
@@ -57,4 +57,4 @@ const RelatedSwiper = ({platforms}: {platforms: IPlatform[]}) => {
     );
 };
 
-export default RelatedSwiper;
+export default RelatedSwiperPlatform;

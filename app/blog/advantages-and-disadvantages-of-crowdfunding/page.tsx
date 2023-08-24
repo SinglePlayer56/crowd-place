@@ -1,5 +1,5 @@
 import styles from '../blog.module.css'
-import {ArticleNote, CustomList, HTag, PTag, Tag} from "@/components";
+import {ArticleNote, CustomList, HTag, InterestingPosts, PTag, Tag} from "@/components";
 import {Metadata} from "next";
 import {getPost} from "@/helpers";
 
@@ -392,6 +392,7 @@ const ArticlePage = async () => {
                     </div>
                 </div>
             </section>
+            <InterestingPosts postsCategory={post.slugCategory}/>
         </>
     );
 };
