@@ -5,6 +5,8 @@ import {selectPlatformHandler} from "./handlers/select-platform.js";
 import {getRelatedHandler} from "./handlers/get-related.js";
 import cors from 'cors';
 import {envVariable} from "./envLoader.js";
+import {selectPostsHandler} from "./handlers/select-posts.js";
+import {getPostHandler} from "./handlers/get-post.js";
 
 
 const app = express();
@@ -38,6 +40,10 @@ app.get('/api/get-all-platforms', getAllPlatformHandler);
 app.get('/api/get-platform/:platform', getPlatformHandler);
 
 app.get('/api/select-platforms', selectPlatformHandler);
+
+app.get('/api/select-posts', selectPostsHandler);
+
+app.get('/api/get-post/:postSlug', getPostHandler);
 
 // app.post('/api/send-mail', sendMailHandler);
 

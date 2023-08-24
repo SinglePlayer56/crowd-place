@@ -4,29 +4,13 @@
 }
 
 .head__title {
+    margin-top: 50px;
     margin-bottom: 40px;
 }
 
 .head__text {
     margin-bottom: 45px;
     max-width: 1180px;
-}
-
-
-.reviews {
-    padding: 55px 0;
-    background-color: #f6fbf1;
-}
-
-.reviews__title {
-    margin-bottom: 45px;
-}
-
-.reviews__list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin-bottom: 50px;
 }
 
 .whoCan {
@@ -47,27 +31,14 @@
     margin: 0 auto;
 }
 
-@media screen and (max-width: 1400px) {
-    .reviews__list {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .reviews__list {
-        grid-template-columns: 1fr;
-        justify-items: center;
-    }
-}
-
 .article {
-    max-width: 1200px;
-    margin: 40px auto;
+    /*max-width: 1200px;*/
+    /*margin: 40px auto;*/
 }
 
 .article__text {
     margin-bottom: 15px;
-    text-align: justify;
+    /*text-align: justify;*/
 }
 
 .article__list {
@@ -88,6 +59,35 @@
 
 .article__section p:last-child {
     margin: 0;
+}
+
+.article__data {
+    display: flex;
+    align-items: center;
+    gap: 10px 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.article__date {
+    font-family: var(--inter-font);
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    color: #acb8c0;
+}
+
+.article__tags {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1200px) {
+    .article__text {
+        text-align: justify;
+    }
 }
 
 

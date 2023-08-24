@@ -47,7 +47,7 @@ export const selectPlatformHandler = async (req, res) => {
                         },
                     });
                 }
-                else if (value === 'more than 5') {
+                else if (value === 'More than 5') {
                     filters.push({
                         [type]: {
                             [Op.lt]: currentYear - 5,

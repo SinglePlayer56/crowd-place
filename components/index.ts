@@ -34,6 +34,7 @@ import PlatformCardCountryList from "@/components/PlatformCardCountryList/Platfo
 import ArticleNote from "@/components/ArticleNote/ArticleNote";
 import ArticleImage from "@/components/ArticleImage/ArticleImage";
 import FilterPosts from "@/components/FilterPosts/FilterPosts";
+import ListingPosts from "@/components/ListingPosts/ListingPosts";
 
 export {
     Footer,
@@ -71,5 +72,6 @@ export {
     PlatformCardCountryList,
     ArticleNote,
     ArticleImage,
-    FilterPosts
+    FilterPosts,
+    ListingPosts
 }

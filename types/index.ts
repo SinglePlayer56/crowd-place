@@ -3,7 +3,22 @@ export interface HeaderLink {
     href: string;
 }
 
-export interface searchParams<T> {
+export interface IPostResponse {
+    count: number;
+    rows: IPost[]
+}
+
+export interface IPost {
+    title: string;
+    description: string;
+    imagePath: string;
+    category: string;
+    slugCategory: string;
+    slugHref: string;
+    date: string;
+}
+
+export interface SearchParams<T> {
     params: T,
     searchParams: {
         page: string;

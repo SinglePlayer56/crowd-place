@@ -41,6 +41,7 @@ const SelectFilters = memo(({className}: SelectFiltersProps) => {
     const clientFilters = useAppSelector((state) => state.filters.filtersFields);
 
     useEffect(() => {
+        resetHandler();
         for (const key in params) {
             dispatch(addTag(decodeURIComponent(params[key] as string).split('+')));
         }

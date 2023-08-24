@@ -4,4 +4,5 @@ export interface BlogCardProps {
     text: string;
     tag: string;
     date: string;
+    href: string;
 }

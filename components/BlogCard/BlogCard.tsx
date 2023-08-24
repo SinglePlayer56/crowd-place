@@ -1,9 +1,11 @@
+'use client';
 import styles from './BlogCard.module.css';
 import {BlogCardProps} from "./BlogCard.props";
 import Image from 'next/image';
 import {HTag, PTag, Tag, Date} from "@/components";
+import Link from "next/link";
 
-const BlogCard = ({title, tag, text, pathImage, date}: BlogCardProps) => {
+const BlogCard = ({title, tag, text, pathImage, date, href}: BlogCardProps) => {
 
     return (
         <div className={styles.card}>
@@ -15,14 +17,16 @@ const BlogCard = ({title, tag, text, pathImage, date}: BlogCardProps) => {
                 height={215}
             />
             <div className={styles.card__content}>
-                <HTag className={styles.card__title} tag={'h3'}>
-                    {title}
-                </HTag>
+                <Link href={href}>
+                    <HTag className={styles.card__title} tag={'h3'}>
+                        {title}
+                    </HTag>
+                </Link>
                 <PTag className={styles.card__text} fontSize={'20px'}>
                     {text}
                 </PTag>
                 <div className={styles.card__footer}>
-                    <Tag title={tag} />
+                    <Tag href={'blog'} title={tag} />
                     <Date date={date} />
                 </div>
             </div>

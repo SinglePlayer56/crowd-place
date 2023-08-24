@@ -49,6 +49,7 @@ const PlatformCardTags = ({tags, title, className}: PlatformCardTagsProps) => {
                                 key={item}
                                 title={item}
                                 initial={false}
+                                href={'platforms'}
                                 animate={{opacity: 1, y: 0}}
                             />
                         )
@@ -60,6 +61,7 @@ const PlatformCardTags = ({tags, title, className}: PlatformCardTagsProps) => {
                                     [styles.hidden]: !isVisible
                                 })}
                                 title={item}
+                                href={'platforms'}
                                 initial={false}
                                 animate={{opacity: isVisible ? 1 : 0, y: 0}}
                                 transition={{duration: 0.3, delay: 0.05 * index}}

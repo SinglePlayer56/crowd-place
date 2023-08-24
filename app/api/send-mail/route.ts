@@ -2,21 +2,6 @@ import {generateEmailContent, mailOptions, transporter} from "@/nodemailerConfig
 import {AddFormData, ContactsFormData} from "@/types";
 import {mailDataType} from "@/helpers";
 
-import Platform from '../../../models/platform';
-
-
-export const GET = async (req: any, res: any) => {
-
-    const allPlatform = await Platform.findAll({
-        order: [
-            ['id', 'DESC']
-        ]
-    });
-    return new Response(JSON.stringify(allPlatform), {status: 200});
-
-}
-
-
 export const POST = async (req: any) => {
     const data: AddFormData | ContactsFormData = await req.json();
 

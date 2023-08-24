@@ -1,9 +1,9 @@
 import styles from './platforms.module.css'
 import {BreadCrumbs, CustomButton, HTag, ListingPlatforms, PTag, SelectFilters} from "@/components";
-import {FilterPageParams, searchParams} from "@/types";
+import {FilterPageParams, SearchParams} from "@/types";
 
 
-const Platforms = async ({searchParams, params}: searchParams<FilterPageParams>) => {
+const Platforms = async ({searchParams, params}: SearchParams<FilterPageParams>) => {
     const paramsBreadCrumbs = [
         {name: 'Main', href: ''},
         {name: 'Platforms', href: 'platforms'}

@@ -9,11 +9,12 @@ import {
     SelectFilters
 } from "@/components";
 import Image from 'next/image';
-import {BlogCardsValues, CrowdfundingCardValues} from "@/consts";
+import {CrowdfundingCardValues} from "@/consts";
 import Link from "next/link";
+import {getPosts} from "@/helpers";
 
-const Main = () => {
-
+const Main = async () => {
+    const {rows: posts} = await getPosts();
     return (
         <MainPageLayout>
             <section className={styles.start}>
@@ -76,14 +77,15 @@ const Main = () => {
                         Latest from blog
                     </HTag>
                     <div className={styles.latestBlog__list}>
-                        {BlogCardsValues.map((cardValue) => (
+                        {posts.map((cardValue) => (
                             <BlogCard
                                 key={cardValue.title}
-                                pathImage={cardValue.pathImage}
+                                pathImage={cardValue.imagePath}
                                 title={cardValue.title}
-                                text={cardValue.text}
-                                tag={cardValue.tag}
+                                text={cardValue.description}
+                                tag={cardValue.category}
                                 date={cardValue.date}
+                                href={`/blog/${cardValue.slugHref}/`}
                             />
                         ))}
                     </div>

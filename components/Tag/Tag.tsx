@@ -7,11 +7,11 @@ import {ForwardedRef, forwardRef} from "react";
 import {motion} from "framer-motion";
 import Link from "next/link";
 
-const Tag = forwardRef<HTMLSpanElement, TagProps>(({title, className}: TagProps, ref: ForwardedRef<HTMLSpanElement>) => {
+const Tag = forwardRef<HTMLSpanElement, TagProps>(({title, href, className}: TagProps, ref: ForwardedRef<HTMLSpanElement>) => {
 
     return (
         <span ref={ref} className={cn(styles.tag, className)}>
-            <Link href={`/blog/${title.toLowerCase().split(' ').join('-')}/`} >
+            <Link href={`/${href}/${title.toLowerCase().split(' ').join('-')}/`} >
                 {title}
             </Link>
         </span>

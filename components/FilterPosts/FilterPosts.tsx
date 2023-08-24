@@ -20,6 +20,7 @@ const FilterPosts = ({className}: FilterPostsProps) => {
                     return (
                         <Tag
                             key={tag}
+                            href={'blog'}
                             title={tag}
                             className={cn(styles.tag)}
                         />
@@ -28,6 +29,7 @@ const FilterPosts = ({className}: FilterPostsProps) => {
                     return (
                         <Tag
                             key={tag}
+                            href={'blog'}
                             title={tag}
                             className={cn(styles.tagNotActive, styles.tag)}
                         />

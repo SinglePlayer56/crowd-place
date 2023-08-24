@@ -1,5 +1,4 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
-import filter from "@/components/Filter/Filter";
 
 export interface IFilterField {
     options: ICheckboxValues[];
@@ -125,7 +124,7 @@ const initialState: IFiltersState = {
                 {title: '1 year', checked: false, slug: '1-year'},
                 {title: '2-3 years', checked: false, slug: '2-3-years'},
                 {title: '4-5 years', checked: false, slug: '4-5-years'},
-                {title: 'more than 5', checked: false, slug: 'more-than-5'}
+                {title: 'More than 5', checked: false, slug: 'more-than-5'}
             ]
             ,
             placeholder: 'Years on market',

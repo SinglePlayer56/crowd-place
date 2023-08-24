@@ -1,8 +1,6 @@
-import {redirect, usePathname} from "next/navigation";
-import {AddFormData, ContactsFormData, FilterPageParams} from "@/types";
+import {usePathname} from "next/navigation";
+import {AddFormData, ContactsFormData, FilterPageParams, IPost, IPostResponse} from "@/types";
 import {store} from "@/store";
-import {FilterType} from "@/store/slices/filters";
-import {Op} from "sequelize";
 
 export function extractValuesByKeyArray(obj: Record<string, string>, keysArray: string[]) {
     const result = [];
@@ -171,5 +169,21 @@ export function getMetadataValues(params: FilterPageParams) {
             canonical: `${process.env.DOMAIN}/platform/${allPath}/`
         }
     }
+}
+
+export async function getPosts(category: string = '', currentPage: number = 1, perPage: number = 3) {
+    const response: Response = await fetch(`${process.env.SERVER}/api/select-posts/?category=${category}&page=${currentPage}&perPage=${perPage}`);
+
+    const posts: Promise<IPostResponse> = response.json();
+
+    return posts;
+}
+
+export async function getPost(postLink: string) {
+    const response = await fetch(`${process.env.SERVER}/api/get-post/${postLink}`);
+
+    const post: IPost = await response.json();
+
+    return post;
 }
 
