@@ -6,7 +6,7 @@ import Link from "next/link";
 import cn from 'classnames';
 import {HeaderLink} from "@/types";
 import {isActiveLink} from "@/helpers";
-import {SearchButton} from "@/components";
+import {SearchBar} from "@/components";
 import {useScrollPosition} from "@/hooks";
 import React from "react";
 import Burger from "@/components/Burger/Burger";
@@ -27,12 +27,12 @@ const Header = () => {
         }
     ];
 
-    const scrollPosition = useScrollPosition();
-    const buttonVariants = {
-        hidden: {scale: 0},
-        visible: {scale: 1},
-        hover: {scale: 1.05}
-    }
+    // const scrollPosition = useScrollPosition();
+    // const buttonVariants = {
+    //     hidden: {scale: 0},
+    //     visible: {scale: 1},
+    //     hover: {scale: 1.05}
+    // }
 
     return (
         <header className={styles.header}>
@@ -47,14 +47,9 @@ const Header = () => {
                             className={styles.header__logo}
                         />
                     </Link>
-                    <SearchButton
-                        variants={buttonVariants}
-                        initial={false}
-                        animate={scrollPosition > 80 ? 'hidden' : 'visible'}
-                        whileHover={'hover'}
-                        className={styles.header__searchButton}
-                        color={'blue'}
-                    />
+                    <div className={styles.searchBar_wrapper}>
+                        <SearchBar page={'Other'} />
+                    </div>
                     <div className={styles.header__nav}>
                         {headerLinkHref.map((link) => (
                             <Link

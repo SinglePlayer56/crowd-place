@@ -1,6 +1,6 @@
 import styles from './HeaderMainPage.module.css';
 import Link from "next/link";
-import {SearchButton} from "@/components";
+import {SearchBar} from "@/components";
 
 const HeaderMainPage = () => {
 
@@ -8,10 +8,7 @@ const HeaderMainPage = () => {
         <header className={styles.header}>
             <div className="container">
                 <div className={styles.header__content}>
-                    <div className={styles.searchBar}>
-                        <SearchButton color={"white"} />
-                    </div>
-
+                    <SearchBar page={'Main'} className={styles.header__search}/>
                     <div className={styles.navMenu}>
                         <Link className={styles.header__link} href={'/platforms'}>Platforms</Link>
                         <Link className={styles.header__link} href={'/blog'}>Blog</Link>

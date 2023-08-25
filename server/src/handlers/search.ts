@@ -10,14 +10,9 @@ export const searchHandler = async (req: Request, res: Response) => {
         const platformResult = await Platform.findAll({
             //literal('RAND()') // для рандомного вывода
             order: [['id', 'DESC']],
-            limit: 10,
             where: {
                 [Op.or]: [
-                    { name: { [Op.like]: `%${slugPlatform}%` } },
-                    { country: { [Op.like]: `%${slugPlatform}%` } },
-                    { investmentType: { [Op.like]: `%${slugPlatform}%` } },
-                    { industry: { [Op.like]: `%${slugPlatform}%` } },
-                    { description: { [Op.like]: `%${slugPlatform}%` } },
+                    { name: { [Op.like]: `%${slugPlatform}%` } }
                 ]
             },
         });
@@ -25,12 +20,9 @@ export const searchHandler = async (req: Request, res: Response) => {
         const postResult = await Post.findAll({
             //literal('RAND()') // для рандомного вывода
             order: [['id', 'DESC']],
-            limit: 10,
             where: {
                 [Op.or]: [
-                    { title: { [Op.like]: `%${slugPlatform}%` } },
-                    { description: { [Op.like]: `%${slugPlatform}%` } },
-                    { category: { [Op.like]: `%${slugPlatform}%` } }
+                    { title: { [Op.like]: `%${slugPlatform}%` } }
                 ]
             },
         });

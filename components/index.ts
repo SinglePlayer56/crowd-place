@@ -37,6 +37,7 @@ import ArticleImage from "@/components/ArticleImage/ArticleImage";
 import FilterPosts from "@/components/FilterPosts/FilterPosts";
 import ListingPosts from "@/components/ListingPosts/ListingPosts";
 import InterestingPosts from "@/components/InterestingPosts/InterestingPosts";
+import SearchBar from "@/components/SearchBar/SearchBar";
 
 export {
     Footer,
@@ -77,5 +78,6 @@ export {
     FilterPosts,
     ListingPosts,
     RelatedSwiperPost,
-    InterestingPosts
+    InterestingPosts,
+    SearchBar
 }

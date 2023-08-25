@@ -77,7 +77,7 @@ const Main = async () => {
                         Latest from blog
                     </HTag>
                     <div className={styles.latestBlog__list}>
-                        {posts.map((cardValue) => (
+                        {posts.length > 0 && posts.map((cardValue) => (
                             <BlogCard
                                 key={cardValue.title}
                                 pathImage={cardValue.imagePath}

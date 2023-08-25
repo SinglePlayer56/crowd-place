@@ -41,7 +41,7 @@ const ListingPlatforms = async ({params, searchParams}: ListingPlatformsProps) =
                                 description={platform.description}
                                 type={platform.investmentType}
                                 industry={platform.industry}
-                                href={`/platform/${platform.name.split(' ').join('').toLowerCase()}`}/>
+                                href={`/platform/${platform.slug}`}/>
                         ))}
                     </div>
                     <Pagination

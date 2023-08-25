@@ -40,7 +40,9 @@ const Burger = ({className}: any) => {
             animate={isOpen ? "open" : "closed"}
             custom={height}
             ref={containerRef}
-            className={cn(styles.nav, className)}
+            className={cn(styles.nav, className, {
+                [styles.notActive]: !isOpen
+            })}
         >
             <motion.div className={styles.background} variants={sidebar} />
             <Navigation isOpen={isOpen} />
