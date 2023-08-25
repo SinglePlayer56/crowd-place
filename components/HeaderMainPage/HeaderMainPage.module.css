@@ -16,6 +16,7 @@
     line-height: 25px;
     font-weight: 400;
     color: #ffffff;
+    transition: all 0.3s ease-in-out;
 }
 
 .header__link:before {
@@ -27,7 +28,11 @@
     border-radius: 3px;
     bottom: -5px;
     left: 0;
-    transition: width 0.3s ease;
+    transition: all 0.3s ease-in-out;
+}
+
+.header__link:active {
+    transform: scale(0.95);
 }
 
 .header__link:hover:before {

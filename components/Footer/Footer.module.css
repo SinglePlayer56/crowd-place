@@ -19,9 +19,31 @@
 .footer__link {
     font-family: var(--inter-font);
     font-size: 16px;
-    line-height: 32px;
+    line-height: 22px;
     font-weight: 400;
     color: #009dee;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer__link:active {
+    transform: scale(0.95);
+}
+
+.footer__link:before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    height: 1.5px;
+    background-color: #009dee;
+    border-radius: 10px;
+    width: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.footer__link:hover:before {
+    width: 100%;
 }
 
 .footer__nav {

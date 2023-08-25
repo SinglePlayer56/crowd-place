@@ -30,6 +30,11 @@
     font-weight: 500;
     color: #090909;
     text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.header__link:active {
+    transform: scale(0.95);
 }
 
 .header__link:hover {

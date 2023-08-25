@@ -7,7 +7,6 @@ import cn from 'classnames';
 import {HeaderLink} from "@/types";
 import {isActiveLink} from "@/helpers";
 import {SearchBar} from "@/components";
-import {useScrollPosition} from "@/hooks";
 import React from "react";
 import Burger from "@/components/Burger/Burger";
 
@@ -15,15 +14,15 @@ const Header = () => {
     const headerLinkHref: HeaderLink[] = [
         {
             name: 'Platforms',
-            href: '/platforms',
+            href: '/platforms/',
         },
         {
             name: 'Blog',
-            href: '/blog'
+            href: '/blog/'
         },
         {
             name: 'Add platform',
-            href: '/add-platform'
+            href: '/add-platform/'
         }
     ];
 

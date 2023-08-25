@@ -30,6 +30,15 @@
 
 .card__title {
     margin-bottom: 25px;
+    transition: all 0.3s ease-in-out;
+}
+
+.card__title:hover {
+    color: #009dee;
+}
+
+.card__title:active {
+    transform: scale(0.95);
 }
 
 .card__text {

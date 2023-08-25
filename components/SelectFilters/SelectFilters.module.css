@@ -13,8 +13,8 @@
 }
 
 .filters__button {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 11px;
+    padding-bottom: 11px;
     height: 100%;
 }
 
@@ -55,6 +55,7 @@
     gap: 20px 30px;
     max-width: 900px;
     margin-top: 20px;
+    overflow: hidden;
 }
 
 

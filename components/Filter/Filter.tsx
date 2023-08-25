@@ -1,3 +1,7 @@
+'use client';
+
+import {motion} from 'framer-motion';
+
 import {FilterProps} from "./Filter.props";
 import styles from './Filter.module.css';
 import cn from 'classnames';
@@ -47,9 +51,11 @@ const Filter = memo(
                         />
                     </button>
                 </label>
-                <div className={cn(styles.filterList,
-                    {
-                        [styles.active]: isOpen
+                <motion.div
+                    initial={{height:0, opacity: 0}}
+                    animate={isOpen ? {height: 'auto', opacity: 1} : {height: 0, opacity: 0}}
+                    className={cn(styles.filterList, {
+                        [styles.notActive]: !isOpen
                     })}
                 >
                     <div className={styles.filterList__checkboxes}>
@@ -80,7 +86,7 @@ const Filter = memo(
                             Add
                         </button>
                     </div>
-                </div>
+                </motion.div>
             </div>
 
         );

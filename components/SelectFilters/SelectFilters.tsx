@@ -14,6 +14,7 @@ import {
 } from "@/store/slices/filters";
 import Link from "next/link";
 import {useParams} from "next/navigation";
+import {motion, AnimatePresence} from "framer-motion";
 
 
 function processFilterArray(filterArray: string[]) {
@@ -129,13 +130,25 @@ const SelectFilters = memo(({className}: SelectFiltersProps) => {
                     />
                 ))}
             </div>
-            {url.length > 11 &&
-                <CustomButton
-                    onClick={resetHandler}
-                    className={styles.filters__resetButton}
-                    color={'white'}
-                    text={'Reset filters'}
-                />}
+            <AnimatePresence>
+                {url.length > 11 &&
+                    <motion.div
+                        key={'reset-filters-button'}
+                        style={{overflow: 'hidden'}}
+                        initial={{opacity: 0, scale: 0, height: 0}}
+                        animate={url.length > 11 ? {opacity: 1, scale: 1, height: 85} : {opacity: 0, scale: 0, height: 0}}
+                        transition={{duration: 0.3}}
+                        exit={{opacity: 0, scale: 0, height: 0}}
+                    >
+                        <CustomButton
+                            onClick={resetHandler}
+                            className={styles.filters__resetButton}
+                            color={'white'}
+                            text={'Reset filters'}
+                        />
+                    </motion.div>
+                }
+            </AnimatePresence>
         </div>
     );
 });

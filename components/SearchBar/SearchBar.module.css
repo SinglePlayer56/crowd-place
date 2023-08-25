@@ -103,20 +103,47 @@
 .result__list {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 5px;
+    justify-items: start;
 }
 
 .result__item {
     display: flex;
     align-items: center;
     gap: 10px;
+    padding: 5px;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
 }
 
 .result__item_text {
     font-family: var(--inter-font);
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 400;
     color: #474749;
+    transition: all 0.3s ease-in-out;
+}
+
+.result__item_highlight {
+    font-weight: 600;
+    color: #000000;
+    transition: all 0.3s ease-in-out;
+}
+
+.result__item:active {
+    transform: scale(0.95);
+}
+
+.result__item:hover {
+    background-color: #009dee;
+}
+
+.result__item:hover .result__item_text {
+    color: #ffffff
+}
+
+.result__item:hover .result__item_highlight {
+    color: #ffffff;
 }
 
 .searchBar__loader,

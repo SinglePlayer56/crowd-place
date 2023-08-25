@@ -139,6 +139,8 @@ const SearchBar = ({className, page}: SearchBarProps) => {
                 variants={variants}
                 initial={'opacityOne'}
                 animate={isExpanded ? 'opacityZero' : 'opacityOne'}
+                whileHover={{scale: 1.1}}
+                whileTap={{scale: 0.95}}
                 onClick={() => setIsExpanded(true)}
                 color={page === 'Main' ? 'white' : 'blue'}
                 className={cn({
@@ -233,18 +235,22 @@ const SearchBar = ({className, page}: SearchBarProps) => {
                                         <div className={styles.result__list}>
                                             {
                                                 searchResult.platformResult.map((platform) => (
-                                                    <div key={`${platform.slug}${platform.name}`} className={styles.result__item}>
+                                                    <motion.div
+                                                        key={`${platform.slug}${platform.name}`}
+                                                        className={styles.result__item}
+                                                    >
                                                         <Image
                                                             src={platform.logo}
                                                             alt={'platform-log'}
-                                                            width={24}
-                                                            height={24}
+                                                            width={26}
+                                                            height={26}
+
                                                         />
                                                         <Link href={`/platform/${platform.slug}/`}
                                                               className={styles.result__item_text}>
                                                             {highlightMatch(platform.name, values)}
                                                         </Link>
-                                                    </div>
+                                                    </motion.div>
                                                 ))
                                             }
 
@@ -293,7 +299,7 @@ function highlightMatch(text: string, values: string): ReactNode {
         return (
             <>
                 {text.substring(0, startIndex)}
-                <span style={{fontWeight: 600, color: '#000000'}}>{text.substring(startIndex, endIndex)}</span>
+                <span className={styles.result__item_highlight}>{text.substring(startIndex, endIndex)}</span>
                 {text.substring(endIndex)}
             </>
         );

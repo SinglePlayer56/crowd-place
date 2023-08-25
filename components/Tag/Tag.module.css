@@ -7,6 +7,9 @@
     padding: 8px 14px;
     color: #009dee;
     white-space: nowrap;
+    background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .tag a {
@@ -15,4 +18,18 @@
     font-weight: 400;
     color: #009dee;
     white-space: nowrap;
+    transition: all 0.3s ease-in-out;
+}
+
+.tag:hover {
+    background-color: #24b2fc;
+    border: 2px solid #24b2fc;
+}
+
+.tag:active {
+    transform: scale(0.95);
+}
+
+.tag:hover a {
+    color: #ffffff
 }

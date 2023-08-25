@@ -42,15 +42,33 @@ const PlatformCardCountryList = ({countries, className}: PlatformCardCountryList
                     {countries.map((country, index) => {
                         if (index > 0) {
                             const lastIndex = countries.length - 1;
-                            return (
-                                <Link
-                                    className={cn(styles.card__country, styles.modal)}
-                                    key={country}
-                                    href={`/platforms/${country.toLowerCase().split(' ').join('-')}/`}
-                                >
-                                    {lastIndex !== index ? `${country} |\u00A0` : country}
-                                </Link>
-                            )
+                            if (lastIndex !== index) {
+                                return (
+                                    <>
+                                        <Link
+                                            className={cn(styles.card__country, styles.modal)}
+                                            key={country}
+                                            href={`/platforms/${country.toLowerCase().split(' ').join('-')}/`}
+                                        >
+                                            {country}
+                                        </Link>
+                                        <span className={styles.card__country_dash}>
+                                            {`\u00A0|\u00A0`}
+                                        </span>
+
+                                    </>
+                                )
+                            } else {
+                                return (
+                                    <Link
+                                        className={cn(styles.card__country, styles.modal)}
+                                        key={country}
+                                        href={`/platforms/${country.toLowerCase().split(' ').join('-')}/`}
+                                    >
+                                        {country}
+                                    </Link>
+                                )
+                            }
                         }
                     })}
                 </motion.div>

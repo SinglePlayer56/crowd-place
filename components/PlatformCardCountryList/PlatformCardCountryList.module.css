@@ -4,11 +4,23 @@
     font-weight: 400;
     color: #686b6f;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.card__country:hover {
+    color: #009dee;
 }
 
 .card__country.modal {
     font-size: 16px;
     font-weight: 500;
+}
+
+.card__country_dash {
+    font-family: var(--inter-font);
+    font-size: 16px;
+    font-weight: 500;
+    color: #686b6f;
 }
 
 .countryList {

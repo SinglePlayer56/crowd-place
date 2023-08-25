@@ -28,13 +28,13 @@
     background-color: #24b2fc;
 }
 
-.white:active {
+.white:hover {
     background-color: #24b2fc;
     border: 2px solid rgba(0, 156, 238, 0);
     color: #fefefe;
 }
 
-.blue:active {
+.blue:hover {
     border: 2px solid rgba(0, 156, 238, 0.21);
     background-color: #f1f8fb;
     color: #009dee;
@@ -42,6 +42,12 @@
 
 .transparent {
     background-color: transparent;
+}
+
+.white:active,
+.blue:active,
+.transparent:active {
+    transform: scale(0.95);
 }
 
 @media screen and (max-width: 768px) {
