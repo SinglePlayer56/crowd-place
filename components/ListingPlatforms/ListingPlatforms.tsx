@@ -32,7 +32,7 @@ const ListingPlatforms = async ({params, searchParams}: ListingPlatformsProps) =
                         Reviews
                     </HTag>
                     <div className={styles.reviews__list}>
-                        {platforms.map((platform) => (
+                        {platforms.length > 0 && platforms.map((platform) => (
                             <PlatformCard
                                 key={platform.name}
                                 pathLogo={platform.logo}

@@ -3,7 +3,7 @@ export interface PlatformCardProps {
     title: string;
     countries: string[];
     description: string;
-    industry?: string[];
-    type?: string[];
+    industry: string[];
+    type: string[];
     href: string;
 }

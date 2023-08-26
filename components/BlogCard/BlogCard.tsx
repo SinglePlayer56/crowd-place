@@ -17,17 +17,16 @@ const BlogCard = ({title, tag, text, pathImage, date, href}: BlogCardProps) => {
                 height={215}
             />
             <div className={styles.card__content}>
-                <Link href={href}>
-                    <HTag className={styles.card__title} tag={'h3'}>
-                        {title}
-                    </HTag>
-                </Link>
+                <Link className={styles.card__link} href={href}/>
+                <HTag className={styles.card__title} tag={'h3'}>
+                    {title}
+                </HTag>
                 <PTag className={styles.card__text} fontSize={'20px'}>
                     {text}
                 </PTag>
                 <div className={styles.card__footer}>
-                    <Tag href={'blog'} title={tag} />
-                    <Date date={date} />
+                    <Tag className={styles.card__tag} href={'blog'} title={tag}/>
+                    <Date date={date}/>
                 </div>
             </div>
         </div>
