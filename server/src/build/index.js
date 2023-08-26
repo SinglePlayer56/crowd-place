@@ -13,7 +13,7 @@ const app = express();
 const port = envVariable.PORT || 3001;
 app.use(express.json());
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'http://1864875-cn27374.twc1.net',
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
 }));
