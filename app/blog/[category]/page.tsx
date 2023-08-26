@@ -2,6 +2,7 @@ import styles from '../blog.module.css'
 import {BreadCrumbs, FilterPosts, HTag, ListingPosts, PTag} from "@/components";
 import {redirect} from "next/navigation";
 import {SearchParams} from "@/types";
+import {getPosts} from "@/helpers";
 
 interface PageProps {
     category: string;
@@ -16,6 +17,16 @@ const CategoryListing = async ({searchParams, params}: SearchParams<PageProps>) 
         {name: 'Main', href: ''},
         {name: 'Blog', href: 'blog'},
     ];
+
+    const perPage = 6;
+    let currentPage = 1;
+
+    if (Number(searchParams.page) >= 1) {
+        currentPage = Number(searchParams.page);
+    }
+
+
+    const {count: totalCount, rows: postsList} = await getPosts(params.category, currentPage, perPage);
 
     return (
         <>
@@ -44,7 +55,14 @@ const CategoryListing = async ({searchParams, params}: SearchParams<PageProps>) 
                     <FilterPosts/>
                 </div>
             </section>
-            <ListingPosts params={params} searchParams={searchParams} />
+            <ListingPosts
+                title={'News'}
+                posts={postsList}
+                perPage={perPage}
+                page={currentPage}
+                totalCount={totalCount}
+                typePaginator={'posts'}
+            />
             <section className={styles.whoCan}>
                 <div className={'container'}>
                     <HTag className={styles.whoCan__title} tag={'h2'}>

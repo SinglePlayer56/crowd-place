@@ -1,8 +1,9 @@
 import {BreadCrumbs, HTag, ListingPlatforms, PTag, SelectFilters} from "@/components";
-import {FilterPageParams} from "@/types";
-import {getMetadataValues} from "@/helpers";
+import {FilterPageParams, IPlatform} from "@/types";
+import {getMetadataValues, getType} from "@/helpers";
 import {Metadata} from "next";
 import styles from '@/app/platforms/[investmentType]/platforms.module.css';
+import {redirect} from "next/navigation";
 
 export async function generateMetadata({params}: PageProps): Promise<Metadata> {
     return getMetadataValues(params);
@@ -17,10 +18,25 @@ interface PageProps {
 
 
 const Platforms = async ({searchParams, params}: PageProps) => {
+    const perPage = 12;
+    let currentPage = 1;
+
     const paramsBreadCrumbs = [
         {name: 'Main', href: ''},
         {name: 'Platforms', href: 'platforms'}
     ];
+
+    if (Number(searchParams.page) >= 1) {
+        currentPage = Number(searchParams.page);
+    }
+
+    const {count: totalCount, rows: platforms}: { count: number, rows: IPlatform[] } = await getType(params, currentPage, perPage);
+
+    const paramsPath = Object.values(params).map((value) => decodeURIComponent(value)).join('/');
+
+    if (searchParams.page === '1') {
+        redirect(`/platforms/${paramsPath}/`)
+    }
 
     return (
         <>
@@ -52,7 +68,14 @@ const Platforms = async ({searchParams, params}: PageProps) => {
                     />
                 </div>
             </section>
-            <ListingPlatforms params={params} searchParams={searchParams}/>
+            <ListingPlatforms
+                title={'Reviews'}
+                type={'main'}
+                platforms={platforms}
+                page={currentPage}
+                totalCount={totalCount}
+                perPage={perPage}
+            />
             <section className={styles.whoCan}>
                 <div className={'container'}>
                     <HTag className={styles.whoCan__title} tag={'h2'}>

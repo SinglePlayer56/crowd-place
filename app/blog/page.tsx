@@ -1,8 +1,12 @@
 import styles from './blog.module.css'
 import {BreadCrumbs, FilterPosts, HTag, ListingPosts, PTag} from "@/components";
 import {redirect} from "next/navigation";
+import {getPosts} from "@/helpers";
 
 const BlogListing = async ({searchParams, params}: any) => {
+    const perPage = 6;
+    let currentPage = 1;
+
     const paramsBreadCrumbs = [
         {name: 'Main', href: ''},
         {name: 'Blog', href: 'blog'},
@@ -11,6 +15,13 @@ const BlogListing = async ({searchParams, params}: any) => {
     if (searchParams.page === '1') {
         redirect('/blog/')
     }
+
+    if (Number(searchParams.page) >= 1) {
+        currentPage = Number(searchParams.page);
+    }
+
+
+    const {count: totalCount, rows: postsList} = await getPosts(params.category, currentPage, perPage);
 
 
     return (
@@ -40,7 +51,14 @@ const BlogListing = async ({searchParams, params}: any) => {
                     <FilterPosts/>
                 </div>
             </section>
-            <ListingPosts params={params} searchParams={searchParams} />
+            <ListingPosts
+                title={'News'}
+                posts={postsList}
+                perPage={perPage}
+                page={currentPage}
+                totalCount={totalCount}
+                typePaginator={'posts'}
+            />
             <section className={styles.whoCan}>
                 <div className={'container'}>
                     <HTag className={styles.whoCan__title} tag={'h2'}>

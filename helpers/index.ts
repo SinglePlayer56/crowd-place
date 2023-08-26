@@ -195,3 +195,29 @@ export async function getInterestingPosts(excludePostSlug: string, postCategory:
     return posts;
 }
 
+export function replacedSearchParam(url: string, paramName: string, newValue: string) {
+    const [, queryParamsStr] = url.split("?");
+    if (queryParamsStr) {
+        const queryParams: string[] = queryParamsStr.split("&");
+
+        // Создаем объект для хранения параметров
+        const paramsObj: { [key: string]: string } = {};
+        queryParams.forEach(param => {
+            const [key, value] = param.split("=");
+            paramsObj[key] = value;
+        });
+
+        // Изменяем значение указанного параметра
+        if (paramsObj.hasOwnProperty(paramName)) {
+            paramsObj[paramName] = newValue;
+        }
+
+        // Собираем обратно только квери-параметры с измененными параметрами
+        const newParams: string[] = Object.entries(paramsObj).map(([key, value]) => `${key}=${value}`);
+        const newQueryParams: string = newParams.join("&");
+
+        return newQueryParams;
+    } else {
+        console.log("URL не содержит квери-параметры.");
+    }
+}

@@ -9,13 +9,8 @@ import {motion, AnimatePresence} from "framer-motion";
 import {useClickOutside} from 'react-click-outside-hook';
 import {KeyboardEvent} from "react";
 import Image from 'next/image';
-import {IPlatform, IPost} from "@/types";
+import {ISearchResult} from "@/types";
 import Link from 'next/link';
-
-interface ISearchResult {
-    platformResult: IPlatform[];
-    postResult: IPost[]
-}
 
 async function fetchSearchHandler(value: string): Promise<ISearchResult | undefined> {
     try {

@@ -1,3 +1,5 @@
+import {PropsWithChildren} from "react";
+
 export interface HeaderLink {
     name: string;
     href: string;
@@ -64,6 +66,15 @@ export type FormField<T> = {
     required: boolean;
 }
 
+export type PaginatorType = 'main' | 'posts' | 'platforms';
+
+export interface ISearchResult {
+    platformResult: IPlatform[];
+    postResult: IPost[];
+    totalPlatform: number;
+    totalPosts: number;
+}
+
 export interface IPlatform {
     name: string,
     logo: string,
@@ -113,3 +124,22 @@ export interface FilterPageParams {
     yearFounded?: string;
     licenseNumber?: string;
 }
+
+export interface SearchPageSearchParams {
+    limitPlatforms: string;
+    limitPosts: string;
+    platformPage: string;
+    postPage: string;
+    content: string;
+}
+
+export type PaginationLinkProps = {
+    page?: number | string;
+    active?: boolean;
+    disabled?: boolean;
+    platformPage?: number | string;
+    postPage?: number | string;
+    type: PaginatorType;
+    currentPage: string;
+    linkHref: string;
+} & PropsWithChildren;

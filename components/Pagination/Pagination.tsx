@@ -1,25 +1,33 @@
 'use client';
 
-// components/Pagination.tsx
 // @ts-ignore
 import usePagination from "@lucasmogari/react-pagination";
 import cn from "classnames";
 import Link from "next/link";
-import React, { memo, PropsWithChildren } from "react";
+import React, {useEffect, useMemo, useState} from "react";
 import {usePathname} from "next/navigation";
 import styles from './Pagination.module.css';
+import {PaginationLinkProps, PaginatorType, SearchPageSearchParams} from "@/types";
+import {replacedSearchParam} from "@/helpers";
 
 type Props = {
     page: number;
     itemCount: number;
     perPage: number;
+    type: PaginatorType;
+    searchParams?: SearchPageSearchParams
 };
 
-const Pagination = ({ page, itemCount, perPage }: Props) => {
-    // use the usePagination hook
-    // getPageItem - function that returns the type of page based on the index.
-    // size - the number of pages
-    const { getPageItem, totalPages, currentPage} = usePagination({
+const Pagination = ({page, itemCount, perPage, type, searchParams}: Props) => {
+    const [searchProps, setSearchProps] = useState<SearchPageSearchParams | undefined>(searchParams);
+
+    useEffect(() => {
+        if (searchParams !== searchProps) {
+            setSearchProps(searchParams);
+        }
+    }, [searchParams]);
+
+    const {getPageItem, totalPages, currentPage} = usePagination({
         totalItems: itemCount,
         page: page,
         itemsPerPage: perPage,
@@ -27,50 +35,58 @@ const Pagination = ({ page, itemCount, perPage }: Props) => {
         totalPages: Math.ceil(itemCount / perPage)
     });
 
-    // const firstPage = 1;
-    // calculate the next page
-    // const nextPage = Math.min(page + 1, totalPages);
-    // calculate the previous page
-    // const prevPage = Math.max(page - 1, firstPage);
-    // create a new array based on the total pages
-    const arr = new Array(totalPages);
+    const pathName = usePathname();
+    const currentUrl = typeof window !== "undefined" ? window.location.href : "";
+
+    const getPageLinks = useMemo(() => {
+        const links = [];
+
+        for (let i = 0; i < totalPages; i++) {
+            const { page } = getPageItem(i);
+
+            if (page === "gap") {
+                links.push(<span className={styles.dashed} key={`gap-${i}`}>...</span>);
+            } else if (page) {
+                const link = type === "main" ? `page=${page}` :
+                    type === "platforms" ? replacedSearchParam(currentUrl, "platformPage", String(page)) :
+                        replacedSearchParam(currentUrl, "postPage", String(page));
+
+                const linkHref = (type === "main" && page === 1) ? pathName : `?${link}`;
+
+                links.push(
+                    <PaginationLink
+                        key={`page-${page}`}
+                        type={type}
+                        active={page === currentPage}
+                        page={page}
+                        platformPage={page}
+                        postPage={page}
+                        currentPage={String(currentPage)}
+                        linkHref={linkHref}
+                    >
+                        {page}
+                    </PaginationLink>
+                );
+            }
+        }
+
+        return links;
+    }, [currentPage, currentUrl, totalPages, type]);
 
     return (
         <div className={styles.pagination}>
-            {[...arr].map((_, i) => {
-                // getPageItem function returns the type of page based on the index.
-                // it also automatically calculates if the page is disabled.
-                const { page } = getPageItem(i);
-
-
-                if (page === "gap") {
-                    return <span className={styles.dashed} key={`${page}-${i}`}>...</span>;
-                }
-
-                return page && <PaginationLink active={page === currentPage} key={`${page} + ${i}`} page={page}>
-                    {page}
-                </PaginationLink>;
-            })}
+            {getPageLinks}
         </div>
     );
 };
 
-type PaginationLinkProps = {
-    page?: number | string;
-    active?: boolean;
-    disabled?: boolean;
-} & PropsWithChildren;
 
-function PaginationLink({ page, children, ...props }: PaginationLinkProps) {
-    const pathName = usePathname();
-    // we use existing data from router query, we just modify the page.
-    const q = { page };
+
+function PaginationLink({page, children, platformPage, postPage, currentPage, type, linkHref, ...props}: PaginationLinkProps) {
     return (
         <Link
             scroll={false}
-            // only use the query for the url, it will only modify the query, won't modify the route.
-            href={page === 1 ? pathName : { query: q }}
-            // toggle the appropriate classes based on active, disabled states.
+            href={ linkHref }
             className={cn(styles.button, {
                 "p-2": true,
                 [styles.active]: props.active,
@@ -82,4 +98,5 @@ function PaginationLink({ page, children, ...props }: PaginationLinkProps) {
         </Link>
     );
 }
-export default memo(Pagination);
+
+export default Pagination;

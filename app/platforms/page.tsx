@@ -1,13 +1,38 @@
 import styles from './platforms.module.css'
 import {BreadCrumbs, CustomButton, HTag, ListingPlatforms, PTag, SelectFilters} from "@/components";
-import {FilterPageParams, SearchParams} from "@/types";
+import {FilterPageParams, IPlatform, SearchParams} from "@/types";
+import {getType} from "@/helpers";
+import {redirect} from "next/navigation";
 
 
 const Platforms = async ({searchParams, params}: SearchParams<FilterPageParams>) => {
     const paramsBreadCrumbs = [
         {name: 'Main', href: ''},
         {name: 'Platforms', href: 'platforms'}
-    ]
+    ];
+
+    const perPage = 12;
+    let currentPage = 1;
+
+    if (Number(searchParams.page) >= 1) {
+        currentPage = Number(searchParams.page);
+    }
+
+    const {count: totalCount, rows: platforms}: { count: number, rows: IPlatform[] } = await getType(params, currentPage, perPage);
+
+    if (searchParams.page === '1') {
+        redirect(`/platforms/`)
+    }
+
+    // if (Number(searchParams.page) >= 1) {
+    //     currentPage = Number(searchParams.page);
+    // }
+    //
+    // const paramsPath = Object.values(params).map((value) => decodeURIComponent(value)).join('/');
+    //
+    // if (searchParams.page === '1') {
+    //     redirect(`/platforms/${paramsPath}/`)
+    // }
 
     return (
         <>
@@ -39,7 +64,14 @@ const Platforms = async ({searchParams, params}: SearchParams<FilterPageParams>)
                     />
                 </div>
             </section>
-            <ListingPlatforms params={params} searchParams={searchParams}/>
+            <ListingPlatforms
+                title={'Reviews'}
+                type={'main'}
+                platforms={platforms}
+                page={currentPage}
+                totalCount={totalCount}
+                perPage={perPage}
+            />
             <section className={styles.whoCan}>
                 <div className={'container'}>
                     <HTag className={styles.whoCan__title} tag={'h2'}>

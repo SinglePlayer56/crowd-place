@@ -5,14 +5,19 @@ import Post from "../models/post.js";
 
 export const searchHandler = async (req: Request, res: Response) => {
     const slugPlatform = req.query.searchParams as string;
-    const limitPlatforms = Number(req.query.limitPlatforms as string);
-    const limitPosts = Number(req.query.limitPosts as string);
+    const currentPlatformsPage = req.query.platformsPage ? Number(req.query.platformsPage as string) : 1;
+    const currentPostsPage = req.query.postsPage ? Number(req.query.postsPage as string) : 1;
+    const limitPlatforms = req.query.limitPlatforms ? Number(req.query.limitPlatforms as string) : 5;
+    const limitPosts = req.query.limitPosts ? Number(req.query.limitPosts as string) : 5;
+    const offsetPlatforms = (currentPlatformsPage - 1) * limitPlatforms;
+    const offsetPosts = (currentPostsPage - 1) * limitPosts;
 
     try {
-        const platformResult = await Platform.findAll({
+        const platformResult = await Platform.findAndCountAll({
             //literal('RAND()') // для рандомного вывода
             order: [['id', 'DESC']],
-            limit: limitPlatforms ? limitPlatforms : 0,
+            limit: limitPlatforms,
+            offset: offsetPlatforms,
             where: {
                 [Op.or]: [
                     { name: { [Op.like]: `%${slugPlatform}%` } }
@@ -20,10 +25,11 @@ export const searchHandler = async (req: Request, res: Response) => {
             },
         });
 
-        const postResult = await Post.findAll({
+        const postResult = await Post.findAndCountAll({
             //literal('RAND()') // для рандомного вывода
             order: [['id', 'DESC']],
-            limit: limitPosts ? limitPosts : 0,
+            limit: limitPosts,
+            offset: offsetPosts,
             where: {
                 [Op.or]: [
                     { title: { [Op.like]: `%${slugPlatform}%` } }
@@ -31,7 +37,12 @@ export const searchHandler = async (req: Request, res: Response) => {
             },
         });
 
-        return res.status(200).json({platformResult, postResult});
+        return res.status(200).json({
+            platformResult: platformResult.rows,
+            postResult: postResult.rows,
+            totalPlatform: platformResult.count,
+            totalPosts: postResult.count
+        });
     } catch (err) {
         return res.status(500).json({ message: 'Internal Server Error' });
     }

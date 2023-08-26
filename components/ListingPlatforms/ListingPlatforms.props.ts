@@ -1,8 +1,11 @@
-import {FilterPageParams} from "@/types";
+import {IPlatform, PaginatorType, SearchPageSearchParams} from "@/types";
 
 export interface ListingPlatformsProps {
-    params: FilterPageParams,
-    searchParams: {
-        page: string;
-    }
+    type: PaginatorType;
+    platforms: IPlatform[];
+    totalCount: number;
+    page: number;
+    perPage: number;
+    searchParams?: SearchPageSearchParams;
+    title: string;
 }
