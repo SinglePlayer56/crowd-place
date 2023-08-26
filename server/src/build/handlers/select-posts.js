@@ -21,7 +21,7 @@ export const selectPostsHandler = async (req, res) => {
     }
 };
 function generateWhereClauses(category) {
-    if (category !== 'undefined') {
+    if (category !== '') {
         return {
             slugCategory: {
                 [Op.regexp]: category
