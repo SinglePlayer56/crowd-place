@@ -26,17 +26,13 @@ export const selectPostsHandler = async (req: Request, res: Response) => {
 }
 
 function generateWhereClauses (category: string | undefined) {
-    if (category !== 'undefined') {
+    if (category !== '') {
         return {
             slugCategory: {
                 [Op.regexp]: category
             }
         }
     } else {
-        return {
-            slugCategory: {
-                [Op.regexp]: ''
-            }
-        }
+        return {}
     }
 }
