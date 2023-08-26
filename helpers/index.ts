@@ -217,7 +217,5 @@ export function replacedSearchParam(url: string, paramName: string, newValue: st
         const newQueryParams: string = newParams.join("&");
 
         return newQueryParams;
-    } else {
-        console.log("URL не содержит квери-параметры.");
     }
 }

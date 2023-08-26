@@ -25,9 +25,5 @@
 }
 
 .tagNotActive:hover {
-    border: 2px solid #d5edfd;
-}
-
-.tagNotActive:hover a {
-    color: #009dee;
+    border: 2px solid rgba(135, 137, 140, 0.15);
 }

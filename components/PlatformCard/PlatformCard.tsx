@@ -24,6 +24,7 @@ const PlatformCard = memo(({pathLogo, title, countries, description, industry, t
                     <PlatformCardCountryList
                         countries={countries}
                         className={styles.card__countryList}
+                        slugPlatform={href}
                     />
                 </div>
             </div>

@@ -3,11 +3,11 @@
 import styles from "./PlatformCardCountryList.module.css";
 import {PlatformCardCountryListProps} from "./PlatformCardCountryList.props";
 import cn from 'classnames';
-import {useEffect, useState} from "react";
+import {useEffect, useState, Fragment} from "react";
 import {motion, AnimatePresence} from "framer-motion";
 import Link from "next/link";
 
-const PlatformCardCountryList = ({countries, className}: PlatformCardCountryListProps) => {
+const PlatformCardCountryList = ({countries, slugPlatform, className}: PlatformCardCountryListProps) => {
     const [isVisible, setIsVisible] = useState<boolean>(false)
 
     useEffect(() => {
@@ -44,10 +44,9 @@ const PlatformCardCountryList = ({countries, className}: PlatformCardCountryList
                             const lastIndex = countries.length - 1;
                             if (lastIndex !== index) {
                                 return (
-                                    <>
+                                    <Fragment key={`${country}-${slugPlatform}`}>
                                         <Link
                                             className={cn(styles.card__country, styles.modal)}
-                                            key={country}
                                             href={`/platforms/${country.toLowerCase().split(' ').join('-')}/`}
                                         >
                                             {country}
@@ -56,13 +55,13 @@ const PlatformCardCountryList = ({countries, className}: PlatformCardCountryList
                                             {`\u00A0|\u00A0`}
                                         </span>
 
-                                    </>
+                                    </Fragment>
                                 )
                             } else {
                                 return (
                                     <Link
                                         className={cn(styles.card__country, styles.modal)}
-                                        key={country}
+                                        key={`${country}-${slugPlatform}`}
                                         href={`/platforms/${country.toLowerCase().split(' ').join('-')}/`}
                                     >
                                         {country}

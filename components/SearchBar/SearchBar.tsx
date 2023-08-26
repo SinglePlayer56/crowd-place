@@ -11,6 +11,7 @@ import {KeyboardEvent} from "react";
 import Image from 'next/image';
 import {ISearchResult} from "@/types";
 import Link from 'next/link';
+import {useRouter} from "next/navigation";
 
 async function fetchSearchHandler(value: string): Promise<ISearchResult | undefined> {
     try {
@@ -33,6 +34,7 @@ const SearchBar = ({className, page}: SearchBarProps) => {
     const [isFetching, setIsFetching] = useState<boolean>(false);
     const [refSearchWindow, isOutsideClick] = useClickOutside();
     const [variants, setVariants] = useState({});
+    const router = useRouter();
     const inputHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setValue(e.target.value);
     }
@@ -126,6 +128,12 @@ const SearchBar = ({className, page}: SearchBarProps) => {
     const closeSearchHandler = () => {
         setIsExpanded(false);
         setValue('');
+    }
+
+    const routeSearchPage = () => {
+        const hrefSearchPage = `/search/?content=${values}&limitPlatforms=8&platformPage=1&limitPosts=6&postPage=1`;
+
+        router.push(hrefSearchPage);
     }
 
     return (
@@ -271,6 +279,10 @@ const SearchBar = ({className, page}: SearchBarProps) => {
                                             }
                                         </div>
                                     </div>
+                                }
+
+                                {searchResult && (searchResult.totalPosts > 5 || searchResult.totalPlatform > 5 ) &&
+                                    <button onClick={routeSearchPage}>See more</button>
                                 }
                             </motion.div>
                         )}

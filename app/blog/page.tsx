@@ -57,7 +57,7 @@ const BlogListing = async ({searchParams, params}: any) => {
                 perPage={perPage}
                 page={currentPage}
                 totalCount={totalCount}
-                typePaginator={'posts'}
+                typePaginator={'main'}
             />
             <section className={styles.whoCan}>
                 <div className={'container'}>

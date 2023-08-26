@@ -4,7 +4,7 @@
 import usePagination from "@lucasmogari/react-pagination";
 import cn from "classnames";
 import Link from "next/link";
-import React, {useEffect, useMemo, useState} from "react";
+import React, {useEffect, useLayoutEffect, useMemo, useState} from "react";
 import {usePathname} from "next/navigation";
 import styles from './Pagination.module.css';
 import {PaginationLinkProps, PaginatorType, SearchPageSearchParams} from "@/types";
@@ -20,6 +20,12 @@ type Props = {
 
 const Pagination = ({page, itemCount, perPage, type, searchParams}: Props) => {
     const [searchProps, setSearchProps] = useState<SearchPageSearchParams | undefined>(searchParams);
+    const [currentUrl, setCurrentUrl] = useState<string>('');
+
+    useEffect(() => {
+        const url = typeof window !== "undefined" ? window.location.href : "";
+        setCurrentUrl(url);
+    }, [])
 
     useEffect(() => {
         if (searchParams !== searchProps) {
@@ -36,8 +42,6 @@ const Pagination = ({page, itemCount, perPage, type, searchParams}: Props) => {
     });
 
     const pathName = usePathname();
-    const currentUrl = typeof window !== "undefined" ? window.location.href : "";
-
     const getPageLinks = useMemo(() => {
         const links = [];
 
@@ -55,7 +59,7 @@ const Pagination = ({page, itemCount, perPage, type, searchParams}: Props) => {
 
                 links.push(
                     <PaginationLink
-                        key={`page-${page}`}
+                        key={`page-${type}-${page}`}
                         type={type}
                         active={page === currentPage}
                         page={page}

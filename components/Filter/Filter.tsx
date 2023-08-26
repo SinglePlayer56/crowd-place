@@ -7,7 +7,8 @@ import styles from './Filter.module.css';
 import cn from 'classnames';
 import Image from 'next/image';
 import {Checkbox} from "@/components";
-import {memo} from "react";
+import {memo, useEffect} from "react";
+import {useClickOutside} from "react-click-outside-hook";
 
 const Filter = memo(
     ({
@@ -23,13 +24,21 @@ const Filter = memo(
      }: FilterProps) => {
         const isOpen = expanded === index;
 
+        const [refElem, isClickedOutside] = useClickOutside();
+
+        useEffect(() => {
+            if (isOpen && isClickedOutside) {
+                setExpanded(false);
+            }
+        }, [isOpen, isClickedOutside]);
+
         const acceptHandler = () => {
             acceptFilters(type);
             setExpanded(false);
         }
 
         return (
-            <div className={styles.filter}>
+            <div ref={refElem} className={styles.filter}>
                 <label
                     className={styles.filterActive}
 

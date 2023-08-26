@@ -136,7 +136,7 @@ const SelectFilters = memo(({className}: SelectFiltersProps) => {
                         key={'reset-filters-button'}
                         style={{overflow: 'hidden'}}
                         initial={{opacity: 0, scale: 0, height: 0}}
-                        animate={url.length > 11 ? {opacity: 1, scale: 1, height: 85} : {opacity: 0, scale: 0, height: 0}}
+                        animate={url.length > 11 ? {opacity: 1, scale: 1, height: 90} : {opacity: 0, scale: 0, height: 0}}
                         transition={{duration: 0.3}}
                         exit={{opacity: 0, scale: 0, height: 0}}
                     >

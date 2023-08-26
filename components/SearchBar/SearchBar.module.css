@@ -166,7 +166,7 @@
 
 .otherPositions {
     position: absolute;
-    top: 71px;
+    top: 45px;
     left: 1360px;
 }
 
@@ -201,7 +201,7 @@
 
 @media screen and (max-width: 1100px) {
     .otherPositions {
-        top: 20px;
+        top: -6px;
         left: 900px;
     }
 }

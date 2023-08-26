@@ -61,7 +61,7 @@ const CategoryListing = async ({searchParams, params}: SearchParams<PageProps>) 
                 perPage={perPage}
                 page={currentPage}
                 totalCount={totalCount}
-                typePaginator={'posts'}
+                typePaginator={'main'}
             />
             <section className={styles.whoCan}>
                 <div className={'container'}>
