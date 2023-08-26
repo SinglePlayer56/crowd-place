@@ -32,5 +32,11 @@ function generateWhereClauses (category: string | undefined) {
                 [Op.regexp]: category
             }
         }
+    } else {
+        return {
+            slugCategory: {
+                [Op.regexp]: ''
+            }
+        }
     }
 }
