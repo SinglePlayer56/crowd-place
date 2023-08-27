@@ -41,10 +41,10 @@ app.use(cors({
 //     next();
 // });
 
-app.use('/api', createProxyMiddleware({
-    target: 'http://1864875-cn27374.twc1.net:3001', // Порт, на котором запущен Express сервер
-    changeOrigin: true,
-}));
+// app.use('/api', createProxyMiddleware({
+//     target: 'http://1864875-cn27374.twc1.net:3001', // Порт, на котором запущен Express сервер
+//     changeOrigin: true,
+// }));
 
 app.get('/api/get-related/:industry/', getRelatedHandler);
 
