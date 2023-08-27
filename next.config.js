@@ -26,6 +26,10 @@ const nextConfig = {
                 destination: `${process.env.SERVER}/api/:path*`, // Прокси на Express сервер
             }
         ]
+    },
+    api: {
+        bodyParser: false,
+        externalResolver: true,
     }
 };
 
