@@ -41,13 +41,13 @@ app.use(cors({
 //     next();
 // });
 
-app.use(
-    '/api',
-    createProxyMiddleware({
-        target: 'http://localhost:3001', // Целевой порт (Express сервер на порту 3001)
-        changeOrigin: true,
-    })
-);
+// app.use(
+//     '/api',
+//     createProxyMiddleware({
+//         target: 'http://localhost:3001', // Целевой порт (Express сервер на порту 3001)
+//         changeOrigin: true,
+//     })
+// );
 
 app.get('/api/get-related/:industry/', getRelatedHandler);
 
