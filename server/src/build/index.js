@@ -9,7 +9,6 @@ import { selectPostsHandler } from "./handlers/select-posts.js";
 import { getPostHandler } from "./handlers/get-post.js";
 import { getInterestingPostsHandler } from "./handlers/get-interesting-posts.js";
 import { searchHandler } from "./handlers/search.js";
-import * as http from "http";
 const app = express();
 const port = envVariable.PORT || 3001;
 app.use(express.json());
@@ -33,10 +32,7 @@ app.get('/api/select-posts/', selectPostsHandler);
 app.get('/api/get-post/:postSlug/', getPostHandler);
 app.get('/api/get-interesting-posts/', getInterestingPostsHandler);
 app.get('/api/search/', searchHandler);
-const server = http.createServer(app);
-server.listen(port, () => {
-    const address = server.address();
-    const url = `http://${address.address}:${address.port}`;
-    console.log(`Сервер запущен по адресу: ${url}`);
+app.listen(port, () => {
+    console.log(`Server is running on port ${port}`);
 });
 //# sourceMappingURL=index.js.map
