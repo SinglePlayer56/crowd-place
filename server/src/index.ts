@@ -44,21 +44,21 @@ app.use((req: any, res: Response, next) => {
 //         },
 //     })
 // );
-app.get('/apiexpress/get-related/:industry', getRelatedHandler);
+app.get('/api/get-related/:industry', getRelatedHandler);
 
-app.get('/apiexpress/get-all-platforms', getAllPlatformHandler);
+app.get('/api/get-all-platforms', getAllPlatformHandler);
 
-app.get('/apiexpress/get-platform/:platform', getPlatformHandler);
+app.get('/api/get-platform/:platform', getPlatformHandler);
 
-app.get('/apiexpress/select-platforms', selectPlatformHandler);
+app.get('/api/select-platforms', selectPlatformHandler);
 
-app.get('/apiexpress/select-posts', selectPostsHandler);
+app.get('/api/select-posts', selectPostsHandler);
 
-app.get('/apiexpress/get-post/:postSlug', getPostHandler);
+app.get('/api/get-post/:postSlug', getPostHandler);
 
-app.get('/apiexpress/get-interesting-posts', getInterestingPostsHandler);
+app.get('/api/get-interesting-posts', getInterestingPostsHandler);
 
-app.get('/apiexpress/search', searchHandler);
+app.get('/api/search', searchHandler);
 
 // app.post('/api/send-mail', sendMailHandler);
 
