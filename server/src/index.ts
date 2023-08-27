@@ -23,14 +23,14 @@ app.use(cors({
     allowedHeaders: ['Content-Type'], // Разрешенные заголовки
 }));
 
-app.use((req: any, res: Response, next) => {
-    // Исключаем пути Next.js из перенаправления
-    if (req.hostname === envVariable.DOMAIN && req.port === '3002' && !req.url.startsWith('/')) {
-        const redirectUrl = `http://${req.hostname}:3001${req.url}`;
-        return res.redirect(redirectUrl);
-    }
-    next();
-});
+// app.use((req: any, res: Response, next) => {
+//     // Исключаем пути Next.js из перенаправления
+//     if (req.hostname === envVariable.DOMAIN && req.port === '3002' && !req.url.startsWith('/')) {
+//         const redirectUrl = `http://${req.hostname}:3001${req.url}`;
+//         return res.redirect(redirectUrl);
+//     }
+//     next();
+// });
 
 // app.use((req: any, res: Response, next) => {
 //     // Перенаправляем запросы с порта 3002 на порт 3001
