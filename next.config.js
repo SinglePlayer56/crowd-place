@@ -18,6 +18,14 @@ const nextConfig = {
                 permanent: true,
             },
         ]
+    },
+    async rewrites() {
+        return [
+            {
+                source: '/api/:path*', // Запросы, начинающиеся с /api
+                destination: `${process.env.SERVER}/api/:path*`, // Прокси на Express сервер
+            }
+        ]
     }
 };
 
