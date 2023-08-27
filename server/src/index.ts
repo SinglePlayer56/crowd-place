@@ -1,4 +1,4 @@
-import express from 'express';
+import express, {Response} from 'express';
 import {getAllPlatformHandler} from "./handlers/get-all-platform.js";
 import {getPlatformHandler} from "./handlers/get-platform.js";
 import {selectPlatformHandler} from "./handlers/select-platform.js";
@@ -22,6 +22,15 @@ app.use(cors({
     allowedHeaders: ['Content-Type'], // Разрешенные заголовки
 }));
 
+app.use((req: any, res: Response, next) => {
+    // Перенаправляем запросы с порта 3002 на порт 3001
+    if (req.hostname === envVariable.DOMAIN && req.port === '3002') {
+        const redirectUrl = `http://${req.hostname}:3001${req.url}`;
+        return res.redirect(redirectUrl);
+    }
+    next();
+});
+
 // app.use(
 //     '/api2/',
 //     createProxyMiddleware({
@@ -35,21 +44,21 @@ app.use(cors({
 //         },
 //     })
 // );
-app.get('/api/get-related/:industry', getRelatedHandler);
+app.get('/apiexpress/get-related/:industry', getRelatedHandler);
 
-app.get('/api/get-all-platforms', getAllPlatformHandler);
+app.get('/apiexpress/get-all-platforms', getAllPlatformHandler);
 
-app.get('/api/get-platform/:platform', getPlatformHandler);
+app.get('/apiexpress/get-platform/:platform', getPlatformHandler);
 
-app.get('/api/select-platforms', selectPlatformHandler);
+app.get('/apiexpress/select-platforms', selectPlatformHandler);
 
-app.get('/api/select-posts', selectPostsHandler);
+app.get('/apiexpress/select-posts', selectPostsHandler);
 
-app.get('/api/get-post/:postSlug', getPostHandler);
+app.get('/apiexpress/get-post/:postSlug', getPostHandler);
 
-app.get('/api/get-interesting-posts', getInterestingPostsHandler);
+app.get('/apiexpress/get-interesting-posts', getInterestingPostsHandler);
 
-app.get('/api/search', searchHandler);
+app.get('/apiexpress/search', searchHandler);
 
 // app.post('/api/send-mail', sendMailHandler);
 

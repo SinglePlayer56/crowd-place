@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "npx nodemon",
     "start": "npm run build && node src/build/index",
-    "build": "rimraf ./src/build && npx tsc",
+    "build": "rimraf ./src/build && npx tsc && cp ./src/.env ./src/build/",
     "createPost": "npm run build && node src/build/createDB/create-post.js"
   },
   "keywords": [],

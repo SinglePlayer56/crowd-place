@@ -13,10 +13,17 @@ const app = express();
 const port = envVariable.PORT || 3001;
 app.use(express.json());
 app.use(cors({
-    origin: 'http://1864875-cn27374.twc1.net',
+    origin: 'http://1864875-cn27374.twc1.net:3002',
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
 }));
+app.use((req, res, next) => {
+    if (req.hostname === envVariable.DOMAIN && req.port === '3002') {
+        const redirectUrl = `http://${req.hostname}:3001${req.url}`;
+        return res.redirect(redirectUrl);
+    }
+    next();
+});
 app.get('/api/get-related/:industry', getRelatedHandler);
 app.get('/api/get-all-platforms', getAllPlatformHandler);
 app.get('/api/get-platform/:platform', getPlatformHandler);
