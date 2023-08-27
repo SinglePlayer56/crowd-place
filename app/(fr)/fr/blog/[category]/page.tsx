@@ -1,51 +1,41 @@
-import {BreadCrumbs, HTag, ListingPlatforms, PTag, SelectFilters} from "@/components";
-import {FilterPageParams, IPlatform} from "@/types";
-import {getMetadataValues, getType} from "@/helpers";
-import {Metadata} from "next";
-import styles from '@/app/platforms/[investmentType]/platforms.module.css';
+import styles from '../blog.module.css'
+import {BreadCrumbs, FilterPosts, HTag, ListingPosts, PTag} from "@/components";
 import {redirect} from "next/navigation";
-
-export async function generateMetadata({params}: PageProps): Promise<Metadata> {
-    return getMetadataValues(params);
-}
+import {SearchParams} from "@/types";
+import {getPosts} from "@/helpers";
 
 interface PageProps {
-    searchParams: {
-        page: string
-    },
-    params: FilterPageParams
+    category: string;
 }
 
-
-const Platforms = async ({searchParams, params}: PageProps) => {
-    const perPage = 12;
-    let currentPage = 1;
+const CategoryListing = async ({searchParams, params}: SearchParams<PageProps>) => {
+    if (searchParams.page === '1') {
+        redirect(`/blog/${params.category}/`)
+    }
 
     const paramsBreadCrumbs = [
         {name: 'Main', href: ''},
-        {name: 'Platforms', href: 'platforms'}
+        {name: 'Blog', href: 'blog'},
     ];
+
+    const perPage = 6;
+    let currentPage = 1;
 
     if (Number(searchParams.page) >= 1) {
         currentPage = Number(searchParams.page);
     }
 
-    const {count: totalCount, rows: platforms}: { count: number, rows: IPlatform[] } = await getType(params, currentPage, perPage);
 
-    const paramsPath = Object.values(params).map((value) => decodeURIComponent(value)).join('/');
-
-    if (searchParams.page === '1') {
-        redirect(`/platforms/${paramsPath}/`)
-    }
+    const {count: totalCount, rows: postsList} = await getPosts(params.category, currentPage, perPage);
 
     return (
         <>
             <> </>
-            <BreadCrumbs paramsPath={paramsBreadCrumbs}/>
             <section className={styles.head}>
                 <div className={'container'}>
+                    <BreadCrumbs paramsPath={paramsBreadCrumbs}/>
                     <HTag className={styles.head__title} tag={'h1'}>
-                        Environmental impact H1
+                        Blog Listing
                     </HTag>
                     <PTag className={styles.head__text} fontSize={'20px'}>
                         Impact investing is one of the emerging yet steady trends in the crowdfunding sector. It’s
@@ -62,19 +52,16 @@ const Platforms = async ({searchParams, params}: PageProps) => {
                         donation-based crowdfunding, investors receive either some regular returns or partial ownership
                         of the companies.
                     </PTag>
-                    <SelectFilters
-                        className={styles.start__filters}
-                        resetButton
-                    />
+                    <FilterPosts/>
                 </div>
             </section>
-            <ListingPlatforms
-                title={'Reviews'}
-                type={'main'}
-                platforms={platforms}
+            <ListingPosts
+                title={'News'}
+                posts={postsList}
+                perPage={perPage}
                 page={currentPage}
                 totalCount={totalCount}
-                perPage={perPage}
+                typePaginator={'main'}
             />
             <section className={styles.whoCan}>
                 <div className={'container'}>
@@ -94,4 +81,4 @@ const Platforms = async ({searchParams, params}: PageProps) => {
     );
 };
 
-export default Platforms;
+export default CategoryListing;

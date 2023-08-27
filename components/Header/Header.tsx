@@ -6,7 +6,7 @@ import Link from "next/link";
 import cn from 'classnames';
 import {HeaderLink} from "@/types";
 import {isActiveLink} from "@/helpers";
-import {SearchBar} from "@/components";
+import {LangSwitcher, SearchBar} from "@/components";
 import React from "react";
 import Burger from "@/components/Burger/Burger";
 
@@ -61,6 +61,7 @@ const Header = () => {
                                 {link.name}
                             </Link>
                         ))}
+                        <LangSwitcher/>
                     </div>
                     <Burger className={styles.header__burger}/>
                 </div>

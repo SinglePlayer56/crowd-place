@@ -47,6 +47,9 @@
 }
 
 .searchBar__resultContainer {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    align-items: start;
     margin-top: -8px;
     width: 100%;
     background-color: #ffffff;
@@ -173,7 +176,8 @@
 .result__seeMore {
     font-size: 18px;
     font-family: var(--inter-font);
-    float: right;
+    align-self: end;
+    justify-self: end;
     margin-bottom: 15px;
     color: #009dee;
     cursor: pointer;

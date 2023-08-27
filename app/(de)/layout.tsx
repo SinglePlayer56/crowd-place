@@ -1,4 +1,4 @@
-import './globals.css';
+import '../globals.css'
 import type {Metadata} from 'next';
 import {ContextRedux} from "@/components";
 
@@ -13,11 +13,11 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="en">
+        <html lang="de">
         <body className={'full-height'}>
-            <ContextRedux>
-                {children}
-            </ContextRedux>
+        <ContextRedux>
+            {children}
+        </ContextRedux>
         </body>
         </html>
     )

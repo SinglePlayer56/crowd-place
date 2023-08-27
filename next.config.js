@@ -17,6 +17,16 @@ const nextConfig = {
                 destination: '/blog/',
                 permanent: true,
             },
+            {
+                source: '/fr/',
+                destination: '/',
+                permanent: false,
+            },
+            {
+                source: '/de/',
+                destination: '/',
+                permanent: false,
+            },
         ]
     },
     async rewrites() {

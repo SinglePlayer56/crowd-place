@@ -2,7 +2,7 @@ import {BreadCrumbs, HTag, ListingPlatforms, PTag, SelectFilters} from "@/compon
 import {FilterPageParams, IPlatform} from "@/types";
 import {getMetadataValues, getType} from "@/helpers";
 import {Metadata} from "next";
-import styles from '@/app/platforms/[investmentType]/platforms.module.css';
+import styles from './platforms.module.css';
 import {redirect} from "next/navigation";
 
 export async function generateMetadata({params}: PageProps): Promise<Metadata> {
