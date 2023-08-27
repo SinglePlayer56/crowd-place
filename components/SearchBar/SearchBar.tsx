@@ -15,7 +15,7 @@ import {useRouter} from "next/navigation";
 
 async function fetchSearchHandler(value: string): Promise<ISearchResult | undefined> {
     try {
-        const response = await fetch(`http://1864875-cn27374.twc1.net:3001/api/search?searchParams=${value}`);
+        const response = await fetch(`http://localhost:3001/api/search?searchParams=${value}`);
 
         const data = await response.json();
 

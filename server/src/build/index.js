@@ -13,7 +13,7 @@ const app = express();
 const port = envVariable.PORT || 3001;
 app.use(express.json());
 app.use(cors({
-    origin: 'http://1864875-cn27374.twc1.net:3002',
+    origin: ['http://1864875-cn27374.twc1.net:3002', 'http://localhost:3000', 'http://1864875-cn27374.twc1.net'],
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
 }));
@@ -24,14 +24,14 @@ app.use((req, res, next) => {
     }
     next();
 });
-app.get('/api/get-related/:industry', getRelatedHandler);
-app.get('/api/get-all-platforms', getAllPlatformHandler);
-app.get('/api/get-platform/:platform', getPlatformHandler);
-app.get('/api/select-platforms', selectPlatformHandler);
-app.get('/api/select-posts', selectPostsHandler);
-app.get('/api/get-post/:postSlug', getPostHandler);
-app.get('/api/get-interesting-posts', getInterestingPostsHandler);
-app.get('/api/search', searchHandler);
+app.get('/api/get-related/:industry/', getRelatedHandler);
+app.get('/api/get-all-platforms/', getAllPlatformHandler);
+app.get('/api/get-platform/:platform/', getPlatformHandler);
+app.get('/api/select-platforms/', selectPlatformHandler);
+app.get('/api/select-posts/', selectPostsHandler);
+app.get('/api/get-post/:postSlug/', getPostHandler);
+app.get('/api/get-interesting-posts/', getInterestingPostsHandler);
+app.get('/api/search/', searchHandler);
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
