@@ -6,6 +6,7 @@
 .head__logo {
     border: 2px solid #d5edfd;
     border-radius: 9px;
+    object-fit: contain;
 }
 
 .description__hidden {

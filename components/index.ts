@@ -38,6 +38,7 @@ import FilterPosts from "@/components/FilterPosts/FilterPosts";
 import ListingPosts from "@/components/ListingPosts/ListingPosts";
 import InterestingPosts from "@/components/InterestingPosts/InterestingPosts";
 import SearchBar from "@/components/SearchBar/SearchBar";
+import SearchPageInput from "@/components/SearchPageInput/SearchPageInput";
 
 export {
     Footer,
@@ -79,5 +80,6 @@ export {
     ListingPosts,
     RelatedSwiperPost,
     InterestingPosts,
-    SearchBar
+    SearchBar,
+    SearchPageInput
 }

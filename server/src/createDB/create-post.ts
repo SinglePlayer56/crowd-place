@@ -1,5 +1,5 @@
 import {IPost} from "../types/index.js";
-import sequelize from "../utils/index.js";
+import sequelize from "../utils/connectDB.js";
 import Post from "../models/post.js";
 
 

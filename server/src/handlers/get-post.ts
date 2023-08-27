@@ -1,7 +1,7 @@
 import {Request, Response} from "express";
 import Post from "../models/post.js";
 
-export const getPostHandler = async (req: Request, res: Response) => {
+const getPostHandler = async (req: Request, res: Response) => {
     try {
         const platform = await Post.findOne({
             where: {
@@ -15,3 +15,5 @@ export const getPostHandler = async (req: Request, res: Response) => {
         res.status(500).json({ message: 'Internal Server Error' });
     }
 }
+
+export default getPostHandler;

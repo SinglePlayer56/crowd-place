@@ -1,7 +1,7 @@
 import {Request, Response} from "express";
 import Platform from "../models/platform.js";
 
-export const getAllPlatformHandler = async (_: Request, res: Response) => {
+const getAllPlatformHandler = async (_: Request, res: Response) => {
     try {
         const allPlatform = await Platform.findAll({
             order: [
@@ -15,3 +15,5 @@ export const getAllPlatformHandler = async (_: Request, res: Response) => {
         res.status(500).json({ message: 'Internal Server Error' });
     }
 }
+
+export default getAllPlatformHandler;

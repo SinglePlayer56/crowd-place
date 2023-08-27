@@ -24,13 +24,15 @@ const ListingPosts = async ({typePaginator, perPage, page, totalCount, posts, se
                         />
                     ))}
                 </div>
-                <Pagination
-                    itemCount={totalCount}
-                    page={page}
-                    perPage={perPage}
-                    type={typePaginator}
-                    searchParams={searchParams}
-                />
+                {totalCount > perPage &&
+                    <Pagination
+                        itemCount={totalCount}
+                        page={page}
+                        perPage={perPage}
+                        type={typePaginator}
+                        searchParams={searchParams}
+                    />
+                }
             </div>
         </section>
     );

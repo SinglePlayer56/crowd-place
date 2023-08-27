@@ -1,5 +1,5 @@
 import {CreationOptional, DataTypes, InferAttributes, InferCreationAttributes, Model} from "sequelize";
-import sequelize from "../utils/index.js";
+import sequelize from "../utils/connectDB.js";
 
 class Platform extends Model<InferAttributes<Platform>, InferCreationAttributes<Platform>> {
     declare id: CreationOptional<number>;

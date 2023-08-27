@@ -1,5 +1,5 @@
 import {CreationOptional, DataTypes, InferAttributes, InferCreationAttributes, Model} from "sequelize";
-import sequelize from "../utils/index.js";
+import sequelize from "../utils/connectDB.js";
 
 class Post extends Model<InferAttributes<Post>, InferCreationAttributes<Post>> {
     declare id: CreationOptional<number>;

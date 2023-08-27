@@ -2,7 +2,7 @@ import {Op} from "sequelize";
 import {Request, Response} from "express";
 import Post from "../models/post.js";
 
-export const getInterestingPostsHandler = async (req: Request, res: Response) => {
+const getInterestingPostsHandler = async (req: Request, res: Response) => {
     const slugPost = req.query.post as string;
     const slugCategory = req.query.category as string;
 
@@ -25,3 +25,5 @@ export const getInterestingPostsHandler = async (req: Request, res: Response) =>
         return res.status(500).json({ message: 'Internal Server Error' });
     }
 }
+
+export default getInterestingPostsHandler;

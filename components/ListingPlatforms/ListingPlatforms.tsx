@@ -27,13 +27,15 @@ const ListingPlatforms = async ({type, platforms, totalCount, page, perPage, sea
                                 href={`/platform/${platform.slug}`}/>
                         ))}
                     </div>
-                    <Pagination
-                        type={type}
-                        itemCount={totalCount}
-                        page={page}
-                        perPage={perPage}
-                        searchParams={searchParams}
-                    />
+                    {totalCount > perPage &&
+                        <Pagination
+                            type={type}
+                            itemCount={totalCount}
+                            page={page}
+                            perPage={perPage}
+                            searchParams={searchParams}
+                        />
+                    }
                 </div>
             </section>
 

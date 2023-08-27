@@ -2,8 +2,7 @@ import Platform from "../models/platform.js";
 import {Op} from "sequelize";
 import {Request, Response} from "express";
 import Post from "../models/post.js";
-
-export const searchHandler = async (req: Request, res: Response) => {
+const searchHandler = async (req: Request, res: Response) => {
     const slugPlatform = req.query.searchParams as string;
     const currentPlatformsPage = req.query.platformsPage ? Number(req.query.platformsPage as string) : 1;
     const currentPostsPage = req.query.postsPage ? Number(req.query.postsPage as string) : 1;
@@ -47,3 +46,5 @@ export const searchHandler = async (req: Request, res: Response) => {
         return res.status(500).json({ message: 'Internal Server Error' });
     }
 }
+
+export default searchHandler;

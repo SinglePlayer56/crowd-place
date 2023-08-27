@@ -1,9 +1,8 @@
-import {ListingPlatforms, ListingPosts, PlatformCard} from "@/components";
-import styles from './SearchPage.module.css';
+import {ListingPlatforms, ListingPosts, SearchPageInput} from "@/components";
 import {ISearchResult, SearchPageSearchParams} from "@/types";
 
 async function fetchSearchHandler(value: string, platformsPage: number = 1, postsPage: number = 1, limitPlatforms: string = '0', limitPosts: string = '0'): Promise<ISearchResult> {
-    const response = await fetch(`http://1864875-cn27374.twc1.net/api/search?searchParams=${value}&platformsPage=${platformsPage}&postsPage=${postsPage}&limitPlatforms=${limitPlatforms}&limitPosts=${limitPosts}`);
+    const response = await fetch(`http://localhost:3001/api/search?searchParams=${value}&platformsPage=${platformsPage}&postsPage=${postsPage}&limitPlatforms=${limitPlatforms}&limitPosts=${limitPosts}`);
 
     const data = await response.json();
 
@@ -40,6 +39,10 @@ const SearchPage = async ({searchParams}: { searchParams: SearchPageSearchParams
 
     return (
         <>
+            <SearchPageInput
+                content={content}
+                totalCountResult={totalPosts + totalPlatform}
+            />
             {platformResult.length > 0 &&
                 <ListingPlatforms
                     title={'Platforms'}

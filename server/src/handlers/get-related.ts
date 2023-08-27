@@ -2,7 +2,7 @@ import Platform from "../models/platform.js";
 import {Op} from "sequelize";
 import {Request, Response} from "express";
 
-export const getRelatedHandler = async (req: Request, res: Response) => {
+const getRelatedHandler = async (req: Request, res: Response) => {
     const slugPlatform = req.query.name as string;
 
     try {
@@ -24,3 +24,5 @@ export const getRelatedHandler = async (req: Request, res: Response) => {
         return res.status(500).json({ message: 'Internal Server Error' });
     }
 }
+
+export default getRelatedHandler;

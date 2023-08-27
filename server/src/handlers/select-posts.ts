@@ -2,7 +2,7 @@ import {Request, Response} from "express";
 import Post from "../models/post.js";
 import {Op} from "sequelize";
 
-export const selectPostsHandler = async (req: Request, res: Response) => {
+const selectPostsHandler = async (req: Request, res: Response) => {
     try {
         const currentPage = req.query.page ? Number(req.query.page) : 1;
         const perPage = Number(req.query.perPage);
@@ -36,3 +36,5 @@ function generateWhereClauses (category: string | undefined) {
         return {}
     }
 }
+
+export default selectPostsHandler;

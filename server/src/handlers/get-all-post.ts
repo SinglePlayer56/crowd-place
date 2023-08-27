@@ -1,7 +1,7 @@
 import {Request, Response} from "express";
 import Post from "../models/platform.js";
 
-export const getAllPostHandler = async (_: Request, res: Response) => {
+const getAllPostHandler = async (_: Request, res: Response) => {
     try {
         const allPlatform = await Post.findAll({
             order: [
@@ -15,3 +15,5 @@ export const getAllPostHandler = async (_: Request, res: Response) => {
         res.status(500).json({ message: 'Internal Server Error' });
     }
 }
+
+export default getAllPostHandler;

@@ -2,19 +2,6 @@ import {usePathname} from "next/navigation";
 import {AddFormData, ContactsFormData, FilterPageParams, IPost, IPostResponse} from "@/types";
 import {store} from "@/store";
 
-export function extractValuesByKeyArray(obj: Record<string, string>, keysArray: string[]) {
-    const result = [];
-
-    for (let i = 0; i < keysArray.length; i++) {
-        const key = keysArray[i];
-        if (obj.hasOwnProperty(key)) {
-            result.push(obj[key]);
-        }
-    }
-
-    return result;
-}
-
 export function createFilterObject(obj: Record<string, string>, keysArray: string[]) {
     const filteredObject: Record<string, string> = {};
 
@@ -50,25 +37,6 @@ export function generateQueryParams(object: Record<string, string>) {
         .join('&');
 }
 
-// export function searchTypeFilters(arrayParams: string[]) {
-//     let filterType: string[] = [];
-//
-//     arrayParams.forEach((value) => {
-//         store.getState().filters.filtersFields.forEach((filter, index) => {
-//             filter.options.forEach((option) => {
-//                 if (option.slug.includes(value)) {
-//                     const type = store.getState().filters.filtersFields[index].type;
-//                     if (!filterType.includes(type)) {
-//                         filterType.push();
-//                     }
-//                 }
-//             })
-//         })
-//     })
-//
-//     return filterType;
-// }
-
 export function convertToObjectValue(arrayValue: string[]) {
     const filterType = searchTypeFilter(arrayValue);
 
@@ -82,7 +50,6 @@ export function convertToObjectValue(arrayValue: string[]) {
 
         return createFilterObject(slugTitleObject, arrayValue);
     }
-
 }
 
 export function isActiveLink(href: string) {
@@ -91,12 +58,8 @@ export function isActiveLink(href: string) {
     return pathName === href;
 }
 
-export function mailDataType(data: AddFormData | ContactsFormData): data is AddFormData {
-    return (data as AddFormData)['Platform name'] !== undefined;
-}
-
 export async function sendMail(data: AddFormData | ContactsFormData) {
-    const response = await fetch(`/api/send-mail`, {
+    const response = await fetch(`http://localhost:3001/api/send-mail/`, {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {

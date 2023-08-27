@@ -7,6 +7,10 @@
     justify-content: center;
 }
 
+.searchButton.none {
+    display: none;
+}
+
 .searchButton.white {
     border-radius: 8px;
     background-color: transparent;

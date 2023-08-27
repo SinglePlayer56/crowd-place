@@ -170,6 +170,36 @@
     left: 1360px;
 }
 
+.result__seeMore {
+    font-size: 18px;
+    font-family: var(--inter-font);
+    float: right;
+    margin-bottom: 15px;
+    color: #009dee;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.result__seeMore:active {
+    transform: scale(0.95);
+}
+
+.result__seeMore:before {
+    position: absolute;
+    content: '';
+    bottom: -2px;
+    left: 0;
+    height: 1.5px;
+    width: 0;
+    background-color: #009dee;
+    transition: all 0.3s ease-in-out;
+}
+
+.result__seeMore:hover:before {
+    width: 100%;
+}
+
 @media screen and (max-width: 1700px) {
     .otherPositions {
         left: 1260px;

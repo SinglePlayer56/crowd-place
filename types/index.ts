@@ -27,34 +27,6 @@ export interface SearchParams<T> {
     }
 }
 
-export interface PlatformData {
-    name: string;
-    pathLogo: string;
-    country: string[];
-    type: string[];
-    industry: string[];
-    year: string;
-    license: string;
-    language: string[];
-    reviewLink: string;
-    website: string;
-    minimumInvestment: string;
-    advertisedReturn: string;
-    investors: string;
-    paymentOptions: string[];
-    totalFundingVolume: string;
-    averageLoanDuration: string;
-    description: string;
-    regulated: boolean;
-    buyBack: boolean;
-    publicStatistics: boolean;
-    signupBonus: boolean;
-    secondaryMarket: boolean;
-    autoInvest: boolean;
-    whoCanInvest: string;
-    slug: string;
-}
-
 export type formData<T> = {
     [K in keyof T]: T[K]
 }

@@ -3,7 +3,7 @@ import Platform from "../models/platform.js";
 import {Request, Response} from "express";
 import {FilterType} from "../types/index.js";
 
-export const selectPlatformHandler = async (req: Request, res: Response) => {
+const selectPlatformHandler = async (req: Request, res: Response) => {
     const currentPage = Number(req.query.page);
     const perPage = Number(req.query.perPage);
     const offset = (currentPage - 1) * perPage;
@@ -112,3 +112,5 @@ export const selectPlatformHandler = async (req: Request, res: Response) => {
 
     res.status(200).json(response);
 }
+
+export default selectPlatformHandler;

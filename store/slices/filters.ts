@@ -186,9 +186,6 @@ const filtersSlice = createSlice({
         acceptSelectFilterType: (state, action: PayloadAction<FilterType>) => {
             state[action.payload].final = [...state[action.payload].middle];
         },
-        addMiddleFilter: (state, action: PayloadAction<{ type: FilterType, valueArray: string[] }>) => {
-            state[action.payload.type].middle = [...action.payload.valueArray];
-        },
         clearSelectFilterType: (state, action: PayloadAction<FilterType>) => {
             state[action.payload].middle = [];
 
@@ -198,16 +195,6 @@ const filtersSlice = createSlice({
                     ...item,
                     checked: false
                 }));
-            }
-        },
-        addServerState: (state, action: PayloadAction<IFiltersState>) => {
-            return {...state, ...action.payload}
-        },
-        addServerOptions: (state, action: PayloadAction<{ type: FilterType, options: ICheckboxValues[] }>) => {
-            const currentIndex = state.filtersFields.findIndex((field) => field.type === action.payload.type);
-
-            if (currentIndex !== -1) {
-                state.filtersFields[currentIndex].options = [...action.payload.options];
             }
         },
         addTag: (state, action: PayloadAction<string[] >) => {
@@ -313,9 +300,6 @@ export const {
     clearSelectFilterType,
     resetFilters,
     toggleCheckbox,
-    addMiddleFilter,
-    addServerState,
-    addServerOptions,
     removeFilter,
     addTag
 } = filtersSlice.actions;

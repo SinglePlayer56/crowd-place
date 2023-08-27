@@ -15,7 +15,7 @@ import {useRouter} from "next/navigation";
 
 async function fetchSearchHandler(value: string): Promise<ISearchResult | undefined> {
     try {
-        const response = await fetch(`http://1864875-cn27374.twc1.net/api/search?searchParams=${value}`);
+        const response = await fetch(`http://localhost:3001/api/search?searchParams=${value}`);
 
         const data = await response.json();
 
@@ -35,6 +35,7 @@ const SearchBar = ({className, page}: SearchBarProps) => {
     const [refSearchWindow, isOutsideClick] = useClickOutside();
     const [variants, setVariants] = useState({});
     const router = useRouter();
+
     const inputHandler = (e: ChangeEvent<HTMLInputElement>) => {
         setValue(e.target.value);
     }
@@ -206,6 +207,7 @@ const SearchBar = ({className, page}: SearchBarProps) => {
                                             alt={'loading-animation'}
                                             width={40}
                                             height={40}
+                                            style={{objectFit: 'contain'}}
                                         />
                                     </motion.div>
                                 }
@@ -247,7 +249,7 @@ const SearchBar = ({className, page}: SearchBarProps) => {
                                                             alt={'platform-log'}
                                                             width={26}
                                                             height={26}
-
+                                                            style={{objectFit: 'contain'}}
                                                         />
                                                         <Link href={`/platform/${platform.slug}/`}
                                                               className={styles.result__item_text}>
@@ -282,7 +284,7 @@ const SearchBar = ({className, page}: SearchBarProps) => {
                                 }
 
                                 {searchResult && (searchResult.totalPosts > 5 || searchResult.totalPlatform > 5 ) &&
-                                    <button onClick={routeSearchPage}>See more</button>
+                                    <span onClick={routeSearchPage} className={styles.result__seeMore}>See more results</span>
                                 }
                             </motion.div>
                         )}

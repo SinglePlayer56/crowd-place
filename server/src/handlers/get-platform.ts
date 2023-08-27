@@ -1,7 +1,7 @@
 import {Request, Response} from "express";
 import Platform from "../models/platform.js";
 
-export const getPlatformHandler = async (req: Request, res: Response) => {
+const getPlatformHandler = async (req: Request, res: Response) => {
     try {
         const platform = await Platform.findOne({
             where: {
@@ -15,3 +15,5 @@ export const getPlatformHandler = async (req: Request, res: Response) => {
         res.status(500).json({ message: 'Internal Server Error' });
     }
 }
+
+export default getPlatformHandler;
