@@ -31,19 +31,6 @@ app.use((req: any, res: Response, next) => {
     next();
 });
 
-// app.use(
-//     '/api2/',
-//     createProxyMiddleware({
-//         target: 'http://localhost:3000',
-//         changeOrigin: true,
-//         onProxyReq: (proxyReq, req, res) => {
-//             if (req.url.startsWith('/get-type/investment/')) {
-//                 // Преобразуем запрос к вашему серверу Next.js, убирая '/api' из пути
-//                 proxyReq.path = req.url.replace('/api2', '');
-//             }
-//         },
-//     })
-// );
 app.get('/api/get-related/:industry/', getRelatedHandler);
 
 app.get('/api/get-all-platforms/', getAllPlatformHandler);
@@ -59,8 +46,6 @@ app.get('/api/get-post/:postSlug/', getPostHandler);
 app.get('/api/get-interesting-posts/', getInterestingPostsHandler);
 
 app.get('/api/search/', searchHandler);
-
-// app.post('/api/send-mail', sendMailHandler);
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
