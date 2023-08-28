@@ -1,7 +1,7 @@
 import {Sequelize} from "sequelize";
 import mysql2 from 'mysql2';
 
-const sequelize = new Sequelize('crowdplace', 'root', '', {
+const sequelize = new Sequelize('crowdplace', 'root', 'singleplayer56', {
     dialect: 'mysql',
     host: 'localhost',
     dialectModule: mysql2,
