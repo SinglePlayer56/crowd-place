@@ -15,7 +15,7 @@ import {Op} from "sequelize";
 
 
 const app = express();
-const port = envVariable.PORT || 3001;
+const port = envVariable.PORT || 3003;
 
 app.set('trust proxy', true);
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
@@ -24,6 +24,7 @@ app.use(bodyParser.json({limit: '10mb'}));
 app.use(cors({
     origin: [
         'https://crowd-place.com',
+        'https://crowd-place.com:3001',
         'https://crowd-place.com:3002',
         'http://1864875-cn27374.twc1.net:3002',
         'http://localhost:3000',
