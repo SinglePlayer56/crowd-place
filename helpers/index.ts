@@ -59,7 +59,7 @@ export function isActiveLink(href: string) {
 }
 
 export async function sendMail(data: AddFormData | ContactsFormData) {
-    const response = await fetch(`http://localhost:3001/api/send-mail/`, {
+    const response = await fetch(`http://1864875-cn27374.twc1.net/api/send-mail/`, {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
