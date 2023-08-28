@@ -3,12 +3,8 @@ import mysql2 from 'mysql2';
 
 const sequelize = new Sequelize('crowdplace', 'root', 'singleplayer56', {
     dialect: 'mysql',
-    host: 'localhost',
-    dialectModule: mysql2,
-    dialectOptions: {
-        charset: 'utf8mb4',
-        collate: 'utf8mb4_unicode_ci'
-    }
+    host: '134.122.77.191',
+    dialectModule: mysql2
 });
 
 export default sequelize;

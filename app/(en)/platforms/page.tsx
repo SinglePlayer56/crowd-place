@@ -18,6 +18,8 @@ export async function generateMetadata({searchParams}: {searchParams: {page: str
     };
 }
 
+export const dynamic = "force-dynamic";
+
 const Platforms = async ({searchParams, params}: SearchParams<FilterPageParams>) => {
     const paramsBreadCrumbs = [
         {name: 'Main', href: ''},

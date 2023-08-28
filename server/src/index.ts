@@ -10,8 +10,6 @@ import {
     selectPostsHandler, sendMailHandler
 } from "./handlers/index.js";
 import getInterestingPostsHandler from "./handlers/get-interesting-posts.js";
-import Platform from "./models/platform.js";
-import {Op} from "sequelize";
 
 
 const app = express();
@@ -24,11 +22,10 @@ app.use(bodyParser.json({limit: '10mb'}));
 app.use(cors({
     origin: [
         'https://crowd-place.com',
+        'https://crowd-place.com:3000',
         'https://crowd-place.com:3001',
         'https://crowd-place.com:3002',
-        'http://1864875-cn27374.twc1.net:3002',
-        'http://localhost:3000',
-        'http://1864875-cn27374.twc1.net'
+        'http://localhost:3000'
     ], // Разрешить запросы с этого домена
     methods: ['GET', 'POST'], // Разрешенные HTTP-методы
     allowedHeaders: ['Content-Type'], // Разрешенные заголовки

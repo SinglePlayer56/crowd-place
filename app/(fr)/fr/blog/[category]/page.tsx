@@ -37,9 +37,9 @@ const CategoryListing = async ({searchParams, params}: SearchParams<PageProps>) 
                     <HTag className={styles.head__title} tag={'h1'}>
                         Blog Listing
                     </HTag>
-                    <PTag className={styles.head__text} fontSize={'20px'}>
-                        
-                    </PTag>
+                    {/*<PTag className={styles.head__text} fontSize={'20px'}>*/}
+                    {/*    */}
+                    {/*</PTag>*/}
                     <FilterPosts/>
                 </div>
             </section>
@@ -51,7 +51,7 @@ const CategoryListing = async ({searchParams, params}: SearchParams<PageProps>) 
                 totalCount={totalCount}
                 typePaginator={'main'}
             />
-            
+
         </>
     );
 };

@@ -16,6 +16,7 @@ interface PageProps {
     params: FilterPageParams
 }
 
+export const dynamic = "force-dynamic";
 
 const Platforms = async ({searchParams, params}: PageProps) => {
     const perPage = 12;

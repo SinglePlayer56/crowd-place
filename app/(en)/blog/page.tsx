@@ -33,9 +33,9 @@ const BlogListing = async ({searchParams, params}: any) => {
                     <HTag className={styles.head__title} tag={'h1'}>
                         Blog Listing
                     </HTag>
-                    <PTag className={styles.head__text} fontSize={'20px'}>
-                        
-                    </PTag>
+                    {/*<PTag className={styles.head__text} fontSize={'20px'}>*/}
+                    {/*    */}
+                    {/*</PTag>*/}
                     <FilterPosts/>
                 </div>
             </section>
@@ -47,7 +47,7 @@ const BlogListing = async ({searchParams, params}: any) => {
                 totalCount={totalCount}
                 typePaginator={'main'}
             />
-            
+
         </>
     );
 };
