@@ -1,6 +1,7 @@
 import {usePathname} from "next/navigation";
 import {AddFormData, ContactsFormData, FilterPageParams, IPost, IPostResponse} from "@/types";
 import {store} from "@/store";
+import clientEnv from "@/consts/clientEnv";
 
 export function createFilterObject(obj: Record<string, string>, keysArray: string[]) {
     const filteredObject: Record<string, string> = {};
@@ -59,7 +60,7 @@ export function isActiveLink(href: string) {
 }
 
 export async function sendMail(data: AddFormData | ContactsFormData) {
-    const response = await fetch(`http://1864875-cn27374.twc1.net/api/send-mail/`, {
+    const response = await fetch(`${clientEnv.prodServer}/api/send-mail/`, {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -129,7 +130,7 @@ export function getMetadataValues(params: FilterPageParams) {
         title: `${allValue} | Crowd Place`,
         description: `${allValue} | Crowd Place`,
         alternates: {
-            canonical: `${process.env.DOMAIN}/platform/${allPath}/`
+            canonical: `${process.env.DOMAIN}/platforms/${allPath}/`
         }
     }
 }

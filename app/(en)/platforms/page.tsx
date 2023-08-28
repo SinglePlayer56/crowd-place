@@ -3,7 +3,12 @@ import {BreadCrumbs, CustomButton, HTag, ListingPlatforms, PTag, SelectFilters} 
 import {FilterPageParams, IPlatform, SearchParams} from "@/types";
 import {getType} from "@/helpers";
 import {redirect} from "next/navigation";
+import {Metadata} from "next";
 
+export const metadata: Metadata = {
+    title: 'Platforms | Crowd Place',
+    description: 'Platforms | Crowd Place'
+}
 
 const Platforms = async ({searchParams, params}: SearchParams<FilterPageParams>) => {
     const paramsBreadCrumbs = [
@@ -23,16 +28,6 @@ const Platforms = async ({searchParams, params}: SearchParams<FilterPageParams>)
     if (searchParams.page === '1') {
         redirect(`/platforms/`)
     }
-
-    // if (Number(searchParams.page) >= 1) {
-    //     currentPage = Number(searchParams.page);
-    // }
-    //
-    // const paramsPath = Object.values(params).map((value) => decodeURIComponent(value)).join('/');
-    //
-    // if (searchParams.page === '1') {
-    //     redirect(`/platforms/${paramsPath}/`)
-    // }
 
     return (
         <>

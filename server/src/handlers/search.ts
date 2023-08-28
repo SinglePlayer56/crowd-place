@@ -2,6 +2,7 @@ import Platform from "../models/platform.js";
 import {Op} from "sequelize";
 import {Request, Response} from "express";
 import Post from "../models/post.js";
+
 const searchHandler = async (req: Request, res: Response) => {
     const slugPlatform = req.query.searchParams as string;
     const currentPlatformsPage = req.query.platformsPage ? Number(req.query.platformsPage as string) : 1;
@@ -12,6 +13,7 @@ const searchHandler = async (req: Request, res: Response) => {
     const offsetPosts = (currentPostsPage - 1) * limitPosts;
 
     try {
+
         const platformResult = await Platform.findAndCountAll({
             //literal('RAND()') // для рандомного вывода
             order: [['id', 'DESC']],
@@ -43,7 +45,9 @@ const searchHandler = async (req: Request, res: Response) => {
             totalPosts: postResult.count
         });
     } catch (err) {
-        return res.status(500).json({ message: 'Internal Server Error' });
+        if (err instanceof Error) {
+            return res.status(500).json({ message: err.message || 'Internal Server Error' });
+        }
     }
 }
 

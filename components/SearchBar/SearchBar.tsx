@@ -12,17 +12,13 @@ import Image from 'next/image';
 import {ISearchResult} from "@/types";
 import Link from 'next/link';
 import {useRouter} from "next/navigation";
+import clientEnv from "@/consts/clientEnv";
 
-async function fetchSearchHandler(value: string): Promise<ISearchResult | undefined> {
-    try {
-        const response = await fetch(`http://1864875-cn27374.twc1.net/api/search?searchParams=${value}`);
+async function fetchSearchHandler(value: string): Promise<ISearchResult> {
+    const response = await fetch(`${clientEnv.prodServer}/api/search?searchParams=${value}`);
+    const data = await response.json();
 
-        const data = await response.json();
-
-        return data;
-    } catch (e) {
-        console.log({message: 'Bad request'})
-    }
+    return data;
 }
 
 const SearchBar = ({className, page}: SearchBarProps) => {
@@ -269,7 +265,8 @@ const SearchBar = ({className, page}: SearchBarProps) => {
                                         <div className={styles.result__list}>
                                             {
                                                 searchResult.postResult.map((post) => (
-                                                    <div key={`${post.slugHref}${post.title}`} className={styles.result__list}>
+                                                    <div key={`${post.slugHref}${post.title}`}
+                                                         className={styles.result__list}>
                                                         <div className={styles.result__item}>
                                                             <Link href={`/blog/${post.slugHref}/`}
                                                                   className={styles.result__item_text}>
@@ -283,8 +280,9 @@ const SearchBar = ({className, page}: SearchBarProps) => {
                                     </div>
                                 }
 
-                                {searchResult && (searchResult.totalPosts > 5 || searchResult.totalPlatform > 5 ) &&
-                                    <span onClick={routeSearchPage} className={styles.result__seeMore}>See more results</span>
+                                {searchResult && (searchResult.totalPosts > 5 || searchResult.totalPlatform > 5) &&
+                                    <span onClick={routeSearchPage}
+                                          className={styles.result__seeMore}>See more results</span>
                                 }
                             </motion.div>
                         )}

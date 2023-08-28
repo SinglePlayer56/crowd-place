@@ -15,11 +15,17 @@ import getInterestingPostsHandler from "./handlers/get-interesting-posts.js";
 const app = express();
 const port = envVariable.PORT || 3001;
 
-
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+app.use(bodyParser.json({limit: '10mb'}));
 
 app.use(cors({
-    origin: ['http://1864875-cn27374.twc1.net:3002', 'http://localhost:3000', 'http://1864875-cn27374.twc1.net'], // Разрешить запросы с этого домена
+    origin: [
+        'https://crowd-place.com',
+        'https://crowd-place.com:3002',
+        'http://1864875-cn27374.twc1.net:3002',
+        'http://localhost:3000',
+        'http://1864875-cn27374.twc1.net'
+    ], // Разрешить запросы с этого домена
     methods: ['GET', 'POST'], // Разрешенные HTTP-методы
     allowedHeaders: ['Content-Type'], // Разрешенные заголовки
 }));
