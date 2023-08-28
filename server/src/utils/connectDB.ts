@@ -3,7 +3,7 @@ import mysql2 from 'mysql2';
 
 const sequelize = new Sequelize('crowdplace', 'root', '', {
     dialect: 'mysql',
-    host: 'localhost',
+    host: '134.122.77.191',
     dialectModule: mysql2,
     dialectOptions: {
         charset: 'utf8mb4',
