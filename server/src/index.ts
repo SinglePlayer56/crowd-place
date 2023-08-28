@@ -15,7 +15,7 @@ import {Op} from "sequelize";
 
 
 const app = express();
-const port = envVariable.PORT || 3001;
+const port = envVariable.PORT || 443;
 
 app.set('trust proxy', true);
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
