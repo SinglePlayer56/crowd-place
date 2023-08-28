@@ -11,7 +11,7 @@
     "expres2": "node server/src/build/index.js",
     "devServer": "concurrently \"npm run express\" \"npm run dev\"",
     "devBuild": "concurrently --success=command-0 \"npm run build\" \"npm run express\"",
-    "devStart": "concurrently \"PORT=3002 npm run start\" \"npm run express\" ",
+    "devStart": "concurrently \"npm run start\" \"npm run express\" ",
     "deploy": "scp -r .next/ root@134.122.77.191:/root/crowd-place/"
   },
   "dependencies": {
