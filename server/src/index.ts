@@ -1,4 +1,4 @@
-import express from 'express';
+import express, {Request, Response} from 'express';
 import cors from 'cors';
 import {envVariable} from "./envLoader.js";
 import bodyParser from "body-parser";
@@ -10,6 +10,8 @@ import {
     selectPostsHandler, sendMailHandler
 } from "./handlers/index.js";
 import getInterestingPostsHandler from "./handlers/get-interesting-posts.js";
+import Platform from "./models/platform.js";
+import {Op} from "sequelize";
 
 
 const app = express();
@@ -31,6 +33,13 @@ app.use(cors({
     allowedHeaders: ['Content-Type'], // Разрешенные заголовки
 }));
 
+app.get('/api/test-get/', async (req: Request, res: Response) => {
+    try {
+        return res.status(200).json({message: 'Success'});
+    } catch (err) {
+        return res.status(500).json({ message: 'Internal Server Error' });
+    }
+});
 app.get('/api/get-related/:industry/', getRelatedHandler);
 
 app.get('/api/get-all-platforms/', getAllPlatformHandler);
