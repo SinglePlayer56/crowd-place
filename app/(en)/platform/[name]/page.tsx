@@ -54,7 +54,8 @@ const Platform = async ({params}: Props) => {
         website,
         signupBonus,
         logo,
-        slug
+        slug,
+        whoCanInvest
     }: IPlatform = await getPlatform(params.name);
 
     const relatedPlatforms: IPlatform[] = await getRelatedPlatform(industry[0], params.name);
@@ -179,19 +180,18 @@ const Platform = async ({params}: Props) => {
                     </div>
                 </div>
             </section>
-            <section className={styles.whoCan}>
-                <div className={'container'}>
-                    <HTag className={styles.whoCan__title} tag={'h2'}>
-                        Who can invest
-                    </HTag>
-                    <PTag className={styles.whoCan__text} fontSize={'20px'}>
-                        Impact investing is one of the emerging yet steady trends in the crowdfunding sector. It’s
-                        becoming increasingly widespread for investors to be interested not only in the possible returns
-                        but the collateral social or environmental impact. In other words people want their investment
-                        choices to be aligned with their values.
-                    </PTag>
-                </div>
-            </section>
+            {whoCanInvest &&
+                <section className={styles.whoCan}>
+                    <div className={'container'}>
+                        <HTag className={styles.whoCan__title} tag={'h2'}>
+                            Who can invest
+                        </HTag>
+                        <PTag className={styles.whoCan__text} fontSize={'20px'}>
+                            {whoCanInvest}
+                        </PTag>
+                    </div>
+                </section>
+            }
             <section className={styles.review}>
                 <div className={'container'}>
                     <HTag className={styles.review__title} tag={'h2'}>
