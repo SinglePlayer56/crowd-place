@@ -1,4 +1,3 @@
-import type {Metadata} from 'next'
 import {PageLayout} from "@/components";
 
 export default function PlatformsLayout({

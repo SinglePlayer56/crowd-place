@@ -258,8 +258,28 @@
     }
 
     .otherPositions {
-        top: 10px;
-        left: 195px;
+        /*top: 10px;*/
+        /*left: 195px;*/
+        top: 76px;
+        left: 600px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .otherPositions {
+        left: 500px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .otherPositions {
+        left: 400px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .otherPositions {
+        left: 300px;
     }
 }
 
@@ -280,8 +300,14 @@
         font-size: 24px;
     }
 
+    /*.otherPositions {*/
+    /*    top: 15px;*/
+    /*}*/
+}
+
+@media screen and (max-width: 390px) {
     .otherPositions {
-        top: 15px;
+        left: 240px;
     }
 }
 

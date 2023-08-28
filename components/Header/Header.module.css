@@ -8,9 +8,10 @@
 
 .header__content {
     position: relative;
-    display: flex;
+    display: grid;
     align-items: center;
-    justify-content: space-between;
+    grid-template-columns: auto 1fr auto;
+    justify-items: end;
 }
 
 .header__logo {

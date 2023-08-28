@@ -1,11 +1,12 @@
 .switcher {
     position: relative;
+    margin-left: 30px;
 }
 
 .switcher__currentLang_wrapper {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     cursor: pointer;
 }
 
@@ -54,3 +55,35 @@
 .switcher__langList_item:hover {
     color: #009dee;
 }
+
+@media screen and (max-width: 768px) {
+    .switcher {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 40px;
+    }
+
+    .switcher__currentLang,
+    .switcher__langList_item {
+        font-size: 17px;
+    }
+
+    .switcher__icon {
+        width: 12px;
+        height: auto;
+    }
+}
+
+.switcher.switcher__off {
+    display: none;
+}
+
+/*@media screen and (max-width: 425px) {*/
+/*    .switcher {*/
+/*        position: absolute;*/
+/*        top: 40px;*/
+/*        transform: translateY(0%);*/
+/*        right: 0;*/
+/*    }*/
+/*}*/

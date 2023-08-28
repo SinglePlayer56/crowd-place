@@ -61,8 +61,8 @@ const Header = () => {
                                 {link.name}
                             </Link>
                         ))}
-                        <LangSwitcher/>
                     </div>
+                    <LangSwitcher/>
                     <Burger className={styles.header__burger}/>
                 </div>
             </div>
