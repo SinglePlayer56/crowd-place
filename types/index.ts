@@ -114,4 +114,5 @@ export type PaginationLinkProps = {
     type: PaginatorType;
     currentPage: string;
     linkHref: string;
+    rel: string;
 } & PropsWithChildren;

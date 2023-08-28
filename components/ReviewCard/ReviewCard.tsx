@@ -12,8 +12,8 @@ const ReviewCard = ({title, href, pathImg}: ReviewCardProps) => {
                 <Image
                     src={pathImg}
                     alt={`${title} logo`}
-                    width={55}
-                    height={55}
+                    width={40}
+                    height={40}
                     className={styles.review__item_img}
                 />
                 <p className={styles.review__item_text}>

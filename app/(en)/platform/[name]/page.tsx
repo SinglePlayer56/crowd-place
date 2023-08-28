@@ -217,6 +217,7 @@ const Platform = async ({params}: Props) => {
             </section>
             <section className={styles.relatedPlatforms}>
                 <div className={'container'}>
+                    <HTag className={styles.relatedPlatforms__title} tag={'h2'}>See other platforms</HTag>
                     <div className={styles.reviews__list}>
                         <RelatedSwiperPlatform platforms={relatedPlatforms}/>
                     </div>

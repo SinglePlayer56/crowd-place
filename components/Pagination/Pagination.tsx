@@ -61,6 +61,7 @@ const Pagination = ({page, itemCount, perPage, type, searchParams}: Props) => {
                     <PaginationLink
                         key={`page-${type}-${page}`}
                         type={type}
+                        rel={currentPage > page ? 'prev' : currentPage < page ? 'next' : 'self'}
                         active={page === currentPage}
                         page={page}
                         platformPage={page}
@@ -86,11 +87,12 @@ const Pagination = ({page, itemCount, perPage, type, searchParams}: Props) => {
 
 
 
-function PaginationLink({page, children, platformPage, postPage, currentPage, type, linkHref, ...props}: PaginationLinkProps) {
+function PaginationLink({page, children, platformPage, postPage, currentPage, type, rel, linkHref, ...props}: PaginationLinkProps) {
     return (
         <Link
             scroll={false}
             href={ linkHref }
+            rel={rel}
             className={cn(styles.button, {
                 "p-2": true,
                 [styles.active]: props.active,

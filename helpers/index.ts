@@ -60,7 +60,7 @@ export function isActiveLink(href: string) {
 }
 
 export async function sendMail(data: AddFormData | ContactsFormData) {
-    const response = await fetch(`${clientEnv.prodServer}/api/send-mail/`, {
+    const response = await fetch(`${clientEnv.localServer}/api/send-mail/`, {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -114,7 +114,7 @@ export async function getType(params: FilterPageParams, page: number, perPage: n
     return await res.json();
 }
 
-export function getMetadataValues(params: FilterPageParams) {
+export function getMetadataValues(params: FilterPageParams, currentPage: string) {
     const paramsValues = Object.values(params).map((param) => decodeURIComponent(param).split('+'))
     const valueObjects = paramsValues.map(convertToObjectValue);
     const sortedValues = valueObjects.map((obj) => {
@@ -123,14 +123,16 @@ export function getMetadataValues(params: FilterPageParams) {
         }
     })
 
-    const allValue = sortedValues.join('+');
+    const allValue = sortedValues.join(' - ');
     const allPath = Object.values(params).map((value) => decodeURIComponent(value)).join('/')
+    const currentPageNumber = currentPage ? `- page ${currentPage} ` : '';
+    const canonicalSearchParams = `${process.env.DOMAIN}/platforms/${allPath}/?page=${currentPage}`
 
     return {
-        title: `${allValue} | Crowd Place`,
-        description: `${allValue} | Crowd Place`,
+        title: `${allValue} ${currentPageNumber} | Crowd Place`,
+        description: `${allValue} ${currentPageNumber}| Crowd Place`,
         alternates: {
-            canonical: `${process.env.DOMAIN}/platforms/${allPath}/`
+            canonical: !currentPage ? `${process.env.DOMAIN}/platforms/${allPath}/` : canonicalSearchParams
         }
     }
 }
