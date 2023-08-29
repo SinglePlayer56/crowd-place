@@ -29,13 +29,9 @@ const Main = async () => {
                                 className={styles.start__logo}
                             />
                             <div className={styles.start__content}>
-                                <HTag className={styles.start__title} tag={'h1'}>
-                                    Crowdfunding platform aggregator. Explore and find the best match for you.
-                                </HTag>
+                                <HTag className={styles.start__title} tag={'h1'}>Crowdfunding Platforms Hub</HTag>
                                 <PTag className={styles.start__text} fontSize={'20px'}>
-                                    Search the best crowdfunding platform aggregator to discover alternative
-                                    investment
-                                    opportunities or get your crowdfunding platform listed to get discovered.
+                                    Looking to explore alternative investment opportunities? Look no further! Find the perfect crowdfunding platform by conducting a search, or if you own a crowdfunding platform, get it listed on our platform to increase its visibility and attract discoverability.
                                 </PTag>
                                 <Link href={'/add-platform/'}>
                                     <CustomButton

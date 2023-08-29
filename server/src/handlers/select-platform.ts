@@ -16,8 +16,6 @@ const selectPlatformHandler = async (req: Request, res: Response) => {
         currentValues.push(value);
     }
 
-    console.log(currentValues);
-
     currentValues = currentValues.slice(0, currentValues.length - 3);
 
     let emptyIndices = currentValues.reduce((indices, item, index) => {

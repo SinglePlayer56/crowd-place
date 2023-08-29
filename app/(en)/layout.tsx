@@ -3,8 +3,8 @@ import type {Metadata} from 'next';
 import {ContextRedux} from "@/components";
 
 export const metadata: Metadata = {
-    title: 'Crowd Place',
-    description: 'Crowd Place',
+    title: 'Crowdfunding Platforms for Investors and Others | Crowd-Place.com',
+    description: 'Discover a comprehensive compilation of diverse crowdfunding platforms at Crowd-Place.com.',
 }
 
 export default function RootLayout({
