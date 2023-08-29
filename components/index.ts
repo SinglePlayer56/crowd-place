@@ -40,6 +40,8 @@ import InterestingPosts from "@/components/InterestingPosts/InterestingPosts";
 import SearchBar from "@/components/SearchBar/SearchBar";
 import SearchPageInput from "@/components/SearchPageInput/SearchPageInput";
 import LangSwitcher from "@/components/LangSwitcher/LangSwitcher";
+import PlatformsListingLinks from "@/components/PlatformsListingLinks/PlatformsListingLinks";
+import Up from "@/components/Up/Up";
 
 export {
     Footer,
@@ -83,5 +85,7 @@ export {
     InterestingPosts,
     SearchBar,
     SearchPageInput,
-    LangSwitcher
+    LangSwitcher,
+    PlatformsListingLinks,
+    Up
 }

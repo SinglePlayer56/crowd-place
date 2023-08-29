@@ -38,15 +38,6 @@
     margin-bottom: 45px;
 }
 
-.links {
-    background-color: #f1f8fb;
-    padding: 55px 0;
-}
-
-.links__button {
-    margin: 0 auto;
-}
-
 @media screen and (max-width: 1650px) {
     .reviews__list {
         grid-template-columns: repeat(3, 1fr);

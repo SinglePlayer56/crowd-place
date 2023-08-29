@@ -1,5 +1,5 @@
 import {ReactNode} from "react";
-import {Footer, Header} from "@/components";
+import {Footer, Header, Up} from "@/components";
 
 const PageLayout = ({children}: {children:ReactNode}) => {
 
@@ -10,6 +10,7 @@ const PageLayout = ({children}: {children:ReactNode}) => {
               {children}
           </main>
           <Footer/>
+          <Up/>
       </>
   );
 };

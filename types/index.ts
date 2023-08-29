@@ -1,5 +1,10 @@
 import {PropsWithChildren} from "react";
 
+export interface ILinksForListing {
+    title: string;
+    href: string;
+}
+
 export interface HeaderLink {
     name: string;
     href: string;

@@ -1,7 +1,12 @@
 import styles from './platforms.module.css'
-import {BreadCrumbs, CustomButton, HTag, ListingPlatforms, PTag, SelectFilters} from "@/components";
+import {
+    BreadCrumbs,
+    ListingPlatforms,
+    PlatformsListingLinks,
+    SelectFilters
+} from "@/components";
 import {FilterPageParams, IPlatform, SearchParams} from "@/types";
-import {getMetadataValues, getType} from "@/helpers";
+import {getType} from "@/helpers";
 import {redirect} from "next/navigation";
 import {Metadata} from "next";
 
@@ -65,17 +70,7 @@ const Platforms = async ({searchParams, params}: SearchParams<FilterPageParams>)
                 totalCount={totalCount}
                 perPage={perPage}
             />
-            <section className={styles.links}>
-                <div className={'container'}>
-                    <HTag className={styles.links__title} tag={'h2'}>
-                        Links
-                    </HTag>
-                    <div className={styles.links__list}>
-
-                    </div>
-                    <CustomButton className={styles.links__button} text={'See all'} color={'transparent'} />
-                </div>
-            </section>
+            <PlatformsListingLinks/>
         </>
     );
 };
