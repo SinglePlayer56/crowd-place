@@ -1,5 +1,9 @@
-.paragraph {
+.paragraph:not(:last-child) {
     margin-bottom: 30px;
+}
+
+.aboutUs__subtitle {
+    margin-bottom: 10px;
 }
 
 .aboutUs__title {
