@@ -1,7 +1,7 @@
 import styles from '../blog.module.css'
-import {ArticleImage, HTag, InterestingPosts, PTag, Tag} from "@/components";
+import {ArticleImage, BreadCrumbs, HTag, InterestingPosts, PTag, Tag} from "@/components";
 import {Metadata} from "next";
-import {getPost} from "@/helpers";
+import {generateLink, getPost} from "@/helpers";
 
 // export const metadata: Metadata = {
 //     title: `Best Crowdfunding Property Platforms | ${process.env.NAME_WEBSITE}`,
@@ -26,9 +26,16 @@ export async function generateMetadata(): Promise<Metadata> {
 const ArticlePage = async () => {
     const post = await getPost('crowdfunding-property');
 
+    const paramsBreadCrumbs = [
+        {name: 'Main', href: ''},
+        {name: 'Blog', href: 'blog'},
+        {name: 'Crowdfunding property', href: post.slugHref},
+    ];
+
     return (
         <>
             <> </>
+            <BreadCrumbs paramsPath={paramsBreadCrumbs} />
             <section className={styles.article}>
                 <div className={'container'}>
                     <div className={'container-1200'}>
@@ -38,7 +45,7 @@ const ArticlePage = async () => {
                         <div className={styles.article__data}>
                             <span className={styles.article__date}>{post.date}</span>
                             <div className={styles.article__tags}>
-                                <Tag href={'blog'} title={post.category} />
+                                <Tag href={generateLink(`/blog/`, post.category)} title={post.category} />
                             </div>
                         </div>
                         <section className={styles.article__section}>

@@ -6,6 +6,7 @@ import cn from 'classnames';
 import {useEffect, useState, Fragment} from "react";
 import {motion, AnimatePresence} from "framer-motion";
 import Link from "next/link";
+import {generateLink} from "@/helpers";
 
 const PlatformCardCountryList = ({countries, slugPlatform, className}: PlatformCardCountryListProps) => {
     const [isVisible, setIsVisible] = useState<boolean>(false)
@@ -23,7 +24,7 @@ const PlatformCardCountryList = ({countries, slugPlatform, className}: PlatformC
     return (
         <div className={cn(styles.countryList, className)}>
             <Link
-                href={`/platforms/${countries[0].toLowerCase().split(' ').join('-')}/`}
+                href={generateLink('/platforms/', countries[0])}
                 className={styles.card__country}
             >
                 {countries[0]}
@@ -47,7 +48,7 @@ const PlatformCardCountryList = ({countries, slugPlatform, className}: PlatformC
                                     <Fragment key={`${country}-${slugPlatform}`}>
                                         <Link
                                             className={cn(styles.card__country, styles.modal)}
-                                            href={`/platforms/${country.toLowerCase().split(' ').join('-')}/`}
+                                            href={generateLink('/platforms/', country)}
                                         >
                                             {country}
                                         </Link>
@@ -62,7 +63,7 @@ const PlatformCardCountryList = ({countries, slugPlatform, className}: PlatformC
                                     <Link
                                         className={cn(styles.card__country, styles.modal)}
                                         key={`${country}-${slugPlatform}`}
-                                        href={`/platforms/${country.toLowerCase().split(' ').join('-')}/`}
+                                        href={generateLink('/platforms/', country)}
                                     >
                                         {country}
                                     </Link>

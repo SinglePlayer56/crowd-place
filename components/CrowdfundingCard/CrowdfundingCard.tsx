@@ -5,8 +5,9 @@ import styles from './CrowdfundingCard.module.css';
 import Image from 'next/image';
 import {useEffect, useState} from "react";
 import cn from 'classnames';
+import Link from 'next/link';
 
-const CrowdfundingCard = ({title, iconPath, value}: CrowdfundingCardProps) => {
+const CrowdfundingCard = ({title, iconPath, value, href}: CrowdfundingCardProps) => {
     const [isVisible, setIsVisible] = useState<boolean>(false);
 
     useEffect(() => {
@@ -45,6 +46,7 @@ const CrowdfundingCard = ({title, iconPath, value}: CrowdfundingCardProps) => {
                     </div>
                 }
             </div>
+            {href && <Link className={styles.card__link} href={href}></Link>}
             <h3 className={styles.card__title}>
                 {title}
             </h3>

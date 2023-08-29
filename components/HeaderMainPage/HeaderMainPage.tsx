@@ -10,8 +10,8 @@ const HeaderMainPage = () => {
                 <div className={styles.header__content}>
                     <SearchBar page={'Main'} className={styles.header__search}/>
                     <div className={styles.navMenu}>
-                        <Link className={styles.header__link} href={'/platforms'}>Platforms</Link>
-                        <Link className={styles.header__link} href={'/blog'}>Blog</Link>
+                        <Link className={styles.header__link} href={'/platforms/'}>Platforms</Link>
+                        <Link className={styles.header__link} href={'/blog/'}>Blog</Link>
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@ const Tag = forwardRef<HTMLSpanElement, TagProps>(({title, href, className}: Tag
 
     return (
         <span ref={ref} className={cn(styles.tag, className)}>
-            <Link href={`/${href}/${title.toLowerCase().split(' ').join('-')}/`} >
+            <Link href={`${href}`} >
                 {title}
             </Link>
         </span>

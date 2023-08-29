@@ -24,7 +24,7 @@ const ListingPlatforms = async ({type, platforms, totalCount, page, perPage, sea
                                 description={platform.description}
                                 type={platform.investmentType}
                                 industry={platform.industry}
-                                href={`/platform/${platform.slug}`}/>
+                                href={`/platform/${platform.slug}/`}/>
                         ))}
                     </div>
                     {totalCount > perPage &&

@@ -4,8 +4,11 @@ import {BlogCardProps} from "./BlogCard.props";
 import Image from 'next/image';
 import {HTag, PTag, Tag, Date} from "@/components";
 import Link from "next/link";
+import {generateLink} from "@/helpers";
+import {useLanguagePage} from "@/hooks/languagePage";
 
 const BlogCard = ({title, tag, text, pathImage, date, href}: BlogCardProps) => {
+    const language = useLanguagePage();
 
     return (
         <div className={styles.card}>
@@ -25,7 +28,7 @@ const BlogCard = ({title, tag, text, pathImage, date, href}: BlogCardProps) => {
                     {text}
                 </PTag>
                 <div className={styles.card__footer}>
-                    <Tag className={styles.card__tag} href={'blog'} title={tag}/>
+                    <Tag className={styles.card__tag} href={generateLink(`${language}/blog/`, tag)} title={tag}/>
                     <Date date={date}/>
                 </div>
             </div>

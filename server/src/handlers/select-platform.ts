@@ -16,6 +16,8 @@ const selectPlatformHandler = async (req: Request, res: Response) => {
         currentValues.push(value);
     }
 
+    console.log(currentValues);
+
     currentValues = currentValues.slice(0, currentValues.length - 3);
 
     let emptyIndices = currentValues.reduce((indices, item, index) => {
@@ -76,19 +78,26 @@ const selectPlatformHandler = async (req: Request, res: Response) => {
                 [Op.or]: filters,
             };
         } else if (type === 'licenseNumber') {
+            const filters: any = [];
+
+            currentValues.forEach((value) => {
+                if (value === 'Yes') {
+                    filters.push({
+                        regulated: {
+                            [Op.ne]: false,
+                        },
+                    })
+                } else if (value === 'No') {
+                    filters.push({
+                        regulated: {
+                            [Op.ne]: true,
+                        },
+                    })
+                }
+            })
+
             return {
-                [Op.and]: [
-                    {
-                        [type]: {
-                            [Op.ne]: 'N/A',
-                        },
-                    },
-                    {
-                        [type]: {
-                            [Op.ne]: null,
-                        },
-                    },
-                ]
+                [Op.and]: filters
             }
         } else {
             return {

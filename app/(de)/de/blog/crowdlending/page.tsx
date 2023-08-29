@@ -1,7 +1,7 @@
 import styles from '../blog.module.css'
 import {ArticleImage, CustomList, HTag, InterestingPosts, PTag, Tag} from "@/components";
 import {Metadata} from "next";
-import {getPost} from "@/helpers";
+import {generateLink, getPost} from "@/helpers";
 
 // export const metadata: Metadata = {
 //     title: `Best Crowdlending Platforms in Europe 2023 | ${process.env.NAME_WEBSITE}`,
@@ -38,7 +38,7 @@ const ArticlePage = async () => {
                         <div className={styles.article__data}>
                             <span className={styles.article__date}>{post.date}</span>
                             <div className={styles.article__tags}>
-                                <Tag href={'blog'} title={post.category} />
+                                <Tag href={generateLink(`/de/blog/`, post.category)} title={post.category} />
                             </div>
                         </div>
                         <section className={styles.article__section}>

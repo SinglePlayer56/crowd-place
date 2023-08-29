@@ -4,7 +4,8 @@ import {getInterestingPosts} from "@/helpers";
 import {InterestingPostsProps} from "./InterestingPosts.props";
 
 const InterestingPosts = async ({postsCategory, excludeSlugPost}: InterestingPostsProps) => {
-    const relatedPosts = await getInterestingPosts(excludeSlugPost, postsCategory);
+    // для вывода похожих категорий, добавить в функцию postsCategory
+    const relatedPosts = await getInterestingPosts(excludeSlugPost, '');
 
     return (
         <section className={styles.interesting}>

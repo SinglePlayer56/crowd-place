@@ -123,14 +123,14 @@ export function getMetadataValues(params: FilterPageParams, currentPage: string)
         }
     })
 
-    const allValue = sortedValues.join(' - ');
+    const allValue = sortedValues.join(' - ').replace('Yes', 'Regulated').replace('No', 'No regulated');
     const allPath = Object.values(params).map((value) => decodeURIComponent(value)).join('/')
     const currentPageNumber = currentPage ? `- page ${currentPage} ` : '';
     const canonicalSearchParams = `${process.env.DOMAIN}/platforms/${allPath}/?page=${currentPage}`
 
     return {
-        title: `${allValue} ${currentPageNumber} | Crowd Place`,
-        description: `${allValue} ${currentPageNumber}| Crowd Place`,
+        title: `Best Crowdfunding | ${allValue} ${currentPageNumber} | Crowd Place`,
+        description: `Best Crowdfunding | ${allValue} ${currentPageNumber}| Crowd Place`,
         alternates: {
             canonical: !currentPage ? `${process.env.DOMAIN}/platforms/${allPath}/` : canonicalSearchParams
         }
@@ -184,4 +184,8 @@ export function replacedSearchParam(url: string, paramName: string, newValue: st
 
         return newQueryParams;
     }
+}
+
+export function generateLink(path: string, param: string) {
+    return `${path}${param.toLowerCase().split(' ').join('-')}`
 }

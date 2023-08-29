@@ -46,7 +46,7 @@ const RelatedSwiperPlatform = ({platforms}: {platforms: IPlatform[]}) => {
                             title={platform.name}
                             countries={platform.country}
                             description={platform.description}
-                            href={`/platform/${platform.slug}`}
+                            href={`/platform/${platform.slug}/`}
                             type={platform.investmentType}
                             industry={platform.industry}
                         />

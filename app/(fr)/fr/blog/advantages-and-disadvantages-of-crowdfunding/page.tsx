@@ -1,7 +1,7 @@
 import styles from '../blog.module.css'
 import {ArticleNote, CustomList, HTag, InterestingPosts, PTag, Tag} from "@/components";
 import {Metadata} from "next";
-import {getPost} from "@/helpers";
+import {generateLink, getPost} from "@/helpers";
 
 // export const metadata: Metadata = {
 //     title: `Advantages and Disadvantages of Crowdfunding | ${process.env.NAME_WEBSITE}`,
@@ -39,7 +39,7 @@ const ArticlePage = async () => {
                         <div className={styles.article__data}>
                             <span className={styles.article__date}>{post.date}</span>
                             <div className={styles.article__tags}>
-                                <Tag href={'blog'} title={post.category} />
+                                <Tag href={generateLink(`/fr/blog/`, post.category)} title={post.category} />
                             </div>
                         </div>
                         <section className={styles.article__section}>

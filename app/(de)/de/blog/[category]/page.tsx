@@ -3,6 +3,29 @@ import {BreadCrumbs, FilterPosts, HTag, ListingPosts, PTag} from "@/components";
 import {redirect} from "next/navigation";
 import {SearchParams} from "@/types";
 import {getPosts} from "@/helpers";
+import {Metadata} from "next";
+import {categoryPostsTags} from "@/consts";
+
+export async function generateMetadata({searchParams, params}: SearchParams<PageProps>): Promise<Metadata> {
+    const currentPage = searchParams.page ? `- page ${searchParams.page}` : '';
+    const canonicalSearchParams = `${process.env.DOMAIN}/de/blog/${params.category}/?page=${searchParams.page}`
+
+    let currentCategory = '';
+    const slugTags = categoryPostsTags.map((tag) => tag.toLowerCase().split(' ').join('-'));
+    slugTags.forEach((slugTag, index) => {
+        if (slugTag === params.category) {
+            currentCategory = categoryPostsTags[index];
+        }
+    });
+
+    return {
+        title: `Posts ${currentCategory} ${currentPage} | Crowd Place`,
+        description: `Posts ${currentCategory} ${currentPage} | Crowd Place`,
+        alternates: {
+            canonical: !searchParams.page ? `${process.env.DOMAIN}/de/blog/${params.category}/` : canonicalSearchParams
+        }
+    };
+}
 
 interface PageProps {
     category: string;

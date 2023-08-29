@@ -4,23 +4,21 @@ import {Tag} from "@/components";
 import cn from 'classnames';
 import styles from './FilterPosts.module.css'
 import {FilterPostsProps} from "./FilterPosts.props";
-import {useParams} from "next/navigation";
+import {categoryPostsTags} from "@/consts";
+import {generateLink} from "@/helpers";
+import {useLanguagePage} from "@/hooks/languagePage";
 
 const FilterPosts = ({className}: FilterPostsProps) => {
-    const params = useParams();
-    const category = params.category as string;
-
-    const categoryTags = ['All posts', 'P2P Lending', 'Fundraising', 'Property Crowdfunding'];
+    const language = useLanguagePage();
 
     return (
         <div className={cn(styles.filters, className)}>
-            {categoryTags.map((tag) => {
-                const slug = tag.toLowerCase().split(' ').join('-');
-                if (category === slug || (category === undefined && tag === 'All posts')) {
+            {categoryPostsTags.map((tag) => {
+                if (tag === 'All posts') {
                     return (
                         <Tag
                             key={tag}
-                            href={'blog'}
+                            href={`${language}/blog/`}
                             title={tag}
                             className={cn(styles.tag)}
                         />
@@ -29,7 +27,7 @@ const FilterPosts = ({className}: FilterPostsProps) => {
                     return (
                         <Tag
                             key={tag}
-                            href={'blog'}
+                            href={generateLink(`${language}/blog/`, tag)}
                             title={tag}
                             className={cn(styles.tagNotActive, styles.tag)}
                         />

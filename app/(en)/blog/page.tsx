@@ -2,6 +2,22 @@ import styles from './blog.module.css'
 import {BreadCrumbs, FilterPosts, HTag, ListingPosts, PTag} from "@/components";
 import {redirect} from "next/navigation";
 import {getPosts} from "@/helpers";
+import {Metadata} from "next";
+
+export async function generateMetadata({searchParams}: {searchParams: {page: string}}): Promise<Metadata> {
+    const currentPage = searchParams.page ? `- page ${searchParams.page}` : '';
+    const canonicalSearchParams = `${process.env.DOMAIN}/blog/?page=${searchParams.page}`
+
+    return {
+        title: `Blog ${currentPage} | Crowd Place`,
+        description: `Blog ${currentPage} | Crowd Place`,
+        alternates: {
+            canonical: !searchParams.page ? `${process.env.DOMAIN}/blog/` : canonicalSearchParams
+        }
+    };
+}
+
+export const dynamic = "force-dynamic";
 
 const BlogListing = async ({searchParams, params}: any) => {
     const perPage = 6;

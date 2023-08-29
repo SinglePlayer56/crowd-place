@@ -37,7 +37,7 @@ const Main = async () => {
                                     investment
                                     opportunities or get your crowdfunding platform listed to get discovered.
                                 </PTag>
-                                <Link href={'/add-platform'}>
+                                <Link href={'/add-platform/'}>
                                     <CustomButton
                                         text={'Add platform'}
                                         color={'white'}
@@ -66,6 +66,7 @@ const Main = async () => {
                                 key={valueCard.title}
                                 iconPath={valueCard.iconPath}
                                 title={valueCard.title}
+                                href={valueCard.href}
                             />))}
                     </div>
                 </div>

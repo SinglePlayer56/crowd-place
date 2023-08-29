@@ -7,6 +7,7 @@ import {PlatformCardTagsProps} from "@/components/PlatformCardTags/PlatformCardT
 import {useEffect, useRef, useState} from "react";
 import {motion, AnimatePresence} from 'framer-motion';
 import {useSearchParams} from "next/navigation";
+import {generateLink} from "@/helpers";
 
 const PlatformCardTags = ({tags, title, className}: PlatformCardTagsProps) => {
     const searchParams = useSearchParams();
@@ -49,7 +50,7 @@ const PlatformCardTags = ({tags, title, className}: PlatformCardTagsProps) => {
                                 key={item}
                                 title={item}
                                 initial={false}
-                                href={'platforms'}
+                                href={generateLink(`/platforms/`, item)}
                                 animate={{opacity: 1, y: 0}}
                             />
                         )
@@ -61,7 +62,7 @@ const PlatformCardTags = ({tags, title, className}: PlatformCardTagsProps) => {
                                     [styles.hidden]: !isVisible
                                 })}
                                 title={item}
-                                href={'platforms'}
+                                href={generateLink(`/platforms/`, item)}
                                 initial={false}
                                 animate={{opacity: isVisible ? 1 : 0, y: 0}}
                                 transition={{duration: 0.3, delay: 0.05 * index}}

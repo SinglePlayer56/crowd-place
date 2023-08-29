@@ -1,38 +1,48 @@
 import {CrowdfundingCardProps} from "@/components/CrowdfundingCard/CrowdfundingCard.props";
 import {CountryListProps} from "@/components/CountryList/CountryList.props";
 
+export const categoryPostsTags = ['All posts', 'P2P Lending', 'Fundraising', 'Property Crowdfunding'];
+
 export const CrowdfundingCardValues: CrowdfundingCardProps[] = [
     {
         title: 'P2P lending platforms',
-        iconPath: '/icons/people.svg'
+        iconPath: '/icons/people.svg',
+        href: '/platforms/p2p-lending/'
     },
     {
         title: 'Equity crowdfunding platforms',
-        iconPath: '/icons/money.svg'
+        iconPath: '/icons/money.svg',
+        href: '/platforms/equity/'
     },
     {
         title: 'Property crowdfunding platforms',
-        iconPath: '/icons/home.svg'
+        iconPath: '/icons/home.svg',
+        href: '/platforms/property/'
     },
     {
         title: 'Startup crowdfunding platforms',
-        iconPath: '/icons/rocket.svg'
+        iconPath: '/icons/rocket.svg',
+        href: '/platforms/startups/'
     },
     {
         title: 'Personal loans crowdfunding platforms',
-        iconPath: '/icons/coins.svg'
+        iconPath: '/icons/coins.svg',
+        href: '/platforms/personal-loans/'
     },
     {
         title: 'Green energy crowdfunding platforms',
-        iconPath: '/icons/leaf.svg'
+        iconPath: '/icons/leaf.svg',
+        href: '/platforms/green-energy/'
     },
     {
         title: 'Crowdfunding platform for education',
-        iconPath: '/icons/book.svg'
+        iconPath: '/icons/book.svg',
+        href: '/platforms/education/'
     },
     {
         title: 'Debt crowdfunding platform',
-        iconPath: '/icons/hand-coins.svg'
+        iconPath: '/icons/hand-coins.svg',
+        href: '/platforms/debt/'
     }
 ]
 

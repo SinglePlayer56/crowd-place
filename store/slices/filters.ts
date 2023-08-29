@@ -132,9 +132,10 @@ const initialState: IFiltersState = {
         },
         {
             options: [
-                {title: 'Yes', checked: false, slug: 'yes'}
+                {title: 'Yes', checked: false, slug: 'yes'},
+                {title: 'No', checked: false, slug: 'no'},
             ],
-            placeholder: 'ECSP license',
+            placeholder: 'Regulated?',
             type: "licenseNumber"
         },
     ],

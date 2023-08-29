@@ -45,7 +45,7 @@ const RelatedSwiperPost = ({posts}: {posts: IPost[]}) => {
                             tag={post.category}
                             date={post.date}
                             pathImage={post.imagePath}
-                            href={`/blog/${post.slugHref}`}
+                            href={`/blog/${post.slugHref}/`}
                         />
                     </SwiperSlide>
                 ))

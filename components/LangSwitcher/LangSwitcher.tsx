@@ -12,7 +12,7 @@ const LangSwitcher = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const pathName = usePathname();
     const [refSwitcher, isClickedOutside] = useClickOutside();
-    const isBlogPage = pathName.includes('blog');
+    const isBlogPage = pathName.endsWith('/blog/');
 
     const curLang = useMemo(() => pathName.split('/'), [pathName]);
 
@@ -45,7 +45,7 @@ const LangSwitcher = () => {
     if (curTestLang === 'en') {
         arrLink = toLowerLang
             .filter((lang) => curTestLang !== lang)
-            .map((lang) => `${pathName}${lang}/`);
+            .map((lang) => `/${lang}${pathName}`);
     } else {
         arrLink = toLowerLang.map((lang) =>
             lang === 'en'

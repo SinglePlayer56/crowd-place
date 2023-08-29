@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Link from "next/link";
 import {useLayoutEffect, useRef, useState} from "react";
 import {motion, AnimatePresence} from "framer-motion";
+import {generateLink} from "@/helpers";
 
 const CountryList = () => {
     const [isVisibleAll, setIsVisibleAll] = useState<boolean>(false);
@@ -53,7 +54,7 @@ const CountryList = () => {
                                             className={styles.countryList__flag}
                                         />
                                         <Link
-                                            href={`/platforms/${countryValue.country.toLowerCase().split(' ').join('-')}`}
+                                            href={generateLink('/platforms/', countryValue.country)}
                                             className={styles.countryList__name}
                                         >
                                             {countryValue.country}
@@ -78,7 +79,7 @@ const CountryList = () => {
                                             className={styles.countryList__flag}
                                         />
                                         <Link
-                                            href={`/platforms/${countryValue.country.toLowerCase().split(' ').join('-')}`}
+                                            href={generateLink('/platforms/', countryValue.country)}
                                             className={styles.countryList__name}
                                         >
                                             {countryValue.country}

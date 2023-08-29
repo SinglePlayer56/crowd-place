@@ -81,7 +81,7 @@ const SelectFilters = memo(({className}: SelectFiltersProps) => {
         { title: 'Industry', options: allFilters.industry.final },
         { title: 'Country', options: allFilters.country.final },
         { title: 'Years on market', options: allFilters.yearFounded.final },
-        { title: 'ECSP license', options: allFilters.licenseNumber.final }
+        { title: 'Regulated?', options: allFilters.licenseNumber.final }
     ], [
         allFilters.investmentType.final,
         allFilters.industry.final,

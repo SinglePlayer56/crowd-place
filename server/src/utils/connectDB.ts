@@ -1,9 +1,12 @@
 import {Sequelize} from "sequelize";
 import mysql2 from 'mysql2';
+import {envVariable} from "../envLoader.js";
 
-const sequelize = new Sequelize('crowdplace', 'root', 'singleplayer56', {
+const env = envVariable;
+
+const sequelize = new Sequelize(`${env.DB_NAME}`, `${env.DB_USER}`, `${env.DB_PASSWORD}`, {
     dialect: 'mysql',
-    host: '134.122.77.191',
+    host: env.DB_HOST,
     dialectModule: mysql2
 });
 

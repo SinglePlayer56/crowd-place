@@ -1,7 +1,7 @@
 import styles from '../blog.module.css'
-import {ArticleNote, CustomList, HTag, InterestingPosts, PTag, Tag} from "@/components";
+import {ArticleNote, BreadCrumbs, CustomList, HTag, InterestingPosts, PTag, Tag} from "@/components";
 import {Metadata} from "next";
-import {getPost} from "@/helpers";
+import {generateLink, getPost} from "@/helpers";
 
 // export const metadata: Metadata = {
 //     title: `Advantages and Disadvantages of Crowdfunding | ${process.env.NAME_WEBSITE}`,
@@ -27,9 +27,16 @@ export async function generateMetadata(): Promise<Metadata> {
 const ArticlePage = async () => {
     const post = await getPost('advantages-and-disadvantages-of-crowdfunding');
 
+    const paramsBreadCrumbs = [
+        {name: 'Main', href: ''},
+        {name: 'Blog', href: 'blog'},
+        {name: 'Advantages and disadvantages of crowdfunding', href: post.slugHref},
+    ];
+
     return (
         <>
             <> </>
+            <BreadCrumbs paramsPath={paramsBreadCrumbs} />
             <section className={styles.article}>
                 <div className={'container'}>
                     <div className={'container-1200'}>
@@ -39,7 +46,7 @@ const ArticlePage = async () => {
                         <div className={styles.article__data}>
                             <span className={styles.article__date}>{post.date}</span>
                             <div className={styles.article__tags}>
-                                <Tag href={'blog'} title={post.category} />
+                                <Tag href={generateLink(`/blog/`, post.category)} title={post.category} />
                             </div>
                         </div>
                         <section className={styles.article__section}>
