@@ -1,18 +1,14 @@
 import {usePathname} from "next/navigation";
-import {AddFormData, ContactsFormData, FilterPageParams, IPost, IPostResponse} from "@/types";
+import {FilterPageParams} from "@/types";
 import {store} from "@/store";
-import clientEnv from "@/consts/clientEnv";
 
 export function createFilterObject(obj: Record<string, string>, keysArray: string[]) {
-    const filteredObject: Record<string, string> = {};
-
-    keysArray.forEach((key) => {
+    return keysArray.reduce((filteredObject: Record<any, any>, key) => {
         if (obj.hasOwnProperty(key)) {
-            filteredObject[key] = obj[key]
+            filteredObject[key] = obj[key];
         }
-    })
-
-    return filteredObject;
+        return filteredObject;
+    }, {});
 }
 
 export function searchTypeFilter(arrayParams: string[]) {
@@ -55,28 +51,10 @@ export function convertToObjectValue(arrayValue: string[]) {
 
 export function isActiveLink(href: string) {
     const pathName = usePathname();
-
     return pathName === href;
 }
 
-export async function sendMail(data: AddFormData | ContactsFormData) {
-    const response = await fetch(`${clientEnv.localServer}/api/send-mail/`, {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json"
-        },
 
-    });
-
-    if (response.status === 400) {
-        const errorMessage = await response.json();
-        throw new Error(errorMessage);
-    }
-
-    return await response.json();
-}
 
 // Filter params validation
 // function filterParamsValidation(params: Record<FilterType, string>) {
@@ -96,25 +74,7 @@ export async function sendMail(data: AddFormData | ContactsFormData) {
 //     }
 // }
 
-export async function getType(params: FilterPageParams, page: number, perPage: number) {
-    const paramsValues = Object.values(params).map(param => decodeURIComponent(param).split('+'));
-    const investObjects = paramsValues.map(convertToObjectValue);
-    const filters = paramsValues.map(searchTypeFilter);
-    const queryParams = investObjects
-        .map((object) => {
-            if (object) {
-                return generateQueryParams(object);
-            }
-        })
-        .join('&and&');
-    const allFilters = filters.join('-');
-
-    const res = await fetch(`${process.env.SERVER}/api/select-platforms?${queryParams}&page=${page}&perPage=${perPage}&typeFilter=${allFilters}`);
-
-    return await res.json();
-}
-
-export function getMetadataValues(params: FilterPageParams, currentPage: string) {
+function generateParamsData(params: FilterPageParams) {
     const paramsValues = Object.values(params).map((param) => decodeURIComponent(param).split('+'))
     const valueObjects = paramsValues.map(convertToObjectValue);
     const sortedValues = valueObjects.map((obj) => {
@@ -124,6 +84,12 @@ export function getMetadataValues(params: FilterPageParams, currentPage: string)
     })
 
     const typesArray = paramsValues.map(searchTypeFilter);
+
+    return {sortedValues, typesArray}
+}
+
+export function getMetadataValues(params: FilterPageParams, currentPage: string) {
+    const {sortedValues, typesArray} = generateParamsData(params);
 
     const allValue = sortedValues.join(' - ').replace('Yes', 'Regulated').replace('No', 'No regulated');
     const allPath = Object.values(params).map((value) => decodeURIComponent(value)).join('/')
@@ -194,15 +160,7 @@ export function getMetadataValues(params: FilterPageParams, currentPage: string)
 }
 
 export function getTitleForPage(params: FilterPageParams) {
-    const paramsValues = Object.values(params).map((param) => decodeURIComponent(param).split('+'))
-    const valueObjects = paramsValues.map(convertToObjectValue);
-    const sortedValues = valueObjects.map((obj) => {
-        if (obj) {
-            return Object.values(obj).sort().join(', ');
-        }
-    })
-
-    const typesArray = paramsValues.map(searchTypeFilter);
+    const {sortedValues, typesArray} = generateParamsData(params);
 
     if (typesArray.length === 1 && !typesArray.includes('country') && sortedValues[0]) {
         const type = sortedValues[0];
@@ -230,52 +188,25 @@ export function getTitleForPage(params: FilterPageParams) {
     }
 }
 
-export async function getPosts(category: string = '', currentPage: number = 1, perPage: number = 3) {
-    const response: Response = await fetch(`${process.env.SERVER}/api/select-posts/?category=${category}&page=${currentPage}&perPage=${perPage}`);
-
-    const posts: Promise<IPostResponse> = response.json();
-
-    return posts;
-}
-
-export async function getPost(postLink: string) {
-    const response = await fetch(`${process.env.SERVER}/api/get-post/${postLink}`);
-
-    const post: IPost = await response.json();
-
-    return post;
-}
-
-export async function getInterestingPosts(excludePostSlug: string, postCategory: string) {
-    const response = await fetch(`${process.env.SERVER}/api/get-interesting-posts?post=${excludePostSlug}&category=${postCategory}`);
-
-    const posts: IPost[] = await response.json();
-
-    return posts;
-}
 
 export function replacedSearchParam(url: string, paramName: string, newValue: string) {
     const [, queryParamsStr] = url.split("?");
     if (queryParamsStr) {
         const queryParams: string[] = queryParamsStr.split("&");
 
-        // Создаем объект для хранения параметров
         const paramsObj: { [key: string]: string } = {};
         queryParams.forEach(param => {
             const [key, value] = param.split("=");
             paramsObj[key] = value;
         });
 
-        // Изменяем значение указанного параметра
         if (paramsObj.hasOwnProperty(paramName)) {
             paramsObj[paramName] = newValue;
         }
 
-        // Собираем обратно только квери-параметры с измененными параметрами
         const newParams: string[] = Object.entries(paramsObj).map(([key, value]) => `${key}=${value}`);
-        const newQueryParams: string = newParams.join("&");
 
-        return newQueryParams;
+        return newParams.join("&");
     }
 }
 

@@ -11,7 +11,7 @@ import {
 import Image from 'next/image';
 import {CrowdfundingCardValues} from "@/consts";
 import Link from "next/link";
-import {getPosts} from "@/helpers";
+import {getPosts} from "@/helpers/fetch";
 
 const Main = async () => {
     const {rows: posts} = await getPosts();

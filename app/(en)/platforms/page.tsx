@@ -6,7 +6,7 @@ import {
     SelectFilters
 } from "@/components";
 import {FilterPageParams, IPlatform, SearchParams} from "@/types";
-import {getType} from "@/helpers";
+import {getType} from "@/helpers/fetch";
 import {redirect} from "next/navigation";
 import {Metadata} from "next";
 

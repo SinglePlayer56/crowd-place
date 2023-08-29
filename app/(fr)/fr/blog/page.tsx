@@ -1,7 +1,7 @@
-import styles from './blog.module.css'
-import {BreadCrumbs, FilterPosts, HTag, ListingPosts, PTag} from "@/components";
+import styles from '../../../(en)/blog/blog.module.css';
+import {BreadCrumbs, FilterPosts, HTag, ListingPosts} from "@/components";
 import {redirect} from "next/navigation";
-import {getPosts} from "@/helpers";
+import {getPosts} from "@/helpers/fetch";
 import {Metadata} from "next";
 
 export async function generateMetadata({searchParams}: {searchParams: {page: string}}): Promise<Metadata> {

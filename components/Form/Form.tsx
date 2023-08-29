@@ -4,7 +4,7 @@ import styles from './Form.module.css';
 import {CustomButton, Input, TextArea} from "@/components";
 import {SubmitHandler, useForm} from "react-hook-form";
 import {AddFormData, ContactsFormData, formData} from "@/types";
-import {sendMail} from "@/helpers";
+import {sendMail} from "@/helpers/fetch";
 import {useState} from "react";
 import Image from 'next/image';
 import {FormProps} from "./Form.props";

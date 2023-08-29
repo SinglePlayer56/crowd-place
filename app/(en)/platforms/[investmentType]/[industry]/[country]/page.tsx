@@ -1,6 +1,7 @@
 import {BreadCrumbs, HTag, ListingPlatforms, PTag, SelectFilters} from "@/components";
 import {FilterPageParams, IPlatform} from "@/types";
-import {getMetadataValues, getTitleForPage, getType} from "@/helpers";
+import {getMetadataValues, getTitleForPage} from "@/helpers";
+import {getType} from "@/helpers/fetch";
 import {Metadata} from "next";
 import styles from '../../platforms.module.css';
 import {redirect} from "next/navigation";

@@ -2,7 +2,7 @@ import styles from '../blog.module.css'
 import {BreadCrumbs, FilterPosts, HTag, ListingPosts, PTag} from "@/components";
 import {redirect} from "next/navigation";
 import {SearchParams} from "@/types";
-import {getPosts} from "@/helpers";
+import {getPosts} from "@/helpers/fetch";
 import {Metadata} from "next";
 import {categoryPostsTags} from "@/consts";
 

@@ -1,7 +1,8 @@
 import styles from '../blog.module.css'
 import {BreadCrumbs, CustomList, HTag, InterestingPosts, PTag, Tag} from "@/components";
 import {Metadata} from "next";
-import {generateLink, getPost} from "@/helpers";
+import {generateLink} from "@/helpers";
+import {getPost} from "@/helpers/fetch";
 
 // export const metadata: Metadata = {
 //     title: `Best Crowdlending Platforms in Europe 2023 | ${process.env.NAME_WEBSITE}`,

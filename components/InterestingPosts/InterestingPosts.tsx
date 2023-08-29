@@ -1,6 +1,6 @@
 import styles from './InterestingPosts.module.css'
 import {HTag, RelatedSwiperPost} from "@/components";
-import {getInterestingPosts} from "@/helpers";
+import {getInterestingPosts} from "@/helpers/fetch";
 import {InterestingPostsProps} from "./InterestingPosts.props";
 
 const InterestingPosts = async ({postsCategory, excludeSlugPost}: InterestingPostsProps) => {
