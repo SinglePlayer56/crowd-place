@@ -23,8 +23,8 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
 
 
     return {
-        title: `${data.name} | Crowd Place`,
-        description: `${data.description}`,
+        title: `${data.name} review ${data.yearFounded}`,
+        description: `${data.name} crowdfunding platform review: Minimum investment, Advertised return, and others.`,
         alternates: {
             canonical: `${process.env.DOMAIN}/platform/${params.name}/`
         }

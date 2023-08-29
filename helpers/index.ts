@@ -119,21 +119,114 @@ export function getMetadataValues(params: FilterPageParams, currentPage: string)
     const valueObjects = paramsValues.map(convertToObjectValue);
     const sortedValues = valueObjects.map((obj) => {
         if (obj) {
-            return Object.values(obj).sort().join(' ');
+            return Object.values(obj).sort().join(', ');
         }
     })
 
+    const typesArray = paramsValues.map(searchTypeFilter);
+
     const allValue = sortedValues.join(' - ').replace('Yes', 'Regulated').replace('No', 'No regulated');
     const allPath = Object.values(params).map((value) => decodeURIComponent(value)).join('/')
-    const currentPageNumber = currentPage ? `- page ${currentPage} ` : '';
+    const currentPageNumber = currentPage ? ` | page ${currentPage} ` : '';
     const canonicalSearchParams = `${process.env.DOMAIN}/platforms/${allPath}/?page=${currentPage}`
 
-    return {
-        title: `Best Crowdfunding | ${allValue} ${currentPageNumber} | Crowd Place`,
-        description: `Best Crowdfunding | ${allValue} ${currentPageNumber}| Crowd Place`,
-        alternates: {
-            canonical: !currentPage ? `${process.env.DOMAIN}/platforms/${allPath}/` : canonicalSearchParams
+    if (typesArray.length === 1 && !typesArray.includes('country') && sortedValues[0]) {
+
+        const type = sortedValues[0];
+        if (type !== 'P2P lending') {
+            return {
+                title: `Peer-to-Peer (P2P) Lending platforms${currentPageNumber}`,
+                description: `List of the best Peer-to-Peer lending platforms. Compare P2P lending platforms and choose the best one for you.`,
+                alternates: {
+                    canonical: !currentPage ? `${process.env.DOMAIN}/platforms/${allPath}/` : canonicalSearchParams
+                }
+            }
+        } else {
+            return {
+                title: `${type} Crowdfunding platforms${currentPageNumber}`,
+                description: `List of the best ${type} crowdfunding platforms. Compare ${type} crowdfunding platforms and choose the best one for you.`,
+                alternates: {
+                    canonical: !currentPage ? `${process.env.DOMAIN}/platforms/${allPath}/` : canonicalSearchParams
+                }
+            }
         }
+    } else if (typesArray.length === 1 && typesArray.includes('country') && sortedValues[0]) {
+        const country = sortedValues[0];
+
+        return {
+            title: `Crowdfunding platforms in ${country}${currentPageNumber}`,
+            description: ` List of the best crowdfunding platforms in ${country}. Compare crowdfunding platforms in ${country} and choose the best one for you.`,
+            alternates: {
+                canonical: !currentPage ? `${process.env.DOMAIN}/platforms/${allPath}/` : canonicalSearchParams
+            }
+        }
+    } else if (typesArray.length === 2 && typesArray.includes('country') && sortedValues[0] && sortedValues[1]) {
+        const type = sortedValues[0];
+        const country = sortedValues[1];
+
+        if (sortedValues[0] === 'P2P lending') {
+            return {
+                title: `Peer-to-Peer (P2P) Lending platforms in ${country}${currentPageNumber}`,
+                description: ` List of the best Peer-to-Peer lending platforms in ${country}. Compare P2P lending platforms in ${country} and choose the best one for you.`,
+                alternates: {
+                    canonical: !currentPage ? `${process.env.DOMAIN}/platforms/${allPath}/` : canonicalSearchParams
+                }
+            }
+        } else {
+            return {
+                title: `${type} Crowdfunding platforms in ${country}${currentPageNumber}`,
+                description: `List of the best ${type} Crowdfunding platforms in ${country}. Compare ${type} Crowdfunding platforms in ${country} and choose the best one for you.`,
+                alternates: {
+                    canonical: !currentPage ? `${process.env.DOMAIN}/platforms/${allPath}/` : canonicalSearchParams
+                }
+            }
+        }
+
+    } else {
+        return {
+            title: `${allValue} crowdfunding platforms ${currentPageNumber}`,
+            description: `${allValue} crowdfunding platforms ${currentPageNumber}`,
+            alternates: {
+                canonical: !currentPage ? `${process.env.DOMAIN}/platforms/${allPath}/` : canonicalSearchParams
+            }
+        }
+    }
+}
+
+export function getTitleForPage(params: FilterPageParams) {
+    const paramsValues = Object.values(params).map((param) => decodeURIComponent(param).split('+'))
+    const valueObjects = paramsValues.map(convertToObjectValue);
+    const sortedValues = valueObjects.map((obj) => {
+        if (obj) {
+            return Object.values(obj).sort().join(', ');
+        }
+    })
+
+    const typesArray = paramsValues.map(searchTypeFilter);
+
+    if (typesArray.length === 1 && !typesArray.includes('country') && sortedValues[0]) {
+        const type = sortedValues[0];
+        if (type === 'P2P lending') {
+            return `Peer-to-Peer (P2P) Lending platforms`
+        } else {
+            return `${type} Crowdfunding platforms`
+        }
+    } else if (typesArray.length === 1 && typesArray.includes('country') && sortedValues[0]) {
+        const country = sortedValues[0];
+        return `Crowdfunding platforms in ${country}`
+    } else if (typesArray.length === 2 && typesArray.includes('country') && sortedValues[0] && sortedValues[1]) {
+        const type = sortedValues[0];
+        const country = sortedValues[1];
+
+        if (sortedValues[0] === 'P2P lending') {
+            return `Peer-to-Peer (P2P) Lending platforms in ${country}`
+        } else {
+            return `${type} Crowdfunding platforms in ${country}`
+        }
+
+    } else {
+        const allValue = sortedValues.join(' and ').replace('Yes', 'Regulated').replace('No', 'No regulated');
+        return `${allValue} Crowdfunding platforms`
     }
 }
 

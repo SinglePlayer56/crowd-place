@@ -1,6 +1,6 @@
 import styles from './platforms.module.css'
 import {
-    BreadCrumbs,
+    BreadCrumbs, HTag,
     ListingPlatforms,
     PlatformsListingLinks,
     SelectFilters
@@ -15,8 +15,8 @@ export async function generateMetadata({searchParams}: {searchParams: {page: str
     const canonicalSearchParams = `${process.env.DOMAIN}/platforms/?page=${searchParams.page}`
 
     return {
-        title: `Best Crowdfunding ${currentPage} | Crowd Place`,
-        description: `Best Crowdfunding ${currentPage} | Crowd Place`,
+        title: `Best Crowdfunding Platforms 2023 ${currentPage} | Crowd-Place.com`,
+        description: `List of the Best Crowdfunding Platforms in Europe with reviews.`,
         alternates: {
             canonical: !searchParams.page ? `${process.env.DOMAIN}/platforms/` : canonicalSearchParams
         }
@@ -50,9 +50,9 @@ const Platforms = async ({searchParams, params}: SearchParams<FilterPageParams>)
             <BreadCrumbs paramsPath={paramsBreadCrumbs}/>
             <section className={styles.head}>
                 <div className={'container'}>
-                    {/*<HTag className={styles.head__title} tag={'h1'}>*/}
-                    {/*    */}
-                    {/*</HTag>*/}
+                    <HTag className={styles.head__title} tag={'h1'}>
+                        Best Crowdfunding Platforms
+                    </HTag>
                     {/*<PTag className={styles.head__text} fontSize={'20px'}>*/}
                     {/*    */}
                     {/*</PTag>*/}

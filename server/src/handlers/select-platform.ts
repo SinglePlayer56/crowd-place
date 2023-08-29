@@ -79,17 +79,21 @@ const selectPlatformHandler = async (req: Request, res: Response) => {
             const filters: any = [];
 
             currentValues.forEach((value) => {
-                if (value === 'Yes') {
+                if (value === 'Yes' && !currentValues.includes('No')) {
                     filters.push({
                         regulated: {
                             [Op.ne]: false,
                         },
                     })
-                } else if (value === 'No') {
+                } else if (value === 'No' && !currentValues.includes('Yes')) {
                     filters.push({
                         regulated: {
                             [Op.ne]: true,
                         },
+                    })
+                } else if ((value === 'No' && currentValues.includes('Yes')) || (value === 'Yes' && currentValues.includes('No'))) {
+                    filters.push({
+                        regulated: {[Op.like]: '%%'},
                     })
                 }
             })

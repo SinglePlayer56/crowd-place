@@ -1,6 +1,6 @@
 import {BreadCrumbs, HTag, ListingPlatforms, PTag, SelectFilters} from "@/components";
 import {FilterPageParams, IPlatform} from "@/types";
-import {getMetadataValues, getType} from "@/helpers";
+import {getMetadataValues, getTitleForPage, getType} from "@/helpers";
 import {Metadata} from "next";
 import styles from '../../../platforms.module.css';
 import {redirect} from "next/navigation";
@@ -45,9 +45,9 @@ const Platforms = async ({searchParams, params}: PageProps) => {
             <BreadCrumbs paramsPath={paramsBreadCrumbs}/>
             <section className={styles.head}>
                 <div className={'container'}>
-                    {/*<HTag className={styles.head__title} tag={'h1'}>*/}
-                    {/*    */}
-                    {/*</HTag>*/}
+                    <HTag className={styles.head__title} tag={'h1'}>
+                        {getTitleForPage(params)}
+                    </HTag>
                     {/*<PTag className={styles.head__text} fontSize={'20px'}>*/}
                     {/*    */}
                     {/*</PTag>*/}

@@ -2,8 +2,8 @@ import type {Metadata} from 'next'
 import {PageLayout} from "@/components";
 
 export const metadata: Metadata = {
-    title: 'Platforms | Crowd Place',
-    description: 'Platforms | Crowd Place',
+    title: 'Best Crowdfunding Platforms 2023 | Crowd-Place.com',
+    description: 'List of the Best Crowdfunding Platforms in Europe with reviews.',
     alternates: {
         canonical: `${process.env.DOMAIN}/platforms/`
     }
