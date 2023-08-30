@@ -42,7 +42,10 @@ const CountryList = () => {
                         {CountryListValue.map((countryValue, index) => {
                             if (index < perPage) {
                                 return (
-                                    <div
+                                    <motion.div
+                                        initial={{transform: 'scale(1)'}}
+                                        transition={{duration: 0.3}}
+                                        whileTap={{transform: 'scale(0.95)'}}
                                         key={countryValue.country}
                                         className={styles.countryList__item}
                                     >
@@ -59,16 +62,17 @@ const CountryList = () => {
                                         >
                                             {countryValue.country}
                                         </Link>
-                                    </div>
+                                    </motion.div>
                                 )
                             } else {
                                 return (
                                     <motion.div
-                                        initial={{opacity: 0, display: 'none'}}
-                                        animate={{opacity: isVisibleAll ? 1 : 0, display: isVisibleAll ? 'flex' : ''}}
+                                        initial={{opacity: 0, display: 'none', transform: 'scale(1)'}}
+                                        animate={{opacity: isVisibleAll ? 1 : 0, display: isVisibleAll ? 'flex' : '', transform: 'scale(1)'}}
                                         exit={{opacity: 0}}
-                                        transition={{opacity: { duration: 0.3, delay: isVisibleAll ? 0.2 : 0 }}}
+                                        transition={{opacity: { duration: 0.3, delay: isVisibleAll ? 0.2 : 0 }, transform: {duration: 0.3}}}
                                         key={countryValue.country}
+                                        whileTap={{transform: 'scale(0.95)'}}
                                         className={styles.countryList__item}
                                     >
                                         <Image
