@@ -7,9 +7,12 @@ import {FilterPostsProps} from "./FilterPosts.props";
 import {categoryPostsTags} from "@/consts";
 import {generateLink} from "@/helpers";
 import {useLanguagePage} from "@/hooks/languagePage";
+import {usePathname} from "next/navigation";
 
 const FilterPosts = ({className}: FilterPostsProps) => {
     const language = useLanguagePage();
+    const pathNameArray = usePathname().split('/');
+    const currentPageSlug = pathNameArray[pathNameArray.length - 2];
 
     return (
         <div className={cn(styles.filters, className)}>
@@ -20,7 +23,9 @@ const FilterPosts = ({className}: FilterPostsProps) => {
                             key={tag}
                             href={`${language}/blog/`}
                             title={tag}
-                            className={cn(styles.tag)}
+                            className={cn(styles.tag, {
+                                [styles.tagNotActive]: currentPageSlug !== 'blog'
+                            })}
                         />
                     )
                 } else {
@@ -29,7 +34,9 @@ const FilterPosts = ({className}: FilterPostsProps) => {
                             key={tag}
                             href={generateLink(`${language}/blog/`, tag)}
                             title={tag}
-                            className={cn(styles.tagNotActive, styles.tag)}
+                            className={cn(styles.tag, {
+                                [styles.tagNotActive]: currentPageSlug !== tag.toLowerCase().split(' ').join('-')
+                            })}
                         />
                     )
                 }

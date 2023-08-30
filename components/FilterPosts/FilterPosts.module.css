@@ -5,7 +5,9 @@
 }
 
 .tag {
+    border: 2px solid #24b2fc;
     padding: 10px 16px;
+    color: #24b2fc;
 }
 .tag a {
     font-size: 20px;
@@ -13,7 +15,7 @@
 
 .tagNotActive,
 .tagNotActive a {
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
 }
 
 .tagNotActive a {

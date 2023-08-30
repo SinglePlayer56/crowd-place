@@ -13,7 +13,6 @@ const Tag = forwardRef<HTMLSpanElement, TagProps>(({title, href, className}: Tag
             ref={ref}
             className={cn(styles.tag, className)}
             initial={{transform: 'scale(1)'}}
-            whileHover={{backgroundColor: '#24b2fc', border: '2px solid #24b2fc'}}
             whileTap={{transform: 'scale(0.95)'}}
             transition={{duration: 0.3, ease: "easeInOut"}}
         >
