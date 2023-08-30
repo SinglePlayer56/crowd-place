@@ -12,13 +12,14 @@ const BlogCard = ({title, tag, text, pathImage, date, href}: BlogCardProps) => {
 
     return (
         <div className={styles.card}>
-            <Image
-                className={styles.card__image}
-                src={pathImage}
-                alt={'blog card image'}
-                width={511}
-                height={215}
-            />
+            <div className={styles.card__image}>
+                <Image
+                    src={pathImage}
+                    alt={'blog card image'}
+                    width={511}
+                    height={215}
+                />
+            </div>
             <div className={styles.card__content}>
                 <Link className={styles.card__link} href={href}/>
                 <HTag className={styles.card__title} tag={'h3'}>
