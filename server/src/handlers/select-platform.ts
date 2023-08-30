@@ -45,16 +45,16 @@ const selectPlatformHandler = async (req: Request, res: Response) => {
             const filters: any = [];
 
             currentValues.forEach(value => {
-                if (value === '1 year') {
+                if (value === '0 years') {
                     filters.push({
                         [type]: {
-                            [Op.gte]: currentYear - 1,
+                            [Op.gte]: currentYear,
                         },
                     });
-                } else if (value === '2-3 years') {
+                } else if (value === '1-3 years') {
                     filters.push({
                         [type]: {
-                            [Op.between]: [currentYear - 3, currentYear - 2],
+                            [Op.between]: [currentYear - 3, currentYear - 1],
                         },
                     });
                 } else if (value === '4-5 years') {

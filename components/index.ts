@@ -32,7 +32,6 @@ import RelatedSwiperPlatform from "@/components/RelatedSwiperPlatform/RelatedSwi
 import RelatedSwiperPost from "@/components/RelatedSwiperPost/RelatedSwiperPost";
 import HiddenDescription from "@/components/HiddenDescription/HiddenDescription";
 import PlatformCardCountryList from "@/components/PlatformCardCountryList/PlatformCardCountryList";
-import ArticleNote from "@/components/ArticleNote/ArticleNote";
 import ArticleImage from "@/components/ArticleImage/ArticleImage";
 import FilterPosts from "@/components/FilterPosts/FilterPosts";
 import ListingPosts from "@/components/ListingPosts/ListingPosts";
@@ -77,7 +76,6 @@ export {
     RelatedSwiperPlatform,
     HiddenDescription,
     PlatformCardCountryList,
-    ArticleNote,
     ArticleImage,
     FilterPosts,
     ListingPosts,

@@ -1,5 +1,5 @@
 import styles from '../../../../(en)/blog/blog.module.css';
-import {ArticleNote, CustomList, HTag, InterestingPosts, PTag, Tag} from "@/components";
+import {CustomList, HTag, InterestingPosts, PTag, Tag} from "@/components";
 import {Metadata} from "next";
 import {generateLink} from "@/helpers";
 import {getPost} from "@/helpers/fetch";
@@ -53,9 +53,9 @@ const ArticlePage = async () => {
                             This alternative way of investing can be a suitable addition to your investment portfolio and
                             act as a means of contributing to a better world.
                         </PTag>
-                        <ArticleNote>
-                            <span>👆</span> Crowdfunding can fund different projects and this allows you to diversify.
-                        </ArticleNote>
+                        <PTag className={styles.article__text} fontSize={'20px'}>
+                            <i><span>👆</span> Crowdfunding can fund different projects and this allows you to diversify.</i>
+                        </PTag>
                         <PTag className={styles.article__text} fontSize={'20px'}>
                             For example, there are start-ups that need money or companies that need a new product funded.
                             The crowdfunding process usually involves setting up an online page where people can donate or

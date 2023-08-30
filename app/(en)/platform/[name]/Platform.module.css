@@ -121,7 +121,7 @@
 }
 
 .review__title {
-    margin-bottom: 45px;
+    margin-bottom: 35px;
 }
 
 .review__list {
@@ -136,15 +136,6 @@
 
 .relatedPlatforms__title {
     margin-bottom: 55px;
-}
-
-.reviews__list {
-    /*padding: 0 20px;*/
-    /*display: grid;*/
-    /*grid-template-columns: repeat(4, 1fr);*/
-    /*gap: 25px;*/
-    /*margin-bottom: 50px;*/
-    /*display: flex;*/
 }
 
 @media screen and (max-width: 1500px) {
@@ -179,7 +170,7 @@
         grid-template-columns: 1fr;
     }
 
-    .reviews__list {
+    .review__list {
         flex-direction: column;
     }
 
