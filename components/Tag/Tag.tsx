@@ -8,13 +8,18 @@ import {motion} from "framer-motion";
 import Link from "next/link";
 
 const Tag = forwardRef<HTMLSpanElement, TagProps>(({title, href, className}: TagProps, ref: ForwardedRef<HTMLSpanElement>) => {
-
     return (
-        <span ref={ref} className={cn(styles.tag, className)}>
+        <motion.span
+            ref={ref}
+            className={cn(styles.tag, className)}
+            whileHover={{backgroundColor: '#24b2fc', border: '2px solid #24b2fc'}}
+            whileTap={{transform: 'scale(0.95)'}}
+            transition={{duration: 0.3, ease: "easeInOut"}}
+        >
             <Link href={`${href}`} >
                 {title}
             </Link>
-        </span>
+        </motion.span>
     );
 });
 
