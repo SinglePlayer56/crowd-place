@@ -91,7 +91,7 @@ function generateParamsData(params: FilterPageParams) {
 export function getMetadataValues(params: FilterPageParams, currentPage: string) {
     const {sortedValues, typesArray} = generateParamsData(params);
 
-    const allValue = sortedValues.join(' - ').replace('Yes', 'Regulated').replace('No', 'No regulated');
+    let allValue = sortedValues.join(' - ').replace('Yes', 'Regulated').replace('No', 'No regulated');
     const allPath = Object.values(params).map((value) => decodeURIComponent(value)).join('/')
     const currentPageNumber = currentPage ? ` | page ${currentPage} ` : '';
     const canonicalSearchParams = `${process.env.DOMAIN}/platforms/${allPath}/?page=${currentPage}`
@@ -99,7 +99,7 @@ export function getMetadataValues(params: FilterPageParams, currentPage: string)
     if (typesArray.length === 1 && !typesArray.includes('country') && sortedValues[0]) {
 
         const type = sortedValues[0];
-        if (type !== 'P2P lending') {
+        if (type === 'P2P lending') {
             return {
                 title: `Peer-to-Peer (P2P) Lending platforms${currentPageNumber}`,
                 description: `List of the best Peer-to-Peer lending platforms. Compare P2P lending platforms and choose the best one for you.`,
@@ -148,10 +148,35 @@ export function getMetadataValues(params: FilterPageParams, currentPage: string)
             }
         }
 
-    } else {
+    } else if (typesArray.length > 2 && typesArray.includes('country')) {
+        const countryIndex = typesArray.findIndex((type) => type === 'country');
+        const country = sortedValues[countryIndex];
+        let valueNotCountry = sortedValues
+            .filter((_, index) => index !== countryIndex)
+            .join(' - ').replace('Yes', 'Regulated').replace('No', 'No regulated');
+        const isAllRegulated = (valueNotCountry.includes('Regulated') && valueNotCountry.includes('No regulated')) && 'Regulated and no regulated';
+
+        if (isAllRegulated) {
+            valueNotCountry = valueNotCountry.replace('No regulated, Regulated', isAllRegulated);
+        }
+
         return {
-            title: `${allValue} crowdfunding platforms ${currentPageNumber}`,
-            description: `${allValue} crowdfunding platforms ${currentPageNumber}`,
+            title: `${valueNotCountry} Crowdfunding platforms in ${country}${currentPageNumber}`,
+            description: `${valueNotCountry} Crowdfunding platforms in ${country}${currentPageNumber}`,
+            alternates: {
+                canonical: !currentPage ? `${process.env.DOMAIN}/platforms/${allPath}/` : canonicalSearchParams
+            }
+        }
+    } else {
+        const isAllRegulated = (allValue.includes('Regulated') && allValue.includes('No regulated')) && 'Regulated and no regulated';
+
+        if (isAllRegulated) {
+            allValue = allValue.replace('No regulated, Regulated', isAllRegulated);
+        }
+
+        return {
+            title: `${allValue} Crowdfunding platforms ${currentPageNumber}`,
+            description: `${allValue} Crowdfunding platforms ${currentPageNumber}`,
             alternates: {
                 canonical: !currentPage ? `${process.env.DOMAIN}/platforms/${allPath}/` : canonicalSearchParams
             }
@@ -182,8 +207,26 @@ export function getTitleForPage(params: FilterPageParams) {
             return `${type} Crowdfunding platforms in ${country}`
         }
 
+    } else if (typesArray.length > 2 && typesArray.includes('country')) {
+        const countryIndex = typesArray.findIndex((type) => type === 'country');
+        const country = sortedValues[countryIndex];
+        let valueNotCountry = sortedValues
+            .filter((_, index) => index !== countryIndex)
+            .join(' and ').replace('Yes', 'Regulated').replace('No', 'No regulated');
+        const isAllRegulated = (valueNotCountry.includes('Regulated') && valueNotCountry.includes('No regulated')) && 'Regulated and no regulated';
+
+        if (isAllRegulated) {
+            valueNotCountry = valueNotCountry.replace('No regulated, Regulated', isAllRegulated);
+        }
+
+        return `${valueNotCountry} Crowdfunding platforms in ${country}`
     } else {
-        const allValue = sortedValues.join(' and ').replace('Yes', 'Regulated').replace('No', 'No regulated');
+        let allValue = sortedValues.join(' and ').replace('Yes', 'Regulated').replace('No', 'No regulated');
+        const isAllRegulated = (allValue.includes('Regulated') && allValue.includes('No regulated')) && 'Regulated and no regulated';
+
+        if (isAllRegulated) {
+            allValue = allValue.replace('No regulated, Regulated', isAllRegulated);
+        }
         return `${allValue} Crowdfunding platforms`
     }
 }

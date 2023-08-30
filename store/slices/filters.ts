@@ -259,7 +259,7 @@ const filtersSlice = createSlice({
                     state.yearFounded.final = state.yearFounded.final.filter((value) => value !== action.payload.value);
                     break;
                 }
-                case 'ECSP license': {
+                case 'Regulated?': {
                     const filterIndex = state.filtersFields.findIndex((options) => options.type === 'licenseNumber');
                     const currentOption = state.filtersFields[filterIndex].options.findIndex((option) => option.title === action.payload.value);
                     state.filtersFields[filterIndex].options[currentOption].checked = false;

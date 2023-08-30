@@ -18,7 +18,7 @@ export const CrowdfundingCardValues: CrowdfundingCardProps[] = [
     {
         title: 'Property crowdfunding platforms',
         iconPath: '/icons/home.svg',
-        href: '/platforms/property/'
+        href: '/platforms/real-estate/'
     },
     {
         title: 'Startup crowdfunding platforms',
