@@ -3,7 +3,7 @@
 import {CustomButtonProps} from "@/components/CustomButton/CustomButton.props";
 import styles from './CustomButton.module.css';
 import cn from 'classnames';
-import {ForwardedRef, forwardRef, memo} from "react";
+import {memo} from "react";
 
 const CustomButton = memo(({text, color, className, type, children, disabled, onClick}: CustomButtonProps) => {
 

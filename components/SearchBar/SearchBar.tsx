@@ -15,7 +15,7 @@ import {useRouter} from "next/navigation";
 import clientEnv from "@/consts/clientEnv";
 
 async function fetchSearchHandler(value: string): Promise<ISearchResult> {
-    const response = await fetch(`${clientEnv.localServer}/api/search?searchParams=${value}`);
+    const response = await fetch(`${clientEnv.prodServer}/api/search?searchParams=${value}`);
     const data = await response.json();
 
     return data;

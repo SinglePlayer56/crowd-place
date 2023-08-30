@@ -79,7411 +79,3866 @@ export const CountryListValue: CountryListProps[] = [
     {country: 'United Kingdom', pathFlag: '/flags/United_Kingdom.svg'}
 ];
 
-export const platformListingLinks = [
+export const platformListingLinks: ILinksForListing[] = [
     {
-        title: 'equity',
+        title: 'Equity Crowdfunding platforms',
         href: '/platforms/equity/'
     },
     {
-        title: 'debt',
+        title: 'Debt Crowdfunding platforms',
         href: '/platforms/debt/'
     },
     {
-        title: 'p2p lending',
+        title: 'Peer-to-Peer (P2P) Lending platforms',
         href: '/platforms/p2p-lending/'
     },
     {
-        title: 'reward',
+        title: 'Reward Crowdfunding platforms',
         href: '/platforms/reward/'
     },
     {
-        title: 'donation',
+        title: 'Donation Crowdfunding platforms',
         href: '/platforms/donation/'
     },
     {
-        title: 'buy to let',
+        title: 'Buy-to-let Crowdfunding platforms',
         href: '/platforms/buy-to-let/'
     },
     {
-        title: 'mini bonds',
+        title: 'Mini-bonds Crowdfunding platforms',
         href: '/platforms/mini-bonds/'
     },
     {
-        title: 'real estate',
+        title: 'Real estate Crowdfunding platforms',
         href: '/platforms/real-estate/'
     },
     {
-        title: 'startups',
+        title: 'Startups Crowdfunding platforms',
         href: '/platforms/startups/'
     },
     {
-        title: 'sustainability',
+        title: 'Sustainability Crowdfunding platforms',
         href: '/platforms/sustainability/'
     },
     {
-        title: 'litigation',
+        title: 'Litigation Crowdfunding platforms',
         href: '/platforms/litigation/'
     },
     {
-        title: 'green energy',
+        title: 'Green energy Crowdfunding platforms',
         href: '/platforms/green-energy/'
     },
     {
-        title: 'health science',
+        title: 'Health science Crowdfunding platforms',
         href: '/platforms/health-science/'
     },
     {
-        title: 'logistics',
+        title: 'Logistics Crowdfunding platforms',
         href: '/platforms/logistics/'
     },
     {
-        title: 'personal loans',
+        title: 'Personal loans Crowdfunding platforms',
         href: '/platforms/personal-loans/'
     },
     {
-        title: 'art',
+        title: 'Art Crowdfunding platforms',
         href: '/platforms/art/'
     },
     {
-        title: 'mortgages',
+        title: 'Mortgages Crowdfunding platforms',
         href: '/platforms/mortgages/'
     },
     {
-        title: 'social cause',
+        title: 'Social cause Crowdfunding platforms',
         href: '/platforms/social-cause/'
     },
     {
-        title: 'education',
+        title: 'Education Crowdfunding platforms',
         href: '/platforms/education/'
     },
     {
-        title: 'farming',
+        title: 'Farming Crowdfunding platforms',
         href: '/platforms/farming/'
     },
     {
-        title: 'sport',
+        title: 'Sport Crowdfunding platforms',
         href: '/platforms/sport/'
     },
     {
-        title: 'maritime',
+        title: 'Maritime Crowdfunding platforms',
         href: '/platforms/maritime/'
     },
     {
-        title: "equity-andorra",
-        href: "/platforms/equity/andorra/"
+        "title": "Equity Crowdfunding platforms in Andorra",
+        "href": "/platforms/equity/andorra/"
     },
     {
-        title: "debt-andorra",
-        href: "/platforms/debt/andorra/"
+        "title": "Debt Crowdfunding platforms in Andorra",
+        "href": "/platforms/debt/andorra/"
     },
     {
-        title: "p2p-lending-andorra",
-        href: "/platforms/p2p-lending/andorra/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Andorra",
+        "href": "/platforms/p2p-lending/andorra/"
     },
     {
-        title: "reward-andorra",
-        href: "/platforms/reward/andorra/"
+        "title": "Reward Crowdfunding platforms in Andorra",
+        "href": "/platforms/reward/andorra/"
     },
     {
-        title: "donation-andorra",
-        href: "/platforms/donation/andorra/"
+        "title": "Donation Crowdfunding platforms in Andorra",
+        "href": "/platforms/donation/andorra/"
     },
     {
-        title: "buy-to-let-andorra",
-        href: "/platforms/buy-to-let/andorra/"
+        "title": "Buy-to-let Crowdfunding platforms in Andorra",
+        "href": "/platforms/buy-to-let/andorra/"
     },
     {
-        title: "mini-bonds-andorra",
-        href: "/platforms/mini-bonds/andorra/"
+        "title": "Mini-bonds Crowdfunding platforms in Andorra",
+        "href": "/platforms/mini-bonds/andorra/"
     },
     {
-        title: "equity-albania",
-        href: "/platforms/equity/albania/"
+        "title": "Equity Crowdfunding platforms in Albania",
+        "href": "/platforms/equity/albania/"
     },
     {
-        title: "debt-albania",
-        href: "/platforms/debt/albania/"
+        "title": "Debt Crowdfunding platforms in Albania",
+        "href": "/platforms/debt/albania/"
     },
     {
-        title: "p2p-lending-albania",
-        href: "/platforms/p2p-lending/albania/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Albania",
+        "href": "/platforms/p2p-lending/albania/"
     },
     {
-        title: "reward-albania",
-        href: "/platforms/reward/albania/"
+        "title": "Reward Crowdfunding platforms in Albania",
+        "href": "/platforms/reward/albania/"
     },
     {
-        title: "donation-albania",
-        href: "/platforms/donation/albania/"
+        "title": "Donation Crowdfunding platforms in Albania",
+        "href": "/platforms/donation/albania/"
     },
     {
-        title: "buy-to-let-albania",
-        href: "/platforms/buy-to-let/albania/"
+        "title": "Buy-to-let Crowdfunding platforms in Albania",
+        "href": "/platforms/buy-to-let/albania/"
     },
     {
-        title: "mini-bonds-albania",
-        href: "/platforms/mini-bonds/albania/"
+        "title": "Mini-bonds Crowdfunding platforms in Albania",
+        "href": "/platforms/mini-bonds/albania/"
     },
     {
-        title: "equity-austria",
-        href: "/platforms/equity/austria/"
+        "title": "Equity Crowdfunding platforms in Austria",
+        "href": "/platforms/equity/austria/"
     },
     {
-        title: "debt-austria",
-        href: "/platforms/debt/austria/"
+        "title": "Debt Crowdfunding platforms in Austria",
+        "href": "/platforms/debt/austria/"
     },
     {
-        title: "p2p-lending-austria",
-        href: "/platforms/p2p-lending/austria/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Austria",
+        "href": "/platforms/p2p-lending/austria/"
     },
     {
-        title: "reward-austria",
-        href: "/platforms/reward/austria/"
+        "title": "Reward Crowdfunding platforms in Austria",
+        "href": "/platforms/reward/austria/"
     },
     {
-        title: "donation-austria",
-        href: "/platforms/donation/austria/"
+        "title": "Donation Crowdfunding platforms in Austria",
+        "href": "/platforms/donation/austria/"
     },
     {
-        title: "buy-to-let-austria",
-        href: "/platforms/buy-to-let/austria/"
+        "title": "Buy-to-let Crowdfunding platforms in Austria",
+        "href": "/platforms/buy-to-let/austria/"
     },
     {
-        title: "mini-bonds-austria",
-        href: "/platforms/mini-bonds/austria/"
+        "title": "Mini-bonds Crowdfunding platforms in Austria",
+        "href": "/platforms/mini-bonds/austria/"
     },
     {
-        title: "equity-belgium",
-        href: "/platforms/equity/belgium/"
+        "title": "Equity Crowdfunding platforms in Belgium",
+        "href": "/platforms/equity/belgium/"
     },
     {
-        title: "debt-belgium",
-        href: "/platforms/debt/belgium/"
+        "title": "Debt Crowdfunding platforms in Belgium",
+        "href": "/platforms/debt/belgium/"
     },
     {
-        title: "p2p-lending-belgium",
-        href: "/platforms/p2p-lending/belgium/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Belgium",
+        "href": "/platforms/p2p-lending/belgium/"
     },
     {
-        title: "reward-belgium",
-        href: "/platforms/reward/belgium/"
+        "title": "Reward Crowdfunding platforms in Belgium",
+        "href": "/platforms/reward/belgium/"
     },
     {
-        title: "donation-belgium",
-        href: "/platforms/donation/belgium/"
+        "title": "Donation Crowdfunding platforms in Belgium",
+        "href": "/platforms/donation/belgium/"
     },
     {
-        title: "buy-to-let-belgium",
-        href: "/platforms/buy-to-let/belgium/"
+        "title": "Buy-to-let Crowdfunding platforms in Belgium",
+        "href": "/platforms/buy-to-let/belgium/"
     },
     {
-        title: "mini-bonds-belgium",
-        href: "/platforms/mini-bonds/belgium/"
+        "title": "Mini-bonds Crowdfunding platforms in Belgium",
+        "href": "/platforms/mini-bonds/belgium/"
     },
     {
-        title: "equity-bulgaria",
-        href: "/platforms/equity/bulgaria/"
+        "title": "Equity Crowdfunding platforms in Bulgaria",
+        "href": "/platforms/equity/bulgaria/"
     },
     {
-        title: "debt-bulgaria",
-        href: "/platforms/debt/bulgaria/"
+        "title": "Debt Crowdfunding platforms in Bulgaria",
+        "href": "/platforms/debt/bulgaria/"
     },
     {
-        title: "p2p-lending-bulgaria",
-        href: "/platforms/p2p-lending/bulgaria/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Bulgaria",
+        "href": "/platforms/p2p-lending/bulgaria/"
     },
     {
-        title: "reward-bulgaria",
-        href: "/platforms/reward/bulgaria/"
+        "title": "Reward Crowdfunding platforms in Bulgaria",
+        "href": "/platforms/reward/bulgaria/"
     },
     {
-        title: "donation-bulgaria",
-        href: "/platforms/donation/bulgaria/"
+        "title": "Donation Crowdfunding platforms in Bulgaria",
+        "href": "/platforms/donation/bulgaria/"
     },
     {
-        title: "buy-to-let-bulgaria",
-        href: "/platforms/buy-to-let/bulgaria/"
+        "title": "Buy-to-let Crowdfunding platforms in Bulgaria",
+        "href": "/platforms/buy-to-let/bulgaria/"
     },
     {
-        title: "mini-bonds-bulgaria",
-        href: "/platforms/mini-bonds/bulgaria/"
+        "title": "Mini-bonds Crowdfunding platforms in Bulgaria",
+        "href": "/platforms/mini-bonds/bulgaria/"
     },
     {
-        title: "equity-croatia",
-        href: "/platforms/equity/croatia/"
+        "title": "Equity Crowdfunding platforms in Croatia",
+        "href": "/platforms/equity/croatia/"
     },
     {
-        title: "debt-croatia",
-        href: "/platforms/debt/croatia/"
+        "title": "Debt Crowdfunding platforms in Croatia",
+        "href": "/platforms/debt/croatia/"
     },
     {
-        title: "p2p-lending-croatia",
-        href: "/platforms/p2p-lending/croatia/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Croatia",
+        "href": "/platforms/p2p-lending/croatia/"
     },
     {
-        title: "reward-croatia",
-        href: "/platforms/reward/croatia/"
+        "title": "Reward Crowdfunding platforms in Croatia",
+        "href": "/platforms/reward/croatia/"
     },
     {
-        title: "donation-croatia",
-        href: "/platforms/donation/croatia/"
+        "title": "Donation Crowdfunding platforms in Croatia",
+        "href": "/platforms/donation/croatia/"
     },
     {
-        title: "buy-to-let-croatia",
-        href: "/platforms/buy-to-let/croatia/"
+        "title": "Buy-to-let Crowdfunding platforms in Croatia",
+        "href": "/platforms/buy-to-let/croatia/"
     },
     {
-        title: "mini-bonds-croatia",
-        href: "/platforms/mini-bonds/croatia/"
+        "title": "Mini-bonds Crowdfunding platforms in Croatia",
+        "href": "/platforms/mini-bonds/croatia/"
     },
     {
-        title: "equity-cyprus",
-        href: "/platforms/equity/cyprus/"
+        "title": "Equity Crowdfunding platforms in Cyprus",
+        "href": "/platforms/equity/cyprus/"
     },
     {
-        title: "debt-cyprus",
-        href: "/platforms/debt/cyprus/"
+        "title": "Debt Crowdfunding platforms in Cyprus",
+        "href": "/platforms/debt/cyprus/"
     },
     {
-        title: "p2p-lending-cyprus",
-        href: "/platforms/p2p-lending/cyprus/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Cyprus",
+        "href": "/platforms/p2p-lending/cyprus/"
     },
     {
-        title: "reward-cyprus",
-        href: "/platforms/reward/cyprus/"
+        "title": "Reward Crowdfunding platforms in Cyprus",
+        "href": "/platforms/reward/cyprus/"
     },
     {
-        title: "donation-cyprus",
-        href: "/platforms/donation/cyprus/"
+        "title": "Donation Crowdfunding platforms in Cyprus",
+        "href": "/platforms/donation/cyprus/"
     },
     {
-        title: "buy-to-let-cyprus",
-        href: "/platforms/buy-to-let/cyprus/"
+        "title": "Buy-to-let Crowdfunding platforms in Cyprus",
+        "href": "/platforms/buy-to-let/cyprus/"
     },
     {
-        title: "mini-bonds-cyprus",
-        href: "/platforms/mini-bonds/cyprus/"
+        "title": "Mini-bonds Crowdfunding platforms in Cyprus",
+        "href": "/platforms/mini-bonds/cyprus/"
     },
     {
-        title: "equity-czech-republic",
-        href: "/platforms/equity/czech-republic/"
+        "title": "Equity Crowdfunding platforms in Czech Republic",
+        "href": "/platforms/equity/czech-republic/"
     },
     {
-        title: "debt-czech-republic",
-        href: "/platforms/debt/czech-republic/"
+        "title": "Debt Crowdfunding platforms in Czech Republic",
+        "href": "/platforms/debt/czech-republic/"
     },
     {
-        title: "p2p-lending-czech-republic",
-        href: "/platforms/p2p-lending/czech-republic/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Czech Republic",
+        "href": "/platforms/p2p-lending/czech-republic/"
     },
     {
-        title: "reward-czech-republic",
-        href: "/platforms/reward/czech-republic/"
+        "title": "Reward Crowdfunding platforms in Czech Republic",
+        "href": "/platforms/reward/czech-republic/"
     },
     {
-        title: "donation-czech-republic",
-        href: "/platforms/donation/czech-republic/"
+        "title": "Donation Crowdfunding platforms in Czech Republic",
+        "href": "/platforms/donation/czech-republic/"
     },
     {
-        title: "buy-to-let-czech-republic",
-        href: "/platforms/buy-to-let/czech-republic/"
+        "title": "Buy-to-let Crowdfunding platforms in Czech Republic",
+        "href": "/platforms/buy-to-let/czech-republic/"
     },
     {
-        title: "mini-bonds-czech-republic",
-        href: "/platforms/mini-bonds/czech-republic/"
+        "title": "Mini-bonds Crowdfunding platforms in Czech Republic",
+        "href": "/platforms/mini-bonds/czech-republic/"
     },
     {
-        title: "equity-denmark",
-        href: "/platforms/equity/denmark/"
+        "title": "Equity Crowdfunding platforms in Denmark",
+        "href": "/platforms/equity/denmark/"
     },
     {
-        title: "debt-denmark",
-        href: "/platforms/debt/denmark/"
+        "title": "Debt Crowdfunding platforms in Denmark",
+        "href": "/platforms/debt/denmark/"
     },
     {
-        title: "p2p-lending-denmark",
-        href: "/platforms/p2p-lending/denmark/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Denmark",
+        "href": "/platforms/p2p-lending/denmark/"
     },
     {
-        title: "reward-denmark",
-        href: "/platforms/reward/denmark/"
+        "title": "Reward Crowdfunding platforms in Denmark",
+        "href": "/platforms/reward/denmark/"
     },
     {
-        title: "donation-denmark",
-        href: "/platforms/donation/denmark/"
+        "title": "Donation Crowdfunding platforms in Denmark",
+        "href": "/platforms/donation/denmark/"
     },
     {
-        title: "buy-to-let-denmark",
-        href: "/platforms/buy-to-let/denmark/"
+        "title": "Buy-to-let Crowdfunding platforms in Denmark",
+        "href": "/platforms/buy-to-let/denmark/"
     },
     {
-        title: "mini-bonds-denmark",
-        href: "/platforms/mini-bonds/denmark/"
+        "title": "Mini-bonds Crowdfunding platforms in Denmark",
+        "href": "/platforms/mini-bonds/denmark/"
     },
     {
-        title: "equity-estonia",
-        href: "/platforms/equity/estonia/"
+        "title": "Equity Crowdfunding platforms in Estonia",
+        "href": "/platforms/equity/estonia/"
     },
     {
-        title: "debt-estonia",
-        href: "/platforms/debt/estonia/"
+        "title": "Debt Crowdfunding platforms in Estonia",
+        "href": "/platforms/debt/estonia/"
     },
     {
-        title: "p2p-lending-estonia",
-        href: "/platforms/p2p-lending/estonia/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Estonia",
+        "href": "/platforms/p2p-lending/estonia/"
     },
     {
-        title: "reward-estonia",
-        href: "/platforms/reward/estonia/"
+        "title": "Reward Crowdfunding platforms in Estonia",
+        "href": "/platforms/reward/estonia/"
     },
     {
-        title: "donation-estonia",
-        href: "/platforms/donation/estonia/"
+        "title": "Donation Crowdfunding platforms in Estonia",
+        "href": "/platforms/donation/estonia/"
     },
     {
-        title: "buy-to-let-estonia",
-        href: "/platforms/buy-to-let/estonia/"
+        "title": "Buy-to-let Crowdfunding platforms in Estonia",
+        "href": "/platforms/buy-to-let/estonia/"
     },
     {
-        title: "mini-bonds-estonia",
-        href: "/platforms/mini-bonds/estonia/"
+        "title": "Mini-bonds Crowdfunding platforms in Estonia",
+        "href": "/platforms/mini-bonds/estonia/"
     },
     {
-        title: "equity-finland",
-        href: "/platforms/equity/finland/"
+        "title": "Equity Crowdfunding platforms in Finland",
+        "href": "/platforms/equity/finland/"
     },
     {
-        title: "debt-finland",
-        href: "/platforms/debt/finland/"
+        "title": "Debt Crowdfunding platforms in Finland",
+        "href": "/platforms/debt/finland/"
     },
     {
-        title: "p2p-lending-finland",
-        href: "/platforms/p2p-lending/finland/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Finland",
+        "href": "/platforms/p2p-lending/finland/"
     },
     {
-        title: "reward-finland",
-        href: "/platforms/reward/finland/"
+        "title": "Reward Crowdfunding platforms in Finland",
+        "href": "/platforms/reward/finland/"
     },
     {
-        title: "donation-finland",
-        href: "/platforms/donation/finland/"
+        "title": "Donation Crowdfunding platforms in Finland",
+        "href": "/platforms/donation/finland/"
     },
     {
-        title: "buy-to-let-finland",
-        href: "/platforms/buy-to-let/finland/"
+        "title": "Buy-to-let Crowdfunding platforms in Finland",
+        "href": "/platforms/buy-to-let/finland/"
     },
     {
-        title: "mini-bonds-finland",
-        href: "/platforms/mini-bonds/finland/"
+        "title": "Mini-bonds Crowdfunding platforms in Finland",
+        "href": "/platforms/mini-bonds/finland/"
     },
     {
-        title: "equity-france",
-        href: "/platforms/equity/france/"
+        "title": "Equity Crowdfunding platforms in France",
+        "href": "/platforms/equity/france/"
     },
     {
-        title: "debt-france",
-        href: "/platforms/debt/france/"
+        "title": "Debt Crowdfunding platforms in France",
+        "href": "/platforms/debt/france/"
     },
     {
-        title: "p2p-lending-france",
-        href: "/platforms/p2p-lending/france/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in France",
+        "href": "/platforms/p2p-lending/france/"
     },
     {
-        title: "reward-france",
-        href: "/platforms/reward/france/"
+        "title": "Reward Crowdfunding platforms in France",
+        "href": "/platforms/reward/france/"
     },
     {
-        title: "donation-france",
-        href: "/platforms/donation/france/"
+        "title": "Donation Crowdfunding platforms in France",
+        "href": "/platforms/donation/france/"
     },
     {
-        title: "buy-to-let-france",
-        href: "/platforms/buy-to-let/france/"
+        "title": "Buy-to-let Crowdfunding platforms in France",
+        "href": "/platforms/buy-to-let/france/"
     },
     {
-        title: "mini-bonds-france",
-        href: "/platforms/mini-bonds/france/"
+        "title": "Mini-bonds Crowdfunding platforms in France",
+        "href": "/platforms/mini-bonds/france/"
     },
     {
-        title: "equity-germany",
-        href: "/platforms/equity/germany/"
+        "title": "Equity Crowdfunding platforms in Germany",
+        "href": "/platforms/equity/germany/"
     },
     {
-        title: "debt-germany",
-        href: "/platforms/debt/germany/"
+        "title": "Debt Crowdfunding platforms in Germany",
+        "href": "/platforms/debt/germany/"
     },
     {
-        title: "p2p-lending-germany",
-        href: "/platforms/p2p-lending/germany/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Germany",
+        "href": "/platforms/p2p-lending/germany/"
     },
     {
-        title: "reward-germany",
-        href: "/platforms/reward/germany/"
+        "title": "Reward Crowdfunding platforms in Germany",
+        "href": "/platforms/reward/germany/"
     },
     {
-        title: "donation-germany",
-        href: "/platforms/donation/germany/"
+        "title": "Donation Crowdfunding platforms in Germany",
+        "href": "/platforms/donation/germany/"
     },
     {
-        title: "buy-to-let-germany",
-        href: "/platforms/buy-to-let/germany/"
+        "title": "Buy-to-let Crowdfunding platforms in Germany",
+        "href": "/platforms/buy-to-let/germany/"
     },
     {
-        title: "mini-bonds-germany",
-        href: "/platforms/mini-bonds/germany/"
+        "title": "Mini-bonds Crowdfunding platforms in Germany",
+        "href": "/platforms/mini-bonds/germany/"
     },
     {
-        title: "equity-greece",
-        href: "/platforms/equity/greece/"
+        "title": "Equity Crowdfunding platforms in Greece",
+        "href": "/platforms/equity/greece/"
     },
     {
-        title: "debt-greece",
-        href: "/platforms/debt/greece/"
+        "title": "Debt Crowdfunding platforms in Greece",
+        "href": "/platforms/debt/greece/"
     },
     {
-        title: "p2p-lending-greece",
-        href: "/platforms/p2p-lending/greece/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Greece",
+        "href": "/platforms/p2p-lending/greece/"
     },
     {
-        title: "reward-greece",
-        href: "/platforms/reward/greece/"
+        "title": "Reward Crowdfunding platforms in Greece",
+        "href": "/platforms/reward/greece/"
     },
     {
-        title: "donation-greece",
-        href: "/platforms/donation/greece/"
+        "title": "Donation Crowdfunding platforms in Greece",
+        "href": "/platforms/donation/greece/"
     },
     {
-        title: "buy-to-let-greece",
-        href: "/platforms/buy-to-let/greece/"
+        "title": "Buy-to-let Crowdfunding platforms in Greece",
+        "href": "/platforms/buy-to-let/greece/"
     },
     {
-        title: "mini-bonds-greece",
-        href: "/platforms/mini-bonds/greece/"
+        "title": "Mini-bonds Crowdfunding platforms in Greece",
+        "href": "/platforms/mini-bonds/greece/"
     },
     {
-        title: "equity-hungary",
-        href: "/platforms/equity/hungary/"
+        "title": "Equity Crowdfunding platforms in Hungary",
+        "href": "/platforms/equity/hungary/"
     },
     {
-        title: "debt-hungary",
-        href: "/platforms/debt/hungary/"
+        "title": "Debt Crowdfunding platforms in Hungary",
+        "href": "/platforms/debt/hungary/"
     },
     {
-        title: "p2p-lending-hungary",
-        href: "/platforms/p2p-lending/hungary/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Hungary",
+        "href": "/platforms/p2p-lending/hungary/"
     },
     {
-        title: "reward-hungary",
-        href: "/platforms/reward/hungary/"
+        "title": "Reward Crowdfunding platforms in Hungary",
+        "href": "/platforms/reward/hungary/"
     },
     {
-        title: "donation-hungary",
-        href: "/platforms/donation/hungary/"
+        "title": "Donation Crowdfunding platforms in Hungary",
+        "href": "/platforms/donation/hungary/"
     },
     {
-        title: "buy-to-let-hungary",
-        href: "/platforms/buy-to-let/hungary/"
+        "title": "Buy-to-let Crowdfunding platforms in Hungary",
+        "href": "/platforms/buy-to-let/hungary/"
     },
     {
-        title: "mini-bonds-hungary",
-        href: "/platforms/mini-bonds/hungary/"
+        "title": "Mini-bonds Crowdfunding platforms in Hungary",
+        "href": "/platforms/mini-bonds/hungary/"
     },
     {
-        title: "equity-iceland",
-        href: "/platforms/equity/iceland/"
+        "title": "Equity Crowdfunding platforms in Iceland",
+        "href": "/platforms/equity/iceland/"
     },
     {
-        title: "debt-iceland",
-        href: "/platforms/debt/iceland/"
+        "title": "Debt Crowdfunding platforms in Iceland",
+        "href": "/platforms/debt/iceland/"
     },
     {
-        title: "p2p-lending-iceland",
-        href: "/platforms/p2p-lending/iceland/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Iceland",
+        "href": "/platforms/p2p-lending/iceland/"
     },
     {
-        title: "reward-iceland",
-        href: "/platforms/reward/iceland/"
+        "title": "Reward Crowdfunding platforms in Iceland",
+        "href": "/platforms/reward/iceland/"
     },
     {
-        title: "donation-iceland",
-        href: "/platforms/donation/iceland/"
+        "title": "Donation Crowdfunding platforms in Iceland",
+        "href": "/platforms/donation/iceland/"
     },
     {
-        title: "buy-to-let-iceland",
-        href: "/platforms/buy-to-let/iceland/"
+        "title": "Buy-to-let Crowdfunding platforms in Iceland",
+        "href": "/platforms/buy-to-let/iceland/"
     },
     {
-        title: "mini-bonds-iceland",
-        href: "/platforms/mini-bonds/iceland/"
+        "title": "Mini-bonds Crowdfunding platforms in Iceland",
+        "href": "/platforms/mini-bonds/iceland/"
     },
     {
-        title: "equity-ireland",
-        href: "/platforms/equity/ireland/"
+        "title": "Equity Crowdfunding platforms in Ireland",
+        "href": "/platforms/equity/ireland/"
     },
     {
-        title: "debt-ireland",
-        href: "/platforms/debt/ireland/"
+        "title": "Debt Crowdfunding platforms in Ireland",
+        "href": "/platforms/debt/ireland/"
     },
     {
-        title: "p2p-lending-ireland",
-        href: "/platforms/p2p-lending/ireland/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Ireland",
+        "href": "/platforms/p2p-lending/ireland/"
     },
     {
-        title: "reward-ireland",
-        href: "/platforms/reward/ireland/"
+        "title": "Reward Crowdfunding platforms in Ireland",
+        "href": "/platforms/reward/ireland/"
     },
     {
-        title: "donation-ireland",
-        href: "/platforms/donation/ireland/"
+        "title": "Donation Crowdfunding platforms in Ireland",
+        "href": "/platforms/donation/ireland/"
     },
     {
-        title: "buy-to-let-ireland",
-        href: "/platforms/buy-to-let/ireland/"
+        "title": "Buy-to-let Crowdfunding platforms in Ireland",
+        "href": "/platforms/buy-to-let/ireland/"
     },
     {
-        title: "mini-bonds-ireland",
-        href: "/platforms/mini-bonds/ireland/"
+        "title": "Mini-bonds Crowdfunding platforms in Ireland",
+        "href": "/platforms/mini-bonds/ireland/"
     },
     {
-        title: "equity-israel",
-        href: "/platforms/equity/israel/"
+        "title": "Equity Crowdfunding platforms in Israel",
+        "href": "/platforms/equity/israel/"
     },
     {
-        title: "debt-israel",
-        href: "/platforms/debt/israel/"
+        "title": "Debt Crowdfunding platforms in Israel",
+        "href": "/platforms/debt/israel/"
     },
     {
-        title: "p2p-lending-israel",
-        href: "/platforms/p2p-lending/israel/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Israel",
+        "href": "/platforms/p2p-lending/israel/"
     },
     {
-        title: "reward-israel",
-        href: "/platforms/reward/israel/"
+        "title": "Reward Crowdfunding platforms in Israel",
+        "href": "/platforms/reward/israel/"
     },
     {
-        title: "donation-israel",
-        href: "/platforms/donation/israel/"
+        "title": "Donation Crowdfunding platforms in Israel",
+        "href": "/platforms/donation/israel/"
     },
     {
-        title: "buy-to-let-israel",
-        href: "/platforms/buy-to-let/israel/"
+        "title": "Buy-to-let Crowdfunding platforms in Israel",
+        "href": "/platforms/buy-to-let/israel/"
     },
     {
-        title: "mini-bonds-israel",
-        href: "/platforms/mini-bonds/israel/"
+        "title": "Mini-bonds Crowdfunding platforms in Israel",
+        "href": "/platforms/mini-bonds/israel/"
     },
     {
-        title: "equity-italy",
-        href: "/platforms/equity/italy/"
+        "title": "Equity Crowdfunding platforms in Italy",
+        "href": "/platforms/equity/italy/"
     },
     {
-        title: "debt-italy",
-        href: "/platforms/debt/italy/"
+        "title": "Debt Crowdfunding platforms in Italy",
+        "href": "/platforms/debt/italy/"
     },
     {
-        title: "p2p-lending-italy",
-        href: "/platforms/p2p-lending/italy/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Italy",
+        "href": "/platforms/p2p-lending/italy/"
     },
     {
-        title: "reward-italy",
-        href: "/platforms/reward/italy/"
+        "title": "Reward Crowdfunding platforms in Italy",
+        "href": "/platforms/reward/italy/"
     },
     {
-        title: "donation-italy",
-        href: "/platforms/donation/italy/"
+        "title": "Donation Crowdfunding platforms in Italy",
+        "href": "/platforms/donation/italy/"
     },
     {
-        title: "buy-to-let-italy",
-        href: "/platforms/buy-to-let/italy/"
+        "title": "Buy-to-let Crowdfunding platforms in Italy",
+        "href": "/platforms/buy-to-let/italy/"
     },
     {
-        title: "mini-bonds-italy",
-        href: "/platforms/mini-bonds/italy/"
+        "title": "Mini-bonds Crowdfunding platforms in Italy",
+        "href": "/platforms/mini-bonds/italy/"
     },
     {
-        title: "equity-latvia",
-        href: "/platforms/equity/latvia/"
+        "title": "Equity Crowdfunding platforms in Latvia",
+        "href": "/platforms/equity/latvia/"
     },
     {
-        title: "debt-latvia",
-        href: "/platforms/debt/latvia/"
+        "title": "Debt Crowdfunding platforms in Latvia",
+        "href": "/platforms/debt/latvia/"
     },
     {
-        title: "p2p-lending-latvia",
-        href: "/platforms/p2p-lending/latvia/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Latvia",
+        "href": "/platforms/p2p-lending/latvia/"
     },
     {
-        title: "reward-latvia",
-        href: "/platforms/reward/latvia/"
+        "title": "Reward Crowdfunding platforms in Latvia",
+        "href": "/platforms/reward/latvia/"
     },
     {
-        title: "donation-latvia",
-        href: "/platforms/donation/latvia/"
+        "title": "Donation Crowdfunding platforms in Latvia",
+        "href": "/platforms/donation/latvia/"
     },
     {
-        title: "buy-to-let-latvia",
-        href: "/platforms/buy-to-let/latvia/"
+        "title": "Buy-to-let Crowdfunding platforms in Latvia",
+        "href": "/platforms/buy-to-let/latvia/"
     },
     {
-        title: "mini-bonds-latvia",
-        href: "/platforms/mini-bonds/latvia/"
+        "title": "Mini-bonds Crowdfunding platforms in Latvia",
+        "href": "/platforms/mini-bonds/latvia/"
     },
     {
-        title: "equity-liechtenstein",
-        href: "/platforms/equity/liechtenstein/"
+        "title": "Equity Crowdfunding platforms in Liechtenstein",
+        "href": "/platforms/equity/liechtenstein/"
     },
     {
-        title: "debt-liechtenstein",
-        href: "/platforms/debt/liechtenstein/"
+        "title": "Debt Crowdfunding platforms in Liechtenstein",
+        "href": "/platforms/debt/liechtenstein/"
     },
     {
-        title: "p2p-lending-liechtenstein",
-        href: "/platforms/p2p-lending/liechtenstein/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Liechtenstein",
+        "href": "/platforms/p2p-lending/liechtenstein/"
     },
     {
-        title: "reward-liechtenstein",
-        href: "/platforms/reward/liechtenstein/"
+        "title": "Reward Crowdfunding platforms in Liechtenstein",
+        "href": "/platforms/reward/liechtenstein/"
     },
     {
-        title: "donation-liechtenstein",
-        href: "/platforms/donation/liechtenstein/"
+        "title": "Donation Crowdfunding platforms in Liechtenstein",
+        "href": "/platforms/donation/liechtenstein/"
     },
     {
-        title: "buy-to-let-liechtenstein",
-        href: "/platforms/buy-to-let/liechtenstein/"
+        "title": "Buy-to-let Crowdfunding platforms in Liechtenstein",
+        "href": "/platforms/buy-to-let/liechtenstein/"
     },
     {
-        title: "mini-bonds-liechtenstein",
-        href: "/platforms/mini-bonds/liechtenstein/"
+        "title": "Mini-bonds Crowdfunding platforms in Liechtenstein",
+        "href": "/platforms/mini-bonds/liechtenstein/"
     },
     {
-        title: "equity-lithuania",
-        href: "/platforms/equity/lithuania/"
+        "title": "Equity Crowdfunding platforms in Lithuania",
+        "href": "/platforms/equity/lithuania/"
     },
     {
-        title: "debt-lithuania",
-        href: "/platforms/debt/lithuania/"
+        "title": "Debt Crowdfunding platforms in Lithuania",
+        "href": "/platforms/debt/lithuania/"
     },
     {
-        title: "p2p-lending-lithuania",
-        href: "/platforms/p2p-lending/lithuania/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Lithuania",
+        "href": "/platforms/p2p-lending/lithuania/"
     },
     {
-        title: "reward-lithuania",
-        href: "/platforms/reward/lithuania/"
+        "title": "Reward Crowdfunding platforms in Lithuania",
+        "href": "/platforms/reward/lithuania/"
     },
     {
-        title: "donation-lithuania",
-        href: "/platforms/donation/lithuania/"
+        "title": "Donation Crowdfunding platforms in Lithuania",
+        "href": "/platforms/donation/lithuania/"
     },
     {
-        title: "buy-to-let-lithuania",
-        href: "/platforms/buy-to-let/lithuania/"
+        "title": "Buy-to-let Crowdfunding platforms in Lithuania",
+        "href": "/platforms/buy-to-let/lithuania/"
     },
     {
-        title: "mini-bonds-lithuania",
-        href: "/platforms/mini-bonds/lithuania/"
+        "title": "Mini-bonds Crowdfunding platforms in Lithuania",
+        "href": "/platforms/mini-bonds/lithuania/"
     },
     {
-        title: "equity-luxembourg",
-        href: "/platforms/equity/luxembourg/"
+        "title": "Equity Crowdfunding platforms in Luxembourg",
+        "href": "/platforms/equity/luxembourg/"
     },
     {
-        title: "debt-luxembourg",
-        href: "/platforms/debt/luxembourg/"
+        "title": "Debt Crowdfunding platforms in Luxembourg",
+        "href": "/platforms/debt/luxembourg/"
     },
     {
-        title: "p2p-lending-luxembourg",
-        href: "/platforms/p2p-lending/luxembourg/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Luxembourg",
+        "href": "/platforms/p2p-lending/luxembourg/"
     },
     {
-        title: "reward-luxembourg",
-        href: "/platforms/reward/luxembourg/"
+        "title": "Reward Crowdfunding platforms in Luxembourg",
+        "href": "/platforms/reward/luxembourg/"
     },
     {
-        title: "donation-luxembourg",
-        href: "/platforms/donation/luxembourg/"
+        "title": "Donation Crowdfunding platforms in Luxembourg",
+        "href": "/platforms/donation/luxembourg/"
     },
     {
-        title: "buy-to-let-luxembourg",
-        href: "/platforms/buy-to-let/luxembourg/"
+        "title": "Buy-to-let Crowdfunding platforms in Luxembourg",
+        "href": "/platforms/buy-to-let/luxembourg/"
     },
     {
-        title: "mini-bonds-luxembourg",
-        href: "/platforms/mini-bonds/luxembourg/"
+        "title": "Mini-bonds Crowdfunding platforms in Luxembourg",
+        "href": "/platforms/mini-bonds/luxembourg/"
     },
     {
-        title: "equity-macedonia",
-        href: "/platforms/equity/macedonia/"
+        "title": "Equity Crowdfunding platforms in Macedonia",
+        "href": "/platforms/equity/macedonia/"
     },
     {
-        title: "debt-macedonia",
-        href: "/platforms/debt/macedonia/"
+        "title": "Debt Crowdfunding platforms in Macedonia",
+        "href": "/platforms/debt/macedonia/"
     },
     {
-        title: "p2p-lending-macedonia",
-        href: "/platforms/p2p-lending/macedonia/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Macedonia",
+        "href": "/platforms/p2p-lending/macedonia/"
     },
     {
-        title: "reward-macedonia",
-        href: "/platforms/reward/macedonia/"
+        "title": "Reward Crowdfunding platforms in Macedonia",
+        "href": "/platforms/reward/macedonia/"
     },
     {
-        title: "donation-macedonia",
-        href: "/platforms/donation/macedonia/"
+        "title": "Donation Crowdfunding platforms in Macedonia",
+        "href": "/platforms/donation/macedonia/"
     },
     {
-        title: "buy-to-let-macedonia",
-        href: "/platforms/buy-to-let/macedonia/"
+        "title": "Buy-to-let Crowdfunding platforms in Macedonia",
+        "href": "/platforms/buy-to-let/macedonia/"
     },
     {
-        title: "mini-bonds-macedonia",
-        href: "/platforms/mini-bonds/macedonia/"
+        "title": "Mini-bonds Crowdfunding platforms in Macedonia",
+        "href": "/platforms/mini-bonds/macedonia/"
     },
     {
-        title: "equity-malta",
-        href: "/platforms/equity/malta/"
+        "title": "Equity Crowdfunding platforms in Malta",
+        "href": "/platforms/equity/malta/"
     },
     {
-        title: "debt-malta",
-        href: "/platforms/debt/malta/"
+        "title": "Debt Crowdfunding platforms in Malta",
+        "href": "/platforms/debt/malta/"
     },
     {
-        title: "p2p-lending-malta",
-        href: "/platforms/p2p-lending/malta/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Malta",
+        "href": "/platforms/p2p-lending/malta/"
     },
     {
-        title: "reward-malta",
-        href: "/platforms/reward/malta/"
+        "title": "Reward Crowdfunding platforms in Malta",
+        "href": "/platforms/reward/malta/"
     },
     {
-        title: "donation-malta",
-        href: "/platforms/donation/malta/"
+        "title": "Donation Crowdfunding platforms in Malta",
+        "href": "/platforms/donation/malta/"
     },
     {
-        title: "buy-to-let-malta",
-        href: "/platforms/buy-to-let/malta/"
+        "title": "Buy-to-let Crowdfunding platforms in Malta",
+        "href": "/platforms/buy-to-let/malta/"
     },
     {
-        title: "mini-bonds-malta",
-        href: "/platforms/mini-bonds/malta/"
+        "title": "Mini-bonds Crowdfunding platforms in Malta",
+        "href": "/platforms/mini-bonds/malta/"
     },
     {
-        title: "equity-moldova",
-        href: "/platforms/equity/moldova/"
+        "title": "Equity Crowdfunding platforms in Moldova",
+        "href": "/platforms/equity/moldova/"
     },
     {
-        title: "debt-moldova",
-        href: "/platforms/debt/moldova/"
+        "title": "Debt Crowdfunding platforms in Moldova",
+        "href": "/platforms/debt/moldova/"
     },
     {
-        title: "p2p-lending-moldova",
-        href: "/platforms/p2p-lending/moldova/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Moldova",
+        "href": "/platforms/p2p-lending/moldova/"
     },
     {
-        title: "reward-moldova",
-        href: "/platforms/reward/moldova/"
+        "title": "Reward Crowdfunding platforms in Moldova",
+        "href": "/platforms/reward/moldova/"
     },
     {
-        title: "donation-moldova",
-        href: "/platforms/donation/moldova/"
+        "title": "Donation Crowdfunding platforms in Moldova",
+        "href": "/platforms/donation/moldova/"
     },
     {
-        title: "buy-to-let-moldova",
-        href: "/platforms/buy-to-let/moldova/"
+        "title": "Buy-to-let Crowdfunding platforms in Moldova",
+        "href": "/platforms/buy-to-let/moldova/"
     },
     {
-        title: "mini-bonds-moldova",
-        href: "/platforms/mini-bonds/moldova/"
+        "title": "Mini-bonds Crowdfunding platforms in Moldova",
+        "href": "/platforms/mini-bonds/moldova/"
     },
     {
-        title: "equity-monaco",
-        href: "/platforms/equity/monaco/"
+        "title": "Equity Crowdfunding platforms in Monaco",
+        "href": "/platforms/equity/monaco/"
     },
     {
-        title: "debt-monaco",
-        href: "/platforms/debt/monaco/"
+        "title": "Debt Crowdfunding platforms in Monaco",
+        "href": "/platforms/debt/monaco/"
     },
     {
-        title: "p2p-lending-monaco",
-        href: "/platforms/p2p-lending/monaco/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Monaco",
+        "href": "/platforms/p2p-lending/monaco/"
     },
     {
-        title: "reward-monaco",
-        href: "/platforms/reward/monaco/"
+        "title": "Reward Crowdfunding platforms in Monaco",
+        "href": "/platforms/reward/monaco/"
     },
     {
-        title: "donation-monaco",
-        href: "/platforms/donation/monaco/"
+        "title": "Donation Crowdfunding platforms in Monaco",
+        "href": "/platforms/donation/monaco/"
     },
     {
-        title: "buy-to-let-monaco",
-        href: "/platforms/buy-to-let/monaco/"
+        "title": "Buy-to-let Crowdfunding platforms in Monaco",
+        "href": "/platforms/buy-to-let/monaco/"
     },
     {
-        title: "mini-bonds-monaco",
-        href: "/platforms/mini-bonds/monaco/"
+        "title": "Mini-bonds Crowdfunding platforms in Monaco",
+        "href": "/platforms/mini-bonds/monaco/"
     },
     {
-        title: "equity-netherlands",
-        href: "/platforms/equity/netherlands/"
+        "title": "Equity Crowdfunding platforms in Netherlands",
+        "href": "/platforms/equity/netherlands/"
     },
     {
-        title: "debt-netherlands",
-        href: "/platforms/debt/netherlands/"
+        "title": "Debt Crowdfunding platforms in Netherlands",
+        "href": "/platforms/debt/netherlands/"
     },
     {
-        title: "p2p-lending-netherlands",
-        href: "/platforms/p2p-lending/netherlands/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Netherlands",
+        "href": "/platforms/p2p-lending/netherlands/"
     },
     {
-        title: "reward-netherlands",
-        href: "/platforms/reward/netherlands/"
+        "title": "Reward Crowdfunding platforms in Netherlands",
+        "href": "/platforms/reward/netherlands/"
     },
     {
-        title: "donation-netherlands",
-        href: "/platforms/donation/netherlands/"
+        "title": "Donation Crowdfunding platforms in Netherlands",
+        "href": "/platforms/donation/netherlands/"
     },
     {
-        title: "buy-to-let-netherlands",
-        href: "/platforms/buy-to-let/netherlands/"
+        "title": "Buy-to-let Crowdfunding platforms in Netherlands",
+        "href": "/platforms/buy-to-let/netherlands/"
     },
     {
-        title: "mini-bonds-netherlands",
-        href: "/platforms/mini-bonds/netherlands/"
+        "title": "Mini-bonds Crowdfunding platforms in Netherlands",
+        "href": "/platforms/mini-bonds/netherlands/"
     },
     {
-        title: "equity-norway",
-        href: "/platforms/equity/norway/"
+        "title": "Equity Crowdfunding platforms in Norway",
+        "href": "/platforms/equity/norway/"
     },
     {
-        title: "debt-norway",
-        href: "/platforms/debt/norway/"
+        "title": "Debt Crowdfunding platforms in Norway",
+        "href": "/platforms/debt/norway/"
     },
     {
-        title: "p2p-lending-norway",
-        href: "/platforms/p2p-lending/norway/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Norway",
+        "href": "/platforms/p2p-lending/norway/"
     },
     {
-        title: "reward-norway",
-        href: "/platforms/reward/norway/"
+        "title": "Reward Crowdfunding platforms in Norway",
+        "href": "/platforms/reward/norway/"
     },
     {
-        title: "donation-norway",
-        href: "/platforms/donation/norway/"
+        "title": "Donation Crowdfunding platforms in Norway",
+        "href": "/platforms/donation/norway/"
     },
     {
-        title: "buy-to-let-norway",
-        href: "/platforms/buy-to-let/norway/"
+        "title": "Buy-to-let Crowdfunding platforms in Norway",
+        "href": "/platforms/buy-to-let/norway/"
     },
     {
-        title: "mini-bonds-norway",
-        href: "/platforms/mini-bonds/norway/"
+        "title": "Mini-bonds Crowdfunding platforms in Norway",
+        "href": "/platforms/mini-bonds/norway/"
     },
     {
-        title: "equity-poland",
-        href: "/platforms/equity/poland/"
+        "title": "Equity Crowdfunding platforms in Poland",
+        "href": "/platforms/equity/poland/"
     },
     {
-        title: "debt-poland",
-        href: "/platforms/debt/poland/"
+        "title": "Debt Crowdfunding platforms in Poland",
+        "href": "/platforms/debt/poland/"
     },
     {
-        title: "p2p-lending-poland",
-        href: "/platforms/p2p-lending/poland/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Poland",
+        "href": "/platforms/p2p-lending/poland/"
     },
     {
-        title: "reward-poland",
-        href: "/platforms/reward/poland/"
+        "title": "Reward Crowdfunding platforms in Poland",
+        "href": "/platforms/reward/poland/"
     },
     {
-        title: "donation-poland",
-        href: "/platforms/donation/poland/"
+        "title": "Donation Crowdfunding platforms in Poland",
+        "href": "/platforms/donation/poland/"
     },
     {
-        title: "buy-to-let-poland",
-        href: "/platforms/buy-to-let/poland/"
+        "title": "Buy-to-let Crowdfunding platforms in Poland",
+        "href": "/platforms/buy-to-let/poland/"
     },
     {
-        title: "mini-bonds-poland",
-        href: "/platforms/mini-bonds/poland/"
+        "title": "Mini-bonds Crowdfunding platforms in Poland",
+        "href": "/platforms/mini-bonds/poland/"
     },
     {
-        title: "equity-portugal",
-        href: "/platforms/equity/portugal/"
+        "title": "Equity Crowdfunding platforms in Portugal",
+        "href": "/platforms/equity/portugal/"
     },
     {
-        title: "debt-portugal",
-        href: "/platforms/debt/portugal/"
+        "title": "Debt Crowdfunding platforms in Portugal",
+        "href": "/platforms/debt/portugal/"
     },
     {
-        title: "p2p-lending-portugal",
-        href: "/platforms/p2p-lending/portugal/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Portugal",
+        "href": "/platforms/p2p-lending/portugal/"
     },
     {
-        title: "reward-portugal",
-        href: "/platforms/reward/portugal/"
+        "title": "Reward Crowdfunding platforms in Portugal",
+        "href": "/platforms/reward/portugal/"
     },
     {
-        title: "donation-portugal",
-        href: "/platforms/donation/portugal/"
+        "title": "Donation Crowdfunding platforms in Portugal",
+        "href": "/platforms/donation/portugal/"
     },
     {
-        title: "buy-to-let-portugal",
-        href: "/platforms/buy-to-let/portugal/"
+        "title": "Buy-to-let Crowdfunding platforms in Portugal",
+        "href": "/platforms/buy-to-let/portugal/"
     },
     {
-        title: "mini-bonds-portugal",
-        href: "/platforms/mini-bonds/portugal/"
+        "title": "Mini-bonds Crowdfunding platforms in Portugal",
+        "href": "/platforms/mini-bonds/portugal/"
     },
     {
-        title: "equity-romania",
-        href: "/platforms/equity/romania/"
+        "title": "Equity Crowdfunding platforms in Romania",
+        "href": "/platforms/equity/romania/"
     },
     {
-        title: "debt-romania",
-        href: "/platforms/debt/romania/"
+        "title": "Debt Crowdfunding platforms in Romania",
+        "href": "/platforms/debt/romania/"
     },
     {
-        title: "p2p-lending-romania",
-        href: "/platforms/p2p-lending/romania/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Romania",
+        "href": "/platforms/p2p-lending/romania/"
     },
     {
-        title: "reward-romania",
-        href: "/platforms/reward/romania/"
+        "title": "Reward Crowdfunding platforms in Romania",
+        "href": "/platforms/reward/romania/"
     },
     {
-        title: "donation-romania",
-        href: "/platforms/donation/romania/"
+        "title": "Donation Crowdfunding platforms in Romania",
+        "href": "/platforms/donation/romania/"
     },
     {
-        title: "buy-to-let-romania",
-        href: "/platforms/buy-to-let/romania/"
+        "title": "Buy-to-let Crowdfunding platforms in Romania",
+        "href": "/platforms/buy-to-let/romania/"
     },
     {
-        title: "mini-bonds-romania",
-        href: "/platforms/mini-bonds/romania/"
+        "title": "Mini-bonds Crowdfunding platforms in Romania",
+        "href": "/platforms/mini-bonds/romania/"
     },
     {
-        title: "equity-turkey",
-        href: "/platforms/equity/turkey/"
+        "title": "Equity Crowdfunding platforms in Turkey",
+        "href": "/platforms/equity/turkey/"
     },
     {
-        title: "debt-turkey",
-        href: "/platforms/debt/turkey/"
+        "title": "Debt Crowdfunding platforms in Turkey",
+        "href": "/platforms/debt/turkey/"
     },
     {
-        title: "p2p-lending-turkey",
-        href: "/platforms/p2p-lending/turkey/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Turkey",
+        "href": "/platforms/p2p-lending/turkey/"
     },
     {
-        title: "reward-turkey",
-        href: "/platforms/reward/turkey/"
+        "title": "Reward Crowdfunding platforms in Turkey",
+        "href": "/platforms/reward/turkey/"
     },
     {
-        title: "donation-turkey",
-        href: "/platforms/donation/turkey/"
+        "title": "Donation Crowdfunding platforms in Turkey",
+        "href": "/platforms/donation/turkey/"
     },
     {
-        title: "buy-to-let-turkey",
-        href: "/platforms/buy-to-let/turkey/"
+        "title": "Buy-to-let Crowdfunding platforms in Turkey",
+        "href": "/platforms/buy-to-let/turkey/"
     },
     {
-        title: "mini-bonds-turkey",
-        href: "/platforms/mini-bonds/turkey/"
+        "title": "Mini-bonds Crowdfunding platforms in Turkey",
+        "href": "/platforms/mini-bonds/turkey/"
     },
     {
-        title: "equity-serbia",
-        href: "/platforms/equity/serbia/"
+        "title": "Equity Crowdfunding platforms in Serbia",
+        "href": "/platforms/equity/serbia/"
     },
     {
-        title: "debt-serbia",
-        href: "/platforms/debt/serbia/"
+        "title": "Debt Crowdfunding platforms in Serbia",
+        "href": "/platforms/debt/serbia/"
     },
     {
-        title: "p2p-lending-serbia",
-        href: "/platforms/p2p-lending/serbia/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Serbia",
+        "href": "/platforms/p2p-lending/serbia/"
     },
     {
-        title: "reward-serbia",
-        href: "/platforms/reward/serbia/"
+        "title": "Reward Crowdfunding platforms in Serbia",
+        "href": "/platforms/reward/serbia/"
     },
     {
-        title: "donation-serbia",
-        href: "/platforms/donation/serbia/"
+        "title": "Donation Crowdfunding platforms in Serbia",
+        "href": "/platforms/donation/serbia/"
     },
     {
-        title: "buy-to-let-serbia",
-        href: "/platforms/buy-to-let/serbia/"
+        "title": "Buy-to-let Crowdfunding platforms in Serbia",
+        "href": "/platforms/buy-to-let/serbia/"
     },
     {
-        title: "mini-bonds-serbia",
-        href: "/platforms/mini-bonds/serbia/"
+        "title": "Mini-bonds Crowdfunding platforms in Serbia",
+        "href": "/platforms/mini-bonds/serbia/"
     },
     {
-        title: "equity-slovakia",
-        href: "/platforms/equity/slovakia/"
+        "title": "Equity Crowdfunding platforms in Slovakia",
+        "href": "/platforms/equity/slovakia/"
     },
     {
-        title: "debt-slovakia",
-        href: "/platforms/debt/slovakia/"
+        "title": "Debt Crowdfunding platforms in Slovakia",
+        "href": "/platforms/debt/slovakia/"
     },
     {
-        title: "p2p-lending-slovakia",
-        href: "/platforms/p2p-lending/slovakia/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Slovakia",
+        "href": "/platforms/p2p-lending/slovakia/"
     },
     {
-        title: "reward-slovakia",
-        href: "/platforms/reward/slovakia/"
+        "title": "Reward Crowdfunding platforms in Slovakia",
+        "href": "/platforms/reward/slovakia/"
     },
     {
-        title: "donation-slovakia",
-        href: "/platforms/donation/slovakia/"
+        "title": "Donation Crowdfunding platforms in Slovakia",
+        "href": "/platforms/donation/slovakia/"
     },
     {
-        title: "buy-to-let-slovakia",
-        href: "/platforms/buy-to-let/slovakia/"
+        "title": "Buy-to-let Crowdfunding platforms in Slovakia",
+        "href": "/platforms/buy-to-let/slovakia/"
     },
     {
-        title: "mini-bonds-slovakia",
-        href: "/platforms/mini-bonds/slovakia/"
+        "title": "Mini-bonds Crowdfunding platforms in Slovakia",
+        "href": "/platforms/mini-bonds/slovakia/"
     },
     {
-        title: "equity-slovenia",
-        href: "/platforms/equity/slovenia/"
+        "title": "Equity Crowdfunding platforms in Slovenia",
+        "href": "/platforms/equity/slovenia/"
     },
     {
-        title: "debt-slovenia",
-        href: "/platforms/debt/slovenia/"
+        "title": "Debt Crowdfunding platforms in Slovenia",
+        "href": "/platforms/debt/slovenia/"
     },
     {
-        title: "p2p-lending-slovenia",
-        href: "/platforms/p2p-lending/slovenia/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Slovenia",
+        "href": "/platforms/p2p-lending/slovenia/"
     },
     {
-        title: "reward-slovenia",
-        href: "/platforms/reward/slovenia/"
+        "title": "Reward Crowdfunding platforms in Slovenia",
+        "href": "/platforms/reward/slovenia/"
     },
     {
-        title: "donation-slovenia",
-        href: "/platforms/donation/slovenia/"
+        "title": "Donation Crowdfunding platforms in Slovenia",
+        "href": "/platforms/donation/slovenia/"
     },
     {
-        title: "buy-to-let-slovenia",
-        href: "/platforms/buy-to-let/slovenia/"
+        "title": "Buy-to-let Crowdfunding platforms in Slovenia",
+        "href": "/platforms/buy-to-let/slovenia/"
     },
     {
-        title: "mini-bonds-slovenia",
-        href: "/platforms/mini-bonds/slovenia/"
+        "title": "Mini-bonds Crowdfunding platforms in Slovenia",
+        "href": "/platforms/mini-bonds/slovenia/"
     },
     {
-        title: "equity-spain",
-        href: "/platforms/equity/spain/"
+        "title": "Equity Crowdfunding platforms in Spain",
+        "href": "/platforms/equity/spain/"
     },
     {
-        title: "debt-spain",
-        href: "/platforms/debt/spain/"
+        "title": "Debt Crowdfunding platforms in Spain",
+        "href": "/platforms/debt/spain/"
     },
     {
-        title: "p2p-lending-spain",
-        href: "/platforms/p2p-lending/spain/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Spain",
+        "href": "/platforms/p2p-lending/spain/"
     },
     {
-        title: "reward-spain",
-        href: "/platforms/reward/spain/"
+        "title": "Reward Crowdfunding platforms in Spain",
+        "href": "/platforms/reward/spain/"
     },
     {
-        title: "donation-spain",
-        href: "/platforms/donation/spain/"
+        "title": "Donation Crowdfunding platforms in Spain",
+        "href": "/platforms/donation/spain/"
     },
     {
-        title: "buy-to-let-spain",
-        href: "/platforms/buy-to-let/spain/"
+        "title": "Buy-to-let Crowdfunding platforms in Spain",
+        "href": "/platforms/buy-to-let/spain/"
     },
     {
-        title: "mini-bonds-spain",
-        href: "/platforms/mini-bonds/spain/"
+        "title": "Mini-bonds Crowdfunding platforms in Spain",
+        "href": "/platforms/mini-bonds/spain/"
     },
     {
-        title: "equity-sweden",
-        href: "/platforms/equity/sweden/"
+        "title": "Equity Crowdfunding platforms in Sweden",
+        "href": "/platforms/equity/sweden/"
     },
     {
-        title: "debt-sweden",
-        href: "/platforms/debt/sweden/"
+        "title": "Debt Crowdfunding platforms in Sweden",
+        "href": "/platforms/debt/sweden/"
     },
     {
-        title: "p2p-lending-sweden",
-        href: "/platforms/p2p-lending/sweden/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Sweden",
+        "href": "/platforms/p2p-lending/sweden/"
     },
     {
-        title: "reward-sweden",
-        href: "/platforms/reward/sweden/"
+        "title": "Reward Crowdfunding platforms in Sweden",
+        "href": "/platforms/reward/sweden/"
     },
     {
-        title: "donation-sweden",
-        href: "/platforms/donation/sweden/"
+        "title": "Donation Crowdfunding platforms in Sweden",
+        "href": "/platforms/donation/sweden/"
     },
     {
-        title: "buy-to-let-sweden",
-        href: "/platforms/buy-to-let/sweden/"
+        "title": "Buy-to-let Crowdfunding platforms in Sweden",
+        "href": "/platforms/buy-to-let/sweden/"
     },
     {
-        title: "mini-bonds-sweden",
-        href: "/platforms/mini-bonds/sweden/"
+        "title": "Mini-bonds Crowdfunding platforms in Sweden",
+        "href": "/platforms/mini-bonds/sweden/"
     },
     {
-        title: "equity-switzerland",
-        href: "/platforms/equity/switzerland/"
+        "title": "Equity Crowdfunding platforms in Switzerland",
+        "href": "/platforms/equity/switzerland/"
     },
     {
-        title: "debt-switzerland",
-        href: "/platforms/debt/switzerland/"
+        "title": "Debt Crowdfunding platforms in Switzerland",
+        "href": "/platforms/debt/switzerland/"
     },
     {
-        title: "p2p-lending-switzerland",
-        href: "/platforms/p2p-lending/switzerland/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Switzerland",
+        "href": "/platforms/p2p-lending/switzerland/"
     },
     {
-        title: "reward-switzerland",
-        href: "/platforms/reward/switzerland/"
+        "title": "Reward Crowdfunding platforms in Switzerland",
+        "href": "/platforms/reward/switzerland/"
     },
     {
-        title: "donation-switzerland",
-        href: "/platforms/donation/switzerland/"
+        "title": "Donation Crowdfunding platforms in Switzerland",
+        "href": "/platforms/donation/switzerland/"
     },
     {
-        title: "buy-to-let-switzerland",
-        href: "/platforms/buy-to-let/switzerland/"
+        "title": "Buy-to-let Crowdfunding platforms in Switzerland",
+        "href": "/platforms/buy-to-let/switzerland/"
     },
     {
-        title: "mini-bonds-switzerland",
-        href: "/platforms/mini-bonds/switzerland/"
+        "title": "Mini-bonds Crowdfunding platforms in Switzerland",
+        "href": "/platforms/mini-bonds/switzerland/"
     },
     {
-        title: "equity-united-kingdom",
-        href: "/platforms/equity/united-kingdom/"
+        "title": "Equity Crowdfunding platforms in United Kingdom",
+        "href": "/platforms/equity/united-kingdom/"
     },
     {
-        title: "debt-united-kingdom",
-        href: "/platforms/debt/united-kingdom/"
+        "title": "Debt Crowdfunding platforms in United Kingdom",
+        "href": "/platforms/debt/united-kingdom/"
     },
     {
-        title: "p2p-lending-united-kingdom",
-        href: "/platforms/p2p-lending/united-kingdom/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in United Kingdom",
+        "href": "/platforms/p2p-lending/united-kingdom/"
     },
     {
-        title: "reward-united-kingdom",
-        href: "/platforms/reward/united-kingdom/"
+        "title": "Reward Crowdfunding platforms in United Kingdom",
+        "href": "/platforms/reward/united-kingdom/"
     },
     {
-        title: "donation-united-kingdom",
-        href: "/platforms/donation/united-kingdom/"
+        "title": "Donation Crowdfunding platforms in United Kingdom",
+        "href": "/platforms/donation/united-kingdom/"
     },
     {
-        title: "buy-to-let-united-kingdom",
-        href: "/platforms/buy-to-let/united-kingdom/"
+        "title": "Buy-to-let Crowdfunding platforms in United Kingdom",
+        "href": "/platforms/buy-to-let/united-kingdom/"
     },
     {
-        title: "mini-bonds-united-kingdom",
-        href: "/platforms/mini-bonds/united-kingdom/"
+        "title": "Mini-bonds Crowdfunding platforms in United Kingdom",
+        "href": "/platforms/mini-bonds/united-kingdom/"
     },
     {
-        title: "equity-ukraine",
-        href: "/platforms/equity/ukraine/"
+        "title": "Equity Crowdfunding platforms in Ukraine",
+        "href": "/platforms/equity/ukraine/"
     },
     {
-        title: "debt-ukraine",
-        href: "/platforms/debt/ukraine/"
+        "title": "Debt Crowdfunding platforms in Ukraine",
+        "href": "/platforms/debt/ukraine/"
     },
     {
-        title: "p2p-lending-ukraine",
-        href: "/platforms/p2p-lending/ukraine/"
+        "title": "Peer-to-Peer (P2P) Lending platforms in Ukraine",
+        "href": "/platforms/p2p-lending/ukraine/"
     },
     {
-        title: "reward-ukraine",
-        href: "/platforms/reward/ukraine/"
+        "title": "Reward Crowdfunding platforms in Ukraine",
+        "href": "/platforms/reward/ukraine/"
     },
     {
-        title: "donation-ukraine",
-        href: "/platforms/donation/ukraine/"
+        "title": "Donation Crowdfunding platforms in Ukraine",
+        "href": "/platforms/donation/ukraine/"
     },
     {
-        title: "buy-to-let-ukraine",
-        href: "/platforms/buy-to-let/ukraine/"
+        "title": "Buy-to-let Crowdfunding platforms in Ukraine",
+        "href": "/platforms/buy-to-let/ukraine/"
     },
     {
-        title: "mini-bonds-ukraine",
-        href: "/platforms/mini-bonds/ukraine/"
+        "title": "Mini-bonds Crowdfunding platforms in Ukraine",
+        "href": "/platforms/mini-bonds/ukraine/"
     },
+
     {
-        title: "real-estate-andorra",
-        href: "/platforms/real-estate/andorra/"
+        "title": "Real estate Crowdfunding platforms in Andorra",
+        "href": "/platforms/real-estate/andorra/"
     },
     {
-        title: "startups-andorra",
-        href: "/platforms/startups/andorra/"
+        "title": "Startups Crowdfunding platforms in Andorra",
+        "href": "/platforms/startups/andorra/"
     },
     {
-        title: "sustainability-andorra",
-        href: "/platforms/sustainability/andorra/"
+        "title": "SME Crowdfunding platforms in Andorra",
+        "href": "/platforms/sme/andorra/"
     },
     {
-        title: "litigation-andorra",
-        href: "/platforms/litigation/andorra/"
+        "title": "Sustainability Crowdfunding platforms in Andorra",
+        "href": "/platforms/sustainability/andorra/"
     },
     {
-        title: "green-energy-andorra",
-        href: "/platforms/green-energy/andorra/"
+        "title": "Litigation Crowdfunding platforms in Andorra",
+        "href": "/platforms/litigation/andorra/"
     },
     {
-        title: "health-science-andorra",
-        href: "/platforms/health-science/andorra/"
+        "title": "Green energy Crowdfunding platforms in Andorra",
+        "href": "/platforms/green-energy/andorra/"
     },
     {
-        title: "logistics-andorra",
-        href: "/platforms/logistics/andorra/"
+        "title": "Health & Science Crowdfunding platforms in Andorra",
+        "href": "/platforms/health-science/andorra/"
     },
     {
-        title: "personal-loans-andorra",
-        href: "/platforms/personal-loans/andorra/"
+        "title": "Logistics Crowdfunding platforms in Andorra",
+        "href": "/platforms/logistics/andorra/"
     },
     {
-        title: "art-andorra",
-        href: "/platforms/art/andorra/"
+        "title": "Personal loans Crowdfunding platforms in Andorra",
+        "href": "/platforms/personal-loans/andorra/"
     },
     {
-        title: "mortgages-andorra",
-        href: "/platforms/mortgages/andorra/"
+        "title": "Art Crowdfunding platforms in Andorra",
+        "href": "/platforms/art/andorra/"
     },
     {
-        title: "social-cause-andorra",
-        href: "/platforms/social-cause/andorra/"
+        "title": "Mortgages Crowdfunding platforms in Andorra",
+        "href": "/platforms/mortgages/andorra/"
     },
     {
-        title: "education-andorra",
-        href: "/platforms/education/andorra/"
+        "title": "Social cause Crowdfunding platforms in Andorra",
+        "href": "/platforms/social-cause/andorra/"
     },
     {
-        title: "farming-andorra",
-        href: "/platforms/farming/andorra/"
+        "title": "Education Crowdfunding platforms in Andorra",
+        "href": "/platforms/education/andorra/"
     },
     {
-        title: "sport-andorra",
-        href: "/platforms/sport/andorra/"
+        "title": "Farming Crowdfunding platforms in Andorra",
+        "href": "/platforms/farming/andorra/"
     },
     {
-        title: "maritime-andorra",
-        href: "/platforms/maritime/andorra/"
+        "title": "Sport Crowdfunding platforms in Andorra",
+        "href": "/platforms/sport/andorra/"
     },
     {
-        title: "real-estate-albania",
-        href: "/platforms/real-estate/albania/"
+        "title": "Maritime Crowdfunding platforms in Andorra",
+        "href": "/platforms/maritime/andorra/"
     },
     {
-        title: "startups-albania",
-        href: "/platforms/startups/albania/"
+        "title": "Real estate Crowdfunding platforms in Albania",
+        "href": "/platforms/real-estate/albania/"
     },
     {
-        title: "sustainability-albania",
-        href: "/platforms/sustainability/albania/"
+        "title": "Startups Crowdfunding platforms in Albania",
+        "href": "/platforms/startups/albania/"
     },
     {
-        title: "litigation-albania",
-        href: "/platforms/litigation/albania/"
+        "title": "SME Crowdfunding platforms in Albania",
+        "href": "/platforms/sme/albania/"
     },
     {
-        title: "green-energy-albania",
-        href: "/platforms/green-energy/albania/"
+        "title": "Sustainability Crowdfunding platforms in Albania",
+        "href": "/platforms/sustainability/albania/"
     },
     {
-        title: "health-science-albania",
-        href: "/platforms/health-science/albania/"
+        "title": "Litigation Crowdfunding platforms in Albania",
+        "href": "/platforms/litigation/albania/"
     },
     {
-        title: "logistics-albania",
-        href: "/platforms/logistics/albania/"
+        "title": "Green energy Crowdfunding platforms in Albania",
+        "href": "/platforms/green-energy/albania/"
     },
     {
-        title: "personal-loans-albania",
-        href: "/platforms/personal-loans/albania/"
+        "title": "Health & Science Crowdfunding platforms in Albania",
+        "href": "/platforms/health-science/albania/"
     },
     {
-        title: "art-albania",
-        href: "/platforms/art/albania/"
+        "title": "Logistics Crowdfunding platforms in Albania",
+        "href": "/platforms/logistics/albania/"
     },
     {
-        title: "mortgages-albania",
-        href: "/platforms/mortgages/albania/"
+        "title": "Personal loans Crowdfunding platforms in Albania",
+        "href": "/platforms/personal-loans/albania/"
     },
     {
-        title: "social-cause-albania",
-        href: "/platforms/social-cause/albania/"
+        "title": "Art Crowdfunding platforms in Albania",
+        "href": "/platforms/art/albania/"
     },
     {
-        title: "education-albania",
-        href: "/platforms/education/albania/"
+        "title": "Mortgages Crowdfunding platforms in Albania",
+        "href": "/platforms/mortgages/albania/"
     },
     {
-        title: "farming-albania",
-        href: "/platforms/farming/albania/"
+        "title": "Social cause Crowdfunding platforms in Albania",
+        "href": "/platforms/social-cause/albania/"
     },
     {
-        title: "sport-albania",
-        href: "/platforms/sport/albania/"
+        "title": "Education Crowdfunding platforms in Albania",
+        "href": "/platforms/education/albania/"
     },
     {
-        title: "maritime-albania",
-        href: "/platforms/maritime/albania/"
+        "title": "Farming Crowdfunding platforms in Albania",
+        "href": "/platforms/farming/albania/"
     },
     {
-        title: "real-estate-austria",
-        href: "/platforms/real-estate/austria/"
+        "title": "Sport Crowdfunding platforms in Albania",
+        "href": "/platforms/sport/albania/"
     },
     {
-        title: "startups-austria",
-        href: "/platforms/startups/austria/"
+        "title": "Maritime Crowdfunding platforms in Albania",
+        "href": "/platforms/maritime/albania/"
     },
     {
-        title: "sustainability-austria",
-        href: "/platforms/sustainability/austria/"
+        "title": "Real estate Crowdfunding platforms in Austria",
+        "href": "/platforms/real-estate/austria/"
     },
     {
-        title: "litigation-austria",
-        href: "/platforms/litigation/austria/"
+        "title": "Startups Crowdfunding platforms in Austria",
+        "href": "/platforms/startups/austria/"
     },
     {
-        title: "green-energy-austria",
-        href: "/platforms/green-energy/austria/"
+        "title": "SME Crowdfunding platforms in Austria",
+        "href": "/platforms/sme/austria/"
     },
     {
-        title: "health-science-austria",
-        href: "/platforms/health-science/austria/"
+        "title": "Sustainability Crowdfunding platforms in Austria",
+        "href": "/platforms/sustainability/austria/"
     },
     {
-        title: "logistics-austria",
-        href: "/platforms/logistics/austria/"
+        "title": "Litigation Crowdfunding platforms in Austria",
+        "href": "/platforms/litigation/austria/"
     },
     {
-        title: "personal-loans-austria",
-        href: "/platforms/personal-loans/austria/"
+        "title": "Green energy Crowdfunding platforms in Austria",
+        "href": "/platforms/green-energy/austria/"
     },
     {
-        title: "art-austria",
-        href: "/platforms/art/austria/"
+        "title": "Health & Science Crowdfunding platforms in Austria",
+        "href": "/platforms/health-science/austria/"
     },
     {
-        title: "mortgages-austria",
-        href: "/platforms/mortgages/austria/"
+        "title": "Logistics Crowdfunding platforms in Austria",
+        "href": "/platforms/logistics/austria/"
     },
     {
-        title: "social-cause-austria",
-        href: "/platforms/social-cause/austria/"
+        "title": "Personal loans Crowdfunding platforms in Austria",
+        "href": "/platforms/personal-loans/austria/"
     },
     {
-        title: "education-austria",
-        href: "/platforms/education/austria/"
+        "title": "Art Crowdfunding platforms in Austria",
+        "href": "/platforms/art/austria/"
     },
     {
-        title: "farming-austria",
-        href: "/platforms/farming/austria/"
+        "title": "Mortgages Crowdfunding platforms in Austria",
+        "href": "/platforms/mortgages/austria/"
     },
     {
-        title: "sport-austria",
-        href: "/platforms/sport/austria/"
+        "title": "Social cause Crowdfunding platforms in Austria",
+        "href": "/platforms/social-cause/austria/"
     },
     {
-        title: "maritime-austria",
-        href: "/platforms/maritime/austria/"
+        "title": "Education Crowdfunding platforms in Austria",
+        "href": "/platforms/education/austria/"
     },
     {
-        title: "real-estate-belgium",
-        href: "/platforms/real-estate/belgium/"
+        "title": "Farming Crowdfunding platforms in Austria",
+        "href": "/platforms/farming/austria/"
     },
     {
-        title: "startups-belgium",
-        href: "/platforms/startups/belgium/"
+        "title": "Sport Crowdfunding platforms in Austria",
+        "href": "/platforms/sport/austria/"
     },
     {
-        title: "sustainability-belgium",
-        href: "/platforms/sustainability/belgium/"
+        "title": "Maritime Crowdfunding platforms in Austria",
+        "href": "/platforms/maritime/austria/"
     },
     {
-        title: "litigation-belgium",
-        href: "/platforms/litigation/belgium/"
+        "title": "Real estate Crowdfunding platforms in Belgium",
+        "href": "/platforms/real-estate/belgium/"
     },
     {
-        title: "green-energy-belgium",
-        href: "/platforms/green-energy/belgium/"
+        "title": "Startups Crowdfunding platforms in Belgium",
+        "href": "/platforms/startups/belgium/"
     },
     {
-        title: "health-science-belgium",
-        href: "/platforms/health-science/belgium/"
+        "title": "SME Crowdfunding platforms in Belgium",
+        "href": "/platforms/sme/belgium/"
     },
     {
-        title: "logistics-belgium",
-        href: "/platforms/logistics/belgium/"
+        "title": "Sustainability Crowdfunding platforms in Belgium",
+        "href": "/platforms/sustainability/belgium/"
     },
     {
-        title: "personal-loans-belgium",
-        href: "/platforms/personal-loans/belgium/"
+        "title": "Litigation Crowdfunding platforms in Belgium",
+        "href": "/platforms/litigation/belgium/"
     },
     {
-        title: "art-belgium",
-        href: "/platforms/art/belgium/"
+        "title": "Green energy Crowdfunding platforms in Belgium",
+        "href": "/platforms/green-energy/belgium/"
     },
     {
-        title: "mortgages-belgium",
-        href: "/platforms/mortgages/belgium/"
+        "title": "Health & Science Crowdfunding platforms in Belgium",
+        "href": "/platforms/health-science/belgium/"
     },
     {
-        title: "social-cause-belgium",
-        href: "/platforms/social-cause/belgium/"
+        "title": "Logistics Crowdfunding platforms in Belgium",
+        "href": "/platforms/logistics/belgium/"
     },
     {
-        title: "education-belgium",
-        href: "/platforms/education/belgium/"
+        "title": "Personal loans Crowdfunding platforms in Belgium",
+        "href": "/platforms/personal-loans/belgium/"
     },
     {
-        title: "farming-belgium",
-        href: "/platforms/farming/belgium/"
+        "title": "Art Crowdfunding platforms in Belgium",
+        "href": "/platforms/art/belgium/"
     },
     {
-        title: "sport-belgium",
-        href: "/platforms/sport/belgium/"
+        "title": "Mortgages Crowdfunding platforms in Belgium",
+        "href": "/platforms/mortgages/belgium/"
     },
     {
-        title: "maritime-belgium",
-        href: "/platforms/maritime/belgium/"
+        "title": "Social cause Crowdfunding platforms in Belgium",
+        "href": "/platforms/social-cause/belgium/"
     },
     {
-        title: "real-estate-bulgaria",
-        href: "/platforms/real-estate/bulgaria/"
+        "title": "Education Crowdfunding platforms in Belgium",
+        "href": "/platforms/education/belgium/"
     },
     {
-        title: "startups-bulgaria",
-        href: "/platforms/startups/bulgaria/"
+        "title": "Farming Crowdfunding platforms in Belgium",
+        "href": "/platforms/farming/belgium/"
     },
     {
-        title: "sustainability-bulgaria",
-        href: "/platforms/sustainability/bulgaria/"
+        "title": "Sport Crowdfunding platforms in Belgium",
+        "href": "/platforms/sport/belgium/"
     },
     {
-        title: "litigation-bulgaria",
-        href: "/platforms/litigation/bulgaria/"
+        "title": "Maritime Crowdfunding platforms in Belgium",
+        "href": "/platforms/maritime/belgium/"
     },
     {
-        title: "green-energy-bulgaria",
-        href: "/platforms/green-energy/bulgaria/"
+        "title": "Real estate Crowdfunding platforms in Bulgaria",
+        "href": "/platforms/real-estate/bulgaria/"
     },
     {
-        title: "health-science-bulgaria",
-        href: "/platforms/health-science/bulgaria/"
+        "title": "Startups Crowdfunding platforms in Bulgaria",
+        "href": "/platforms/startups/bulgaria/"
     },
     {
-        title: "logistics-bulgaria",
-        href: "/platforms/logistics/bulgaria/"
+        "title": "SME Crowdfunding platforms in Bulgaria",
+        "href": "/platforms/sme/bulgaria/"
     },
     {
-        title: "personal-loans-bulgaria",
-        href: "/platforms/personal-loans/bulgaria/"
+        "title": "Sustainability Crowdfunding platforms in Bulgaria",
+        "href": "/platforms/sustainability/bulgaria/"
     },
     {
-        title: "art-bulgaria",
-        href: "/platforms/art/bulgaria/"
+        "title": "Litigation Crowdfunding platforms in Bulgaria",
+        "href": "/platforms/litigation/bulgaria/"
     },
     {
-        title: "mortgages-bulgaria",
-        href: "/platforms/mortgages/bulgaria/"
+        "title": "Green energy Crowdfunding platforms in Bulgaria",
+        "href": "/platforms/green-energy/bulgaria/"
     },
     {
-        title: "social-cause-bulgaria",
-        href: "/platforms/social-cause/bulgaria/"
+        "title": "Health & Science Crowdfunding platforms in Bulgaria",
+        "href": "/platforms/health-science/bulgaria/"
     },
     {
-        title: "education-bulgaria",
-        href: "/platforms/education/bulgaria/"
+        "title": "Logistics Crowdfunding platforms in Bulgaria",
+        "href": "/platforms/logistics/bulgaria/"
     },
     {
-        title: "farming-bulgaria",
-        href: "/platforms/farming/bulgaria/"
+        "title": "Personal loans Crowdfunding platforms in Bulgaria",
+        "href": "/platforms/personal-loans/bulgaria/"
     },
     {
-        title: "sport-bulgaria",
-        href: "/platforms/sport/bulgaria/"
+        "title": "Art Crowdfunding platforms in Bulgaria",
+        "href": "/platforms/art/bulgaria/"
     },
     {
-        title: "maritime-bulgaria",
-        href: "/platforms/maritime/bulgaria/"
+        "title": "Mortgages Crowdfunding platforms in Bulgaria",
+        "href": "/platforms/mortgages/bulgaria/"
     },
     {
-        title: "real-estate-croatia",
-        href: "/platforms/real-estate/croatia/"
+        "title": "Social cause Crowdfunding platforms in Bulgaria",
+        "href": "/platforms/social-cause/bulgaria/"
     },
     {
-        title: "startups-croatia",
-        href: "/platforms/startups/croatia/"
+        "title": "Education Crowdfunding platforms in Bulgaria",
+        "href": "/platforms/education/bulgaria/"
     },
     {
-        title: "sustainability-croatia",
-        href: "/platforms/sustainability/croatia/"
+        "title": "Farming Crowdfunding platforms in Bulgaria",
+        "href": "/platforms/farming/bulgaria/"
     },
     {
-        title: "litigation-croatia",
-        href: "/platforms/litigation/croatia/"
+        "title": "Sport Crowdfunding platforms in Bulgaria",
+        "href": "/platforms/sport/bulgaria/"
     },
     {
-        title: "green-energy-croatia",
-        href: "/platforms/green-energy/croatia/"
+        "title": "Maritime Crowdfunding platforms in Bulgaria",
+        "href": "/platforms/maritime/bulgaria/"
     },
     {
-        title: "health-science-croatia",
-        href: "/platforms/health-science/croatia/"
+        "title": "Real estate Crowdfunding platforms in Croatia",
+        "href": "/platforms/real-estate/croatia/"
     },
     {
-        title: "logistics-croatia",
-        href: "/platforms/logistics/croatia/"
+        "title": "Startups Crowdfunding platforms in Croatia",
+        "href": "/platforms/startups/croatia/"
     },
     {
-        title: "personal-loans-croatia",
-        href: "/platforms/personal-loans/croatia/"
+        "title": "SME Crowdfunding platforms in Croatia",
+        "href": "/platforms/sme/croatia/"
     },
     {
-        title: "art-croatia",
-        href: "/platforms/art/croatia/"
+        "title": "Sustainability Crowdfunding platforms in Croatia",
+        "href": "/platforms/sustainability/croatia/"
     },
     {
-        title: "mortgages-croatia",
-        href: "/platforms/mortgages/croatia/"
+        "title": "Litigation Crowdfunding platforms in Croatia",
+        "href": "/platforms/litigation/croatia/"
     },
     {
-        title: "social-cause-croatia",
-        href: "/platforms/social-cause/croatia/"
+        "title": "Green energy Crowdfunding platforms in Croatia",
+        "href": "/platforms/green-energy/croatia/"
     },
     {
-        title: "education-croatia",
-        href: "/platforms/education/croatia/"
+        "title": "Health & Science Crowdfunding platforms in Croatia",
+        "href": "/platforms/health-science/croatia/"
     },
     {
-        title: "farming-croatia",
-        href: "/platforms/farming/croatia/"
+        "title": "Logistics Crowdfunding platforms in Croatia",
+        "href": "/platforms/logistics/croatia/"
     },
     {
-        title: "sport-croatia",
-        href: "/platforms/sport/croatia/"
+        "title": "Personal loans Crowdfunding platforms in Croatia",
+        "href": "/platforms/personal-loans/croatia/"
     },
     {
-        title: "maritime-croatia",
-        href: "/platforms/maritime/croatia/"
+        "title": "Art Crowdfunding platforms in Croatia",
+        "href": "/platforms/art/croatia/"
     },
     {
-        title: "real-estate-cyprus",
-        href: "/platforms/real-estate/cyprus/"
+        "title": "Mortgages Crowdfunding platforms in Croatia",
+        "href": "/platforms/mortgages/croatia/"
     },
     {
-        title: "startups-cyprus",
-        href: "/platforms/startups/cyprus/"
+        "title": "Social cause Crowdfunding platforms in Croatia",
+        "href": "/platforms/social-cause/croatia/"
     },
     {
-        title: "sustainability-cyprus",
-        href: "/platforms/sustainability/cyprus/"
+        "title": "Education Crowdfunding platforms in Croatia",
+        "href": "/platforms/education/croatia/"
     },
     {
-        title: "litigation-cyprus",
-        href: "/platforms/litigation/cyprus/"
+        "title": "Farming Crowdfunding platforms in Croatia",
+        "href": "/platforms/farming/croatia/"
     },
     {
-        title: "green-energy-cyprus",
-        href: "/platforms/green-energy/cyprus/"
+        "title": "Sport Crowdfunding platforms in Croatia",
+        "href": "/platforms/sport/croatia/"
     },
     {
-        title: "health-science-cyprus",
-        href: "/platforms/health-science/cyprus/"
+        "title": "Maritime Crowdfunding platforms in Croatia",
+        "href": "/platforms/maritime/croatia/"
     },
     {
-        title: "logistics-cyprus",
-        href: "/platforms/logistics/cyprus/"
+        "title": "Real estate Crowdfunding platforms in Cyprus",
+        "href": "/platforms/real-estate/cyprus/"
     },
     {
-        title: "personal-loans-cyprus",
-        href: "/platforms/personal-loans/cyprus/"
+        "title": "Startups Crowdfunding platforms in Cyprus",
+        "href": "/platforms/startups/cyprus/"
     },
     {
-        title: "art-cyprus",
-        href: "/platforms/art/cyprus/"
+        "title": "SME Crowdfunding platforms in Cyprus",
+        "href": "/platforms/sme/cyprus/"
     },
     {
-        title: "mortgages-cyprus",
-        href: "/platforms/mortgages/cyprus/"
+        "title": "Sustainability Crowdfunding platforms in Cyprus",
+        "href": "/platforms/sustainability/cyprus/"
     },
     {
-        title: "social-cause-cyprus",
-        href: "/platforms/social-cause/cyprus/"
+        "title": "Litigation Crowdfunding platforms in Cyprus",
+        "href": "/platforms/litigation/cyprus/"
     },
     {
-        title: "education-cyprus",
-        href: "/platforms/education/cyprus/"
+        "title": "Green energy Crowdfunding platforms in Cyprus",
+        "href": "/platforms/green-energy/cyprus/"
     },
     {
-        title: "farming-cyprus",
-        href: "/platforms/farming/cyprus/"
+        "title": "Health & Science Crowdfunding platforms in Cyprus",
+        "href": "/platforms/health-science/cyprus/"
     },
     {
-        title: "sport-cyprus",
-        href: "/platforms/sport/cyprus/"
+        "title": "Logistics Crowdfunding platforms in Cyprus",
+        "href": "/platforms/logistics/cyprus/"
     },
     {
-        title: "maritime-cyprus",
-        href: "/platforms/maritime/cyprus/"
+        "title": "Personal loans Crowdfunding platforms in Cyprus",
+        "href": "/platforms/personal-loans/cyprus/"
     },
     {
-        title: "real-estate-czech-republic",
-        href: "/platforms/real-estate/czech-republic/"
+        "title": "Art Crowdfunding platforms in Cyprus",
+        "href": "/platforms/art/cyprus/"
     },
     {
-        title: "startups-czech-republic",
-        href: "/platforms/startups/czech-republic/"
+        "title": "Mortgages Crowdfunding platforms in Cyprus",
+        "href": "/platforms/mortgages/cyprus/"
     },
     {
-        title: "sustainability-czech-republic",
-        href: "/platforms/sustainability/czech-republic/"
+        "title": "Social cause Crowdfunding platforms in Cyprus",
+        "href": "/platforms/social-cause/cyprus/"
     },
     {
-        title: "litigation-czech-republic",
-        href: "/platforms/litigation/czech-republic/"
+        "title": "Education Crowdfunding platforms in Cyprus",
+        "href": "/platforms/education/cyprus/"
     },
     {
-        title: "green-energy-czech-republic",
-        href: "/platforms/green-energy/czech-republic/"
+        "title": "Farming Crowdfunding platforms in Cyprus",
+        "href": "/platforms/farming/cyprus/"
     },
     {
-        title: "health-science-czech-republic",
-        href: "/platforms/health-science/czech-republic/"
+        "title": "Sport Crowdfunding platforms in Cyprus",
+        "href": "/platforms/sport/cyprus/"
     },
     {
-        title: "logistics-czech-republic",
-        href: "/platforms/logistics/czech-republic/"
+        "title": "Maritime Crowdfunding platforms in Cyprus",
+        "href": "/platforms/maritime/cyprus/"
     },
     {
-        title: "personal-loans-czech-republic",
-        href: "/platforms/personal-loans/czech-republic/"
+        "title": "Real estate Crowdfunding platforms in Czech Republic",
+        "href": "/platforms/real-estate/czech-republic/"
     },
     {
-        title: "art-czech-republic",
-        href: "/platforms/art/czech-republic/"
+        "title": "Startups Crowdfunding platforms in Czech Republic",
+        "href": "/platforms/startups/czech-republic/"
     },
     {
-        title: "mortgages-czech-republic",
-        href: "/platforms/mortgages/czech-republic/"
+        "title": "SME Crowdfunding platforms in Czech Republic",
+        "href": "/platforms/sme/czech-republic/"
     },
     {
-        title: "social-cause-czech-republic",
-        href: "/platforms/social-cause/czech-republic/"
+        "title": "Sustainability Crowdfunding platforms in Czech Republic",
+        "href": "/platforms/sustainability/czech-republic/"
     },
     {
-        title: "education-czech-republic",
-        href: "/platforms/education/czech-republic/"
+        "title": "Litigation Crowdfunding platforms in Czech Republic",
+        "href": "/platforms/litigation/czech-republic/"
     },
     {
-        title: "farming-czech-republic",
-        href: "/platforms/farming/czech-republic/"
+        "title": "Green energy Crowdfunding platforms in Czech Republic",
+        "href": "/platforms/green-energy/czech-republic/"
     },
     {
-        title: "sport-czech-republic",
-        href: "/platforms/sport/czech-republic/"
+        "title": "Health & Science Crowdfunding platforms in Czech Republic",
+        "href": "/platforms/health-science/czech-republic/"
     },
     {
-        title: "maritime-czech-republic",
-        href: "/platforms/maritime/czech-republic/"
+        "title": "Logistics Crowdfunding platforms in Czech Republic",
+        "href": "/platforms/logistics/czech-republic/"
     },
     {
-        title: "real-estate-denmark",
-        href: "/platforms/real-estate/denmark/"
+        "title": "Personal loans Crowdfunding platforms in Czech Republic",
+        "href": "/platforms/personal-loans/czech-republic/"
     },
     {
-        title: "startups-denmark",
-        href: "/platforms/startups/denmark/"
+        "title": "Art Crowdfunding platforms in Czech Republic",
+        "href": "/platforms/art/czech-republic/"
     },
     {
-        title: "sustainability-denmark",
-        href: "/platforms/sustainability/denmark/"
+        "title": "Mortgages Crowdfunding platforms in Czech Republic",
+        "href": "/platforms/mortgages/czech-republic/"
     },
     {
-        title: "litigation-denmark",
-        href: "/platforms/litigation/denmark/"
+        "title": "Social cause Crowdfunding platforms in Czech Republic",
+        "href": "/platforms/social-cause/czech-republic/"
     },
     {
-        title: "green-energy-denmark",
-        href: "/platforms/green-energy/denmark/"
+        "title": "Education Crowdfunding platforms in Czech Republic",
+        "href": "/platforms/education/czech-republic/"
     },
     {
-        title: "health-science-denmark",
-        href: "/platforms/health-science/denmark/"
+        "title": "Farming Crowdfunding platforms in Czech Republic",
+        "href": "/platforms/farming/czech-republic/"
     },
     {
-        title: "logistics-denmark",
-        href: "/platforms/logistics/denmark/"
+        "title": "Sport Crowdfunding platforms in Czech Republic",
+        "href": "/platforms/sport/czech-republic/"
     },
     {
-        title: "personal-loans-denmark",
-        href: "/platforms/personal-loans/denmark/"
+        "title": "Maritime Crowdfunding platforms in Czech Republic",
+        "href": "/platforms/maritime/czech-republic/"
     },
     {
-        title: "art-denmark",
-        href: "/platforms/art/denmark/"
+        "title": "Real estate Crowdfunding platforms in Denmark",
+        "href": "/platforms/real-estate/denmark/"
     },
     {
-        title: "mortgages-denmark",
-        href: "/platforms/mortgages/denmark/"
+        "title": "Startups Crowdfunding platforms in Denmark",
+        "href": "/platforms/startups/denmark/"
     },
     {
-        title: "social-cause-denmark",
-        href: "/platforms/social-cause/denmark/"
+        "title": "SME Crowdfunding platforms in Denmark",
+        "href": "/platforms/sme/denmark/"
     },
     {
-        title: "education-denmark",
-        href: "/platforms/education/denmark/"
+        "title": "Sustainability Crowdfunding platforms in Denmark",
+        "href": "/platforms/sustainability/denmark/"
     },
     {
-        title: "farming-denmark",
-        href: "/platforms/farming/denmark/"
+        "title": "Litigation Crowdfunding platforms in Denmark",
+        "href": "/platforms/litigation/denmark/"
     },
     {
-        title: "sport-denmark",
-        href: "/platforms/sport/denmark/"
+        "title": "Green energy Crowdfunding platforms in Denmark",
+        "href": "/platforms/green-energy/denmark/"
     },
     {
-        title: "maritime-denmark",
-        href: "/platforms/maritime/denmark/"
+        "title": "Health & Science Crowdfunding platforms in Denmark",
+        "href": "/platforms/health-science/denmark/"
     },
     {
-        title: "real-estate-estonia",
-        href: "/platforms/real-estate/estonia/"
+        "title": "Logistics Crowdfunding platforms in Denmark",
+        "href": "/platforms/logistics/denmark/"
     },
     {
-        title: "startups-estonia",
-        href: "/platforms/startups/estonia/"
+        "title": "Personal loans Crowdfunding platforms in Denmark",
+        "href": "/platforms/personal-loans/denmark/"
     },
     {
-        title: "sustainability-estonia",
-        href: "/platforms/sustainability/estonia/"
+        "title": "Art Crowdfunding platforms in Denmark",
+        "href": "/platforms/art/denmark/"
     },
     {
-        title: "litigation-estonia",
-        href: "/platforms/litigation/estonia/"
+        "title": "Mortgages Crowdfunding platforms in Denmark",
+        "href": "/platforms/mortgages/denmark/"
     },
     {
-        title: "green-energy-estonia",
-        href: "/platforms/green-energy/estonia/"
+        "title": "Social cause Crowdfunding platforms in Denmark",
+        "href": "/platforms/social-cause/denmark/"
     },
     {
-        title: "health-science-estonia",
-        href: "/platforms/health-science/estonia/"
+        "title": "Education Crowdfunding platforms in Denmark",
+        "href": "/platforms/education/denmark/"
     },
     {
-        title: "logistics-estonia",
-        href: "/platforms/logistics/estonia/"
+        "title": "Farming Crowdfunding platforms in Denmark",
+        "href": "/platforms/farming/denmark/"
     },
     {
-        title: "personal-loans-estonia",
-        href: "/platforms/personal-loans/estonia/"
+        "title": "Sport Crowdfunding platforms in Denmark",
+        "href": "/platforms/sport/denmark/"
     },
     {
-        title: "art-estonia",
-        href: "/platforms/art/estonia/"
+        "title": "Maritime Crowdfunding platforms in Denmark",
+        "href": "/platforms/maritime/denmark/"
     },
     {
-        title: "mortgages-estonia",
-        href: "/platforms/mortgages/estonia/"
+        "title": "Real estate Crowdfunding platforms in Estonia",
+        "href": "/platforms/real-estate/estonia/"
     },
     {
-        title: "social-cause-estonia",
-        href: "/platforms/social-cause/estonia/"
+        "title": "Startups Crowdfunding platforms in Estonia",
+        "href": "/platforms/startups/estonia/"
     },
     {
-        title: "education-estonia",
-        href: "/platforms/education/estonia/"
+        "title": "SME Crowdfunding platforms in Estonia",
+        "href": "/platforms/sme/estonia/"
     },
     {
-        title: "farming-estonia",
-        href: "/platforms/farming/estonia/"
+        "title": "Sustainability Crowdfunding platforms in Estonia",
+        "href": "/platforms/sustainability/estonia/"
     },
     {
-        title: "sport-estonia",
-        href: "/platforms/sport/estonia/"
+        "title": "Litigation Crowdfunding platforms in Estonia",
+        "href": "/platforms/litigation/estonia/"
     },
     {
-        title: "maritime-estonia",
-        href: "/platforms/maritime/estonia/"
+        "title": "Green energy Crowdfunding platforms in Estonia",
+        "href": "/platforms/green-energy/estonia/"
     },
     {
-        title: "real-estate-finland",
-        href: "/platforms/real-estate/finland/"
+        "title": "Health & Science Crowdfunding platforms in Estonia",
+        "href": "/platforms/health-science/estonia/"
     },
     {
-        title: "startups-finland",
-        href: "/platforms/startups/finland/"
+        "title": "Logistics Crowdfunding platforms in Estonia",
+        "href": "/platforms/logistics/estonia/"
     },
     {
-        title: "sustainability-finland",
-        href: "/platforms/sustainability/finland/"
+        "title": "Personal loans Crowdfunding platforms in Estonia",
+        "href": "/platforms/personal-loans/estonia/"
     },
     {
-        title: "litigation-finland",
-        href: "/platforms/litigation/finland/"
+        "title": "Art Crowdfunding platforms in Estonia",
+        "href": "/platforms/art/estonia/"
     },
     {
-        title: "green-energy-finland",
-        href: "/platforms/green-energy/finland/"
+        "title": "Mortgages Crowdfunding platforms in Estonia",
+        "href": "/platforms/mortgages/estonia/"
     },
     {
-        title: "health-science-finland",
-        href: "/platforms/health-science/finland/"
+        "title": "Social cause Crowdfunding platforms in Estonia",
+        "href": "/platforms/social-cause/estonia/"
     },
     {
-        title: "logistics-finland",
-        href: "/platforms/logistics/finland/"
+        "title": "Education Crowdfunding platforms in Estonia",
+        "href": "/platforms/education/estonia/"
     },
     {
-        title: "personal-loans-finland",
-        href: "/platforms/personal-loans/finland/"
+        "title": "Farming Crowdfunding platforms in Estonia",
+        "href": "/platforms/farming/estonia/"
     },
     {
-        title: "art-finland",
-        href: "/platforms/art/finland/"
+        "title": "Sport Crowdfunding platforms in Estonia",
+        "href": "/platforms/sport/estonia/"
     },
     {
-        title: "mortgages-finland",
-        href: "/platforms/mortgages/finland/"
+        "title": "Maritime Crowdfunding platforms in Estonia",
+        "href": "/platforms/maritime/estonia/"
     },
     {
-        title: "social-cause-finland",
-        href: "/platforms/social-cause/finland/"
+        "title": "Real estate Crowdfunding platforms in Finland",
+        "href": "/platforms/real-estate/finland/"
     },
     {
-        title: "education-finland",
-        href: "/platforms/education/finland/"
+        "title": "Startups Crowdfunding platforms in Finland",
+        "href": "/platforms/startups/finland/"
     },
     {
-        title: "farming-finland",
-        href: "/platforms/farming/finland/"
+        "title": "SME Crowdfunding platforms in Finland",
+        "href": "/platforms/sme/finland/"
     },
     {
-        title: "sport-finland",
-        href: "/platforms/sport/finland/"
+        "title": "Sustainability Crowdfunding platforms in Finland",
+        "href": "/platforms/sustainability/finland/"
     },
     {
-        title: "maritime-finland",
-        href: "/platforms/maritime/finland/"
+        "title": "Litigation Crowdfunding platforms in Finland",
+        "href": "/platforms/litigation/finland/"
     },
     {
-        title: "real-estate-france",
-        href: "/platforms/real-estate/france/"
+        "title": "Green energy Crowdfunding platforms in Finland",
+        "href": "/platforms/green-energy/finland/"
     },
     {
-        title: "startups-france",
-        href: "/platforms/startups/france/"
+        "title": "Health & Science Crowdfunding platforms in Finland",
+        "href": "/platforms/health-science/finland/"
     },
     {
-        title: "sustainability-france",
-        href: "/platforms/sustainability/france/"
+        "title": "Logistics Crowdfunding platforms in Finland",
+        "href": "/platforms/logistics/finland/"
     },
     {
-        title: "litigation-france",
-        href: "/platforms/litigation/france/"
+        "title": "Personal loans Crowdfunding platforms in Finland",
+        "href": "/platforms/personal-loans/finland/"
     },
     {
-        title: "green-energy-france",
-        href: "/platforms/green-energy/france/"
+        "title": "Art Crowdfunding platforms in Finland",
+        "href": "/platforms/art/finland/"
     },
     {
-        title: "health-science-france",
-        href: "/platforms/health-science/france/"
+        "title": "Mortgages Crowdfunding platforms in Finland",
+        "href": "/platforms/mortgages/finland/"
     },
     {
-        title: "logistics-france",
-        href: "/platforms/logistics/france/"
+        "title": "Social cause Crowdfunding platforms in Finland",
+        "href": "/platforms/social-cause/finland/"
     },
     {
-        title: "personal-loans-france",
-        href: "/platforms/personal-loans/france/"
+        "title": "Education Crowdfunding platforms in Finland",
+        "href": "/platforms/education/finland/"
     },
     {
-        title: "art-france",
-        href: "/platforms/art/france/"
+        "title": "Farming Crowdfunding platforms in Finland",
+        "href": "/platforms/farming/finland/"
     },
     {
-        title: "mortgages-france",
-        href: "/platforms/mortgages/france/"
+        "title": "Sport Crowdfunding platforms in Finland",
+        "href": "/platforms/sport/finland/"
     },
     {
-        title: "social-cause-france",
-        href: "/platforms/social-cause/france/"
+        "title": "Maritime Crowdfunding platforms in Finland",
+        "href": "/platforms/maritime/finland/"
     },
     {
-        title: "education-france",
-        href: "/platforms/education/france/"
+        "title": "Real estate Crowdfunding platforms in France",
+        "href": "/platforms/real-estate/france/"
     },
     {
-        title: "farming-france",
-        href: "/platforms/farming/france/"
+        "title": "Startups Crowdfunding platforms in France",
+        "href": "/platforms/startups/france/"
     },
     {
-        title: "sport-france",
-        href: "/platforms/sport/france/"
+        "title": "SME Crowdfunding platforms in France",
+        "href": "/platforms/sme/france/"
     },
     {
-        title: "maritime-france",
-        href: "/platforms/maritime/france/"
+        "title": "Sustainability Crowdfunding platforms in France",
+        "href": "/platforms/sustainability/france/"
     },
     {
-        title: "real-estate-germany",
-        href: "/platforms/real-estate/germany/"
+        "title": "Litigation Crowdfunding platforms in France",
+        "href": "/platforms/litigation/france/"
     },
     {
-        title: "startups-germany",
-        href: "/platforms/startups/germany/"
+        "title": "Green energy Crowdfunding platforms in France",
+        "href": "/platforms/green-energy/france/"
     },
     {
-        title: "sustainability-germany",
-        href: "/platforms/sustainability/germany/"
+        "title": "Health & Science Crowdfunding platforms in France",
+        "href": "/platforms/health-science/france/"
     },
     {
-        title: "litigation-germany",
-        href: "/platforms/litigation/germany/"
+        "title": "Logistics Crowdfunding platforms in France",
+        "href": "/platforms/logistics/france/"
     },
     {
-        title: "green-energy-germany",
-        href: "/platforms/green-energy/germany/"
+        "title": "Personal loans Crowdfunding platforms in France",
+        "href": "/platforms/personal-loans/france/"
     },
     {
-        title: "health-science-germany",
-        href: "/platforms/health-science/germany/"
+        "title": "Art Crowdfunding platforms in France",
+        "href": "/platforms/art/france/"
     },
     {
-        title: "logistics-germany",
-        href: "/platforms/logistics/germany/"
+        "title": "Mortgages Crowdfunding platforms in France",
+        "href": "/platforms/mortgages/france/"
     },
     {
-        title: "personal-loans-germany",
-        href: "/platforms/personal-loans/germany/"
+        "title": "Social cause Crowdfunding platforms in France",
+        "href": "/platforms/social-cause/france/"
     },
     {
-        title: "art-germany",
-        href: "/platforms/art/germany/"
+        "title": "Education Crowdfunding platforms in France",
+        "href": "/platforms/education/france/"
     },
     {
-        title: "mortgages-germany",
-        href: "/platforms/mortgages/germany/"
+        "title": "Farming Crowdfunding platforms in France",
+        "href": "/platforms/farming/france/"
     },
     {
-        title: "social-cause-germany",
-        href: "/platforms/social-cause/germany/"
+        "title": "Sport Crowdfunding platforms in France",
+        "href": "/platforms/sport/france/"
     },
     {
-        title: "education-germany",
-        href: "/platforms/education/germany/"
+        "title": "Maritime Crowdfunding platforms in France",
+        "href": "/platforms/maritime/france/"
     },
     {
-        title: "farming-germany",
-        href: "/platforms/farming/germany/"
+        "title": "Real estate Crowdfunding platforms in Germany",
+        "href": "/platforms/real-estate/germany/"
     },
     {
-        title: "sport-germany",
-        href: "/platforms/sport/germany/"
+        "title": "Startups Crowdfunding platforms in Germany",
+        "href": "/platforms/startups/germany/"
     },
     {
-        title: "maritime-germany",
-        href: "/platforms/maritime/germany/"
+        "title": "SME Crowdfunding platforms in Germany",
+        "href": "/platforms/sme/germany/"
     },
     {
-        title: "real-estate-greece",
-        href: "/platforms/real-estate/greece/"
+        "title": "Sustainability Crowdfunding platforms in Germany",
+        "href": "/platforms/sustainability/germany/"
     },
     {
-        title: "startups-greece",
-        href: "/platforms/startups/greece/"
+        "title": "Litigation Crowdfunding platforms in Germany",
+        "href": "/platforms/litigation/germany/"
     },
     {
-        title: "sustainability-greece",
-        href: "/platforms/sustainability/greece/"
+        "title": "Green energy Crowdfunding platforms in Germany",
+        "href": "/platforms/green-energy/germany/"
     },
     {
-        title: "litigation-greece",
-        href: "/platforms/litigation/greece/"
+        "title": "Health & Science Crowdfunding platforms in Germany",
+        "href": "/platforms/health-science/germany/"
     },
     {
-        title: "green-energy-greece",
-        href: "/platforms/green-energy/greece/"
+        "title": "Logistics Crowdfunding platforms in Germany",
+        "href": "/platforms/logistics/germany/"
     },
     {
-        title: "health-science-greece",
-        href: "/platforms/health-science/greece/"
+        "title": "Personal loans Crowdfunding platforms in Germany",
+        "href": "/platforms/personal-loans/germany/"
     },
     {
-        title: "logistics-greece",
-        href: "/platforms/logistics/greece/"
+        "title": "Art Crowdfunding platforms in Germany",
+        "href": "/platforms/art/germany/"
     },
     {
-        title: "personal-loans-greece",
-        href: "/platforms/personal-loans/greece/"
+        "title": "Mortgages Crowdfunding platforms in Germany",
+        "href": "/platforms/mortgages/germany/"
     },
     {
-        title: "art-greece",
-        href: "/platforms/art/greece/"
+        "title": "Social cause Crowdfunding platforms in Germany",
+        "href": "/platforms/social-cause/germany/"
     },
     {
-        title: "mortgages-greece",
-        href: "/platforms/mortgages/greece/"
+        "title": "Education Crowdfunding platforms in Germany",
+        "href": "/platforms/education/germany/"
     },
     {
-        title: "social-cause-greece",
-        href: "/platforms/social-cause/greece/"
+        "title": "Farming Crowdfunding platforms in Germany",
+        "href": "/platforms/farming/germany/"
     },
     {
-        title: "education-greece",
-        href: "/platforms/education/greece/"
+        "title": "Sport Crowdfunding platforms in Germany",
+        "href": "/platforms/sport/germany/"
     },
     {
-        title: "farming-greece",
-        href: "/platforms/farming/greece/"
+        "title": "Maritime Crowdfunding platforms in Germany",
+        "href": "/platforms/maritime/germany/"
     },
     {
-        title: "sport-greece",
-        href: "/platforms/sport/greece/"
+        "title": "Real estate Crowdfunding platforms in Greece",
+        "href": "/platforms/real-estate/greece/"
     },
     {
-        title: "maritime-greece",
-        href: "/platforms/maritime/greece/"
+        "title": "Startups Crowdfunding platforms in Greece",
+        "href": "/platforms/startups/greece/"
     },
     {
-        title: "real-estate-hungary",
-        href: "/platforms/real-estate/hungary/"
+        "title": "SME Crowdfunding platforms in Greece",
+        "href": "/platforms/sme/greece/"
     },
     {
-        title: "startups-hungary",
-        href: "/platforms/startups/hungary/"
+        "title": "Sustainability Crowdfunding platforms in Greece",
+        "href": "/platforms/sustainability/greece/"
     },
     {
-        title: "sustainability-hungary",
-        href: "/platforms/sustainability/hungary/"
+        "title": "Litigation Crowdfunding platforms in Greece",
+        "href": "/platforms/litigation/greece/"
     },
     {
-        title: "litigation-hungary",
-        href: "/platforms/litigation/hungary/"
+        "title": "Green energy Crowdfunding platforms in Greece",
+        "href": "/platforms/green-energy/greece/"
     },
     {
-        title: "green-energy-hungary",
-        href: "/platforms/green-energy/hungary/"
+        "title": "Health & Science Crowdfunding platforms in Greece",
+        "href": "/platforms/health-science/greece/"
     },
     {
-        title: "health-science-hungary",
-        href: "/platforms/health-science/hungary/"
+        "title": "Logistics Crowdfunding platforms in Greece",
+        "href": "/platforms/logistics/greece/"
     },
     {
-        title: "logistics-hungary",
-        href: "/platforms/logistics/hungary/"
+        "title": "Personal loans Crowdfunding platforms in Greece",
+        "href": "/platforms/personal-loans/greece/"
     },
     {
-        title: "personal-loans-hungary",
-        href: "/platforms/personal-loans/hungary/"
+        "title": "Art Crowdfunding platforms in Greece",
+        "href": "/platforms/art/greece/"
     },
     {
-        title: "art-hungary",
-        href: "/platforms/art/hungary/"
+        "title": "Mortgages Crowdfunding platforms in Greece",
+        "href": "/platforms/mortgages/greece/"
     },
     {
-        title: "mortgages-hungary",
-        href: "/platforms/mortgages/hungary/"
+        "title": "Social cause Crowdfunding platforms in Greece",
+        "href": "/platforms/social-cause/greece/"
     },
     {
-        title: "social-cause-hungary",
-        href: "/platforms/social-cause/hungary/"
+        "title": "Education Crowdfunding platforms in Greece",
+        "href": "/platforms/education/greece/"
     },
     {
-        title: "education-hungary",
-        href: "/platforms/education/hungary/"
+        "title": "Farming Crowdfunding platforms in Greece",
+        "href": "/platforms/farming/greece/"
     },
     {
-        title: "farming-hungary",
-        href: "/platforms/farming/hungary/"
+        "title": "Sport Crowdfunding platforms in Greece",
+        "href": "/platforms/sport/greece/"
     },
     {
-        title: "sport-hungary",
-        href: "/platforms/sport/hungary/"
+        "title": "Maritime Crowdfunding platforms in Greece",
+        "href": "/platforms/maritime/greece/"
     },
     {
-        title: "maritime-hungary",
-        href: "/platforms/maritime/hungary/"
+        "title": "Real estate Crowdfunding platforms in Hungary",
+        "href": "/platforms/real-estate/hungary/"
     },
     {
-        title: "real-estate-iceland",
-        href: "/platforms/real-estate/iceland/"
+        "title": "Startups Crowdfunding platforms in Hungary",
+        "href": "/platforms/startups/hungary/"
     },
     {
-        title: "startups-iceland",
-        href: "/platforms/startups/iceland/"
+        "title": "SME Crowdfunding platforms in Hungary",
+        "href": "/platforms/sme/hungary/"
     },
     {
-        title: "sustainability-iceland",
-        href: "/platforms/sustainability/iceland/"
+        "title": "Sustainability Crowdfunding platforms in Hungary",
+        "href": "/platforms/sustainability/hungary/"
     },
     {
-        title: "litigation-iceland",
-        href: "/platforms/litigation/iceland/"
+        "title": "Litigation Crowdfunding platforms in Hungary",
+        "href": "/platforms/litigation/hungary/"
     },
     {
-        title: "green-energy-iceland",
-        href: "/platforms/green-energy/iceland/"
+        "title": "Green energy Crowdfunding platforms in Hungary",
+        "href": "/platforms/green-energy/hungary/"
     },
     {
-        title: "health-science-iceland",
-        href: "/platforms/health-science/iceland/"
+        "title": "Health & Science Crowdfunding platforms in Hungary",
+        "href": "/platforms/health-science/hungary/"
     },
     {
-        title: "logistics-iceland",
-        href: "/platforms/logistics/iceland/"
+        "title": "Logistics Crowdfunding platforms in Hungary",
+        "href": "/platforms/logistics/hungary/"
     },
     {
-        title: "personal-loans-iceland",
-        href: "/platforms/personal-loans/iceland/"
+        "title": "Personal loans Crowdfunding platforms in Hungary",
+        "href": "/platforms/personal-loans/hungary/"
     },
     {
-        title: "art-iceland",
-        href: "/platforms/art/iceland/"
+        "title": "Art Crowdfunding platforms in Hungary",
+        "href": "/platforms/art/hungary/"
     },
     {
-        title: "mortgages-iceland",
-        href: "/platforms/mortgages/iceland/"
+        "title": "Mortgages Crowdfunding platforms in Hungary",
+        "href": "/platforms/mortgages/hungary/"
     },
     {
-        title: "social-cause-iceland",
-        href: "/platforms/social-cause/iceland/"
+        "title": "Social cause Crowdfunding platforms in Hungary",
+        "href": "/platforms/social-cause/hungary/"
     },
     {
-        title: "education-iceland",
-        href: "/platforms/education/iceland/"
+        "title": "Education Crowdfunding platforms in Hungary",
+        "href": "/platforms/education/hungary/"
     },
     {
-        title: "farming-iceland",
-        href: "/platforms/farming/iceland/"
+        "title": "Farming Crowdfunding platforms in Hungary",
+        "href": "/platforms/farming/hungary/"
     },
     {
-        title: "sport-iceland",
-        href: "/platforms/sport/iceland/"
+        "title": "Sport Crowdfunding platforms in Hungary",
+        "href": "/platforms/sport/hungary/"
     },
     {
-        title: "maritime-iceland",
-        href: "/platforms/maritime/iceland/"
+        "title": "Maritime Crowdfunding platforms in Hungary",
+        "href": "/platforms/maritime/hungary/"
     },
     {
-        title: "real-estate-ireland",
-        href: "/platforms/real-estate/ireland/"
+        "title": "Real estate Crowdfunding platforms in Iceland",
+        "href": "/platforms/real-estate/iceland/"
     },
     {
-        title: "startups-ireland",
-        href: "/platforms/startups/ireland/"
+        "title": "Startups Crowdfunding platforms in Iceland",
+        "href": "/platforms/startups/iceland/"
     },
     {
-        title: "sustainability-ireland",
-        href: "/platforms/sustainability/ireland/"
+        "title": "SME Crowdfunding platforms in Iceland",
+        "href": "/platforms/sme/iceland/"
     },
     {
-        title: "litigation-ireland",
-        href: "/platforms/litigation/ireland/"
+        "title": "Sustainability Crowdfunding platforms in Iceland",
+        "href": "/platforms/sustainability/iceland/"
     },
     {
-        title: "green-energy-ireland",
-        href: "/platforms/green-energy/ireland/"
+        "title": "Litigation Crowdfunding platforms in Iceland",
+        "href": "/platforms/litigation/iceland/"
     },
     {
-        title: "health-science-ireland",
-        href: "/platforms/health-science/ireland/"
+        "title": "Green energy Crowdfunding platforms in Iceland",
+        "href": "/platforms/green-energy/iceland/"
     },
     {
-        title: "logistics-ireland",
-        href: "/platforms/logistics/ireland/"
+        "title": "Health & Science Crowdfunding platforms in Iceland",
+        "href": "/platforms/health-science/iceland/"
     },
     {
-        title: "personal-loans-ireland",
-        href: "/platforms/personal-loans/ireland/"
+        "title": "Logistics Crowdfunding platforms in Iceland",
+        "href": "/platforms/logistics/iceland/"
     },
     {
-        title: "art-ireland",
-        href: "/platforms/art/ireland/"
+        "title": "Personal loans Crowdfunding platforms in Iceland",
+        "href": "/platforms/personal-loans/iceland/"
     },
     {
-        title: "mortgages-ireland",
-        href: "/platforms/mortgages/ireland/"
+        "title": "Art Crowdfunding platforms in Iceland",
+        "href": "/platforms/art/iceland/"
     },
     {
-        title: "social-cause-ireland",
-        href: "/platforms/social-cause/ireland/"
+        "title": "Mortgages Crowdfunding platforms in Iceland",
+        "href": "/platforms/mortgages/iceland/"
     },
     {
-        title: "education-ireland",
-        href: "/platforms/education/ireland/"
+        "title": "Social cause Crowdfunding platforms in Iceland",
+        "href": "/platforms/social-cause/iceland/"
     },
     {
-        title: "farming-ireland",
-        href: "/platforms/farming/ireland/"
+        "title": "Education Crowdfunding platforms in Iceland",
+        "href": "/platforms/education/iceland/"
     },
     {
-        title: "sport-ireland",
-        href: "/platforms/sport/ireland/"
+        "title": "Farming Crowdfunding platforms in Iceland",
+        "href": "/platforms/farming/iceland/"
     },
     {
-        title: "maritime-ireland",
-        href: "/platforms/maritime/ireland/"
+        "title": "Sport Crowdfunding platforms in Iceland",
+        "href": "/platforms/sport/iceland/"
     },
     {
-        title: "real-estate-israel",
-        href: "/platforms/real-estate/israel/"
+        "title": "Maritime Crowdfunding platforms in Iceland",
+        "href": "/platforms/maritime/iceland/"
     },
     {
-        title: "startups-israel",
-        href: "/platforms/startups/israel/"
+        "title": "Real estate Crowdfunding platforms in Ireland",
+        "href": "/platforms/real-estate/ireland/"
     },
     {
-        title: "sustainability-israel",
-        href: "/platforms/sustainability/israel/"
+        "title": "Startups Crowdfunding platforms in Ireland",
+        "href": "/platforms/startups/ireland/"
     },
     {
-        title: "litigation-israel",
-        href: "/platforms/litigation/israel/"
+        "title": "SME Crowdfunding platforms in Ireland",
+        "href": "/platforms/sme/ireland/"
     },
     {
-        title: "green-energy-israel",
-        href: "/platforms/green-energy/israel/"
+        "title": "Sustainability Crowdfunding platforms in Ireland",
+        "href": "/platforms/sustainability/ireland/"
     },
     {
-        title: "health-science-israel",
-        href: "/platforms/health-science/israel/"
+        "title": "Litigation Crowdfunding platforms in Ireland",
+        "href": "/platforms/litigation/ireland/"
     },
     {
-        title: "logistics-israel",
-        href: "/platforms/logistics/israel/"
+        "title": "Green energy Crowdfunding platforms in Ireland",
+        "href": "/platforms/green-energy/ireland/"
     },
     {
-        title: "personal-loans-israel",
-        href: "/platforms/personal-loans/israel/"
+        "title": "Health & Science Crowdfunding platforms in Ireland",
+        "href": "/platforms/health-science/ireland/"
     },
     {
-        title: "art-israel",
-        href: "/platforms/art/israel/"
+        "title": "Logistics Crowdfunding platforms in Ireland",
+        "href": "/platforms/logistics/ireland/"
     },
     {
-        title: "mortgages-israel",
-        href: "/platforms/mortgages/israel/"
+        "title": "Personal loans Crowdfunding platforms in Ireland",
+        "href": "/platforms/personal-loans/ireland/"
     },
     {
-        title: "social-cause-israel",
-        href: "/platforms/social-cause/israel/"
+        "title": "Art Crowdfunding platforms in Ireland",
+        "href": "/platforms/art/ireland/"
     },
     {
-        title: "education-israel",
-        href: "/platforms/education/israel/"
+        "title": "Mortgages Crowdfunding platforms in Ireland",
+        "href": "/platforms/mortgages/ireland/"
     },
     {
-        title: "farming-israel",
-        href: "/platforms/farming/israel/"
+        "title": "Social cause Crowdfunding platforms in Ireland",
+        "href": "/platforms/social-cause/ireland/"
     },
     {
-        title: "sport-israel",
-        href: "/platforms/sport/israel/"
+        "title": "Education Crowdfunding platforms in Ireland",
+        "href": "/platforms/education/ireland/"
     },
     {
-        title: "maritime-israel",
-        href: "/platforms/maritime/israel/"
+        "title": "Farming Crowdfunding platforms in Ireland",
+        "href": "/platforms/farming/ireland/"
     },
     {
-        title: "real-estate-italy",
-        href: "/platforms/real-estate/italy/"
+        "title": "Sport Crowdfunding platforms in Ireland",
+        "href": "/platforms/sport/ireland/"
     },
     {
-        title: "startups-italy",
-        href: "/platforms/startups/italy/"
+        "title": "Maritime Crowdfunding platforms in Ireland",
+        "href": "/platforms/maritime/ireland/"
     },
     {
-        title: "sustainability-italy",
-        href: "/platforms/sustainability/italy/"
+        "title": "Real estate Crowdfunding platforms in Israel",
+        "href": "/platforms/real-estate/israel/"
     },
     {
-        title: "litigation-italy",
-        href: "/platforms/litigation/italy/"
+        "title": "Startups Crowdfunding platforms in Israel",
+        "href": "/platforms/startups/israel/"
     },
     {
-        title: "green-energy-italy",
-        href: "/platforms/green-energy/italy/"
+        "title": "SME Crowdfunding platforms in Israel",
+        "href": "/platforms/sme/israel/"
     },
     {
-        title: "health-science-italy",
-        href: "/platforms/health-science/italy/"
+        "title": "Sustainability Crowdfunding platforms in Israel",
+        "href": "/platforms/sustainability/israel/"
     },
     {
-        title: "logistics-italy",
-        href: "/platforms/logistics/italy/"
+        "title": "Litigation Crowdfunding platforms in Israel",
+        "href": "/platforms/litigation/israel/"
     },
     {
-        title: "personal-loans-italy",
-        href: "/platforms/personal-loans/italy/"
+        "title": "Green energy Crowdfunding platforms in Israel",
+        "href": "/platforms/green-energy/israel/"
     },
     {
-        title: "art-italy",
-        href: "/platforms/art/italy/"
+        "title": "Health & Science Crowdfunding platforms in Israel",
+        "href": "/platforms/health-science/israel/"
     },
     {
-        title: "mortgages-italy",
-        href: "/platforms/mortgages/italy/"
+        "title": "Logistics Crowdfunding platforms in Israel",
+        "href": "/platforms/logistics/israel/"
     },
     {
-        title: "social-cause-italy",
-        href: "/platforms/social-cause/italy/"
+        "title": "Personal loans Crowdfunding platforms in Israel",
+        "href": "/platforms/personal-loans/israel/"
     },
     {
-        title: "education-italy",
-        href: "/platforms/education/italy/"
+        "title": "Art Crowdfunding platforms in Israel",
+        "href": "/platforms/art/israel/"
     },
     {
-        title: "farming-italy",
-        href: "/platforms/farming/italy/"
+        "title": "Mortgages Crowdfunding platforms in Israel",
+        "href": "/platforms/mortgages/israel/"
     },
     {
-        title: "sport-italy",
-        href: "/platforms/sport/italy/"
+        "title": "Social cause Crowdfunding platforms in Israel",
+        "href": "/platforms/social-cause/israel/"
     },
     {
-        title: "maritime-italy",
-        href: "/platforms/maritime/italy/"
+        "title": "Education Crowdfunding platforms in Israel",
+        "href": "/platforms/education/israel/"
     },
     {
-        title: "real-estate-latvia",
-        href: "/platforms/real-estate/latvia/"
+        "title": "Farming Crowdfunding platforms in Israel",
+        "href": "/platforms/farming/israel/"
     },
     {
-        title: "startups-latvia",
-        href: "/platforms/startups/latvia/"
+        "title": "Sport Crowdfunding platforms in Israel",
+        "href": "/platforms/sport/israel/"
     },
     {
-        title: "sustainability-latvia",
-        href: "/platforms/sustainability/latvia/"
+        "title": "Maritime Crowdfunding platforms in Israel",
+        "href": "/platforms/maritime/israel/"
     },
     {
-        title: "litigation-latvia",
-        href: "/platforms/litigation/latvia/"
+        "title": "Real estate Crowdfunding platforms in Italy",
+        "href": "/platforms/real-estate/italy/"
     },
     {
-        title: "green-energy-latvia",
-        href: "/platforms/green-energy/latvia/"
+        "title": "Startups Crowdfunding platforms in Italy",
+        "href": "/platforms/startups/italy/"
     },
     {
-        title: "health-science-latvia",
-        href: "/platforms/health-science/latvia/"
+        "title": "SME Crowdfunding platforms in Italy",
+        "href": "/platforms/sme/italy/"
     },
     {
-        title: "logistics-latvia",
-        href: "/platforms/logistics/latvia/"
+        "title": "Sustainability Crowdfunding platforms in Italy",
+        "href": "/platforms/sustainability/italy/"
     },
     {
-        title: "personal-loans-latvia",
-        href: "/platforms/personal-loans/latvia/"
+        "title": "Litigation Crowdfunding platforms in Italy",
+        "href": "/platforms/litigation/italy/"
     },
     {
-        title: "art-latvia",
-        href: "/platforms/art/latvia/"
+        "title": "Green energy Crowdfunding platforms in Italy",
+        "href": "/platforms/green-energy/italy/"
     },
     {
-        title: "mortgages-latvia",
-        href: "/platforms/mortgages/latvia/"
+        "title": "Health & Science Crowdfunding platforms in Italy",
+        "href": "/platforms/health-science/italy/"
     },
     {
-        title: "social-cause-latvia",
-        href: "/platforms/social-cause/latvia/"
+        "title": "Logistics Crowdfunding platforms in Italy",
+        "href": "/platforms/logistics/italy/"
     },
     {
-        title: "education-latvia",
-        href: "/platforms/education/latvia/"
+        "title": "Personal loans Crowdfunding platforms in Italy",
+        "href": "/platforms/personal-loans/italy/"
     },
     {
-        title: "farming-latvia",
-        href: "/platforms/farming/latvia/"
+        "title": "Art Crowdfunding platforms in Italy",
+        "href": "/platforms/art/italy/"
     },
     {
-        title: "sport-latvia",
-        href: "/platforms/sport/latvia/"
+        "title": "Mortgages Crowdfunding platforms in Italy",
+        "href": "/platforms/mortgages/italy/"
     },
     {
-        title: "maritime-latvia",
-        href: "/platforms/maritime/latvia/"
+        "title": "Social cause Crowdfunding platforms in Italy",
+        "href": "/platforms/social-cause/italy/"
     },
     {
-        title: "real-estate-liechtenstein",
-        href: "/platforms/real-estate/liechtenstein/"
+        "title": "Education Crowdfunding platforms in Italy",
+        "href": "/platforms/education/italy/"
     },
     {
-        title: "startups-liechtenstein",
-        href: "/platforms/startups/liechtenstein/"
+        "title": "Farming Crowdfunding platforms in Italy",
+        "href": "/platforms/farming/italy/"
     },
     {
-        title: "sustainability-liechtenstein",
-        href: "/platforms/sustainability/liechtenstein/"
+        "title": "Sport Crowdfunding platforms in Italy",
+        "href": "/platforms/sport/italy/"
     },
     {
-        title: "litigation-liechtenstein",
-        href: "/platforms/litigation/liechtenstein/"
+        "title": "Maritime Crowdfunding platforms in Italy",
+        "href": "/platforms/maritime/italy/"
     },
     {
-        title: "green-energy-liechtenstein",
-        href: "/platforms/green-energy/liechtenstein/"
+        "title": "Real estate Crowdfunding platforms in Latvia",
+        "href": "/platforms/real-estate/latvia/"
     },
     {
-        title: "health-science-liechtenstein",
-        href: "/platforms/health-science/liechtenstein/"
+        "title": "Startups Crowdfunding platforms in Latvia",
+        "href": "/platforms/startups/latvia/"
     },
     {
-        title: "logistics-liechtenstein",
-        href: "/platforms/logistics/liechtenstein/"
+        "title": "SME Crowdfunding platforms in Latvia",
+        "href": "/platforms/sme/latvia/"
     },
     {
-        title: "personal-loans-liechtenstein",
-        href: "/platforms/personal-loans/liechtenstein/"
+        "title": "Sustainability Crowdfunding platforms in Latvia",
+        "href": "/platforms/sustainability/latvia/"
     },
     {
-        title: "art-liechtenstein",
-        href: "/platforms/art/liechtenstein/"
+        "title": "Litigation Crowdfunding platforms in Latvia",
+        "href": "/platforms/litigation/latvia/"
     },
     {
-        title: "mortgages-liechtenstein",
-        href: "/platforms/mortgages/liechtenstein/"
+        "title": "Green energy Crowdfunding platforms in Latvia",
+        "href": "/platforms/green-energy/latvia/"
     },
     {
-        title: "social-cause-liechtenstein",
-        href: "/platforms/social-cause/liechtenstein/"
+        "title": "Health & Science Crowdfunding platforms in Latvia",
+        "href": "/platforms/health-science/latvia/"
     },
     {
-        title: "education-liechtenstein",
-        href: "/platforms/education/liechtenstein/"
+        "title": "Logistics Crowdfunding platforms in Latvia",
+        "href": "/platforms/logistics/latvia/"
     },
     {
-        title: "farming-liechtenstein",
-        href: "/platforms/farming/liechtenstein/"
+        "title": "Personal loans Crowdfunding platforms in Latvia",
+        "href": "/platforms/personal-loans/latvia/"
     },
     {
-        title: "sport-liechtenstein",
-        href: "/platforms/sport/liechtenstein/"
+        "title": "Art Crowdfunding platforms in Latvia",
+        "href": "/platforms/art/latvia/"
     },
     {
-        title: "maritime-liechtenstein",
-        href: "/platforms/maritime/liechtenstein/"
+        "title": "Mortgages Crowdfunding platforms in Latvia",
+        "href": "/platforms/mortgages/latvia/"
     },
     {
-        title: "real-estate-lithuania",
-        href: "/platforms/real-estate/lithuania/"
+        "title": "Social cause Crowdfunding platforms in Latvia",
+        "href": "/platforms/social-cause/latvia/"
     },
     {
-        title: "startups-lithuania",
-        href: "/platforms/startups/lithuania/"
+        "title": "Education Crowdfunding platforms in Latvia",
+        "href": "/platforms/education/latvia/"
     },
     {
-        title: "sustainability-lithuania",
-        href: "/platforms/sustainability/lithuania/"
+        "title": "Farming Crowdfunding platforms in Latvia",
+        "href": "/platforms/farming/latvia/"
     },
     {
-        title: "litigation-lithuania",
-        href: "/platforms/litigation/lithuania/"
+        "title": "Sport Crowdfunding platforms in Latvia",
+        "href": "/platforms/sport/latvia/"
     },
     {
-        title: "green-energy-lithuania",
-        href: "/platforms/green-energy/lithuania/"
+        "title": "Maritime Crowdfunding platforms in Latvia",
+        "href": "/platforms/maritime/latvia/"
     },
     {
-        title: "health-science-lithuania",
-        href: "/platforms/health-science/lithuania/"
+        "title": "Real estate Crowdfunding platforms in Liechtenstein",
+        "href": "/platforms/real-estate/liechtenstein/"
     },
     {
-        title: "logistics-lithuania",
-        href: "/platforms/logistics/lithuania/"
+        "title": "Startups Crowdfunding platforms in Liechtenstein",
+        "href": "/platforms/startups/liechtenstein/"
     },
     {
-        title: "personal-loans-lithuania",
-        href: "/platforms/personal-loans/lithuania/"
+        "title": "SME Crowdfunding platforms in Liechtenstein",
+        "href": "/platforms/sme/liechtenstein/"
     },
     {
-        title: "art-lithuania",
-        href: "/platforms/art/lithuania/"
+        "title": "Sustainability Crowdfunding platforms in Liechtenstein",
+        "href": "/platforms/sustainability/liechtenstein/"
     },
     {
-        title: "mortgages-lithuania",
-        href: "/platforms/mortgages/lithuania/"
+        "title": "Litigation Crowdfunding platforms in Liechtenstein",
+        "href": "/platforms/litigation/liechtenstein/"
     },
     {
-        title: "social-cause-lithuania",
-        href: "/platforms/social-cause/lithuania/"
+        "title": "Green energy Crowdfunding platforms in Liechtenstein",
+        "href": "/platforms/green-energy/liechtenstein/"
     },
     {
-        title: "education-lithuania",
-        href: "/platforms/education/lithuania/"
+        "title": "Health & Science Crowdfunding platforms in Liechtenstein",
+        "href": "/platforms/health-science/liechtenstein/"
     },
     {
-        title: "farming-lithuania",
-        href: "/platforms/farming/lithuania/"
+        "title": "Logistics Crowdfunding platforms in Liechtenstein",
+        "href": "/platforms/logistics/liechtenstein/"
     },
     {
-        title: "sport-lithuania",
-        href: "/platforms/sport/lithuania/"
+        "title": "Personal loans Crowdfunding platforms in Liechtenstein",
+        "href": "/platforms/personal-loans/liechtenstein/"
     },
     {
-        title: "maritime-lithuania",
-        href: "/platforms/maritime/lithuania/"
+        "title": "Art Crowdfunding platforms in Liechtenstein",
+        "href": "/platforms/art/liechtenstein/"
     },
     {
-        title: "real-estate-luxembourg",
-        href: "/platforms/real-estate/luxembourg/"
+        "title": "Mortgages Crowdfunding platforms in Liechtenstein",
+        "href": "/platforms/mortgages/liechtenstein/"
     },
     {
-        title: "startups-luxembourg",
-        href: "/platforms/startups/luxembourg/"
+        "title": "Social cause Crowdfunding platforms in Liechtenstein",
+        "href": "/platforms/social-cause/liechtenstein/"
     },
     {
-        title: "sustainability-luxembourg",
-        href: "/platforms/sustainability/luxembourg/"
+        "title": "Education Crowdfunding platforms in Liechtenstein",
+        "href": "/platforms/education/liechtenstein/"
     },
     {
-        title: "litigation-luxembourg",
-        href: "/platforms/litigation/luxembourg/"
+        "title": "Farming Crowdfunding platforms in Liechtenstein",
+        "href": "/platforms/farming/liechtenstein/"
     },
     {
-        title: "green-energy-luxembourg",
-        href: "/platforms/green-energy/luxembourg/"
+        "title": "Sport Crowdfunding platforms in Liechtenstein",
+        "href": "/platforms/sport/liechtenstein/"
     },
     {
-        title: "health-science-luxembourg",
-        href: "/platforms/health-science/luxembourg/"
+        "title": "Maritime Crowdfunding platforms in Liechtenstein",
+        "href": "/platforms/maritime/liechtenstein/"
     },
     {
-        title: "logistics-luxembourg",
-        href: "/platforms/logistics/luxembourg/"
+        "title": "Real estate Crowdfunding platforms in Lithuania",
+        "href": "/platforms/real-estate/lithuania/"
     },
     {
-        title: "personal-loans-luxembourg",
-        href: "/platforms/personal-loans/luxembourg/"
+        "title": "Startups Crowdfunding platforms in Lithuania",
+        "href": "/platforms/startups/lithuania/"
     },
     {
-        title: "art-luxembourg",
-        href: "/platforms/art/luxembourg/"
+        "title": "SME Crowdfunding platforms in Lithuania",
+        "href": "/platforms/sme/lithuania/"
     },
     {
-        title: "mortgages-luxembourg",
-        href: "/platforms/mortgages/luxembourg/"
+        "title": "Sustainability Crowdfunding platforms in Lithuania",
+        "href": "/platforms/sustainability/lithuania/"
     },
     {
-        title: "social-cause-luxembourg",
-        href: "/platforms/social-cause/luxembourg/"
+        "title": "Litigation Crowdfunding platforms in Lithuania",
+        "href": "/platforms/litigation/lithuania/"
     },
     {
-        title: "education-luxembourg",
-        href: "/platforms/education/luxembourg/"
+        "title": "Green energy Crowdfunding platforms in Lithuania",
+        "href": "/platforms/green-energy/lithuania/"
     },
     {
-        title: "farming-luxembourg",
-        href: "/platforms/farming/luxembourg/"
+        "title": "Health & Science Crowdfunding platforms in Lithuania",
+        "href": "/platforms/health-science/lithuania/"
     },
     {
-        title: "sport-luxembourg",
-        href: "/platforms/sport/luxembourg/"
+        "title": "Logistics Crowdfunding platforms in Lithuania",
+        "href": "/platforms/logistics/lithuania/"
     },
     {
-        title: "maritime-luxembourg",
-        href: "/platforms/maritime/luxembourg/"
+        "title": "Personal loans Crowdfunding platforms in Lithuania",
+        "href": "/platforms/personal-loans/lithuania/"
     },
     {
-        title: "real-estate-macedonia",
-        href: "/platforms/real-estate/macedonia/"
+        "title": "Art Crowdfunding platforms in Lithuania",
+        "href": "/platforms/art/lithuania/"
     },
     {
-        title: "startups-macedonia",
-        href: "/platforms/startups/macedonia/"
+        "title": "Mortgages Crowdfunding platforms in Lithuania",
+        "href": "/platforms/mortgages/lithuania/"
     },
     {
-        title: "sustainability-macedonia",
-        href: "/platforms/sustainability/macedonia/"
+        "title": "Social cause Crowdfunding platforms in Lithuania",
+        "href": "/platforms/social-cause/lithuania/"
     },
     {
-        title: "litigation-macedonia",
-        href: "/platforms/litigation/macedonia/"
+        "title": "Education Crowdfunding platforms in Lithuania",
+        "href": "/platforms/education/lithuania/"
     },
     {
-        title: "green-energy-macedonia",
-        href: "/platforms/green-energy/macedonia/"
+        "title": "Farming Crowdfunding platforms in Lithuania",
+        "href": "/platforms/farming/lithuania/"
     },
     {
-        title: "health-science-macedonia",
-        href: "/platforms/health-science/macedonia/"
+        "title": "Sport Crowdfunding platforms in Lithuania",
+        "href": "/platforms/sport/lithuania/"
     },
     {
-        title: "logistics-macedonia",
-        href: "/platforms/logistics/macedonia/"
+        "title": "Maritime Crowdfunding platforms in Lithuania",
+        "href": "/platforms/maritime/lithuania/"
     },
     {
-        title: "personal-loans-macedonia",
-        href: "/platforms/personal-loans/macedonia/"
+        "title": "Real estate Crowdfunding platforms in Luxembourg",
+        "href": "/platforms/real-estate/luxembourg/"
     },
     {
-        title: "art-macedonia",
-        href: "/platforms/art/macedonia/"
+        "title": "Startups Crowdfunding platforms in Luxembourg",
+        "href": "/platforms/startups/luxembourg/"
     },
     {
-        title: "mortgages-macedonia",
-        href: "/platforms/mortgages/macedonia/"
+        "title": "SME Crowdfunding platforms in Luxembourg",
+        "href": "/platforms/sme/luxembourg/"
     },
     {
-        title: "social-cause-macedonia",
-        href: "/platforms/social-cause/macedonia/"
+        "title": "Sustainability Crowdfunding platforms in Luxembourg",
+        "href": "/platforms/sustainability/luxembourg/"
     },
     {
-        title: "education-macedonia",
-        href: "/platforms/education/macedonia/"
+        "title": "Litigation Crowdfunding platforms in Luxembourg",
+        "href": "/platforms/litigation/luxembourg/"
     },
     {
-        title: "farming-macedonia",
-        href: "/platforms/farming/macedonia/"
+        "title": "Green energy Crowdfunding platforms in Luxembourg",
+        "href": "/platforms/green-energy/luxembourg/"
     },
     {
-        title: "sport-macedonia",
-        href: "/platforms/sport/macedonia/"
+        "title": "Health & Science Crowdfunding platforms in Luxembourg",
+        "href": "/platforms/health-science/luxembourg/"
     },
     {
-        title: "maritime-macedonia",
-        href: "/platforms/maritime/macedonia/"
+        "title": "Logistics Crowdfunding platforms in Luxembourg",
+        "href": "/platforms/logistics/luxembourg/"
     },
     {
-        title: "real-estate-malta",
-        href: "/platforms/real-estate/malta/"
+        "title": "Personal loans Crowdfunding platforms in Luxembourg",
+        "href": "/platforms/personal-loans/luxembourg/"
     },
     {
-        title: "startups-malta",
-        href: "/platforms/startups/malta/"
+        "title": "Art Crowdfunding platforms in Luxembourg",
+        "href": "/platforms/art/luxembourg/"
     },
     {
-        title: "sustainability-malta",
-        href: "/platforms/sustainability/malta/"
+        "title": "Mortgages Crowdfunding platforms in Luxembourg",
+        "href": "/platforms/mortgages/luxembourg/"
     },
     {
-        title: "litigation-malta",
-        href: "/platforms/litigation/malta/"
+        "title": "Social cause Crowdfunding platforms in Luxembourg",
+        "href": "/platforms/social-cause/luxembourg/"
     },
     {
-        title: "green-energy-malta",
-        href: "/platforms/green-energy/malta/"
+        "title": "Education Crowdfunding platforms in Luxembourg",
+        "href": "/platforms/education/luxembourg/"
     },
     {
-        title: "health-science-malta",
-        href: "/platforms/health-science/malta/"
+        "title": "Farming Crowdfunding platforms in Luxembourg",
+        "href": "/platforms/farming/luxembourg/"
     },
     {
-        title: "logistics-malta",
-        href: "/platforms/logistics/malta/"
+        "title": "Sport Crowdfunding platforms in Luxembourg",
+        "href": "/platforms/sport/luxembourg/"
     },
     {
-        title: "personal-loans-malta",
-        href: "/platforms/personal-loans/malta/"
+        "title": "Maritime Crowdfunding platforms in Luxembourg",
+        "href": "/platforms/maritime/luxembourg/"
     },
     {
-        title: "art-malta",
-        href: "/platforms/art/malta/"
+        "title": "Real estate Crowdfunding platforms in Macedonia",
+        "href": "/platforms/real-estate/macedonia/"
     },
     {
-        title: "mortgages-malta",
-        href: "/platforms/mortgages/malta/"
+        "title": "Startups Crowdfunding platforms in Macedonia",
+        "href": "/platforms/startups/macedonia/"
     },
     {
-        title: "social-cause-malta",
-        href: "/platforms/social-cause/malta/"
+        "title": "SME Crowdfunding platforms in Macedonia",
+        "href": "/platforms/sme/macedonia/"
     },
     {
-        title: "education-malta",
-        href: "/platforms/education/malta/"
+        "title": "Sustainability Crowdfunding platforms in Macedonia",
+        "href": "/platforms/sustainability/macedonia/"
     },
     {
-        title: "farming-malta",
-        href: "/platforms/farming/malta/"
+        "title": "Litigation Crowdfunding platforms in Macedonia",
+        "href": "/platforms/litigation/macedonia/"
     },
     {
-        title: "sport-malta",
-        href: "/platforms/sport/malta/"
+        "title": "Green energy Crowdfunding platforms in Macedonia",
+        "href": "/platforms/green-energy/macedonia/"
     },
     {
-        title: "maritime-malta",
-        href: "/platforms/maritime/malta/"
+        "title": "Health & Science Crowdfunding platforms in Macedonia",
+        "href": "/platforms/health-science/macedonia/"
     },
     {
-        title: "real-estate-moldova",
-        href: "/platforms/real-estate/moldova/"
+        "title": "Logistics Crowdfunding platforms in Macedonia",
+        "href": "/platforms/logistics/macedonia/"
     },
     {
-        title: "startups-moldova",
-        href: "/platforms/startups/moldova/"
+        "title": "Personal loans Crowdfunding platforms in Macedonia",
+        "href": "/platforms/personal-loans/macedonia/"
     },
     {
-        title: "sustainability-moldova",
-        href: "/platforms/sustainability/moldova/"
+        "title": "Art Crowdfunding platforms in Macedonia",
+        "href": "/platforms/art/macedonia/"
     },
     {
-        title: "litigation-moldova",
-        href: "/platforms/litigation/moldova/"
+        "title": "Mortgages Crowdfunding platforms in Macedonia",
+        "href": "/platforms/mortgages/macedonia/"
     },
     {
-        title: "green-energy-moldova",
-        href: "/platforms/green-energy/moldova/"
+        "title": "Social cause Crowdfunding platforms in Macedonia",
+        "href": "/platforms/social-cause/macedonia/"
     },
     {
-        title: "health-science-moldova",
-        href: "/platforms/health-science/moldova/"
+        "title": "Education Crowdfunding platforms in Macedonia",
+        "href": "/platforms/education/macedonia/"
     },
     {
-        title: "logistics-moldova",
-        href: "/platforms/logistics/moldova/"
+        "title": "Farming Crowdfunding platforms in Macedonia",
+        "href": "/platforms/farming/macedonia/"
     },
     {
-        title: "personal-loans-moldova",
-        href: "/platforms/personal-loans/moldova/"
+        "title": "Sport Crowdfunding platforms in Macedonia",
+        "href": "/platforms/sport/macedonia/"
     },
     {
-        title: "art-moldova",
-        href: "/platforms/art/moldova/"
+        "title": "Maritime Crowdfunding platforms in Macedonia",
+        "href": "/platforms/maritime/macedonia/"
     },
     {
-        title: "mortgages-moldova",
-        href: "/platforms/mortgages/moldova/"
+        "title": "Real estate Crowdfunding platforms in Malta",
+        "href": "/platforms/real-estate/malta/"
     },
     {
-        title: "social-cause-moldova",
-        href: "/platforms/social-cause/moldova/"
+        "title": "Startups Crowdfunding platforms in Malta",
+        "href": "/platforms/startups/malta/"
     },
     {
-        title: "education-moldova",
-        href: "/platforms/education/moldova/"
+        "title": "SME Crowdfunding platforms in Malta",
+        "href": "/platforms/sme/malta/"
     },
     {
-        title: "farming-moldova",
-        href: "/platforms/farming/moldova/"
+        "title": "Sustainability Crowdfunding platforms in Malta",
+        "href": "/platforms/sustainability/malta/"
     },
     {
-        title: "sport-moldova",
-        href: "/platforms/sport/moldova/"
+        "title": "Litigation Crowdfunding platforms in Malta",
+        "href": "/platforms/litigation/malta/"
     },
     {
-        title: "maritime-moldova",
-        href: "/platforms/maritime/moldova/"
+        "title": "Green energy Crowdfunding platforms in Malta",
+        "href": "/platforms/green-energy/malta/"
     },
     {
-        title: "real-estate-monaco",
-        href: "/platforms/real-estate/monaco/"
+        "title": "Health & Science Crowdfunding platforms in Malta",
+        "href": "/platforms/health-science/malta/"
     },
     {
-        title: "startups-monaco",
-        href: "/platforms/startups/monaco/"
+        "title": "Logistics Crowdfunding platforms in Malta",
+        "href": "/platforms/logistics/malta/"
     },
     {
-        title: "sustainability-monaco",
-        href: "/platforms/sustainability/monaco/"
+        "title": "Personal loans Crowdfunding platforms in Malta",
+        "href": "/platforms/personal-loans/malta/"
     },
     {
-        title: "litigation-monaco",
-        href: "/platforms/litigation/monaco/"
+        "title": "Art Crowdfunding platforms in Malta",
+        "href": "/platforms/art/malta/"
     },
     {
-        title: "green-energy-monaco",
-        href: "/platforms/green-energy/monaco/"
+        "title": "Mortgages Crowdfunding platforms in Malta",
+        "href": "/platforms/mortgages/malta/"
     },
     {
-        title: "health-science-monaco",
-        href: "/platforms/health-science/monaco/"
+        "title": "Social cause Crowdfunding platforms in Malta",
+        "href": "/platforms/social-cause/malta/"
     },
     {
-        title: "logistics-monaco",
-        href: "/platforms/logistics/monaco/"
+        "title": "Education Crowdfunding platforms in Malta",
+        "href": "/platforms/education/malta/"
     },
     {
-        title: "personal-loans-monaco",
-        href: "/platforms/personal-loans/monaco/"
+        "title": "Farming Crowdfunding platforms in Malta",
+        "href": "/platforms/farming/malta/"
     },
     {
-        title: "art-monaco",
-        href: "/platforms/art/monaco/"
+        "title": "Sport Crowdfunding platforms in Malta",
+        "href": "/platforms/sport/malta/"
     },
     {
-        title: "mortgages-monaco",
-        href: "/platforms/mortgages/monaco/"
+        "title": "Maritime Crowdfunding platforms in Malta",
+        "href": "/platforms/maritime/malta/"
     },
     {
-        title: "social-cause-monaco",
-        href: "/platforms/social-cause/monaco/"
+        "title": "Real estate Crowdfunding platforms in Moldova",
+        "href": "/platforms/real-estate/moldova/"
     },
     {
-        title: "education-monaco",
-        href: "/platforms/education/monaco/"
+        "title": "Startups Crowdfunding platforms in Moldova",
+        "href": "/platforms/startups/moldova/"
     },
     {
-        title: "farming-monaco",
-        href: "/platforms/farming/monaco/"
+        "title": "SME Crowdfunding platforms in Moldova",
+        "href": "/platforms/sme/moldova/"
     },
     {
-        title: "sport-monaco",
-        href: "/platforms/sport/monaco/"
+        "title": "Sustainability Crowdfunding platforms in Moldova",
+        "href": "/platforms/sustainability/moldova/"
     },
     {
-        title: "maritime-monaco",
-        href: "/platforms/maritime/monaco/"
+        "title": "Litigation Crowdfunding platforms in Moldova",
+        "href": "/platforms/litigation/moldova/"
     },
     {
-        title: "real-estate-netherlands",
-        href: "/platforms/real-estate/netherlands/"
+        "title": "Green energy Crowdfunding platforms in Moldova",
+        "href": "/platforms/green-energy/moldova/"
     },
     {
-        title: "startups-netherlands",
-        href: "/platforms/startups/netherlands/"
+        "title": "Health & Science Crowdfunding platforms in Moldova",
+        "href": "/platforms/health-science/moldova/"
     },
     {
-        title: "sustainability-netherlands",
-        href: "/platforms/sustainability/netherlands/"
+        "title": "Logistics Crowdfunding platforms in Moldova",
+        "href": "/platforms/logistics/moldova/"
     },
     {
-        title: "litigation-netherlands",
-        href: "/platforms/litigation/netherlands/"
+        "title": "Personal loans Crowdfunding platforms in Moldova",
+        "href": "/platforms/personal-loans/moldova/"
     },
     {
-        title: "green-energy-netherlands",
-        href: "/platforms/green-energy/netherlands/"
+        "title": "Art Crowdfunding platforms in Moldova",
+        "href": "/platforms/art/moldova/"
     },
     {
-        title: "health-science-netherlands",
-        href: "/platforms/health-science/netherlands/"
+        "title": "Mortgages Crowdfunding platforms in Moldova",
+        "href": "/platforms/mortgages/moldova/"
     },
     {
-        title: "logistics-netherlands",
-        href: "/platforms/logistics/netherlands/"
+        "title": "Social cause Crowdfunding platforms in Moldova",
+        "href": "/platforms/social-cause/moldova/"
     },
     {
-        title: "personal-loans-netherlands",
-        href: "/platforms/personal-loans/netherlands/"
+        "title": "Education Crowdfunding platforms in Moldova",
+        "href": "/platforms/education/moldova/"
     },
     {
-        title: "art-netherlands",
-        href: "/platforms/art/netherlands/"
+        "title": "Farming Crowdfunding platforms in Moldova",
+        "href": "/platforms/farming/moldova/"
     },
     {
-        title: "mortgages-netherlands",
-        href: "/platforms/mortgages/netherlands/"
+        "title": "Sport Crowdfunding platforms in Moldova",
+        "href": "/platforms/sport/moldova/"
     },
     {
-        title: "social-cause-netherlands",
-        href: "/platforms/social-cause/netherlands/"
+        "title": "Maritime Crowdfunding platforms in Moldova",
+        "href": "/platforms/maritime/moldova/"
     },
     {
-        title: "education-netherlands",
-        href: "/platforms/education/netherlands/"
+        "title": "Real estate Crowdfunding platforms in Monaco",
+        "href": "/platforms/real-estate/monaco/"
     },
     {
-        title: "farming-netherlands",
-        href: "/platforms/farming/netherlands/"
+        "title": "Startups Crowdfunding platforms in Monaco",
+        "href": "/platforms/startups/monaco/"
     },
     {
-        title: "sport-netherlands",
-        href: "/platforms/sport/netherlands/"
+        "title": "SME Crowdfunding platforms in Monaco",
+        "href": "/platforms/sme/monaco/"
     },
     {
-        title: "maritime-netherlands",
-        href: "/platforms/maritime/netherlands/"
+        "title": "Sustainability Crowdfunding platforms in Monaco",
+        "href": "/platforms/sustainability/monaco/"
     },
     {
-        title: "real-estate-norway",
-        href: "/platforms/real-estate/norway/"
+        "title": "Litigation Crowdfunding platforms in Monaco",
+        "href": "/platforms/litigation/monaco/"
     },
     {
-        title: "startups-norway",
-        href: "/platforms/startups/norway/"
+        "title": "Green energy Crowdfunding platforms in Monaco",
+        "href": "/platforms/green-energy/monaco/"
     },
     {
-        title: "sustainability-norway",
-        href: "/platforms/sustainability/norway/"
+        "title": "Health & Science Crowdfunding platforms in Monaco",
+        "href": "/platforms/health-science/monaco/"
     },
     {
-        title: "litigation-norway",
-        href: "/platforms/litigation/norway/"
+        "title": "Logistics Crowdfunding platforms in Monaco",
+        "href": "/platforms/logistics/monaco/"
     },
     {
-        title: "green-energy-norway",
-        href: "/platforms/green-energy/norway/"
+        "title": "Personal loans Crowdfunding platforms in Monaco",
+        "href": "/platforms/personal-loans/monaco/"
     },
     {
-        title: "health-science-norway",
-        href: "/platforms/health-science/norway/"
+        "title": "Art Crowdfunding platforms in Monaco",
+        "href": "/platforms/art/monaco/"
     },
     {
-        title: "logistics-norway",
-        href: "/platforms/logistics/norway/"
+        "title": "Mortgages Crowdfunding platforms in Monaco",
+        "href": "/platforms/mortgages/monaco/"
     },
     {
-        title: "personal-loans-norway",
-        href: "/platforms/personal-loans/norway/"
+        "title": "Social cause Crowdfunding platforms in Monaco",
+        "href": "/platforms/social-cause/monaco/"
     },
     {
-        title: "art-norway",
-        href: "/platforms/art/norway/"
+        "title": "Education Crowdfunding platforms in Monaco",
+        "href": "/platforms/education/monaco/"
     },
     {
-        title: "mortgages-norway",
-        href: "/platforms/mortgages/norway/"
+        "title": "Farming Crowdfunding platforms in Monaco",
+        "href": "/platforms/farming/monaco/"
     },
     {
-        title: "social-cause-norway",
-        href: "/platforms/social-cause/norway/"
+        "title": "Sport Crowdfunding platforms in Monaco",
+        "href": "/platforms/sport/monaco/"
     },
     {
-        title: "education-norway",
-        href: "/platforms/education/norway/"
+        "title": "Maritime Crowdfunding platforms in Monaco",
+        "href": "/platforms/maritime/monaco/"
     },
     {
-        title: "farming-norway",
-        href: "/platforms/farming/norway/"
+        "title": "Real estate Crowdfunding platforms in Netherlands",
+        "href": "/platforms/real-estate/netherlands/"
     },
     {
-        title: "sport-norway",
-        href: "/platforms/sport/norway/"
+        "title": "Startups Crowdfunding platforms in Netherlands",
+        "href": "/platforms/startups/netherlands/"
     },
     {
-        title: "maritime-norway",
-        href: "/platforms/maritime/norway/"
+        "title": "SME Crowdfunding platforms in Netherlands",
+        "href": "/platforms/sme/netherlands/"
     },
     {
-        title: "real-estate-poland",
-        href: "/platforms/real-estate/poland/"
+        "title": "Sustainability Crowdfunding platforms in Netherlands",
+        "href": "/platforms/sustainability/netherlands/"
     },
     {
-        title: "startups-poland",
-        href: "/platforms/startups/poland/"
+        "title": "Litigation Crowdfunding platforms in Netherlands",
+        "href": "/platforms/litigation/netherlands/"
     },
     {
-        title: "sustainability-poland",
-        href: "/platforms/sustainability/poland/"
+        "title": "Green energy Crowdfunding platforms in Netherlands",
+        "href": "/platforms/green-energy/netherlands/"
     },
     {
-        title: "litigation-poland",
-        href: "/platforms/litigation/poland/"
+        "title": "Health & Science Crowdfunding platforms in Netherlands",
+        "href": "/platforms/health-science/netherlands/"
     },
     {
-        title: "green-energy-poland",
-        href: "/platforms/green-energy/poland/"
+        "title": "Logistics Crowdfunding platforms in Netherlands",
+        "href": "/platforms/logistics/netherlands/"
     },
     {
-        title: "health-science-poland",
-        href: "/platforms/health-science/poland/"
+        "title": "Personal loans Crowdfunding platforms in Netherlands",
+        "href": "/platforms/personal-loans/netherlands/"
     },
     {
-        title: "logistics-poland",
-        href: "/platforms/logistics/poland/"
+        "title": "Art Crowdfunding platforms in Netherlands",
+        "href": "/platforms/art/netherlands/"
     },
     {
-        title: "personal-loans-poland",
-        href: "/platforms/personal-loans/poland/"
+        "title": "Mortgages Crowdfunding platforms in Netherlands",
+        "href": "/platforms/mortgages/netherlands/"
     },
     {
-        title: "art-poland",
-        href: "/platforms/art/poland/"
+        "title": "Social cause Crowdfunding platforms in Netherlands",
+        "href": "/platforms/social-cause/netherlands/"
     },
     {
-        title: "mortgages-poland",
-        href: "/platforms/mortgages/poland/"
+        "title": "Education Crowdfunding platforms in Netherlands",
+        "href": "/platforms/education/netherlands/"
     },
     {
-        title: "social-cause-poland",
-        href: "/platforms/social-cause/poland/"
+        "title": "Farming Crowdfunding platforms in Netherlands",
+        "href": "/platforms/farming/netherlands/"
     },
     {
-        title: "education-poland",
-        href: "/platforms/education/poland/"
+        "title": "Sport Crowdfunding platforms in Netherlands",
+        "href": "/platforms/sport/netherlands/"
     },
     {
-        title: "farming-poland",
-        href: "/platforms/farming/poland/"
+        "title": "Maritime Crowdfunding platforms in Netherlands",
+        "href": "/platforms/maritime/netherlands/"
     },
     {
-        title: "sport-poland",
-        href: "/platforms/sport/poland/"
+        "title": "Real estate Crowdfunding platforms in Norway",
+        "href": "/platforms/real-estate/norway/"
     },
     {
-        title: "maritime-poland",
-        href: "/platforms/maritime/poland/"
+        "title": "Startups Crowdfunding platforms in Norway",
+        "href": "/platforms/startups/norway/"
     },
     {
-        title: "real-estate-portugal",
-        href: "/platforms/real-estate/portugal/"
+        "title": "SME Crowdfunding platforms in Norway",
+        "href": "/platforms/sme/norway/"
     },
     {
-        title: "startups-portugal",
-        href: "/platforms/startups/portugal/"
+        "title": "Sustainability Crowdfunding platforms in Norway",
+        "href": "/platforms/sustainability/norway/"
     },
     {
-        title: "sustainability-portugal",
-        href: "/platforms/sustainability/portugal/"
+        "title": "Litigation Crowdfunding platforms in Norway",
+        "href": "/platforms/litigation/norway/"
     },
     {
-        title: "litigation-portugal",
-        href: "/platforms/litigation/portugal/"
+        "title": "Green energy Crowdfunding platforms in Norway",
+        "href": "/platforms/green-energy/norway/"
     },
     {
-        title: "green-energy-portugal",
-        href: "/platforms/green-energy/portugal/"
+        "title": "Health & Science Crowdfunding platforms in Norway",
+        "href": "/platforms/health-science/norway/"
     },
     {
-        title: "health-science-portugal",
-        href: "/platforms/health-science/portugal/"
+        "title": "Logistics Crowdfunding platforms in Norway",
+        "href": "/platforms/logistics/norway/"
     },
     {
-        title: "logistics-portugal",
-        href: "/platforms/logistics/portugal/"
+        "title": "Personal loans Crowdfunding platforms in Norway",
+        "href": "/platforms/personal-loans/norway/"
     },
     {
-        title: "personal-loans-portugal",
-        href: "/platforms/personal-loans/portugal/"
+        "title": "Art Crowdfunding platforms in Norway",
+        "href": "/platforms/art/norway/"
     },
     {
-        title: "art-portugal",
-        href: "/platforms/art/portugal/"
+        "title": "Mortgages Crowdfunding platforms in Norway",
+        "href": "/platforms/mortgages/norway/"
     },
     {
-        title: "mortgages-portugal",
-        href: "/platforms/mortgages/portugal/"
+        "title": "Social cause Crowdfunding platforms in Norway",
+        "href": "/platforms/social-cause/norway/"
     },
     {
-        title: "social-cause-portugal",
-        href: "/platforms/social-cause/portugal/"
+        "title": "Education Crowdfunding platforms in Norway",
+        "href": "/platforms/education/norway/"
     },
     {
-        title: "education-portugal",
-        href: "/platforms/education/portugal/"
+        "title": "Farming Crowdfunding platforms in Norway",
+        "href": "/platforms/farming/norway/"
     },
     {
-        title: "farming-portugal",
-        href: "/platforms/farming/portugal/"
+        "title": "Sport Crowdfunding platforms in Norway",
+        "href": "/platforms/sport/norway/"
     },
     {
-        title: "sport-portugal",
-        href: "/platforms/sport/portugal/"
+        "title": "Maritime Crowdfunding platforms in Norway",
+        "href": "/platforms/maritime/norway/"
     },
     {
-        title: "maritime-portugal",
-        href: "/platforms/maritime/portugal/"
+        "title": "Real estate Crowdfunding platforms in Poland",
+        "href": "/platforms/real-estate/poland/"
     },
     {
-        title: "real-estate-romania",
-        href: "/platforms/real-estate/romania/"
+        "title": "Startups Crowdfunding platforms in Poland",
+        "href": "/platforms/startups/poland/"
     },
     {
-        title: "startups-romania",
-        href: "/platforms/startups/romania/"
+        "title": "SME Crowdfunding platforms in Poland",
+        "href": "/platforms/sme/poland/"
     },
     {
-        title: "sustainability-romania",
-        href: "/platforms/sustainability/romania/"
+        "title": "Sustainability Crowdfunding platforms in Poland",
+        "href": "/platforms/sustainability/poland/"
     },
     {
-        title: "litigation-romania",
-        href: "/platforms/litigation/romania/"
+        "title": "Litigation Crowdfunding platforms in Poland",
+        "href": "/platforms/litigation/poland/"
     },
     {
-        title: "green-energy-romania",
-        href: "/platforms/green-energy/romania/"
+        "title": "Green energy Crowdfunding platforms in Poland",
+        "href": "/platforms/green-energy/poland/"
     },
     {
-        title: "health-science-romania",
-        href: "/platforms/health-science/romania/"
+        "title": "Health & Science Crowdfunding platforms in Poland",
+        "href": "/platforms/health-science/poland/"
     },
     {
-        title: "logistics-romania",
-        href: "/platforms/logistics/romania/"
+        "title": "Logistics Crowdfunding platforms in Poland",
+        "href": "/platforms/logistics/poland/"
     },
     {
-        title: "personal-loans-romania",
-        href: "/platforms/personal-loans/romania/"
+        "title": "Personal loans Crowdfunding platforms in Poland",
+        "href": "/platforms/personal-loans/poland/"
     },
     {
-        title: "art-romania",
-        href: "/platforms/art/romania/"
+        "title": "Art Crowdfunding platforms in Poland",
+        "href": "/platforms/art/poland/"
     },
     {
-        title: "mortgages-romania",
-        href: "/platforms/mortgages/romania/"
+        "title": "Mortgages Crowdfunding platforms in Poland",
+        "href": "/platforms/mortgages/poland/"
     },
     {
-        title: "social-cause-romania",
-        href: "/platforms/social-cause/romania/"
+        "title": "Social cause Crowdfunding platforms in Poland",
+        "href": "/platforms/social-cause/poland/"
     },
     {
-        title: "education-romania",
-        href: "/platforms/education/romania/"
+        "title": "Education Crowdfunding platforms in Poland",
+        "href": "/platforms/education/poland/"
     },
     {
-        title: "farming-romania",
-        href: "/platforms/farming/romania/"
+        "title": "Farming Crowdfunding platforms in Poland",
+        "href": "/platforms/farming/poland/"
     },
     {
-        title: "sport-romania",
-        href: "/platforms/sport/romania/"
+        "title": "Sport Crowdfunding platforms in Poland",
+        "href": "/platforms/sport/poland/"
     },
     {
-        title: "maritime-romania",
-        href: "/platforms/maritime/romania/"
+        "title": "Maritime Crowdfunding platforms in Poland",
+        "href": "/platforms/maritime/poland/"
     },
     {
-        title: "real-estate-turkey",
-        href: "/platforms/real-estate/turkey/"
+        "title": "Real estate Crowdfunding platforms in Portugal",
+        "href": "/platforms/real-estate/portugal/"
     },
     {
-        title: "startups-turkey",
-        href: "/platforms/startups/turkey/"
+        "title": "Startups Crowdfunding platforms in Portugal",
+        "href": "/platforms/startups/portugal/"
     },
     {
-        title: "sustainability-turkey",
-        href: "/platforms/sustainability/turkey/"
+        "title": "SME Crowdfunding platforms in Portugal",
+        "href": "/platforms/sme/portugal/"
     },
     {
-        title: "litigation-turkey",
-        href: "/platforms/litigation/turkey/"
+        "title": "Sustainability Crowdfunding platforms in Portugal",
+        "href": "/platforms/sustainability/portugal/"
     },
     {
-        title: "green-energy-turkey",
-        href: "/platforms/green-energy/turkey/"
+        "title": "Litigation Crowdfunding platforms in Portugal",
+        "href": "/platforms/litigation/portugal/"
     },
     {
-        title: "health-science-turkey",
-        href: "/platforms/health-science/turkey/"
+        "title": "Green energy Crowdfunding platforms in Portugal",
+        "href": "/platforms/green-energy/portugal/"
     },
     {
-        title: "logistics-turkey",
-        href: "/platforms/logistics/turkey/"
+        "title": "Health & Science Crowdfunding platforms in Portugal",
+        "href": "/platforms/health-science/portugal/"
     },
     {
-        title: "personal-loans-turkey",
-        href: "/platforms/personal-loans/turkey/"
+        "title": "Logistics Crowdfunding platforms in Portugal",
+        "href": "/platforms/logistics/portugal/"
     },
     {
-        title: "art-turkey",
-        href: "/platforms/art/turkey/"
+        "title": "Personal loans Crowdfunding platforms in Portugal",
+        "href": "/platforms/personal-loans/portugal/"
     },
     {
-        title: "mortgages-turkey",
-        href: "/platforms/mortgages/turkey/"
+        "title": "Art Crowdfunding platforms in Portugal",
+        "href": "/platforms/art/portugal/"
     },
     {
-        title: "social-cause-turkey",
-        href: "/platforms/social-cause/turkey/"
+        "title": "Mortgages Crowdfunding platforms in Portugal",
+        "href": "/platforms/mortgages/portugal/"
     },
     {
-        title: "education-turkey",
-        href: "/platforms/education/turkey/"
+        "title": "Social cause Crowdfunding platforms in Portugal",
+        "href": "/platforms/social-cause/portugal/"
     },
     {
-        title: "farming-turkey",
-        href: "/platforms/farming/turkey/"
+        "title": "Education Crowdfunding platforms in Portugal",
+        "href": "/platforms/education/portugal/"
     },
     {
-        title: "sport-turkey",
-        href: "/platforms/sport/turkey/"
+        "title": "Farming Crowdfunding platforms in Portugal",
+        "href": "/platforms/farming/portugal/"
     },
     {
-        title: "maritime-turkey",
-        href: "/platforms/maritime/turkey/"
+        "title": "Sport Crowdfunding platforms in Portugal",
+        "href": "/platforms/sport/portugal/"
     },
     {
-        title: "real-estate-serbia",
-        href: "/platforms/real-estate/serbia/"
+        "title": "Maritime Crowdfunding platforms in Portugal",
+        "href": "/platforms/maritime/portugal/"
     },
     {
-        title: "startups-serbia",
-        href: "/platforms/startups/serbia/"
+        "title": "Real estate Crowdfunding platforms in Romania",
+        "href": "/platforms/real-estate/romania/"
     },
     {
-        title: "sustainability-serbia",
-        href: "/platforms/sustainability/serbia/"
+        "title": "Startups Crowdfunding platforms in Romania",
+        "href": "/platforms/startups/romania/"
     },
     {
-        title: "litigation-serbia",
-        href: "/platforms/litigation/serbia/"
+        "title": "SME Crowdfunding platforms in Romania",
+        "href": "/platforms/sme/romania/"
     },
     {
-        title: "green-energy-serbia",
-        href: "/platforms/green-energy/serbia/"
+        "title": "Sustainability Crowdfunding platforms in Romania",
+        "href": "/platforms/sustainability/romania/"
     },
     {
-        title: "health-science-serbia",
-        href: "/platforms/health-science/serbia/"
+        "title": "Litigation Crowdfunding platforms in Romania",
+        "href": "/platforms/litigation/romania/"
     },
     {
-        title: "logistics-serbia",
-        href: "/platforms/logistics/serbia/"
+        "title": "Green energy Crowdfunding platforms in Romania",
+        "href": "/platforms/green-energy/romania/"
     },
     {
-        title: "personal-loans-serbia",
-        href: "/platforms/personal-loans/serbia/"
+        "title": "Health & Science Crowdfunding platforms in Romania",
+        "href": "/platforms/health-science/romania/"
     },
     {
-        title: "art-serbia",
-        href: "/platforms/art/serbia/"
+        "title": "Logistics Crowdfunding platforms in Romania",
+        "href": "/platforms/logistics/romania/"
     },
     {
-        title: "mortgages-serbia",
-        href: "/platforms/mortgages/serbia/"
+        "title": "Personal loans Crowdfunding platforms in Romania",
+        "href": "/platforms/personal-loans/romania/"
     },
     {
-        title: "social-cause-serbia",
-        href: "/platforms/social-cause/serbia/"
+        "title": "Art Crowdfunding platforms in Romania",
+        "href": "/platforms/art/romania/"
     },
     {
-        title: "education-serbia",
-        href: "/platforms/education/serbia/"
+        "title": "Mortgages Crowdfunding platforms in Romania",
+        "href": "/platforms/mortgages/romania/"
     },
     {
-        title: "farming-serbia",
-        href: "/platforms/farming/serbia/"
+        "title": "Social cause Crowdfunding platforms in Romania",
+        "href": "/platforms/social-cause/romania/"
     },
     {
-        title: "sport-serbia",
-        href: "/platforms/sport/serbia/"
+        "title": "Education Crowdfunding platforms in Romania",
+        "href": "/platforms/education/romania/"
     },
     {
-        title: "maritime-serbia",
-        href: "/platforms/maritime/serbia/"
+        "title": "Farming Crowdfunding platforms in Romania",
+        "href": "/platforms/farming/romania/"
     },
     {
-        title: "real-estate-slovakia",
-        href: "/platforms/real-estate/slovakia/"
+        "title": "Sport Crowdfunding platforms in Romania",
+        "href": "/platforms/sport/romania/"
     },
     {
-        title: "startups-slovakia",
-        href: "/platforms/startups/slovakia/"
+        "title": "Maritime Crowdfunding platforms in Romania",
+        "href": "/platforms/maritime/romania/"
     },
     {
-        title: "sustainability-slovakia",
-        href: "/platforms/sustainability/slovakia/"
+        "title": "Real estate Crowdfunding platforms in Turkey",
+        "href": "/platforms/real-estate/turkey/"
     },
     {
-        title: "litigation-slovakia",
-        href: "/platforms/litigation/slovakia/"
+        "title": "Startups Crowdfunding platforms in Turkey",
+        "href": "/platforms/startups/turkey/"
     },
     {
-        title: "green-energy-slovakia",
-        href: "/platforms/green-energy/slovakia/"
+        "title": "SME Crowdfunding platforms in Turkey",
+        "href": "/platforms/sme/turkey/"
     },
     {
-        title: "health-science-slovakia",
-        href: "/platforms/health-science/slovakia/"
+        "title": "Sustainability Crowdfunding platforms in Turkey",
+        "href": "/platforms/sustainability/turkey/"
     },
     {
-        title: "logistics-slovakia",
-        href: "/platforms/logistics/slovakia/"
+        "title": "Litigation Crowdfunding platforms in Turkey",
+        "href": "/platforms/litigation/turkey/"
     },
     {
-        title: "personal-loans-slovakia",
-        href: "/platforms/personal-loans/slovakia/"
+        "title": "Green energy Crowdfunding platforms in Turkey",
+        "href": "/platforms/green-energy/turkey/"
     },
     {
-        title: "art-slovakia",
-        href: "/platforms/art/slovakia/"
+        "title": "Health & Science Crowdfunding platforms in Turkey",
+        "href": "/platforms/health-science/turkey/"
     },
     {
-        title: "mortgages-slovakia",
-        href: "/platforms/mortgages/slovakia/"
+        "title": "Logistics Crowdfunding platforms in Turkey",
+        "href": "/platforms/logistics/turkey/"
     },
     {
-        title: "social-cause-slovakia",
-        href: "/platforms/social-cause/slovakia/"
+        "title": "Personal loans Crowdfunding platforms in Turkey",
+        "href": "/platforms/personal-loans/turkey/"
     },
     {
-        title: "education-slovakia",
-        href: "/platforms/education/slovakia/"
+        "title": "Art Crowdfunding platforms in Turkey",
+        "href": "/platforms/art/turkey/"
     },
     {
-        title: "farming-slovakia",
-        href: "/platforms/farming/slovakia/"
+        "title": "Mortgages Crowdfunding platforms in Turkey",
+        "href": "/platforms/mortgages/turkey/"
     },
     {
-        title: "sport-slovakia",
-        href: "/platforms/sport/slovakia/"
+        "title": "Social cause Crowdfunding platforms in Turkey",
+        "href": "/platforms/social-cause/turkey/"
     },
     {
-        title: "maritime-slovakia",
-        href: "/platforms/maritime/slovakia/"
+        "title": "Education Crowdfunding platforms in Turkey",
+        "href": "/platforms/education/turkey/"
     },
     {
-        title: "real-estate-slovenia",
-        href: "/platforms/real-estate/slovenia/"
+        "title": "Farming Crowdfunding platforms in Turkey",
+        "href": "/platforms/farming/turkey/"
     },
     {
-        title: "startups-slovenia",
-        href: "/platforms/startups/slovenia/"
+        "title": "Sport Crowdfunding platforms in Turkey",
+        "href": "/platforms/sport/turkey/"
     },
     {
-        title: "sustainability-slovenia",
-        href: "/platforms/sustainability/slovenia/"
+        "title": "Maritime Crowdfunding platforms in Turkey",
+        "href": "/platforms/maritime/turkey/"
     },
     {
-        title: "litigation-slovenia",
-        href: "/platforms/litigation/slovenia/"
+        "title": "Real estate Crowdfunding platforms in Serbia",
+        "href": "/platforms/real-estate/serbia/"
     },
     {
-        title: "green-energy-slovenia",
-        href: "/platforms/green-energy/slovenia/"
+        "title": "Startups Crowdfunding platforms in Serbia",
+        "href": "/platforms/startups/serbia/"
     },
     {
-        title: "health-science-slovenia",
-        href: "/platforms/health-science/slovenia/"
+        "title": "SME Crowdfunding platforms in Serbia",
+        "href": "/platforms/sme/serbia/"
     },
     {
-        title: "logistics-slovenia",
-        href: "/platforms/logistics/slovenia/"
+        "title": "Sustainability Crowdfunding platforms in Serbia",
+        "href": "/platforms/sustainability/serbia/"
     },
     {
-        title: "personal-loans-slovenia",
-        href: "/platforms/personal-loans/slovenia/"
+        "title": "Litigation Crowdfunding platforms in Serbia",
+        "href": "/platforms/litigation/serbia/"
     },
     {
-        title: "art-slovenia",
-        href: "/platforms/art/slovenia/"
+        "title": "Green energy Crowdfunding platforms in Serbia",
+        "href": "/platforms/green-energy/serbia/"
     },
     {
-        title: "mortgages-slovenia",
-        href: "/platforms/mortgages/slovenia/"
+        "title": "Health & Science Crowdfunding platforms in Serbia",
+        "href": "/platforms/health-science/serbia/"
     },
     {
-        title: "social-cause-slovenia",
-        href: "/platforms/social-cause/slovenia/"
+        "title": "Logistics Crowdfunding platforms in Serbia",
+        "href": "/platforms/logistics/serbia/"
     },
     {
-        title: "education-slovenia",
-        href: "/platforms/education/slovenia/"
+        "title": "Personal loans Crowdfunding platforms in Serbia",
+        "href": "/platforms/personal-loans/serbia/"
     },
     {
-        title: "farming-slovenia",
-        href: "/platforms/farming/slovenia/"
+        "title": "Art Crowdfunding platforms in Serbia",
+        "href": "/platforms/art/serbia/"
     },
     {
-        title: "sport-slovenia",
-        href: "/platforms/sport/slovenia/"
+        "title": "Mortgages Crowdfunding platforms in Serbia",
+        "href": "/platforms/mortgages/serbia/"
     },
     {
-        title: "maritime-slovenia",
-        href: "/platforms/maritime/slovenia/"
+        "title": "Social cause Crowdfunding platforms in Serbia",
+        "href": "/platforms/social-cause/serbia/"
     },
     {
-        title: "real-estate-spain",
-        href: "/platforms/real-estate/spain/"
+        "title": "Education Crowdfunding platforms in Serbia",
+        "href": "/platforms/education/serbia/"
     },
     {
-        title: "startups-spain",
-        href: "/platforms/startups/spain/"
+        "title": "Farming Crowdfunding platforms in Serbia",
+        "href": "/platforms/farming/serbia/"
     },
     {
-        title: "sustainability-spain",
-        href: "/platforms/sustainability/spain/"
+        "title": "Sport Crowdfunding platforms in Serbia",
+        "href": "/platforms/sport/serbia/"
     },
     {
-        title: "litigation-spain",
-        href: "/platforms/litigation/spain/"
+        "title": "Maritime Crowdfunding platforms in Serbia",
+        "href": "/platforms/maritime/serbia/"
     },
     {
-        title: "green-energy-spain",
-        href: "/platforms/green-energy/spain/"
+        "title": "Real estate Crowdfunding platforms in Slovakia",
+        "href": "/platforms/real-estate/slovakia/"
     },
     {
-        title: "health-science-spain",
-        href: "/platforms/health-science/spain/"
+        "title": "Startups Crowdfunding platforms in Slovakia",
+        "href": "/platforms/startups/slovakia/"
     },
     {
-        title: "logistics-spain",
-        href: "/platforms/logistics/spain/"
+        "title": "SME Crowdfunding platforms in Slovakia",
+        "href": "/platforms/sme/slovakia/"
     },
     {
-        title: "personal-loans-spain",
-        href: "/platforms/personal-loans/spain/"
+        "title": "Sustainability Crowdfunding platforms in Slovakia",
+        "href": "/platforms/sustainability/slovakia/"
     },
     {
-        title: "art-spain",
-        href: "/platforms/art/spain/"
+        "title": "Litigation Crowdfunding platforms in Slovakia",
+        "href": "/platforms/litigation/slovakia/"
     },
     {
-        title: "mortgages-spain",
-        href: "/platforms/mortgages/spain/"
+        "title": "Green energy Crowdfunding platforms in Slovakia",
+        "href": "/platforms/green-energy/slovakia/"
     },
     {
-        title: "social-cause-spain",
-        href: "/platforms/social-cause/spain/"
+        "title": "Health & Science Crowdfunding platforms in Slovakia",
+        "href": "/platforms/health-science/slovakia/"
     },
     {
-        title: "education-spain",
-        href: "/platforms/education/spain/"
+        "title": "Logistics Crowdfunding platforms in Slovakia",
+        "href": "/platforms/logistics/slovakia/"
     },
     {
-        title: "farming-spain",
-        href: "/platforms/farming/spain/"
+        "title": "Personal loans Crowdfunding platforms in Slovakia",
+        "href": "/platforms/personal-loans/slovakia/"
     },
     {
-        title: "sport-spain",
-        href: "/platforms/sport/spain/"
+        "title": "Art Crowdfunding platforms in Slovakia",
+        "href": "/platforms/art/slovakia/"
     },
     {
-        title: "maritime-spain",
-        href: "/platforms/maritime/spain/"
+        "title": "Mortgages Crowdfunding platforms in Slovakia",
+        "href": "/platforms/mortgages/slovakia/"
     },
     {
-        title: "real-estate-sweden",
-        href: "/platforms/real-estate/sweden/"
+        "title": "Social cause Crowdfunding platforms in Slovakia",
+        "href": "/platforms/social-cause/slovakia/"
     },
     {
-        title: "startups-sweden",
-        href: "/platforms/startups/sweden/"
+        "title": "Education Crowdfunding platforms in Slovakia",
+        "href": "/platforms/education/slovakia/"
     },
     {
-        title: "sustainability-sweden",
-        href: "/platforms/sustainability/sweden/"
+        "title": "Farming Crowdfunding platforms in Slovakia",
+        "href": "/platforms/farming/slovakia/"
     },
     {
-        title: "litigation-sweden",
-        href: "/platforms/litigation/sweden/"
+        "title": "Sport Crowdfunding platforms in Slovakia",
+        "href": "/platforms/sport/slovakia/"
     },
     {
-        title: "green-energy-sweden",
-        href: "/platforms/green-energy/sweden/"
+        "title": "Maritime Crowdfunding platforms in Slovakia",
+        "href": "/platforms/maritime/slovakia/"
     },
     {
-        title: "health-science-sweden",
-        href: "/platforms/health-science/sweden/"
+        "title": "Real estate Crowdfunding platforms in Slovenia",
+        "href": "/platforms/real-estate/slovenia/"
     },
     {
-        title: "logistics-sweden",
-        href: "/platforms/logistics/sweden/"
+        "title": "Startups Crowdfunding platforms in Slovenia",
+        "href": "/platforms/startups/slovenia/"
     },
     {
-        title: "personal-loans-sweden",
-        href: "/platforms/personal-loans/sweden/"
+        "title": "SME Crowdfunding platforms in Slovenia",
+        "href": "/platforms/sme/slovenia/"
     },
     {
-        title: "art-sweden",
-        href: "/platforms/art/sweden/"
+        "title": "Sustainability Crowdfunding platforms in Slovenia",
+        "href": "/platforms/sustainability/slovenia/"
     },
     {
-        title: "mortgages-sweden",
-        href: "/platforms/mortgages/sweden/"
+        "title": "Litigation Crowdfunding platforms in Slovenia",
+        "href": "/platforms/litigation/slovenia/"
     },
     {
-        title: "social-cause-sweden",
-        href: "/platforms/social-cause/sweden/"
+        "title": "Green energy Crowdfunding platforms in Slovenia",
+        "href": "/platforms/green-energy/slovenia/"
     },
     {
-        title: "education-sweden",
-        href: "/platforms/education/sweden/"
+        "title": "Health & Science Crowdfunding platforms in Slovenia",
+        "href": "/platforms/health-science/slovenia/"
     },
     {
-        title: "farming-sweden",
-        href: "/platforms/farming/sweden/"
+        "title": "Logistics Crowdfunding platforms in Slovenia",
+        "href": "/platforms/logistics/slovenia/"
     },
     {
-        title: "sport-sweden",
-        href: "/platforms/sport/sweden/"
+        "title": "Personal loans Crowdfunding platforms in Slovenia",
+        "href": "/platforms/personal-loans/slovenia/"
     },
     {
-        title: "maritime-sweden",
-        href: "/platforms/maritime/sweden/"
+        "title": "Art Crowdfunding platforms in Slovenia",
+        "href": "/platforms/art/slovenia/"
     },
     {
-        title: "real-estate-switzerland",
-        href: "/platforms/real-estate/switzerland/"
+        "title": "Mortgages Crowdfunding platforms in Slovenia",
+        "href": "/platforms/mortgages/slovenia/"
     },
     {
-        title: "startups-switzerland",
-        href: "/platforms/startups/switzerland/"
+        "title": "Social cause Crowdfunding platforms in Slovenia",
+        "href": "/platforms/social-cause/slovenia/"
     },
     {
-        title: "sustainability-switzerland",
-        href: "/platforms/sustainability/switzerland/"
+        "title": "Education Crowdfunding platforms in Slovenia",
+        "href": "/platforms/education/slovenia/"
     },
     {
-        title: "litigation-switzerland",
-        href: "/platforms/litigation/switzerland/"
+        "title": "Farming Crowdfunding platforms in Slovenia",
+        "href": "/platforms/farming/slovenia/"
     },
     {
-        title: "green-energy-switzerland",
-        href: "/platforms/green-energy/switzerland/"
+        "title": "Sport Crowdfunding platforms in Slovenia",
+        "href": "/platforms/sport/slovenia/"
     },
     {
-        title: "health-science-switzerland",
-        href: "/platforms/health-science/switzerland/"
+        "title": "Maritime Crowdfunding platforms in Slovenia",
+        "href": "/platforms/maritime/slovenia/"
     },
     {
-        title: "logistics-switzerland",
-        href: "/platforms/logistics/switzerland/"
+        "title": "Real estate Crowdfunding platforms in Spain",
+        "href": "/platforms/real-estate/spain/"
     },
     {
-        title: "personal-loans-switzerland",
-        href: "/platforms/personal-loans/switzerland/"
+        "title": "Startups Crowdfunding platforms in Spain",
+        "href": "/platforms/startups/spain/"
     },
     {
-        title: "art-switzerland",
-        href: "/platforms/art/switzerland/"
+        "title": "SME Crowdfunding platforms in Spain",
+        "href": "/platforms/sme/spain/"
     },
     {
-        title: "mortgages-switzerland",
-        href: "/platforms/mortgages/switzerland/"
+        "title": "Sustainability Crowdfunding platforms in Spain",
+        "href": "/platforms/sustainability/spain/"
     },
     {
-        title: "social-cause-switzerland",
-        href: "/platforms/social-cause/switzerland/"
+        "title": "Litigation Crowdfunding platforms in Spain",
+        "href": "/platforms/litigation/spain/"
     },
     {
-        title: "education-switzerland",
-        href: "/platforms/education/switzerland/"
+        "title": "Green energy Crowdfunding platforms in Spain",
+        "href": "/platforms/green-energy/spain/"
     },
     {
-        title: "farming-switzerland",
-        href: "/platforms/farming/switzerland/"
+        "title": "Health & Science Crowdfunding platforms in Spain",
+        "href": "/platforms/health-science/spain/"
     },
     {
-        title: "sport-switzerland",
-        href: "/platforms/sport/switzerland/"
+        "title": "Logistics Crowdfunding platforms in Spain",
+        "href": "/platforms/logistics/spain/"
     },
     {
-        title: "maritime-switzerland",
-        href: "/platforms/maritime/switzerland/"
+        "title": "Personal loans Crowdfunding platforms in Spain",
+        "href": "/platforms/personal-loans/spain/"
     },
     {
-        title: "real-estate-united-kingdom",
-        href: "/platforms/real-estate/united-kingdom/"
+        "title": "Art Crowdfunding platforms in Spain",
+        "href": "/platforms/art/spain/"
     },
     {
-        title: "startups-united-kingdom",
-        href: "/platforms/startups/united-kingdom/"
+        "title": "Mortgages Crowdfunding platforms in Spain",
+        "href": "/platforms/mortgages/spain/"
     },
     {
-        title: "sustainability-united-kingdom",
-        href: "/platforms/sustainability/united-kingdom/"
+        "title": "Social cause Crowdfunding platforms in Spain",
+        "href": "/platforms/social-cause/spain/"
     },
     {
-        title: "litigation-united-kingdom",
-        href: "/platforms/litigation/united-kingdom/"
+        "title": "Education Crowdfunding platforms in Spain",
+        "href": "/platforms/education/spain/"
     },
     {
-        title: "green-energy-united-kingdom",
-        href: "/platforms/green-energy/united-kingdom/"
+        "title": "Farming Crowdfunding platforms in Spain",
+        "href": "/platforms/farming/spain/"
     },
     {
-        title: "health-science-united-kingdom",
-        href: "/platforms/health-science/united-kingdom/"
+        "title": "Sport Crowdfunding platforms in Spain",
+        "href": "/platforms/sport/spain/"
     },
     {
-        title: "logistics-united-kingdom",
-        href: "/platforms/logistics/united-kingdom/"
+        "title": "Maritime Crowdfunding platforms in Spain",
+        "href": "/platforms/maritime/spain/"
     },
     {
-        title: "personal-loans-united-kingdom",
-        href: "/platforms/personal-loans/united-kingdom/"
+        "title": "Real estate Crowdfunding platforms in Sweden",
+        "href": "/platforms/real-estate/sweden/"
     },
     {
-        title: "art-united-kingdom",
-        href: "/platforms/art/united-kingdom/"
+        "title": "Startups Crowdfunding platforms in Sweden",
+        "href": "/platforms/startups/sweden/"
     },
     {
-        title: "mortgages-united-kingdom",
-        href: "/platforms/mortgages/united-kingdom/"
+        "title": "SME Crowdfunding platforms in Sweden",
+        "href": "/platforms/sme/sweden/"
     },
     {
-        title: "social-cause-united-kingdom",
-        href: "/platforms/social-cause/united-kingdom/"
+        "title": "Sustainability Crowdfunding platforms in Sweden",
+        "href": "/platforms/sustainability/sweden/"
     },
     {
-        title: "education-united-kingdom",
-        href: "/platforms/education/united-kingdom/"
+        "title": "Litigation Crowdfunding platforms in Sweden",
+        "href": "/platforms/litigation/sweden/"
     },
     {
-        title: "farming-united-kingdom",
-        href: "/platforms/farming/united-kingdom/"
+        "title": "Green energy Crowdfunding platforms in Sweden",
+        "href": "/platforms/green-energy/sweden/"
     },
     {
-        title: "sport-united-kingdom",
-        href: "/platforms/sport/united-kingdom/"
+        "title": "Health & Science Crowdfunding platforms in Sweden",
+        "href": "/platforms/health-science/sweden/"
     },
     {
-        title: "maritime-united-kingdom",
-        href: "/platforms/maritime/united-kingdom/"
+        "title": "Logistics Crowdfunding platforms in Sweden",
+        "href": "/platforms/logistics/sweden/"
     },
     {
-        title: "real-estate-ukraine",
-        href: "/platforms/real-estate/ukraine/"
+        "title": "Personal loans Crowdfunding platforms in Sweden",
+        "href": "/platforms/personal-loans/sweden/"
     },
     {
-        title: "startups-ukraine",
-        href: "/platforms/startups/ukraine/"
+        "title": "Art Crowdfunding platforms in Sweden",
+        "href": "/platforms/art/sweden/"
     },
     {
-        title: "sustainability-ukraine",
-        href: "/platforms/sustainability/ukraine/"
+        "title": "Mortgages Crowdfunding platforms in Sweden",
+        "href": "/platforms/mortgages/sweden/"
     },
     {
-        title: "litigation-ukraine",
-        href: "/platforms/litigation/ukraine/"
+        "title": "Social cause Crowdfunding platforms in Sweden",
+        "href": "/platforms/social-cause/sweden/"
     },
     {
-        title: "green-energy-ukraine",
-        href: "/platforms/green-energy/ukraine/"
+        "title": "Education Crowdfunding platforms in Sweden",
+        "href": "/platforms/education/sweden/"
     },
     {
-        title: "health-science-ukraine",
-        href: "/platforms/health-science/ukraine/"
+        "title": "Farming Crowdfunding platforms in Sweden",
+        "href": "/platforms/farming/sweden/"
     },
     {
-        title: "logistics-ukraine",
-        href: "/platforms/logistics/ukraine/"
+        "title": "Sport Crowdfunding platforms in Sweden",
+        "href": "/platforms/sport/sweden/"
     },
     {
-        title: "personal-loans-ukraine",
-        href: "/platforms/personal-loans/ukraine/"
+        "title": "Maritime Crowdfunding platforms in Sweden",
+        "href": "/platforms/maritime/sweden/"
     },
     {
-        title: "art-ukraine",
-        href: "/platforms/art/ukraine/"
+        "title": "Real estate Crowdfunding platforms in Switzerland",
+        "href": "/platforms/real-estate/switzerland/"
     },
     {
-        title: "mortgages-ukraine",
-        href: "/platforms/mortgages/ukraine/"
+        "title": "Startups Crowdfunding platforms in Switzerland",
+        "href": "/platforms/startups/switzerland/"
     },
     {
-        title: "social-cause-ukraine",
-        href: "/platforms/social-cause/ukraine/"
+        "title": "SME Crowdfunding platforms in Switzerland",
+        "href": "/platforms/sme/switzerland/"
     },
     {
-        title: "education-ukraine",
-        href: "/platforms/education/ukraine/"
+        "title": "Sustainability Crowdfunding platforms in Switzerland",
+        "href": "/platforms/sustainability/switzerland/"
     },
     {
-        title: "farming-ukraine",
-        href: "/platforms/farming/ukraine/"
+        "title": "Litigation Crowdfunding platforms in Switzerland",
+        "href": "/platforms/litigation/switzerland/"
     },
     {
-        title: "sport-ukraine",
-        href: "/platforms/sport/ukraine/"
+        "title": "Green energy Crowdfunding platforms in Switzerland",
+        "href": "/platforms/green-energy/switzerland/"
     },
     {
-        title: "maritime-ukraine",
-        href: "/platforms/maritime/ukraine/"
+        "title": "Health & Science Crowdfunding platforms in Switzerland",
+        "href": "/platforms/health-science/switzerland/"
+    },
+    {
+        "title": "Logistics Crowdfunding platforms in Switzerland",
+        "href": "/platforms/logistics/switzerland/"
+    },
+    {
+        "title": "Personal loans Crowdfunding platforms in Switzerland",
+        "href": "/platforms/personal-loans/switzerland/"
+    },
+    {
+        "title": "Art Crowdfunding platforms in Switzerland",
+        "href": "/platforms/art/switzerland/"
+    },
+    {
+        "title": "Mortgages Crowdfunding platforms in Switzerland",
+        "href": "/platforms/mortgages/switzerland/"
+    },
+    {
+        "title": "Social cause Crowdfunding platforms in Switzerland",
+        "href": "/platforms/social-cause/switzerland/"
+    },
+    {
+        "title": "Education Crowdfunding platforms in Switzerland",
+        "href": "/platforms/education/switzerland/"
+    },
+    {
+        "title": "Farming Crowdfunding platforms in Switzerland",
+        "href": "/platforms/farming/switzerland/"
+    },
+    {
+        "title": "Sport Crowdfunding platforms in Switzerland",
+        "href": "/platforms/sport/switzerland/"
+    },
+    {
+        "title": "Maritime Crowdfunding platforms in Switzerland",
+        "href": "/platforms/maritime/switzerland/"
+    },
+    {
+        "title": "Real estate Crowdfunding platforms in United Kingdom",
+        "href": "/platforms/real-estate/united-kingdom/"
+    },
+    {
+        "title": "Startups Crowdfunding platforms in United Kingdom",
+        "href": "/platforms/startups/united-kingdom/"
+    },
+    {
+        "title": "SME Crowdfunding platforms in United Kingdom",
+        "href": "/platforms/sme/united-kingdom/"
+    },
+    {
+        "title": "Sustainability Crowdfunding platforms in United Kingdom",
+        "href": "/platforms/sustainability/united-kingdom/"
+    },
+    {
+        "title": "Litigation Crowdfunding platforms in United Kingdom",
+        "href": "/platforms/litigation/united-kingdom/"
+    },
+    {
+        "title": "Green energy Crowdfunding platforms in United Kingdom",
+        "href": "/platforms/green-energy/united-kingdom/"
+    },
+    {
+        "title": "Health & Science Crowdfunding platforms in United Kingdom",
+        "href": "/platforms/health-science/united-kingdom/"
+    },
+    {
+        "title": "Logistics Crowdfunding platforms in United Kingdom",
+        "href": "/platforms/logistics/united-kingdom/"
+    },
+    {
+        "title": "Personal loans Crowdfunding platforms in United Kingdom",
+        "href": "/platforms/personal-loans/united-kingdom/"
+    },
+    {
+        "title": "Art Crowdfunding platforms in United Kingdom",
+        "href": "/platforms/art/united-kingdom/"
+    },
+    {
+        "title": "Mortgages Crowdfunding platforms in United Kingdom",
+        "href": "/platforms/mortgages/united-kingdom/"
+    },
+    {
+        "title": "Social cause Crowdfunding platforms in United Kingdom",
+        "href": "/platforms/social-cause/united-kingdom/"
+    },
+    {
+        "title": "Education Crowdfunding platforms in United Kingdom",
+        "href": "/platforms/education/united-kingdom/"
+    },
+    {
+        "title": "Farming Crowdfunding platforms in United Kingdom",
+        "href": "/platforms/farming/united-kingdom/"
+    },
+    {
+        "title": "Sport Crowdfunding platforms in United Kingdom",
+        "href": "/platforms/sport/united-kingdom/"
+    },
+    {
+        "title": "Maritime Crowdfunding platforms in United Kingdom",
+        "href": "/platforms/maritime/united-kingdom/"
+    },
+    {
+        "title": "Real estate Crowdfunding platforms in Ukraine",
+        "href": "/platforms/real-estate/ukraine/"
+    },
+    {
+        "title": "Startups Crowdfunding platforms in Ukraine",
+        "href": "/platforms/startups/ukraine/"
+    },
+    {
+        "title": "SME Crowdfunding platforms in Ukraine",
+        "href": "/platforms/sme/ukraine/"
+    },
+    {
+        "title": "Sustainability Crowdfunding platforms in Ukraine",
+        "href": "/platforms/sustainability/ukraine/"
+    },
+    {
+        "title": "Litigation Crowdfunding platforms in Ukraine",
+        "href": "/platforms/litigation/ukraine/"
+    },
+    {
+        "title": "Green energy Crowdfunding platforms in Ukraine",
+        "href": "/platforms/green-energy/ukraine/"
+    },
+    {
+        "title": "Health & Science Crowdfunding platforms in Ukraine",
+        "href": "/platforms/health-science/ukraine/"
+    },
+    {
+        "title": "Logistics Crowdfunding platforms in Ukraine",
+        "href": "/platforms/logistics/ukraine/"
+    },
+    {
+        "title": "Personal loans Crowdfunding platforms in Ukraine",
+        "href": "/platforms/personal-loans/ukraine/"
+    },
+    {
+        "title": "Art Crowdfunding platforms in Ukraine",
+        "href": "/platforms/art/ukraine/"
+    },
+    {
+        "title": "Mortgages Crowdfunding platforms in Ukraine",
+        "href": "/platforms/mortgages/ukraine/"
+    },
+    {
+        "title": "Social cause Crowdfunding platforms in Ukraine",
+        "href": "/platforms/social-cause/ukraine/"
+    },
+    {
+        "title": "Education Crowdfunding platforms in Ukraine",
+        "href": "/platforms/education/ukraine/"
+    },
+    {
+        "title": "Farming Crowdfunding platforms in Ukraine",
+        "href": "/platforms/farming/ukraine/"
+    },
+    {
+        "title": "Sport Crowdfunding platforms in Ukraine",
+        "href": "/platforms/sport/ukraine/"
+    },
+    {
+        "title": "Maritime Crowdfunding platforms in Ukraine",
+        "href": "/platforms/maritime/ukraine/"
     }
-
-
-]
-
-// export const investmentTypeLinks: ILinksForListing[] = [
-//     {
-//         title: 'equity',
-//         href: '/platforms/equity/'
-//     },
-//     {
-//         title: 'debt',
-//         href: '/platforms/debt/'
-//     },
-//     {
-//         title: 'p2p lending',
-//         href: '/platforms/p2p-lending/'
-//     },
-//     {
-//         title: 'reward',
-//         href: '/platforms/reward/'
-//     },
-//     {
-//         title: 'donation',
-//         href: '/platforms/donation/'
-//     },
-//     {
-//         title: 'buy to let',
-//         href: '/platforms/buy-to-let/'
-//     },
-//     {
-//         title: 'mini bonds',
-//         href: '/platforms/mini-bonds/'
-//     },
-// ];
-//
-// export const industryLinks: ILinksForListing[] = [
-//     {
-//         title: 'real estate',
-//         href: '/platforms/real-estate/'
-//     },
-//     {
-//         title: 'startups',
-//         href: '/platforms/startups/'
-//     },
-//     {
-//         title: 'sustainability',
-//         href: '/platforms/sustainability/'
-//     },
-//     {
-//         title: 'litigation',
-//         href: '/platforms/litigation/'
-//     },
-//     {
-//         title: 'green energy',
-//         href: '/platforms/green-energy/'
-//     },
-//     {
-//         title: 'health science',
-//         href: '/platforms/health-science/'
-//     },
-//     {
-//         title: 'logistics',
-//         href: '/platforms/logistics/'
-//     },
-//     {
-//         title: 'personal loans',
-//         href: '/platforms/personal-loans/'
-//     },
-//     {
-//         title: 'art',
-//         href: '/platforms/art/'
-//     },
-//     {
-//         title: 'mortgages',
-//         href: '/platforms/mortgages/'
-//     },
-//     {
-//         title: 'social cause',
-//         href: '/platforms/social-cause/'
-//     },
-//     {
-//         title: 'education',
-//         href: '/platforms/education/'
-//     },
-//     {
-//         title: 'farming',
-//         href: '/platforms/farming/'
-//     },
-//     {
-//         title: 'sport',
-//         href: '/platforms/sport/'
-//     },
-//     {
-//         title: 'maritime',
-//         href: '/platforms/maritime/'
-//     },
-// ];
-//
-// export const investmentTypeCountryLinks: ILinksForListing[] = [
-//     {
-//         title: "equity-andorra",
-//         href: "/platforms/equity/andorra/"
-//     },
-//     {
-//         title: "debt-andorra",
-//         href: "/platforms/debt/andorra/"
-//     },
-//     {
-//         title: "p2p-lending-andorra",
-//         href: "/platforms/p2p-lending/andorra/"
-//     },
-//     {
-//         title: "reward-andorra",
-//         href: "/platforms/reward/andorra/"
-//     },
-//     {
-//         title: "donation-andorra",
-//         href: "/platforms/donation/andorra/"
-//     },
-//     {
-//         title: "buy-to-let-andorra",
-//         href: "/platforms/buy-to-let/andorra/"
-//     },
-//     {
-//         title: "mini-bonds-andorra",
-//         href: "/platforms/mini-bonds/andorra/"
-//     },
-//     {
-//         title: "equity-albania",
-//         href: "/platforms/equity/albania/"
-//     },
-//     {
-//         title: "debt-albania",
-//         href: "/platforms/debt/albania/"
-//     },
-//     {
-//         title: "p2p-lending-albania",
-//         href: "/platforms/p2p-lending/albania/"
-//     },
-//     {
-//         title: "reward-albania",
-//         href: "/platforms/reward/albania/"
-//     },
-//     {
-//         title: "donation-albania",
-//         href: "/platforms/donation/albania/"
-//     },
-//     {
-//         title: "buy-to-let-albania",
-//         href: "/platforms/buy-to-let/albania/"
-//     },
-//     {
-//         title: "mini-bonds-albania",
-//         href: "/platforms/mini-bonds/albania/"
-//     },
-//     {
-//         title: "equity-austria",
-//         href: "/platforms/equity/austria/"
-//     },
-//     {
-//         title: "debt-austria",
-//         href: "/platforms/debt/austria/"
-//     },
-//     {
-//         title: "p2p-lending-austria",
-//         href: "/platforms/p2p-lending/austria/"
-//     },
-//     {
-//         title: "reward-austria",
-//         href: "/platforms/reward/austria/"
-//     },
-//     {
-//         title: "donation-austria",
-//         href: "/platforms/donation/austria/"
-//     },
-//     {
-//         title: "buy-to-let-austria",
-//         href: "/platforms/buy-to-let/austria/"
-//     },
-//     {
-//         title: "mini-bonds-austria",
-//         href: "/platforms/mini-bonds/austria/"
-//     },
-//     {
-//         title: "equity-belgium",
-//         href: "/platforms/equity/belgium/"
-//     },
-//     {
-//         title: "debt-belgium",
-//         href: "/platforms/debt/belgium/"
-//     },
-//     {
-//         title: "p2p-lending-belgium",
-//         href: "/platforms/p2p-lending/belgium/"
-//     },
-//     {
-//         title: "reward-belgium",
-//         href: "/platforms/reward/belgium/"
-//     },
-//     {
-//         title: "donation-belgium",
-//         href: "/platforms/donation/belgium/"
-//     },
-//     {
-//         title: "buy-to-let-belgium",
-//         href: "/platforms/buy-to-let/belgium/"
-//     },
-//     {
-//         title: "mini-bonds-belgium",
-//         href: "/platforms/mini-bonds/belgium/"
-//     },
-//     {
-//         title: "equity-bulgaria",
-//         href: "/platforms/equity/bulgaria/"
-//     },
-//     {
-//         title: "debt-bulgaria",
-//         href: "/platforms/debt/bulgaria/"
-//     },
-//     {
-//         title: "p2p-lending-bulgaria",
-//         href: "/platforms/p2p-lending/bulgaria/"
-//     },
-//     {
-//         title: "reward-bulgaria",
-//         href: "/platforms/reward/bulgaria/"
-//     },
-//     {
-//         title: "donation-bulgaria",
-//         href: "/platforms/donation/bulgaria/"
-//     },
-//     {
-//         title: "buy-to-let-bulgaria",
-//         href: "/platforms/buy-to-let/bulgaria/"
-//     },
-//     {
-//         title: "mini-bonds-bulgaria",
-//         href: "/platforms/mini-bonds/bulgaria/"
-//     },
-//     {
-//         title: "equity-croatia",
-//         href: "/platforms/equity/croatia/"
-//     },
-//     {
-//         title: "debt-croatia",
-//         href: "/platforms/debt/croatia/"
-//     },
-//     {
-//         title: "p2p-lending-croatia",
-//         href: "/platforms/p2p-lending/croatia/"
-//     },
-//     {
-//         title: "reward-croatia",
-//         href: "/platforms/reward/croatia/"
-//     },
-//     {
-//         title: "donation-croatia",
-//         href: "/platforms/donation/croatia/"
-//     },
-//     {
-//         title: "buy-to-let-croatia",
-//         href: "/platforms/buy-to-let/croatia/"
-//     },
-//     {
-//         title: "mini-bonds-croatia",
-//         href: "/platforms/mini-bonds/croatia/"
-//     },
-//     {
-//         title: "equity-cyprus",
-//         href: "/platforms/equity/cyprus/"
-//     },
-//     {
-//         title: "debt-cyprus",
-//         href: "/platforms/debt/cyprus/"
-//     },
-//     {
-//         title: "p2p-lending-cyprus",
-//         href: "/platforms/p2p-lending/cyprus/"
-//     },
-//     {
-//         title: "reward-cyprus",
-//         href: "/platforms/reward/cyprus/"
-//     },
-//     {
-//         title: "donation-cyprus",
-//         href: "/platforms/donation/cyprus/"
-//     },
-//     {
-//         title: "buy-to-let-cyprus",
-//         href: "/platforms/buy-to-let/cyprus/"
-//     },
-//     {
-//         title: "mini-bonds-cyprus",
-//         href: "/platforms/mini-bonds/cyprus/"
-//     },
-//     {
-//         title: "equity-czech-republic",
-//         href: "/platforms/equity/czech-republic/"
-//     },
-//     {
-//         title: "debt-czech-republic",
-//         href: "/platforms/debt/czech-republic/"
-//     },
-//     {
-//         title: "p2p-lending-czech-republic",
-//         href: "/platforms/p2p-lending/czech-republic/"
-//     },
-//     {
-//         title: "reward-czech-republic",
-//         href: "/platforms/reward/czech-republic/"
-//     },
-//     {
-//         title: "donation-czech-republic",
-//         href: "/platforms/donation/czech-republic/"
-//     },
-//     {
-//         title: "buy-to-let-czech-republic",
-//         href: "/platforms/buy-to-let/czech-republic/"
-//     },
-//     {
-//         title: "mini-bonds-czech-republic",
-//         href: "/platforms/mini-bonds/czech-republic/"
-//     },
-//     {
-//         title: "equity-denmark",
-//         href: "/platforms/equity/denmark/"
-//     },
-//     {
-//         title: "debt-denmark",
-//         href: "/platforms/debt/denmark/"
-//     },
-//     {
-//         title: "p2p-lending-denmark",
-//         href: "/platforms/p2p-lending/denmark/"
-//     },
-//     {
-//         title: "reward-denmark",
-//         href: "/platforms/reward/denmark/"
-//     },
-//     {
-//         title: "donation-denmark",
-//         href: "/platforms/donation/denmark/"
-//     },
-//     {
-//         title: "buy-to-let-denmark",
-//         href: "/platforms/buy-to-let/denmark/"
-//     },
-//     {
-//         title: "mini-bonds-denmark",
-//         href: "/platforms/mini-bonds/denmark/"
-//     },
-//     {
-//         title: "equity-estonia",
-//         href: "/platforms/equity/estonia/"
-//     },
-//     {
-//         title: "debt-estonia",
-//         href: "/platforms/debt/estonia/"
-//     },
-//     {
-//         title: "p2p-lending-estonia",
-//         href: "/platforms/p2p-lending/estonia/"
-//     },
-//     {
-//         title: "reward-estonia",
-//         href: "/platforms/reward/estonia/"
-//     },
-//     {
-//         title: "donation-estonia",
-//         href: "/platforms/donation/estonia/"
-//     },
-//     {
-//         title: "buy-to-let-estonia",
-//         href: "/platforms/buy-to-let/estonia/"
-//     },
-//     {
-//         title: "mini-bonds-estonia",
-//         href: "/platforms/mini-bonds/estonia/"
-//     },
-//     {
-//         title: "equity-finland",
-//         href: "/platforms/equity/finland/"
-//     },
-//     {
-//         title: "debt-finland",
-//         href: "/platforms/debt/finland/"
-//     },
-//     {
-//         title: "p2p-lending-finland",
-//         href: "/platforms/p2p-lending/finland/"
-//     },
-//     {
-//         title: "reward-finland",
-//         href: "/platforms/reward/finland/"
-//     },
-//     {
-//         title: "donation-finland",
-//         href: "/platforms/donation/finland/"
-//     },
-//     {
-//         title: "buy-to-let-finland",
-//         href: "/platforms/buy-to-let/finland/"
-//     },
-//     {
-//         title: "mini-bonds-finland",
-//         href: "/platforms/mini-bonds/finland/"
-//     },
-//     {
-//         title: "equity-france",
-//         href: "/platforms/equity/france/"
-//     },
-//     {
-//         title: "debt-france",
-//         href: "/platforms/debt/france/"
-//     },
-//     {
-//         title: "p2p-lending-france",
-//         href: "/platforms/p2p-lending/france/"
-//     },
-//     {
-//         title: "reward-france",
-//         href: "/platforms/reward/france/"
-//     },
-//     {
-//         title: "donation-france",
-//         href: "/platforms/donation/france/"
-//     },
-//     {
-//         title: "buy-to-let-france",
-//         href: "/platforms/buy-to-let/france/"
-//     },
-//     {
-//         title: "mini-bonds-france",
-//         href: "/platforms/mini-bonds/france/"
-//     },
-//     {
-//         title: "equity-germany",
-//         href: "/platforms/equity/germany/"
-//     },
-//     {
-//         title: "debt-germany",
-//         href: "/platforms/debt/germany/"
-//     },
-//     {
-//         title: "p2p-lending-germany",
-//         href: "/platforms/p2p-lending/germany/"
-//     },
-//     {
-//         title: "reward-germany",
-//         href: "/platforms/reward/germany/"
-//     },
-//     {
-//         title: "donation-germany",
-//         href: "/platforms/donation/germany/"
-//     },
-//     {
-//         title: "buy-to-let-germany",
-//         href: "/platforms/buy-to-let/germany/"
-//     },
-//     {
-//         title: "mini-bonds-germany",
-//         href: "/platforms/mini-bonds/germany/"
-//     },
-//     {
-//         title: "equity-greece",
-//         href: "/platforms/equity/greece/"
-//     },
-//     {
-//         title: "debt-greece",
-//         href: "/platforms/debt/greece/"
-//     },
-//     {
-//         title: "p2p-lending-greece",
-//         href: "/platforms/p2p-lending/greece/"
-//     },
-//     {
-//         title: "reward-greece",
-//         href: "/platforms/reward/greece/"
-//     },
-//     {
-//         title: "donation-greece",
-//         href: "/platforms/donation/greece/"
-//     },
-//     {
-//         title: "buy-to-let-greece",
-//         href: "/platforms/buy-to-let/greece/"
-//     },
-//     {
-//         title: "mini-bonds-greece",
-//         href: "/platforms/mini-bonds/greece/"
-//     },
-//     {
-//         title: "equity-hungary",
-//         href: "/platforms/equity/hungary/"
-//     },
-//     {
-//         title: "debt-hungary",
-//         href: "/platforms/debt/hungary/"
-//     },
-//     {
-//         title: "p2p-lending-hungary",
-//         href: "/platforms/p2p-lending/hungary/"
-//     },
-//     {
-//         title: "reward-hungary",
-//         href: "/platforms/reward/hungary/"
-//     },
-//     {
-//         title: "donation-hungary",
-//         href: "/platforms/donation/hungary/"
-//     },
-//     {
-//         title: "buy-to-let-hungary",
-//         href: "/platforms/buy-to-let/hungary/"
-//     },
-//     {
-//         title: "mini-bonds-hungary",
-//         href: "/platforms/mini-bonds/hungary/"
-//     },
-//     {
-//         title: "equity-iceland",
-//         href: "/platforms/equity/iceland/"
-//     },
-//     {
-//         title: "debt-iceland",
-//         href: "/platforms/debt/iceland/"
-//     },
-//     {
-//         title: "p2p-lending-iceland",
-//         href: "/platforms/p2p-lending/iceland/"
-//     },
-//     {
-//         title: "reward-iceland",
-//         href: "/platforms/reward/iceland/"
-//     },
-//     {
-//         title: "donation-iceland",
-//         href: "/platforms/donation/iceland/"
-//     },
-//     {
-//         title: "buy-to-let-iceland",
-//         href: "/platforms/buy-to-let/iceland/"
-//     },
-//     {
-//         title: "mini-bonds-iceland",
-//         href: "/platforms/mini-bonds/iceland/"
-//     },
-//     {
-//         title: "equity-ireland",
-//         href: "/platforms/equity/ireland/"
-//     },
-//     {
-//         title: "debt-ireland",
-//         href: "/platforms/debt/ireland/"
-//     },
-//     {
-//         title: "p2p-lending-ireland",
-//         href: "/platforms/p2p-lending/ireland/"
-//     },
-//     {
-//         title: "reward-ireland",
-//         href: "/platforms/reward/ireland/"
-//     },
-//     {
-//         title: "donation-ireland",
-//         href: "/platforms/donation/ireland/"
-//     },
-//     {
-//         title: "buy-to-let-ireland",
-//         href: "/platforms/buy-to-let/ireland/"
-//     },
-//     {
-//         title: "mini-bonds-ireland",
-//         href: "/platforms/mini-bonds/ireland/"
-//     },
-//     {
-//         title: "equity-israel",
-//         href: "/platforms/equity/israel/"
-//     },
-//     {
-//         title: "debt-israel",
-//         href: "/platforms/debt/israel/"
-//     },
-//     {
-//         title: "p2p-lending-israel",
-//         href: "/platforms/p2p-lending/israel/"
-//     },
-//     {
-//         title: "reward-israel",
-//         href: "/platforms/reward/israel/"
-//     },
-//     {
-//         title: "donation-israel",
-//         href: "/platforms/donation/israel/"
-//     },
-//     {
-//         title: "buy-to-let-israel",
-//         href: "/platforms/buy-to-let/israel/"
-//     },
-//     {
-//         title: "mini-bonds-israel",
-//         href: "/platforms/mini-bonds/israel/"
-//     },
-//     {
-//         title: "equity-italy",
-//         href: "/platforms/equity/italy/"
-//     },
-//     {
-//         title: "debt-italy",
-//         href: "/platforms/debt/italy/"
-//     },
-//     {
-//         title: "p2p-lending-italy",
-//         href: "/platforms/p2p-lending/italy/"
-//     },
-//     {
-//         title: "reward-italy",
-//         href: "/platforms/reward/italy/"
-//     },
-//     {
-//         title: "donation-italy",
-//         href: "/platforms/donation/italy/"
-//     },
-//     {
-//         title: "buy-to-let-italy",
-//         href: "/platforms/buy-to-let/italy/"
-//     },
-//     {
-//         title: "mini-bonds-italy",
-//         href: "/platforms/mini-bonds/italy/"
-//     },
-//     {
-//         title: "equity-latvia",
-//         href: "/platforms/equity/latvia/"
-//     },
-//     {
-//         title: "debt-latvia",
-//         href: "/platforms/debt/latvia/"
-//     },
-//     {
-//         title: "p2p-lending-latvia",
-//         href: "/platforms/p2p-lending/latvia/"
-//     },
-//     {
-//         title: "reward-latvia",
-//         href: "/platforms/reward/latvia/"
-//     },
-//     {
-//         title: "donation-latvia",
-//         href: "/platforms/donation/latvia/"
-//     },
-//     {
-//         title: "buy-to-let-latvia",
-//         href: "/platforms/buy-to-let/latvia/"
-//     },
-//     {
-//         title: "mini-bonds-latvia",
-//         href: "/platforms/mini-bonds/latvia/"
-//     },
-//     {
-//         title: "equity-liechtenstein",
-//         href: "/platforms/equity/liechtenstein/"
-//     },
-//     {
-//         title: "debt-liechtenstein",
-//         href: "/platforms/debt/liechtenstein/"
-//     },
-//     {
-//         title: "p2p-lending-liechtenstein",
-//         href: "/platforms/p2p-lending/liechtenstein/"
-//     },
-//     {
-//         title: "reward-liechtenstein",
-//         href: "/platforms/reward/liechtenstein/"
-//     },
-//     {
-//         title: "donation-liechtenstein",
-//         href: "/platforms/donation/liechtenstein/"
-//     },
-//     {
-//         title: "buy-to-let-liechtenstein",
-//         href: "/platforms/buy-to-let/liechtenstein/"
-//     },
-//     {
-//         title: "mini-bonds-liechtenstein",
-//         href: "/platforms/mini-bonds/liechtenstein/"
-//     },
-//     {
-//         title: "equity-lithuania",
-//         href: "/platforms/equity/lithuania/"
-//     },
-//     {
-//         title: "debt-lithuania",
-//         href: "/platforms/debt/lithuania/"
-//     },
-//     {
-//         title: "p2p-lending-lithuania",
-//         href: "/platforms/p2p-lending/lithuania/"
-//     },
-//     {
-//         title: "reward-lithuania",
-//         href: "/platforms/reward/lithuania/"
-//     },
-//     {
-//         title: "donation-lithuania",
-//         href: "/platforms/donation/lithuania/"
-//     },
-//     {
-//         title: "buy-to-let-lithuania",
-//         href: "/platforms/buy-to-let/lithuania/"
-//     },
-//     {
-//         title: "mini-bonds-lithuania",
-//         href: "/platforms/mini-bonds/lithuania/"
-//     },
-//     {
-//         title: "equity-luxembourg",
-//         href: "/platforms/equity/luxembourg/"
-//     },
-//     {
-//         title: "debt-luxembourg",
-//         href: "/platforms/debt/luxembourg/"
-//     },
-//     {
-//         title: "p2p-lending-luxembourg",
-//         href: "/platforms/p2p-lending/luxembourg/"
-//     },
-//     {
-//         title: "reward-luxembourg",
-//         href: "/platforms/reward/luxembourg/"
-//     },
-//     {
-//         title: "donation-luxembourg",
-//         href: "/platforms/donation/luxembourg/"
-//     },
-//     {
-//         title: "buy-to-let-luxembourg",
-//         href: "/platforms/buy-to-let/luxembourg/"
-//     },
-//     {
-//         title: "mini-bonds-luxembourg",
-//         href: "/platforms/mini-bonds/luxembourg/"
-//     },
-//     {
-//         title: "equity-macedonia",
-//         href: "/platforms/equity/macedonia/"
-//     },
-//     {
-//         title: "debt-macedonia",
-//         href: "/platforms/debt/macedonia/"
-//     },
-//     {
-//         title: "p2p-lending-macedonia",
-//         href: "/platforms/p2p-lending/macedonia/"
-//     },
-//     {
-//         title: "reward-macedonia",
-//         href: "/platforms/reward/macedonia/"
-//     },
-//     {
-//         title: "donation-macedonia",
-//         href: "/platforms/donation/macedonia/"
-//     },
-//     {
-//         title: "buy-to-let-macedonia",
-//         href: "/platforms/buy-to-let/macedonia/"
-//     },
-//     {
-//         title: "mini-bonds-macedonia",
-//         href: "/platforms/mini-bonds/macedonia/"
-//     },
-//     {
-//         title: "equity-malta",
-//         href: "/platforms/equity/malta/"
-//     },
-//     {
-//         title: "debt-malta",
-//         href: "/platforms/debt/malta/"
-//     },
-//     {
-//         title: "p2p-lending-malta",
-//         href: "/platforms/p2p-lending/malta/"
-//     },
-//     {
-//         title: "reward-malta",
-//         href: "/platforms/reward/malta/"
-//     },
-//     {
-//         title: "donation-malta",
-//         href: "/platforms/donation/malta/"
-//     },
-//     {
-//         title: "buy-to-let-malta",
-//         href: "/platforms/buy-to-let/malta/"
-//     },
-//     {
-//         title: "mini-bonds-malta",
-//         href: "/platforms/mini-bonds/malta/"
-//     },
-//     {
-//         title: "equity-moldova",
-//         href: "/platforms/equity/moldova/"
-//     },
-//     {
-//         title: "debt-moldova",
-//         href: "/platforms/debt/moldova/"
-//     },
-//     {
-//         title: "p2p-lending-moldova",
-//         href: "/platforms/p2p-lending/moldova/"
-//     },
-//     {
-//         title: "reward-moldova",
-//         href: "/platforms/reward/moldova/"
-//     },
-//     {
-//         title: "donation-moldova",
-//         href: "/platforms/donation/moldova/"
-//     },
-//     {
-//         title: "buy-to-let-moldova",
-//         href: "/platforms/buy-to-let/moldova/"
-//     },
-//     {
-//         title: "mini-bonds-moldova",
-//         href: "/platforms/mini-bonds/moldova/"
-//     },
-//     {
-//         title: "equity-monaco",
-//         href: "/platforms/equity/monaco/"
-//     },
-//     {
-//         title: "debt-monaco",
-//         href: "/platforms/debt/monaco/"
-//     },
-//     {
-//         title: "p2p-lending-monaco",
-//         href: "/platforms/p2p-lending/monaco/"
-//     },
-//     {
-//         title: "reward-monaco",
-//         href: "/platforms/reward/monaco/"
-//     },
-//     {
-//         title: "donation-monaco",
-//         href: "/platforms/donation/monaco/"
-//     },
-//     {
-//         title: "buy-to-let-monaco",
-//         href: "/platforms/buy-to-let/monaco/"
-//     },
-//     {
-//         title: "mini-bonds-monaco",
-//         href: "/platforms/mini-bonds/monaco/"
-//     },
-//     {
-//         title: "equity-netherlands",
-//         href: "/platforms/equity/netherlands/"
-//     },
-//     {
-//         title: "debt-netherlands",
-//         href: "/platforms/debt/netherlands/"
-//     },
-//     {
-//         title: "p2p-lending-netherlands",
-//         href: "/platforms/p2p-lending/netherlands/"
-//     },
-//     {
-//         title: "reward-netherlands",
-//         href: "/platforms/reward/netherlands/"
-//     },
-//     {
-//         title: "donation-netherlands",
-//         href: "/platforms/donation/netherlands/"
-//     },
-//     {
-//         title: "buy-to-let-netherlands",
-//         href: "/platforms/buy-to-let/netherlands/"
-//     },
-//     {
-//         title: "mini-bonds-netherlands",
-//         href: "/platforms/mini-bonds/netherlands/"
-//     },
-//     {
-//         title: "equity-norway",
-//         href: "/platforms/equity/norway/"
-//     },
-//     {
-//         title: "debt-norway",
-//         href: "/platforms/debt/norway/"
-//     },
-//     {
-//         title: "p2p-lending-norway",
-//         href: "/platforms/p2p-lending/norway/"
-//     },
-//     {
-//         title: "reward-norway",
-//         href: "/platforms/reward/norway/"
-//     },
-//     {
-//         title: "donation-norway",
-//         href: "/platforms/donation/norway/"
-//     },
-//     {
-//         title: "buy-to-let-norway",
-//         href: "/platforms/buy-to-let/norway/"
-//     },
-//     {
-//         title: "mini-bonds-norway",
-//         href: "/platforms/mini-bonds/norway/"
-//     },
-//     {
-//         title: "equity-poland",
-//         href: "/platforms/equity/poland/"
-//     },
-//     {
-//         title: "debt-poland",
-//         href: "/platforms/debt/poland/"
-//     },
-//     {
-//         title: "p2p-lending-poland",
-//         href: "/platforms/p2p-lending/poland/"
-//     },
-//     {
-//         title: "reward-poland",
-//         href: "/platforms/reward/poland/"
-//     },
-//     {
-//         title: "donation-poland",
-//         href: "/platforms/donation/poland/"
-//     },
-//     {
-//         title: "buy-to-let-poland",
-//         href: "/platforms/buy-to-let/poland/"
-//     },
-//     {
-//         title: "mini-bonds-poland",
-//         href: "/platforms/mini-bonds/poland/"
-//     },
-//     {
-//         title: "equity-portugal",
-//         href: "/platforms/equity/portugal/"
-//     },
-//     {
-//         title: "debt-portugal",
-//         href: "/platforms/debt/portugal/"
-//     },
-//     {
-//         title: "p2p-lending-portugal",
-//         href: "/platforms/p2p-lending/portugal/"
-//     },
-//     {
-//         title: "reward-portugal",
-//         href: "/platforms/reward/portugal/"
-//     },
-//     {
-//         title: "donation-portugal",
-//         href: "/platforms/donation/portugal/"
-//     },
-//     {
-//         title: "buy-to-let-portugal",
-//         href: "/platforms/buy-to-let/portugal/"
-//     },
-//     {
-//         title: "mini-bonds-portugal",
-//         href: "/platforms/mini-bonds/portugal/"
-//     },
-//     {
-//         title: "equity-romania",
-//         href: "/platforms/equity/romania/"
-//     },
-//     {
-//         title: "debt-romania",
-//         href: "/platforms/debt/romania/"
-//     },
-//     {
-//         title: "p2p-lending-romania",
-//         href: "/platforms/p2p-lending/romania/"
-//     },
-//     {
-//         title: "reward-romania",
-//         href: "/platforms/reward/romania/"
-//     },
-//     {
-//         title: "donation-romania",
-//         href: "/platforms/donation/romania/"
-//     },
-//     {
-//         title: "buy-to-let-romania",
-//         href: "/platforms/buy-to-let/romania/"
-//     },
-//     {
-//         title: "mini-bonds-romania",
-//         href: "/platforms/mini-bonds/romania/"
-//     },
-//     {
-//         title: "equity-turkey",
-//         href: "/platforms/equity/turkey/"
-//     },
-//     {
-//         title: "debt-turkey",
-//         href: "/platforms/debt/turkey/"
-//     },
-//     {
-//         title: "p2p-lending-turkey",
-//         href: "/platforms/p2p-lending/turkey/"
-//     },
-//     {
-//         title: "reward-turkey",
-//         href: "/platforms/reward/turkey/"
-//     },
-//     {
-//         title: "donation-turkey",
-//         href: "/platforms/donation/turkey/"
-//     },
-//     {
-//         title: "buy-to-let-turkey",
-//         href: "/platforms/buy-to-let/turkey/"
-//     },
-//     {
-//         title: "mini-bonds-turkey",
-//         href: "/platforms/mini-bonds/turkey/"
-//     },
-//     {
-//         title: "equity-serbia",
-//         href: "/platforms/equity/serbia/"
-//     },
-//     {
-//         title: "debt-serbia",
-//         href: "/platforms/debt/serbia/"
-//     },
-//     {
-//         title: "p2p-lending-serbia",
-//         href: "/platforms/p2p-lending/serbia/"
-//     },
-//     {
-//         title: "reward-serbia",
-//         href: "/platforms/reward/serbia/"
-//     },
-//     {
-//         title: "donation-serbia",
-//         href: "/platforms/donation/serbia/"
-//     },
-//     {
-//         title: "buy-to-let-serbia",
-//         href: "/platforms/buy-to-let/serbia/"
-//     },
-//     {
-//         title: "mini-bonds-serbia",
-//         href: "/platforms/mini-bonds/serbia/"
-//     },
-//     {
-//         title: "equity-slovakia",
-//         href: "/platforms/equity/slovakia/"
-//     },
-//     {
-//         title: "debt-slovakia",
-//         href: "/platforms/debt/slovakia/"
-//     },
-//     {
-//         title: "p2p-lending-slovakia",
-//         href: "/platforms/p2p-lending/slovakia/"
-//     },
-//     {
-//         title: "reward-slovakia",
-//         href: "/platforms/reward/slovakia/"
-//     },
-//     {
-//         title: "donation-slovakia",
-//         href: "/platforms/donation/slovakia/"
-//     },
-//     {
-//         title: "buy-to-let-slovakia",
-//         href: "/platforms/buy-to-let/slovakia/"
-//     },
-//     {
-//         title: "mini-bonds-slovakia",
-//         href: "/platforms/mini-bonds/slovakia/"
-//     },
-//     {
-//         title: "equity-slovenia",
-//         href: "/platforms/equity/slovenia/"
-//     },
-//     {
-//         title: "debt-slovenia",
-//         href: "/platforms/debt/slovenia/"
-//     },
-//     {
-//         title: "p2p-lending-slovenia",
-//         href: "/platforms/p2p-lending/slovenia/"
-//     },
-//     {
-//         title: "reward-slovenia",
-//         href: "/platforms/reward/slovenia/"
-//     },
-//     {
-//         title: "donation-slovenia",
-//         href: "/platforms/donation/slovenia/"
-//     },
-//     {
-//         title: "buy-to-let-slovenia",
-//         href: "/platforms/buy-to-let/slovenia/"
-//     },
-//     {
-//         title: "mini-bonds-slovenia",
-//         href: "/platforms/mini-bonds/slovenia/"
-//     },
-//     {
-//         title: "equity-spain",
-//         href: "/platforms/equity/spain/"
-//     },
-//     {
-//         title: "debt-spain",
-//         href: "/platforms/debt/spain/"
-//     },
-//     {
-//         title: "p2p-lending-spain",
-//         href: "/platforms/p2p-lending/spain/"
-//     },
-//     {
-//         title: "reward-spain",
-//         href: "/platforms/reward/spain/"
-//     },
-//     {
-//         title: "donation-spain",
-//         href: "/platforms/donation/spain/"
-//     },
-//     {
-//         title: "buy-to-let-spain",
-//         href: "/platforms/buy-to-let/spain/"
-//     },
-//     {
-//         title: "mini-bonds-spain",
-//         href: "/platforms/mini-bonds/spain/"
-//     },
-//     {
-//         title: "equity-sweden",
-//         href: "/platforms/equity/sweden/"
-//     },
-//     {
-//         title: "debt-sweden",
-//         href: "/platforms/debt/sweden/"
-//     },
-//     {
-//         title: "p2p-lending-sweden",
-//         href: "/platforms/p2p-lending/sweden/"
-//     },
-//     {
-//         title: "reward-sweden",
-//         href: "/platforms/reward/sweden/"
-//     },
-//     {
-//         title: "donation-sweden",
-//         href: "/platforms/donation/sweden/"
-//     },
-//     {
-//         title: "buy-to-let-sweden",
-//         href: "/platforms/buy-to-let/sweden/"
-//     },
-//     {
-//         title: "mini-bonds-sweden",
-//         href: "/platforms/mini-bonds/sweden/"
-//     },
-//     {
-//         title: "equity-switzerland",
-//         href: "/platforms/equity/switzerland/"
-//     },
-//     {
-//         title: "debt-switzerland",
-//         href: "/platforms/debt/switzerland/"
-//     },
-//     {
-//         title: "p2p-lending-switzerland",
-//         href: "/platforms/p2p-lending/switzerland/"
-//     },
-//     {
-//         title: "reward-switzerland",
-//         href: "/platforms/reward/switzerland/"
-//     },
-//     {
-//         title: "donation-switzerland",
-//         href: "/platforms/donation/switzerland/"
-//     },
-//     {
-//         title: "buy-to-let-switzerland",
-//         href: "/platforms/buy-to-let/switzerland/"
-//     },
-//     {
-//         title: "mini-bonds-switzerland",
-//         href: "/platforms/mini-bonds/switzerland/"
-//     },
-//     {
-//         title: "equity-united-kingdom",
-//         href: "/platforms/equity/united-kingdom/"
-//     },
-//     {
-//         title: "debt-united-kingdom",
-//         href: "/platforms/debt/united-kingdom/"
-//     },
-//     {
-//         title: "p2p-lending-united-kingdom",
-//         href: "/platforms/p2p-lending/united-kingdom/"
-//     },
-//     {
-//         title: "reward-united-kingdom",
-//         href: "/platforms/reward/united-kingdom/"
-//     },
-//     {
-//         title: "donation-united-kingdom",
-//         href: "/platforms/donation/united-kingdom/"
-//     },
-//     {
-//         title: "buy-to-let-united-kingdom",
-//         href: "/platforms/buy-to-let/united-kingdom/"
-//     },
-//     {
-//         title: "mini-bonds-united-kingdom",
-//         href: "/platforms/mini-bonds/united-kingdom/"
-//     },
-//     {
-//         title: "equity-ukraine",
-//         href: "/platforms/equity/ukraine/"
-//     },
-//     {
-//         title: "debt-ukraine",
-//         href: "/platforms/debt/ukraine/"
-//     },
-//     {
-//         title: "p2p-lending-ukraine",
-//         href: "/platforms/p2p-lending/ukraine/"
-//     },
-//     {
-//         title: "reward-ukraine",
-//         href: "/platforms/reward/ukraine/"
-//     },
-//     {
-//         title: "donation-ukraine",
-//         href: "/platforms/donation/ukraine/"
-//     },
-//     {
-//         title: "buy-to-let-ukraine",
-//         href: "/platforms/buy-to-let/ukraine/"
-//     },
-//     {
-//         title: "mini-bonds-ukraine",
-//         href: "/platforms/mini-bonds/ukraine/"
-//     }
-// ];
-//
-// export const industryCountryLinks: ILinksForListing[] = [
-//     {
-//         title: "real-estate-andorra",
-//         href: "/platforms/real-estate/andorra/"
-//     },
-//     {
-//         title: "startups-andorra",
-//         href: "/platforms/startups/andorra/"
-//     },
-//     {
-//         title: "sustainability-andorra",
-//         href: "/platforms/sustainability/andorra/"
-//     },
-//     {
-//         title: "litigation-andorra",
-//         href: "/platforms/litigation/andorra/"
-//     },
-//     {
-//         title: "green-energy-andorra",
-//         href: "/platforms/green-energy/andorra/"
-//     },
-//     {
-//         title: "health-science-andorra",
-//         href: "/platforms/health-science/andorra/"
-//     },
-//     {
-//         title: "logistics-andorra",
-//         href: "/platforms/logistics/andorra/"
-//     },
-//     {
-//         title: "personal-loans-andorra",
-//         href: "/platforms/personal-loans/andorra/"
-//     },
-//     {
-//         title: "art-andorra",
-//         href: "/platforms/art/andorra/"
-//     },
-//     {
-//         title: "mortgages-andorra",
-//         href: "/platforms/mortgages/andorra/"
-//     },
-//     {
-//         title: "social-cause-andorra",
-//         href: "/platforms/social-cause/andorra/"
-//     },
-//     {
-//         title: "education-andorra",
-//         href: "/platforms/education/andorra/"
-//     },
-//     {
-//         title: "farming-andorra",
-//         href: "/platforms/farming/andorra/"
-//     },
-//     {
-//         title: "sport-andorra",
-//         href: "/platforms/sport/andorra/"
-//     },
-//     {
-//         title: "maritime-andorra",
-//         href: "/platforms/maritime/andorra/"
-//     },
-//     {
-//         title: "real-estate-albania",
-//         href: "/platforms/real-estate/albania/"
-//     },
-//     {
-//         title: "startups-albania",
-//         href: "/platforms/startups/albania/"
-//     },
-//     {
-//         title: "sustainability-albania",
-//         href: "/platforms/sustainability/albania/"
-//     },
-//     {
-//         title: "litigation-albania",
-//         href: "/platforms/litigation/albania/"
-//     },
-//     {
-//         title: "green-energy-albania",
-//         href: "/platforms/green-energy/albania/"
-//     },
-//     {
-//         title: "health-science-albania",
-//         href: "/platforms/health-science/albania/"
-//     },
-//     {
-//         title: "logistics-albania",
-//         href: "/platforms/logistics/albania/"
-//     },
-//     {
-//         title: "personal-loans-albania",
-//         href: "/platforms/personal-loans/albania/"
-//     },
-//     {
-//         title: "art-albania",
-//         href: "/platforms/art/albania/"
-//     },
-//     {
-//         title: "mortgages-albania",
-//         href: "/platforms/mortgages/albania/"
-//     },
-//     {
-//         title: "social-cause-albania",
-//         href: "/platforms/social-cause/albania/"
-//     },
-//     {
-//         title: "education-albania",
-//         href: "/platforms/education/albania/"
-//     },
-//     {
-//         title: "farming-albania",
-//         href: "/platforms/farming/albania/"
-//     },
-//     {
-//         title: "sport-albania",
-//         href: "/platforms/sport/albania/"
-//     },
-//     {
-//         title: "maritime-albania",
-//         href: "/platforms/maritime/albania/"
-//     },
-//     {
-//         title: "real-estate-austria",
-//         href: "/platforms/real-estate/austria/"
-//     },
-//     {
-//         title: "startups-austria",
-//         href: "/platforms/startups/austria/"
-//     },
-//     {
-//         title: "sustainability-austria",
-//         href: "/platforms/sustainability/austria/"
-//     },
-//     {
-//         title: "litigation-austria",
-//         href: "/platforms/litigation/austria/"
-//     },
-//     {
-//         title: "green-energy-austria",
-//         href: "/platforms/green-energy/austria/"
-//     },
-//     {
-//         title: "health-science-austria",
-//         href: "/platforms/health-science/austria/"
-//     },
-//     {
-//         title: "logistics-austria",
-//         href: "/platforms/logistics/austria/"
-//     },
-//     {
-//         title: "personal-loans-austria",
-//         href: "/platforms/personal-loans/austria/"
-//     },
-//     {
-//         title: "art-austria",
-//         href: "/platforms/art/austria/"
-//     },
-//     {
-//         title: "mortgages-austria",
-//         href: "/platforms/mortgages/austria/"
-//     },
-//     {
-//         title: "social-cause-austria",
-//         href: "/platforms/social-cause/austria/"
-//     },
-//     {
-//         title: "education-austria",
-//         href: "/platforms/education/austria/"
-//     },
-//     {
-//         title: "farming-austria",
-//         href: "/platforms/farming/austria/"
-//     },
-//     {
-//         title: "sport-austria",
-//         href: "/platforms/sport/austria/"
-//     },
-//     {
-//         title: "maritime-austria",
-//         href: "/platforms/maritime/austria/"
-//     },
-//     {
-//         title: "real-estate-belgium",
-//         href: "/platforms/real-estate/belgium/"
-//     },
-//     {
-//         title: "startups-belgium",
-//         href: "/platforms/startups/belgium/"
-//     },
-//     {
-//         title: "sustainability-belgium",
-//         href: "/platforms/sustainability/belgium/"
-//     },
-//     {
-//         title: "litigation-belgium",
-//         href: "/platforms/litigation/belgium/"
-//     },
-//     {
-//         title: "green-energy-belgium",
-//         href: "/platforms/green-energy/belgium/"
-//     },
-//     {
-//         title: "health-science-belgium",
-//         href: "/platforms/health-science/belgium/"
-//     },
-//     {
-//         title: "logistics-belgium",
-//         href: "/platforms/logistics/belgium/"
-//     },
-//     {
-//         title: "personal-loans-belgium",
-//         href: "/platforms/personal-loans/belgium/"
-//     },
-//     {
-//         title: "art-belgium",
-//         href: "/platforms/art/belgium/"
-//     },
-//     {
-//         title: "mortgages-belgium",
-//         href: "/platforms/mortgages/belgium/"
-//     },
-//     {
-//         title: "social-cause-belgium",
-//         href: "/platforms/social-cause/belgium/"
-//     },
-//     {
-//         title: "education-belgium",
-//         href: "/platforms/education/belgium/"
-//     },
-//     {
-//         title: "farming-belgium",
-//         href: "/platforms/farming/belgium/"
-//     },
-//     {
-//         title: "sport-belgium",
-//         href: "/platforms/sport/belgium/"
-//     },
-//     {
-//         title: "maritime-belgium",
-//         href: "/platforms/maritime/belgium/"
-//     },
-//     {
-//         title: "real-estate-bulgaria",
-//         href: "/platforms/real-estate/bulgaria/"
-//     },
-//     {
-//         title: "startups-bulgaria",
-//         href: "/platforms/startups/bulgaria/"
-//     },
-//     {
-//         title: "sustainability-bulgaria",
-//         href: "/platforms/sustainability/bulgaria/"
-//     },
-//     {
-//         title: "litigation-bulgaria",
-//         href: "/platforms/litigation/bulgaria/"
-//     },
-//     {
-//         title: "green-energy-bulgaria",
-//         href: "/platforms/green-energy/bulgaria/"
-//     },
-//     {
-//         title: "health-science-bulgaria",
-//         href: "/platforms/health-science/bulgaria/"
-//     },
-//     {
-//         title: "logistics-bulgaria",
-//         href: "/platforms/logistics/bulgaria/"
-//     },
-//     {
-//         title: "personal-loans-bulgaria",
-//         href: "/platforms/personal-loans/bulgaria/"
-//     },
-//     {
-//         title: "art-bulgaria",
-//         href: "/platforms/art/bulgaria/"
-//     },
-//     {
-//         title: "mortgages-bulgaria",
-//         href: "/platforms/mortgages/bulgaria/"
-//     },
-//     {
-//         title: "social-cause-bulgaria",
-//         href: "/platforms/social-cause/bulgaria/"
-//     },
-//     {
-//         title: "education-bulgaria",
-//         href: "/platforms/education/bulgaria/"
-//     },
-//     {
-//         title: "farming-bulgaria",
-//         href: "/platforms/farming/bulgaria/"
-//     },
-//     {
-//         title: "sport-bulgaria",
-//         href: "/platforms/sport/bulgaria/"
-//     },
-//     {
-//         title: "maritime-bulgaria",
-//         href: "/platforms/maritime/bulgaria/"
-//     },
-//     {
-//         title: "real-estate-croatia",
-//         href: "/platforms/real-estate/croatia/"
-//     },
-//     {
-//         title: "startups-croatia",
-//         href: "/platforms/startups/croatia/"
-//     },
-//     {
-//         title: "sustainability-croatia",
-//         href: "/platforms/sustainability/croatia/"
-//     },
-//     {
-//         title: "litigation-croatia",
-//         href: "/platforms/litigation/croatia/"
-//     },
-//     {
-//         title: "green-energy-croatia",
-//         href: "/platforms/green-energy/croatia/"
-//     },
-//     {
-//         title: "health-science-croatia",
-//         href: "/platforms/health-science/croatia/"
-//     },
-//     {
-//         title: "logistics-croatia",
-//         href: "/platforms/logistics/croatia/"
-//     },
-//     {
-//         title: "personal-loans-croatia",
-//         href: "/platforms/personal-loans/croatia/"
-//     },
-//     {
-//         title: "art-croatia",
-//         href: "/platforms/art/croatia/"
-//     },
-//     {
-//         title: "mortgages-croatia",
-//         href: "/platforms/mortgages/croatia/"
-//     },
-//     {
-//         title: "social-cause-croatia",
-//         href: "/platforms/social-cause/croatia/"
-//     },
-//     {
-//         title: "education-croatia",
-//         href: "/platforms/education/croatia/"
-//     },
-//     {
-//         title: "farming-croatia",
-//         href: "/platforms/farming/croatia/"
-//     },
-//     {
-//         title: "sport-croatia",
-//         href: "/platforms/sport/croatia/"
-//     },
-//     {
-//         title: "maritime-croatia",
-//         href: "/platforms/maritime/croatia/"
-//     },
-//     {
-//         title: "real-estate-cyprus",
-//         href: "/platforms/real-estate/cyprus/"
-//     },
-//     {
-//         title: "startups-cyprus",
-//         href: "/platforms/startups/cyprus/"
-//     },
-//     {
-//         title: "sustainability-cyprus",
-//         href: "/platforms/sustainability/cyprus/"
-//     },
-//     {
-//         title: "litigation-cyprus",
-//         href: "/platforms/litigation/cyprus/"
-//     },
-//     {
-//         title: "green-energy-cyprus",
-//         href: "/platforms/green-energy/cyprus/"
-//     },
-//     {
-//         title: "health-science-cyprus",
-//         href: "/platforms/health-science/cyprus/"
-//     },
-//     {
-//         title: "logistics-cyprus",
-//         href: "/platforms/logistics/cyprus/"
-//     },
-//     {
-//         title: "personal-loans-cyprus",
-//         href: "/platforms/personal-loans/cyprus/"
-//     },
-//     {
-//         title: "art-cyprus",
-//         href: "/platforms/art/cyprus/"
-//     },
-//     {
-//         title: "mortgages-cyprus",
-//         href: "/platforms/mortgages/cyprus/"
-//     },
-//     {
-//         title: "social-cause-cyprus",
-//         href: "/platforms/social-cause/cyprus/"
-//     },
-//     {
-//         title: "education-cyprus",
-//         href: "/platforms/education/cyprus/"
-//     },
-//     {
-//         title: "farming-cyprus",
-//         href: "/platforms/farming/cyprus/"
-//     },
-//     {
-//         title: "sport-cyprus",
-//         href: "/platforms/sport/cyprus/"
-//     },
-//     {
-//         title: "maritime-cyprus",
-//         href: "/platforms/maritime/cyprus/"
-//     },
-//     {
-//         title: "real-estate-czech-republic",
-//         href: "/platforms/real-estate/czech-republic/"
-//     },
-//     {
-//         title: "startups-czech-republic",
-//         href: "/platforms/startups/czech-republic/"
-//     },
-//     {
-//         title: "sustainability-czech-republic",
-//         href: "/platforms/sustainability/czech-republic/"
-//     },
-//     {
-//         title: "litigation-czech-republic",
-//         href: "/platforms/litigation/czech-republic/"
-//     },
-//     {
-//         title: "green-energy-czech-republic",
-//         href: "/platforms/green-energy/czech-republic/"
-//     },
-//     {
-//         title: "health-science-czech-republic",
-//         href: "/platforms/health-science/czech-republic/"
-//     },
-//     {
-//         title: "logistics-czech-republic",
-//         href: "/platforms/logistics/czech-republic/"
-//     },
-//     {
-//         title: "personal-loans-czech-republic",
-//         href: "/platforms/personal-loans/czech-republic/"
-//     },
-//     {
-//         title: "art-czech-republic",
-//         href: "/platforms/art/czech-republic/"
-//     },
-//     {
-//         title: "mortgages-czech-republic",
-//         href: "/platforms/mortgages/czech-republic/"
-//     },
-//     {
-//         title: "social-cause-czech-republic",
-//         href: "/platforms/social-cause/czech-republic/"
-//     },
-//     {
-//         title: "education-czech-republic",
-//         href: "/platforms/education/czech-republic/"
-//     },
-//     {
-//         title: "farming-czech-republic",
-//         href: "/platforms/farming/czech-republic/"
-//     },
-//     {
-//         title: "sport-czech-republic",
-//         href: "/platforms/sport/czech-republic/"
-//     },
-//     {
-//         title: "maritime-czech-republic",
-//         href: "/platforms/maritime/czech-republic/"
-//     },
-//     {
-//         title: "real-estate-denmark",
-//         href: "/platforms/real-estate/denmark/"
-//     },
-//     {
-//         title: "startups-denmark",
-//         href: "/platforms/startups/denmark/"
-//     },
-//     {
-//         title: "sustainability-denmark",
-//         href: "/platforms/sustainability/denmark/"
-//     },
-//     {
-//         title: "litigation-denmark",
-//         href: "/platforms/litigation/denmark/"
-//     },
-//     {
-//         title: "green-energy-denmark",
-//         href: "/platforms/green-energy/denmark/"
-//     },
-//     {
-//         title: "health-science-denmark",
-//         href: "/platforms/health-science/denmark/"
-//     },
-//     {
-//         title: "logistics-denmark",
-//         href: "/platforms/logistics/denmark/"
-//     },
-//     {
-//         title: "personal-loans-denmark",
-//         href: "/platforms/personal-loans/denmark/"
-//     },
-//     {
-//         title: "art-denmark",
-//         href: "/platforms/art/denmark/"
-//     },
-//     {
-//         title: "mortgages-denmark",
-//         href: "/platforms/mortgages/denmark/"
-//     },
-//     {
-//         title: "social-cause-denmark",
-//         href: "/platforms/social-cause/denmark/"
-//     },
-//     {
-//         title: "education-denmark",
-//         href: "/platforms/education/denmark/"
-//     },
-//     {
-//         title: "farming-denmark",
-//         href: "/platforms/farming/denmark/"
-//     },
-//     {
-//         title: "sport-denmark",
-//         href: "/platforms/sport/denmark/"
-//     },
-//     {
-//         title: "maritime-denmark",
-//         href: "/platforms/maritime/denmark/"
-//     },
-//     {
-//         title: "real-estate-estonia",
-//         href: "/platforms/real-estate/estonia/"
-//     },
-//     {
-//         title: "startups-estonia",
-//         href: "/platforms/startups/estonia/"
-//     },
-//     {
-//         title: "sustainability-estonia",
-//         href: "/platforms/sustainability/estonia/"
-//     },
-//     {
-//         title: "litigation-estonia",
-//         href: "/platforms/litigation/estonia/"
-//     },
-//     {
-//         title: "green-energy-estonia",
-//         href: "/platforms/green-energy/estonia/"
-//     },
-//     {
-//         title: "health-science-estonia",
-//         href: "/platforms/health-science/estonia/"
-//     },
-//     {
-//         title: "logistics-estonia",
-//         href: "/platforms/logistics/estonia/"
-//     },
-//     {
-//         title: "personal-loans-estonia",
-//         href: "/platforms/personal-loans/estonia/"
-//     },
-//     {
-//         title: "art-estonia",
-//         href: "/platforms/art/estonia/"
-//     },
-//     {
-//         title: "mortgages-estonia",
-//         href: "/platforms/mortgages/estonia/"
-//     },
-//     {
-//         title: "social-cause-estonia",
-//         href: "/platforms/social-cause/estonia/"
-//     },
-//     {
-//         title: "education-estonia",
-//         href: "/platforms/education/estonia/"
-//     },
-//     {
-//         title: "farming-estonia",
-//         href: "/platforms/farming/estonia/"
-//     },
-//     {
-//         title: "sport-estonia",
-//         href: "/platforms/sport/estonia/"
-//     },
-//     {
-//         title: "maritime-estonia",
-//         href: "/platforms/maritime/estonia/"
-//     },
-//     {
-//         title: "real-estate-finland",
-//         href: "/platforms/real-estate/finland/"
-//     },
-//     {
-//         title: "startups-finland",
-//         href: "/platforms/startups/finland/"
-//     },
-//     {
-//         title: "sustainability-finland",
-//         href: "/platforms/sustainability/finland/"
-//     },
-//     {
-//         title: "litigation-finland",
-//         href: "/platforms/litigation/finland/"
-//     },
-//     {
-//         title: "green-energy-finland",
-//         href: "/platforms/green-energy/finland/"
-//     },
-//     {
-//         title: "health-science-finland",
-//         href: "/platforms/health-science/finland/"
-//     },
-//     {
-//         title: "logistics-finland",
-//         href: "/platforms/logistics/finland/"
-//     },
-//     {
-//         title: "personal-loans-finland",
-//         href: "/platforms/personal-loans/finland/"
-//     },
-//     {
-//         title: "art-finland",
-//         href: "/platforms/art/finland/"
-//     },
-//     {
-//         title: "mortgages-finland",
-//         href: "/platforms/mortgages/finland/"
-//     },
-//     {
-//         title: "social-cause-finland",
-//         href: "/platforms/social-cause/finland/"
-//     },
-//     {
-//         title: "education-finland",
-//         href: "/platforms/education/finland/"
-//     },
-//     {
-//         title: "farming-finland",
-//         href: "/platforms/farming/finland/"
-//     },
-//     {
-//         title: "sport-finland",
-//         href: "/platforms/sport/finland/"
-//     },
-//     {
-//         title: "maritime-finland",
-//         href: "/platforms/maritime/finland/"
-//     },
-//     {
-//         title: "real-estate-france",
-//         href: "/platforms/real-estate/france/"
-//     },
-//     {
-//         title: "startups-france",
-//         href: "/platforms/startups/france/"
-//     },
-//     {
-//         title: "sustainability-france",
-//         href: "/platforms/sustainability/france/"
-//     },
-//     {
-//         title: "litigation-france",
-//         href: "/platforms/litigation/france/"
-//     },
-//     {
-//         title: "green-energy-france",
-//         href: "/platforms/green-energy/france/"
-//     },
-//     {
-//         title: "health-science-france",
-//         href: "/platforms/health-science/france/"
-//     },
-//     {
-//         title: "logistics-france",
-//         href: "/platforms/logistics/france/"
-//     },
-//     {
-//         title: "personal-loans-france",
-//         href: "/platforms/personal-loans/france/"
-//     },
-//     {
-//         title: "art-france",
-//         href: "/platforms/art/france/"
-//     },
-//     {
-//         title: "mortgages-france",
-//         href: "/platforms/mortgages/france/"
-//     },
-//     {
-//         title: "social-cause-france",
-//         href: "/platforms/social-cause/france/"
-//     },
-//     {
-//         title: "education-france",
-//         href: "/platforms/education/france/"
-//     },
-//     {
-//         title: "farming-france",
-//         href: "/platforms/farming/france/"
-//     },
-//     {
-//         title: "sport-france",
-//         href: "/platforms/sport/france/"
-//     },
-//     {
-//         title: "maritime-france",
-//         href: "/platforms/maritime/france/"
-//     },
-//     {
-//         title: "real-estate-germany",
-//         href: "/platforms/real-estate/germany/"
-//     },
-//     {
-//         title: "startups-germany",
-//         href: "/platforms/startups/germany/"
-//     },
-//     {
-//         title: "sustainability-germany",
-//         href: "/platforms/sustainability/germany/"
-//     },
-//     {
-//         title: "litigation-germany",
-//         href: "/platforms/litigation/germany/"
-//     },
-//     {
-//         title: "green-energy-germany",
-//         href: "/platforms/green-energy/germany/"
-//     },
-//     {
-//         title: "health-science-germany",
-//         href: "/platforms/health-science/germany/"
-//     },
-//     {
-//         title: "logistics-germany",
-//         href: "/platforms/logistics/germany/"
-//     },
-//     {
-//         title: "personal-loans-germany",
-//         href: "/platforms/personal-loans/germany/"
-//     },
-//     {
-//         title: "art-germany",
-//         href: "/platforms/art/germany/"
-//     },
-//     {
-//         title: "mortgages-germany",
-//         href: "/platforms/mortgages/germany/"
-//     },
-//     {
-//         title: "social-cause-germany",
-//         href: "/platforms/social-cause/germany/"
-//     },
-//     {
-//         title: "education-germany",
-//         href: "/platforms/education/germany/"
-//     },
-//     {
-//         title: "farming-germany",
-//         href: "/platforms/farming/germany/"
-//     },
-//     {
-//         title: "sport-germany",
-//         href: "/platforms/sport/germany/"
-//     },
-//     {
-//         title: "maritime-germany",
-//         href: "/platforms/maritime/germany/"
-//     },
-//     {
-//         title: "real-estate-greece",
-//         href: "/platforms/real-estate/greece/"
-//     },
-//     {
-//         title: "startups-greece",
-//         href: "/platforms/startups/greece/"
-//     },
-//     {
-//         title: "sustainability-greece",
-//         href: "/platforms/sustainability/greece/"
-//     },
-//     {
-//         title: "litigation-greece",
-//         href: "/platforms/litigation/greece/"
-//     },
-//     {
-//         title: "green-energy-greece",
-//         href: "/platforms/green-energy/greece/"
-//     },
-//     {
-//         title: "health-science-greece",
-//         href: "/platforms/health-science/greece/"
-//     },
-//     {
-//         title: "logistics-greece",
-//         href: "/platforms/logistics/greece/"
-//     },
-//     {
-//         title: "personal-loans-greece",
-//         href: "/platforms/personal-loans/greece/"
-//     },
-//     {
-//         title: "art-greece",
-//         href: "/platforms/art/greece/"
-//     },
-//     {
-//         title: "mortgages-greece",
-//         href: "/platforms/mortgages/greece/"
-//     },
-//     {
-//         title: "social-cause-greece",
-//         href: "/platforms/social-cause/greece/"
-//     },
-//     {
-//         title: "education-greece",
-//         href: "/platforms/education/greece/"
-//     },
-//     {
-//         title: "farming-greece",
-//         href: "/platforms/farming/greece/"
-//     },
-//     {
-//         title: "sport-greece",
-//         href: "/platforms/sport/greece/"
-//     },
-//     {
-//         title: "maritime-greece",
-//         href: "/platforms/maritime/greece/"
-//     },
-//     {
-//         title: "real-estate-hungary",
-//         href: "/platforms/real-estate/hungary/"
-//     },
-//     {
-//         title: "startups-hungary",
-//         href: "/platforms/startups/hungary/"
-//     },
-//     {
-//         title: "sustainability-hungary",
-//         href: "/platforms/sustainability/hungary/"
-//     },
-//     {
-//         title: "litigation-hungary",
-//         href: "/platforms/litigation/hungary/"
-//     },
-//     {
-//         title: "green-energy-hungary",
-//         href: "/platforms/green-energy/hungary/"
-//     },
-//     {
-//         title: "health-science-hungary",
-//         href: "/platforms/health-science/hungary/"
-//     },
-//     {
-//         title: "logistics-hungary",
-//         href: "/platforms/logistics/hungary/"
-//     },
-//     {
-//         title: "personal-loans-hungary",
-//         href: "/platforms/personal-loans/hungary/"
-//     },
-//     {
-//         title: "art-hungary",
-//         href: "/platforms/art/hungary/"
-//     },
-//     {
-//         title: "mortgages-hungary",
-//         href: "/platforms/mortgages/hungary/"
-//     },
-//     {
-//         title: "social-cause-hungary",
-//         href: "/platforms/social-cause/hungary/"
-//     },
-//     {
-//         title: "education-hungary",
-//         href: "/platforms/education/hungary/"
-//     },
-//     {
-//         title: "farming-hungary",
-//         href: "/platforms/farming/hungary/"
-//     },
-//     {
-//         title: "sport-hungary",
-//         href: "/platforms/sport/hungary/"
-//     },
-//     {
-//         title: "maritime-hungary",
-//         href: "/platforms/maritime/hungary/"
-//     },
-//     {
-//         title: "real-estate-iceland",
-//         href: "/platforms/real-estate/iceland/"
-//     },
-//     {
-//         title: "startups-iceland",
-//         href: "/platforms/startups/iceland/"
-//     },
-//     {
-//         title: "sustainability-iceland",
-//         href: "/platforms/sustainability/iceland/"
-//     },
-//     {
-//         title: "litigation-iceland",
-//         href: "/platforms/litigation/iceland/"
-//     },
-//     {
-//         title: "green-energy-iceland",
-//         href: "/platforms/green-energy/iceland/"
-//     },
-//     {
-//         title: "health-science-iceland",
-//         href: "/platforms/health-science/iceland/"
-//     },
-//     {
-//         title: "logistics-iceland",
-//         href: "/platforms/logistics/iceland/"
-//     },
-//     {
-//         title: "personal-loans-iceland",
-//         href: "/platforms/personal-loans/iceland/"
-//     },
-//     {
-//         title: "art-iceland",
-//         href: "/platforms/art/iceland/"
-//     },
-//     {
-//         title: "mortgages-iceland",
-//         href: "/platforms/mortgages/iceland/"
-//     },
-//     {
-//         title: "social-cause-iceland",
-//         href: "/platforms/social-cause/iceland/"
-//     },
-//     {
-//         title: "education-iceland",
-//         href: "/platforms/education/iceland/"
-//     },
-//     {
-//         title: "farming-iceland",
-//         href: "/platforms/farming/iceland/"
-//     },
-//     {
-//         title: "sport-iceland",
-//         href: "/platforms/sport/iceland/"
-//     },
-//     {
-//         title: "maritime-iceland",
-//         href: "/platforms/maritime/iceland/"
-//     },
-//     {
-//         title: "real-estate-ireland",
-//         href: "/platforms/real-estate/ireland/"
-//     },
-//     {
-//         title: "startups-ireland",
-//         href: "/platforms/startups/ireland/"
-//     },
-//     {
-//         title: "sustainability-ireland",
-//         href: "/platforms/sustainability/ireland/"
-//     },
-//     {
-//         title: "litigation-ireland",
-//         href: "/platforms/litigation/ireland/"
-//     },
-//     {
-//         title: "green-energy-ireland",
-//         href: "/platforms/green-energy/ireland/"
-//     },
-//     {
-//         title: "health-science-ireland",
-//         href: "/platforms/health-science/ireland/"
-//     },
-//     {
-//         title: "logistics-ireland",
-//         href: "/platforms/logistics/ireland/"
-//     },
-//     {
-//         title: "personal-loans-ireland",
-//         href: "/platforms/personal-loans/ireland/"
-//     },
-//     {
-//         title: "art-ireland",
-//         href: "/platforms/art/ireland/"
-//     },
-//     {
-//         title: "mortgages-ireland",
-//         href: "/platforms/mortgages/ireland/"
-//     },
-//     {
-//         title: "social-cause-ireland",
-//         href: "/platforms/social-cause/ireland/"
-//     },
-//     {
-//         title: "education-ireland",
-//         href: "/platforms/education/ireland/"
-//     },
-//     {
-//         title: "farming-ireland",
-//         href: "/platforms/farming/ireland/"
-//     },
-//     {
-//         title: "sport-ireland",
-//         href: "/platforms/sport/ireland/"
-//     },
-//     {
-//         title: "maritime-ireland",
-//         href: "/platforms/maritime/ireland/"
-//     },
-//     {
-//         title: "real-estate-israel",
-//         href: "/platforms/real-estate/israel/"
-//     },
-//     {
-//         title: "startups-israel",
-//         href: "/platforms/startups/israel/"
-//     },
-//     {
-//         title: "sustainability-israel",
-//         href: "/platforms/sustainability/israel/"
-//     },
-//     {
-//         title: "litigation-israel",
-//         href: "/platforms/litigation/israel/"
-//     },
-//     {
-//         title: "green-energy-israel",
-//         href: "/platforms/green-energy/israel/"
-//     },
-//     {
-//         title: "health-science-israel",
-//         href: "/platforms/health-science/israel/"
-//     },
-//     {
-//         title: "logistics-israel",
-//         href: "/platforms/logistics/israel/"
-//     },
-//     {
-//         title: "personal-loans-israel",
-//         href: "/platforms/personal-loans/israel/"
-//     },
-//     {
-//         title: "art-israel",
-//         href: "/platforms/art/israel/"
-//     },
-//     {
-//         title: "mortgages-israel",
-//         href: "/platforms/mortgages/israel/"
-//     },
-//     {
-//         title: "social-cause-israel",
-//         href: "/platforms/social-cause/israel/"
-//     },
-//     {
-//         title: "education-israel",
-//         href: "/platforms/education/israel/"
-//     },
-//     {
-//         title: "farming-israel",
-//         href: "/platforms/farming/israel/"
-//     },
-//     {
-//         title: "sport-israel",
-//         href: "/platforms/sport/israel/"
-//     },
-//     {
-//         title: "maritime-israel",
-//         href: "/platforms/maritime/israel/"
-//     },
-//     {
-//         title: "real-estate-italy",
-//         href: "/platforms/real-estate/italy/"
-//     },
-//     {
-//         title: "startups-italy",
-//         href: "/platforms/startups/italy/"
-//     },
-//     {
-//         title: "sustainability-italy",
-//         href: "/platforms/sustainability/italy/"
-//     },
-//     {
-//         title: "litigation-italy",
-//         href: "/platforms/litigation/italy/"
-//     },
-//     {
-//         title: "green-energy-italy",
-//         href: "/platforms/green-energy/italy/"
-//     },
-//     {
-//         title: "health-science-italy",
-//         href: "/platforms/health-science/italy/"
-//     },
-//     {
-//         title: "logistics-italy",
-//         href: "/platforms/logistics/italy/"
-//     },
-//     {
-//         title: "personal-loans-italy",
-//         href: "/platforms/personal-loans/italy/"
-//     },
-//     {
-//         title: "art-italy",
-//         href: "/platforms/art/italy/"
-//     },
-//     {
-//         title: "mortgages-italy",
-//         href: "/platforms/mortgages/italy/"
-//     },
-//     {
-//         title: "social-cause-italy",
-//         href: "/platforms/social-cause/italy/"
-//     },
-//     {
-//         title: "education-italy",
-//         href: "/platforms/education/italy/"
-//     },
-//     {
-//         title: "farming-italy",
-//         href: "/platforms/farming/italy/"
-//     },
-//     {
-//         title: "sport-italy",
-//         href: "/platforms/sport/italy/"
-//     },
-//     {
-//         title: "maritime-italy",
-//         href: "/platforms/maritime/italy/"
-//     },
-//     {
-//         title: "real-estate-latvia",
-//         href: "/platforms/real-estate/latvia/"
-//     },
-//     {
-//         title: "startups-latvia",
-//         href: "/platforms/startups/latvia/"
-//     },
-//     {
-//         title: "sustainability-latvia",
-//         href: "/platforms/sustainability/latvia/"
-//     },
-//     {
-//         title: "litigation-latvia",
-//         href: "/platforms/litigation/latvia/"
-//     },
-//     {
-//         title: "green-energy-latvia",
-//         href: "/platforms/green-energy/latvia/"
-//     },
-//     {
-//         title: "health-science-latvia",
-//         href: "/platforms/health-science/latvia/"
-//     },
-//     {
-//         title: "logistics-latvia",
-//         href: "/platforms/logistics/latvia/"
-//     },
-//     {
-//         title: "personal-loans-latvia",
-//         href: "/platforms/personal-loans/latvia/"
-//     },
-//     {
-//         title: "art-latvia",
-//         href: "/platforms/art/latvia/"
-//     },
-//     {
-//         title: "mortgages-latvia",
-//         href: "/platforms/mortgages/latvia/"
-//     },
-//     {
-//         title: "social-cause-latvia",
-//         href: "/platforms/social-cause/latvia/"
-//     },
-//     {
-//         title: "education-latvia",
-//         href: "/platforms/education/latvia/"
-//     },
-//     {
-//         title: "farming-latvia",
-//         href: "/platforms/farming/latvia/"
-//     },
-//     {
-//         title: "sport-latvia",
-//         href: "/platforms/sport/latvia/"
-//     },
-//     {
-//         title: "maritime-latvia",
-//         href: "/platforms/maritime/latvia/"
-//     },
-//     {
-//         title: "real-estate-liechtenstein",
-//         href: "/platforms/real-estate/liechtenstein/"
-//     },
-//     {
-//         title: "startups-liechtenstein",
-//         href: "/platforms/startups/liechtenstein/"
-//     },
-//     {
-//         title: "sustainability-liechtenstein",
-//         href: "/platforms/sustainability/liechtenstein/"
-//     },
-//     {
-//         title: "litigation-liechtenstein",
-//         href: "/platforms/litigation/liechtenstein/"
-//     },
-//     {
-//         title: "green-energy-liechtenstein",
-//         href: "/platforms/green-energy/liechtenstein/"
-//     },
-//     {
-//         title: "health-science-liechtenstein",
-//         href: "/platforms/health-science/liechtenstein/"
-//     },
-//     {
-//         title: "logistics-liechtenstein",
-//         href: "/platforms/logistics/liechtenstein/"
-//     },
-//     {
-//         title: "personal-loans-liechtenstein",
-//         href: "/platforms/personal-loans/liechtenstein/"
-//     },
-//     {
-//         title: "art-liechtenstein",
-//         href: "/platforms/art/liechtenstein/"
-//     },
-//     {
-//         title: "mortgages-liechtenstein",
-//         href: "/platforms/mortgages/liechtenstein/"
-//     },
-//     {
-//         title: "social-cause-liechtenstein",
-//         href: "/platforms/social-cause/liechtenstein/"
-//     },
-//     {
-//         title: "education-liechtenstein",
-//         href: "/platforms/education/liechtenstein/"
-//     },
-//     {
-//         title: "farming-liechtenstein",
-//         href: "/platforms/farming/liechtenstein/"
-//     },
-//     {
-//         title: "sport-liechtenstein",
-//         href: "/platforms/sport/liechtenstein/"
-//     },
-//     {
-//         title: "maritime-liechtenstein",
-//         href: "/platforms/maritime/liechtenstein/"
-//     },
-//     {
-//         title: "real-estate-lithuania",
-//         href: "/platforms/real-estate/lithuania/"
-//     },
-//     {
-//         title: "startups-lithuania",
-//         href: "/platforms/startups/lithuania/"
-//     },
-//     {
-//         title: "sustainability-lithuania",
-//         href: "/platforms/sustainability/lithuania/"
-//     },
-//     {
-//         title: "litigation-lithuania",
-//         href: "/platforms/litigation/lithuania/"
-//     },
-//     {
-//         title: "green-energy-lithuania",
-//         href: "/platforms/green-energy/lithuania/"
-//     },
-//     {
-//         title: "health-science-lithuania",
-//         href: "/platforms/health-science/lithuania/"
-//     },
-//     {
-//         title: "logistics-lithuania",
-//         href: "/platforms/logistics/lithuania/"
-//     },
-//     {
-//         title: "personal-loans-lithuania",
-//         href: "/platforms/personal-loans/lithuania/"
-//     },
-//     {
-//         title: "art-lithuania",
-//         href: "/platforms/art/lithuania/"
-//     },
-//     {
-//         title: "mortgages-lithuania",
-//         href: "/platforms/mortgages/lithuania/"
-//     },
-//     {
-//         title: "social-cause-lithuania",
-//         href: "/platforms/social-cause/lithuania/"
-//     },
-//     {
-//         title: "education-lithuania",
-//         href: "/platforms/education/lithuania/"
-//     },
-//     {
-//         title: "farming-lithuania",
-//         href: "/platforms/farming/lithuania/"
-//     },
-//     {
-//         title: "sport-lithuania",
-//         href: "/platforms/sport/lithuania/"
-//     },
-//     {
-//         title: "maritime-lithuania",
-//         href: "/platforms/maritime/lithuania/"
-//     },
-//     {
-//         title: "real-estate-luxembourg",
-//         href: "/platforms/real-estate/luxembourg/"
-//     },
-//     {
-//         title: "startups-luxembourg",
-//         href: "/platforms/startups/luxembourg/"
-//     },
-//     {
-//         title: "sustainability-luxembourg",
-//         href: "/platforms/sustainability/luxembourg/"
-//     },
-//     {
-//         title: "litigation-luxembourg",
-//         href: "/platforms/litigation/luxembourg/"
-//     },
-//     {
-//         title: "green-energy-luxembourg",
-//         href: "/platforms/green-energy/luxembourg/"
-//     },
-//     {
-//         title: "health-science-luxembourg",
-//         href: "/platforms/health-science/luxembourg/"
-//     },
-//     {
-//         title: "logistics-luxembourg",
-//         href: "/platforms/logistics/luxembourg/"
-//     },
-//     {
-//         title: "personal-loans-luxembourg",
-//         href: "/platforms/personal-loans/luxembourg/"
-//     },
-//     {
-//         title: "art-luxembourg",
-//         href: "/platforms/art/luxembourg/"
-//     },
-//     {
-//         title: "mortgages-luxembourg",
-//         href: "/platforms/mortgages/luxembourg/"
-//     },
-//     {
-//         title: "social-cause-luxembourg",
-//         href: "/platforms/social-cause/luxembourg/"
-//     },
-//     {
-//         title: "education-luxembourg",
-//         href: "/platforms/education/luxembourg/"
-//     },
-//     {
-//         title: "farming-luxembourg",
-//         href: "/platforms/farming/luxembourg/"
-//     },
-//     {
-//         title: "sport-luxembourg",
-//         href: "/platforms/sport/luxembourg/"
-//     },
-//     {
-//         title: "maritime-luxembourg",
-//         href: "/platforms/maritime/luxembourg/"
-//     },
-//     {
-//         title: "real-estate-macedonia",
-//         href: "/platforms/real-estate/macedonia/"
-//     },
-//     {
-//         title: "startups-macedonia",
-//         href: "/platforms/startups/macedonia/"
-//     },
-//     {
-//         title: "sustainability-macedonia",
-//         href: "/platforms/sustainability/macedonia/"
-//     },
-//     {
-//         title: "litigation-macedonia",
-//         href: "/platforms/litigation/macedonia/"
-//     },
-//     {
-//         title: "green-energy-macedonia",
-//         href: "/platforms/green-energy/macedonia/"
-//     },
-//     {
-//         title: "health-science-macedonia",
-//         href: "/platforms/health-science/macedonia/"
-//     },
-//     {
-//         title: "logistics-macedonia",
-//         href: "/platforms/logistics/macedonia/"
-//     },
-//     {
-//         title: "personal-loans-macedonia",
-//         href: "/platforms/personal-loans/macedonia/"
-//     },
-//     {
-//         title: "art-macedonia",
-//         href: "/platforms/art/macedonia/"
-//     },
-//     {
-//         title: "mortgages-macedonia",
-//         href: "/platforms/mortgages/macedonia/"
-//     },
-//     {
-//         title: "social-cause-macedonia",
-//         href: "/platforms/social-cause/macedonia/"
-//     },
-//     {
-//         title: "education-macedonia",
-//         href: "/platforms/education/macedonia/"
-//     },
-//     {
-//         title: "farming-macedonia",
-//         href: "/platforms/farming/macedonia/"
-//     },
-//     {
-//         title: "sport-macedonia",
-//         href: "/platforms/sport/macedonia/"
-//     },
-//     {
-//         title: "maritime-macedonia",
-//         href: "/platforms/maritime/macedonia/"
-//     },
-//     {
-//         title: "real-estate-malta",
-//         href: "/platforms/real-estate/malta/"
-//     },
-//     {
-//         title: "startups-malta",
-//         href: "/platforms/startups/malta/"
-//     },
-//     {
-//         title: "sustainability-malta",
-//         href: "/platforms/sustainability/malta/"
-//     },
-//     {
-//         title: "litigation-malta",
-//         href: "/platforms/litigation/malta/"
-//     },
-//     {
-//         title: "green-energy-malta",
-//         href: "/platforms/green-energy/malta/"
-//     },
-//     {
-//         title: "health-science-malta",
-//         href: "/platforms/health-science/malta/"
-//     },
-//     {
-//         title: "logistics-malta",
-//         href: "/platforms/logistics/malta/"
-//     },
-//     {
-//         title: "personal-loans-malta",
-//         href: "/platforms/personal-loans/malta/"
-//     },
-//     {
-//         title: "art-malta",
-//         href: "/platforms/art/malta/"
-//     },
-//     {
-//         title: "mortgages-malta",
-//         href: "/platforms/mortgages/malta/"
-//     },
-//     {
-//         title: "social-cause-malta",
-//         href: "/platforms/social-cause/malta/"
-//     },
-//     {
-//         title: "education-malta",
-//         href: "/platforms/education/malta/"
-//     },
-//     {
-//         title: "farming-malta",
-//         href: "/platforms/farming/malta/"
-//     },
-//     {
-//         title: "sport-malta",
-//         href: "/platforms/sport/malta/"
-//     },
-//     {
-//         title: "maritime-malta",
-//         href: "/platforms/maritime/malta/"
-//     },
-//     {
-//         title: "real-estate-moldova",
-//         href: "/platforms/real-estate/moldova/"
-//     },
-//     {
-//         title: "startups-moldova",
-//         href: "/platforms/startups/moldova/"
-//     },
-//     {
-//         title: "sustainability-moldova",
-//         href: "/platforms/sustainability/moldova/"
-//     },
-//     {
-//         title: "litigation-moldova",
-//         href: "/platforms/litigation/moldova/"
-//     },
-//     {
-//         title: "green-energy-moldova",
-//         href: "/platforms/green-energy/moldova/"
-//     },
-//     {
-//         title: "health-science-moldova",
-//         href: "/platforms/health-science/moldova/"
-//     },
-//     {
-//         title: "logistics-moldova",
-//         href: "/platforms/logistics/moldova/"
-//     },
-//     {
-//         title: "personal-loans-moldova",
-//         href: "/platforms/personal-loans/moldova/"
-//     },
-//     {
-//         title: "art-moldova",
-//         href: "/platforms/art/moldova/"
-//     },
-//     {
-//         title: "mortgages-moldova",
-//         href: "/platforms/mortgages/moldova/"
-//     },
-//     {
-//         title: "social-cause-moldova",
-//         href: "/platforms/social-cause/moldova/"
-//     },
-//     {
-//         title: "education-moldova",
-//         href: "/platforms/education/moldova/"
-//     },
-//     {
-//         title: "farming-moldova",
-//         href: "/platforms/farming/moldova/"
-//     },
-//     {
-//         title: "sport-moldova",
-//         href: "/platforms/sport/moldova/"
-//     },
-//     {
-//         title: "maritime-moldova",
-//         href: "/platforms/maritime/moldova/"
-//     },
-//     {
-//         title: "real-estate-monaco",
-//         href: "/platforms/real-estate/monaco/"
-//     },
-//     {
-//         title: "startups-monaco",
-//         href: "/platforms/startups/monaco/"
-//     },
-//     {
-//         title: "sustainability-monaco",
-//         href: "/platforms/sustainability/monaco/"
-//     },
-//     {
-//         title: "litigation-monaco",
-//         href: "/platforms/litigation/monaco/"
-//     },
-//     {
-//         title: "green-energy-monaco",
-//         href: "/platforms/green-energy/monaco/"
-//     },
-//     {
-//         title: "health-science-monaco",
-//         href: "/platforms/health-science/monaco/"
-//     },
-//     {
-//         title: "logistics-monaco",
-//         href: "/platforms/logistics/monaco/"
-//     },
-//     {
-//         title: "personal-loans-monaco",
-//         href: "/platforms/personal-loans/monaco/"
-//     },
-//     {
-//         title: "art-monaco",
-//         href: "/platforms/art/monaco/"
-//     },
-//     {
-//         title: "mortgages-monaco",
-//         href: "/platforms/mortgages/monaco/"
-//     },
-//     {
-//         title: "social-cause-monaco",
-//         href: "/platforms/social-cause/monaco/"
-//     },
-//     {
-//         title: "education-monaco",
-//         href: "/platforms/education/monaco/"
-//     },
-//     {
-//         title: "farming-monaco",
-//         href: "/platforms/farming/monaco/"
-//     },
-//     {
-//         title: "sport-monaco",
-//         href: "/platforms/sport/monaco/"
-//     },
-//     {
-//         title: "maritime-monaco",
-//         href: "/platforms/maritime/monaco/"
-//     },
-//     {
-//         title: "real-estate-netherlands",
-//         href: "/platforms/real-estate/netherlands/"
-//     },
-//     {
-//         title: "startups-netherlands",
-//         href: "/platforms/startups/netherlands/"
-//     },
-//     {
-//         title: "sustainability-netherlands",
-//         href: "/platforms/sustainability/netherlands/"
-//     },
-//     {
-//         title: "litigation-netherlands",
-//         href: "/platforms/litigation/netherlands/"
-//     },
-//     {
-//         title: "green-energy-netherlands",
-//         href: "/platforms/green-energy/netherlands/"
-//     },
-//     {
-//         title: "health-science-netherlands",
-//         href: "/platforms/health-science/netherlands/"
-//     },
-//     {
-//         title: "logistics-netherlands",
-//         href: "/platforms/logistics/netherlands/"
-//     },
-//     {
-//         title: "personal-loans-netherlands",
-//         href: "/platforms/personal-loans/netherlands/"
-//     },
-//     {
-//         title: "art-netherlands",
-//         href: "/platforms/art/netherlands/"
-//     },
-//     {
-//         title: "mortgages-netherlands",
-//         href: "/platforms/mortgages/netherlands/"
-//     },
-//     {
-//         title: "social-cause-netherlands",
-//         href: "/platforms/social-cause/netherlands/"
-//     },
-//     {
-//         title: "education-netherlands",
-//         href: "/platforms/education/netherlands/"
-//     },
-//     {
-//         title: "farming-netherlands",
-//         href: "/platforms/farming/netherlands/"
-//     },
-//     {
-//         title: "sport-netherlands",
-//         href: "/platforms/sport/netherlands/"
-//     },
-//     {
-//         title: "maritime-netherlands",
-//         href: "/platforms/maritime/netherlands/"
-//     },
-//     {
-//         title: "real-estate-norway",
-//         href: "/platforms/real-estate/norway/"
-//     },
-//     {
-//         title: "startups-norway",
-//         href: "/platforms/startups/norway/"
-//     },
-//     {
-//         title: "sustainability-norway",
-//         href: "/platforms/sustainability/norway/"
-//     },
-//     {
-//         title: "litigation-norway",
-//         href: "/platforms/litigation/norway/"
-//     },
-//     {
-//         title: "green-energy-norway",
-//         href: "/platforms/green-energy/norway/"
-//     },
-//     {
-//         title: "health-science-norway",
-//         href: "/platforms/health-science/norway/"
-//     },
-//     {
-//         title: "logistics-norway",
-//         href: "/platforms/logistics/norway/"
-//     },
-//     {
-//         title: "personal-loans-norway",
-//         href: "/platforms/personal-loans/norway/"
-//     },
-//     {
-//         title: "art-norway",
-//         href: "/platforms/art/norway/"
-//     },
-//     {
-//         title: "mortgages-norway",
-//         href: "/platforms/mortgages/norway/"
-//     },
-//     {
-//         title: "social-cause-norway",
-//         href: "/platforms/social-cause/norway/"
-//     },
-//     {
-//         title: "education-norway",
-//         href: "/platforms/education/norway/"
-//     },
-//     {
-//         title: "farming-norway",
-//         href: "/platforms/farming/norway/"
-//     },
-//     {
-//         title: "sport-norway",
-//         href: "/platforms/sport/norway/"
-//     },
-//     {
-//         title: "maritime-norway",
-//         href: "/platforms/maritime/norway/"
-//     },
-//     {
-//         title: "real-estate-poland",
-//         href: "/platforms/real-estate/poland/"
-//     },
-//     {
-//         title: "startups-poland",
-//         href: "/platforms/startups/poland/"
-//     },
-//     {
-//         title: "sustainability-poland",
-//         href: "/platforms/sustainability/poland/"
-//     },
-//     {
-//         title: "litigation-poland",
-//         href: "/platforms/litigation/poland/"
-//     },
-//     {
-//         title: "green-energy-poland",
-//         href: "/platforms/green-energy/poland/"
-//     },
-//     {
-//         title: "health-science-poland",
-//         href: "/platforms/health-science/poland/"
-//     },
-//     {
-//         title: "logistics-poland",
-//         href: "/platforms/logistics/poland/"
-//     },
-//     {
-//         title: "personal-loans-poland",
-//         href: "/platforms/personal-loans/poland/"
-//     },
-//     {
-//         title: "art-poland",
-//         href: "/platforms/art/poland/"
-//     },
-//     {
-//         title: "mortgages-poland",
-//         href: "/platforms/mortgages/poland/"
-//     },
-//     {
-//         title: "social-cause-poland",
-//         href: "/platforms/social-cause/poland/"
-//     },
-//     {
-//         title: "education-poland",
-//         href: "/platforms/education/poland/"
-//     },
-//     {
-//         title: "farming-poland",
-//         href: "/platforms/farming/poland/"
-//     },
-//     {
-//         title: "sport-poland",
-//         href: "/platforms/sport/poland/"
-//     },
-//     {
-//         title: "maritime-poland",
-//         href: "/platforms/maritime/poland/"
-//     },
-//     {
-//         title: "real-estate-portugal",
-//         href: "/platforms/real-estate/portugal/"
-//     },
-//     {
-//         title: "startups-portugal",
-//         href: "/platforms/startups/portugal/"
-//     },
-//     {
-//         title: "sustainability-portugal",
-//         href: "/platforms/sustainability/portugal/"
-//     },
-//     {
-//         title: "litigation-portugal",
-//         href: "/platforms/litigation/portugal/"
-//     },
-//     {
-//         title: "green-energy-portugal",
-//         href: "/platforms/green-energy/portugal/"
-//     },
-//     {
-//         title: "health-science-portugal",
-//         href: "/platforms/health-science/portugal/"
-//     },
-//     {
-//         title: "logistics-portugal",
-//         href: "/platforms/logistics/portugal/"
-//     },
-//     {
-//         title: "personal-loans-portugal",
-//         href: "/platforms/personal-loans/portugal/"
-//     },
-//     {
-//         title: "art-portugal",
-//         href: "/platforms/art/portugal/"
-//     },
-//     {
-//         title: "mortgages-portugal",
-//         href: "/platforms/mortgages/portugal/"
-//     },
-//     {
-//         title: "social-cause-portugal",
-//         href: "/platforms/social-cause/portugal/"
-//     },
-//     {
-//         title: "education-portugal",
-//         href: "/platforms/education/portugal/"
-//     },
-//     {
-//         title: "farming-portugal",
-//         href: "/platforms/farming/portugal/"
-//     },
-//     {
-//         title: "sport-portugal",
-//         href: "/platforms/sport/portugal/"
-//     },
-//     {
-//         title: "maritime-portugal",
-//         href: "/platforms/maritime/portugal/"
-//     },
-//     {
-//         title: "real-estate-romania",
-//         href: "/platforms/real-estate/romania/"
-//     },
-//     {
-//         title: "startups-romania",
-//         href: "/platforms/startups/romania/"
-//     },
-//     {
-//         title: "sustainability-romania",
-//         href: "/platforms/sustainability/romania/"
-//     },
-//     {
-//         title: "litigation-romania",
-//         href: "/platforms/litigation/romania/"
-//     },
-//     {
-//         title: "green-energy-romania",
-//         href: "/platforms/green-energy/romania/"
-//     },
-//     {
-//         title: "health-science-romania",
-//         href: "/platforms/health-science/romania/"
-//     },
-//     {
-//         title: "logistics-romania",
-//         href: "/platforms/logistics/romania/"
-//     },
-//     {
-//         title: "personal-loans-romania",
-//         href: "/platforms/personal-loans/romania/"
-//     },
-//     {
-//         title: "art-romania",
-//         href: "/platforms/art/romania/"
-//     },
-//     {
-//         title: "mortgages-romania",
-//         href: "/platforms/mortgages/romania/"
-//     },
-//     {
-//         title: "social-cause-romania",
-//         href: "/platforms/social-cause/romania/"
-//     },
-//     {
-//         title: "education-romania",
-//         href: "/platforms/education/romania/"
-//     },
-//     {
-//         title: "farming-romania",
-//         href: "/platforms/farming/romania/"
-//     },
-//     {
-//         title: "sport-romania",
-//         href: "/platforms/sport/romania/"
-//     },
-//     {
-//         title: "maritime-romania",
-//         href: "/platforms/maritime/romania/"
-//     },
-//     {
-//         title: "real-estate-turkey",
-//         href: "/platforms/real-estate/turkey/"
-//     },
-//     {
-//         title: "startups-turkey",
-//         href: "/platforms/startups/turkey/"
-//     },
-//     {
-//         title: "sustainability-turkey",
-//         href: "/platforms/sustainability/turkey/"
-//     },
-//     {
-//         title: "litigation-turkey",
-//         href: "/platforms/litigation/turkey/"
-//     },
-//     {
-//         title: "green-energy-turkey",
-//         href: "/platforms/green-energy/turkey/"
-//     },
-//     {
-//         title: "health-science-turkey",
-//         href: "/platforms/health-science/turkey/"
-//     },
-//     {
-//         title: "logistics-turkey",
-//         href: "/platforms/logistics/turkey/"
-//     },
-//     {
-//         title: "personal-loans-turkey",
-//         href: "/platforms/personal-loans/turkey/"
-//     },
-//     {
-//         title: "art-turkey",
-//         href: "/platforms/art/turkey/"
-//     },
-//     {
-//         title: "mortgages-turkey",
-//         href: "/platforms/mortgages/turkey/"
-//     },
-//     {
-//         title: "social-cause-turkey",
-//         href: "/platforms/social-cause/turkey/"
-//     },
-//     {
-//         title: "education-turkey",
-//         href: "/platforms/education/turkey/"
-//     },
-//     {
-//         title: "farming-turkey",
-//         href: "/platforms/farming/turkey/"
-//     },
-//     {
-//         title: "sport-turkey",
-//         href: "/platforms/sport/turkey/"
-//     },
-//     {
-//         title: "maritime-turkey",
-//         href: "/platforms/maritime/turkey/"
-//     },
-//     {
-//         title: "real-estate-serbia",
-//         href: "/platforms/real-estate/serbia/"
-//     },
-//     {
-//         title: "startups-serbia",
-//         href: "/platforms/startups/serbia/"
-//     },
-//     {
-//         title: "sustainability-serbia",
-//         href: "/platforms/sustainability/serbia/"
-//     },
-//     {
-//         title: "litigation-serbia",
-//         href: "/platforms/litigation/serbia/"
-//     },
-//     {
-//         title: "green-energy-serbia",
-//         href: "/platforms/green-energy/serbia/"
-//     },
-//     {
-//         title: "health-science-serbia",
-//         href: "/platforms/health-science/serbia/"
-//     },
-//     {
-//         title: "logistics-serbia",
-//         href: "/platforms/logistics/serbia/"
-//     },
-//     {
-//         title: "personal-loans-serbia",
-//         href: "/platforms/personal-loans/serbia/"
-//     },
-//     {
-//         title: "art-serbia",
-//         href: "/platforms/art/serbia/"
-//     },
-//     {
-//         title: "mortgages-serbia",
-//         href: "/platforms/mortgages/serbia/"
-//     },
-//     {
-//         title: "social-cause-serbia",
-//         href: "/platforms/social-cause/serbia/"
-//     },
-//     {
-//         title: "education-serbia",
-//         href: "/platforms/education/serbia/"
-//     },
-//     {
-//         title: "farming-serbia",
-//         href: "/platforms/farming/serbia/"
-//     },
-//     {
-//         title: "sport-serbia",
-//         href: "/platforms/sport/serbia/"
-//     },
-//     {
-//         title: "maritime-serbia",
-//         href: "/platforms/maritime/serbia/"
-//     },
-//     {
-//         title: "real-estate-slovakia",
-//         href: "/platforms/real-estate/slovakia/"
-//     },
-//     {
-//         title: "startups-slovakia",
-//         href: "/platforms/startups/slovakia/"
-//     },
-//     {
-//         title: "sustainability-slovakia",
-//         href: "/platforms/sustainability/slovakia/"
-//     },
-//     {
-//         title: "litigation-slovakia",
-//         href: "/platforms/litigation/slovakia/"
-//     },
-//     {
-//         title: "green-energy-slovakia",
-//         href: "/platforms/green-energy/slovakia/"
-//     },
-//     {
-//         title: "health-science-slovakia",
-//         href: "/platforms/health-science/slovakia/"
-//     },
-//     {
-//         title: "logistics-slovakia",
-//         href: "/platforms/logistics/slovakia/"
-//     },
-//     {
-//         title: "personal-loans-slovakia",
-//         href: "/platforms/personal-loans/slovakia/"
-//     },
-//     {
-//         title: "art-slovakia",
-//         href: "/platforms/art/slovakia/"
-//     },
-//     {
-//         title: "mortgages-slovakia",
-//         href: "/platforms/mortgages/slovakia/"
-//     },
-//     {
-//         title: "social-cause-slovakia",
-//         href: "/platforms/social-cause/slovakia/"
-//     },
-//     {
-//         title: "education-slovakia",
-//         href: "/platforms/education/slovakia/"
-//     },
-//     {
-//         title: "farming-slovakia",
-//         href: "/platforms/farming/slovakia/"
-//     },
-//     {
-//         title: "sport-slovakia",
-//         href: "/platforms/sport/slovakia/"
-//     },
-//     {
-//         title: "maritime-slovakia",
-//         href: "/platforms/maritime/slovakia/"
-//     },
-//     {
-//         title: "real-estate-slovenia",
-//         href: "/platforms/real-estate/slovenia/"
-//     },
-//     {
-//         title: "startups-slovenia",
-//         href: "/platforms/startups/slovenia/"
-//     },
-//     {
-//         title: "sustainability-slovenia",
-//         href: "/platforms/sustainability/slovenia/"
-//     },
-//     {
-//         title: "litigation-slovenia",
-//         href: "/platforms/litigation/slovenia/"
-//     },
-//     {
-//         title: "green-energy-slovenia",
-//         href: "/platforms/green-energy/slovenia/"
-//     },
-//     {
-//         title: "health-science-slovenia",
-//         href: "/platforms/health-science/slovenia/"
-//     },
-//     {
-//         title: "logistics-slovenia",
-//         href: "/platforms/logistics/slovenia/"
-//     },
-//     {
-//         title: "personal-loans-slovenia",
-//         href: "/platforms/personal-loans/slovenia/"
-//     },
-//     {
-//         title: "art-slovenia",
-//         href: "/platforms/art/slovenia/"
-//     },
-//     {
-//         title: "mortgages-slovenia",
-//         href: "/platforms/mortgages/slovenia/"
-//     },
-//     {
-//         title: "social-cause-slovenia",
-//         href: "/platforms/social-cause/slovenia/"
-//     },
-//     {
-//         title: "education-slovenia",
-//         href: "/platforms/education/slovenia/"
-//     },
-//     {
-//         title: "farming-slovenia",
-//         href: "/platforms/farming/slovenia/"
-//     },
-//     {
-//         title: "sport-slovenia",
-//         href: "/platforms/sport/slovenia/"
-//     },
-//     {
-//         title: "maritime-slovenia",
-//         href: "/platforms/maritime/slovenia/"
-//     },
-//     {
-//         title: "real-estate-spain",
-//         href: "/platforms/real-estate/spain/"
-//     },
-//     {
-//         title: "startups-spain",
-//         href: "/platforms/startups/spain/"
-//     },
-//     {
-//         title: "sustainability-spain",
-//         href: "/platforms/sustainability/spain/"
-//     },
-//     {
-//         title: "litigation-spain",
-//         href: "/platforms/litigation/spain/"
-//     },
-//     {
-//         title: "green-energy-spain",
-//         href: "/platforms/green-energy/spain/"
-//     },
-//     {
-//         title: "health-science-spain",
-//         href: "/platforms/health-science/spain/"
-//     },
-//     {
-//         title: "logistics-spain",
-//         href: "/platforms/logistics/spain/"
-//     },
-//     {
-//         title: "personal-loans-spain",
-//         href: "/platforms/personal-loans/spain/"
-//     },
-//     {
-//         title: "art-spain",
-//         href: "/platforms/art/spain/"
-//     },
-//     {
-//         title: "mortgages-spain",
-//         href: "/platforms/mortgages/spain/"
-//     },
-//     {
-//         title: "social-cause-spain",
-//         href: "/platforms/social-cause/spain/"
-//     },
-//     {
-//         title: "education-spain",
-//         href: "/platforms/education/spain/"
-//     },
-//     {
-//         title: "farming-spain",
-//         href: "/platforms/farming/spain/"
-//     },
-//     {
-//         title: "sport-spain",
-//         href: "/platforms/sport/spain/"
-//     },
-//     {
-//         title: "maritime-spain",
-//         href: "/platforms/maritime/spain/"
-//     },
-//     {
-//         title: "real-estate-sweden",
-//         href: "/platforms/real-estate/sweden/"
-//     },
-//     {
-//         title: "startups-sweden",
-//         href: "/platforms/startups/sweden/"
-//     },
-//     {
-//         title: "sustainability-sweden",
-//         href: "/platforms/sustainability/sweden/"
-//     },
-//     {
-//         title: "litigation-sweden",
-//         href: "/platforms/litigation/sweden/"
-//     },
-//     {
-//         title: "green-energy-sweden",
-//         href: "/platforms/green-energy/sweden/"
-//     },
-//     {
-//         title: "health-science-sweden",
-//         href: "/platforms/health-science/sweden/"
-//     },
-//     {
-//         title: "logistics-sweden",
-//         href: "/platforms/logistics/sweden/"
-//     },
-//     {
-//         title: "personal-loans-sweden",
-//         href: "/platforms/personal-loans/sweden/"
-//     },
-//     {
-//         title: "art-sweden",
-//         href: "/platforms/art/sweden/"
-//     },
-//     {
-//         title: "mortgages-sweden",
-//         href: "/platforms/mortgages/sweden/"
-//     },
-//     {
-//         title: "social-cause-sweden",
-//         href: "/platforms/social-cause/sweden/"
-//     },
-//     {
-//         title: "education-sweden",
-//         href: "/platforms/education/sweden/"
-//     },
-//     {
-//         title: "farming-sweden",
-//         href: "/platforms/farming/sweden/"
-//     },
-//     {
-//         title: "sport-sweden",
-//         href: "/platforms/sport/sweden/"
-//     },
-//     {
-//         title: "maritime-sweden",
-//         href: "/platforms/maritime/sweden/"
-//     },
-//     {
-//         title: "real-estate-switzerland",
-//         href: "/platforms/real-estate/switzerland/"
-//     },
-//     {
-//         title: "startups-switzerland",
-//         href: "/platforms/startups/switzerland/"
-//     },
-//     {
-//         title: "sustainability-switzerland",
-//         href: "/platforms/sustainability/switzerland/"
-//     },
-//     {
-//         title: "litigation-switzerland",
-//         href: "/platforms/litigation/switzerland/"
-//     },
-//     {
-//         title: "green-energy-switzerland",
-//         href: "/platforms/green-energy/switzerland/"
-//     },
-//     {
-//         title: "health-science-switzerland",
-//         href: "/platforms/health-science/switzerland/"
-//     },
-//     {
-//         title: "logistics-switzerland",
-//         href: "/platforms/logistics/switzerland/"
-//     },
-//     {
-//         title: "personal-loans-switzerland",
-//         href: "/platforms/personal-loans/switzerland/"
-//     },
-//     {
-//         title: "art-switzerland",
-//         href: "/platforms/art/switzerland/"
-//     },
-//     {
-//         title: "mortgages-switzerland",
-//         href: "/platforms/mortgages/switzerland/"
-//     },
-//     {
-//         title: "social-cause-switzerland",
-//         href: "/platforms/social-cause/switzerland/"
-//     },
-//     {
-//         title: "education-switzerland",
-//         href: "/platforms/education/switzerland/"
-//     },
-//     {
-//         title: "farming-switzerland",
-//         href: "/platforms/farming/switzerland/"
-//     },
-//     {
-//         title: "sport-switzerland",
-//         href: "/platforms/sport/switzerland/"
-//     },
-//     {
-//         title: "maritime-switzerland",
-//         href: "/platforms/maritime/switzerland/"
-//     },
-//     {
-//         title: "real-estate-united-kingdom",
-//         href: "/platforms/real-estate/united-kingdom/"
-//     },
-//     {
-//         title: "startups-united-kingdom",
-//         href: "/platforms/startups/united-kingdom/"
-//     },
-//     {
-//         title: "sustainability-united-kingdom",
-//         href: "/platforms/sustainability/united-kingdom/"
-//     },
-//     {
-//         title: "litigation-united-kingdom",
-//         href: "/platforms/litigation/united-kingdom/"
-//     },
-//     {
-//         title: "green-energy-united-kingdom",
-//         href: "/platforms/green-energy/united-kingdom/"
-//     },
-//     {
-//         title: "health-science-united-kingdom",
-//         href: "/platforms/health-science/united-kingdom/"
-//     },
-//     {
-//         title: "logistics-united-kingdom",
-//         href: "/platforms/logistics/united-kingdom/"
-//     },
-//     {
-//         title: "personal-loans-united-kingdom",
-//         href: "/platforms/personal-loans/united-kingdom/"
-//     },
-//     {
-//         title: "art-united-kingdom",
-//         href: "/platforms/art/united-kingdom/"
-//     },
-//     {
-//         title: "mortgages-united-kingdom",
-//         href: "/platforms/mortgages/united-kingdom/"
-//     },
-//     {
-//         title: "social-cause-united-kingdom",
-//         href: "/platforms/social-cause/united-kingdom/"
-//     },
-//     {
-//         title: "education-united-kingdom",
-//         href: "/platforms/education/united-kingdom/"
-//     },
-//     {
-//         title: "farming-united-kingdom",
-//         href: "/platforms/farming/united-kingdom/"
-//     },
-//     {
-//         title: "sport-united-kingdom",
-//         href: "/platforms/sport/united-kingdom/"
-//     },
-//     {
-//         title: "maritime-united-kingdom",
-//         href: "/platforms/maritime/united-kingdom/"
-//     },
-//     {
-//         title: "real-estate-ukraine",
-//         href: "/platforms/real-estate/ukraine/"
-//     },
-//     {
-//         title: "startups-ukraine",
-//         href: "/platforms/startups/ukraine/"
-//     },
-//     {
-//         title: "sustainability-ukraine",
-//         href: "/platforms/sustainability/ukraine/"
-//     },
-//     {
-//         title: "litigation-ukraine",
-//         href: "/platforms/litigation/ukraine/"
-//     },
-//     {
-//         title: "green-energy-ukraine",
-//         href: "/platforms/green-energy/ukraine/"
-//     },
-//     {
-//         title: "health-science-ukraine",
-//         href: "/platforms/health-science/ukraine/"
-//     },
-//     {
-//         title: "logistics-ukraine",
-//         href: "/platforms/logistics/ukraine/"
-//     },
-//     {
-//         title: "personal-loans-ukraine",
-//         href: "/platforms/personal-loans/ukraine/"
-//     },
-//     {
-//         title: "art-ukraine",
-//         href: "/platforms/art/ukraine/"
-//     },
-//     {
-//         title: "mortgages-ukraine",
-//         href: "/platforms/mortgages/ukraine/"
-//     },
-//     {
-//         title: "social-cause-ukraine",
-//         href: "/platforms/social-cause/ukraine/"
-//     },
-//     {
-//         title: "education-ukraine",
-//         href: "/platforms/education/ukraine/"
-//     },
-//     {
-//         title: "farming-ukraine",
-//         href: "/platforms/farming/ukraine/"
-//     },
-//     {
-//         title: "sport-ukraine",
-//         href: "/platforms/sport/ukraine/"
-//     },
-//     {
-//         title: "maritime-ukraine",
-//         href: "/platforms/maritime/ukraine/"
-//     }
-// ];
+];

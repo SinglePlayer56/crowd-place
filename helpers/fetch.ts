@@ -27,7 +27,7 @@ export async function getInterestingPosts(excludePostSlug: string, postCategory:
 }
 
 export async function sendMail(data: AddFormData | ContactsFormData) {
-    const response = await fetch(`${clientEnv.localServer}/api/send-mail/`, {
+    const response = await fetch(`${clientEnv.prodServer}/api/send-mail/`, {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
