@@ -6,13 +6,13 @@ import {Metadata} from "next";
 
 export async function generateMetadata({searchParams}: {searchParams: {page: string}}): Promise<Metadata> {
     const currentPage = searchParams.page ? `- page ${searchParams.page}` : '';
-    const canonicalSearchParams = `${process.env.DOMAIN}/de/blog/?page=${searchParams.page}`
+    const canonicalSearchParams = `${process.env.DOMAIN}/blog/?page=${searchParams.page}`
 
     return {
         title: `Blog ${currentPage} | Crowd Place`,
         description: `Blog ${currentPage} | Crowd Place`,
         alternates: {
-            canonical: !searchParams.page ? `${process.env.DOMAIN}/de/blog/` : canonicalSearchParams
+            canonical: !searchParams.page ? `${process.env.DOMAIN}/blog/` : canonicalSearchParams
         }
     };
 }

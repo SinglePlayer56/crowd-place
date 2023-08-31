@@ -121,7 +121,7 @@ const initialState: IFiltersState = {
         },
         {
             options: [
-                {title: '0 years', checked: false, slug: '0-years'},
+                {title: 'New', checked: false, slug: 'new'},
                 {title: '1-3 years', checked: false, slug: '1-3-years'},
                 {title: '4-5 years', checked: false, slug: '4-5-years'},
                 {title: 'More than 5', checked: false, slug: 'more-than-5'}

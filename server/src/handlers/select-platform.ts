@@ -45,7 +45,7 @@ const selectPlatformHandler = async (req: Request, res: Response) => {
             const filters: any = [];
 
             currentValues.forEach(value => {
-                if (value === '0 years') {
+                if (value === 'New') {
                     filters.push({
                         [type]: {
                             [Op.gte]: currentYear,

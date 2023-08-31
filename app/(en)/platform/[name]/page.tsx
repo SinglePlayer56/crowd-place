@@ -20,9 +20,10 @@ type Props = {
 
 export async function generateMetadata({params}: Props): Promise<Metadata> {
     const data: IPlatform = await getPlatform(params.name);
+    const currentYear = new Date().getFullYear();
 
     return {
-        title: `${data.name} Platform review ${data.yearFounded}`,
+        title: `${data.name} Platform review ${currentYear}`,
         description: `${data.name} crowdfunding platform review: Minimum investment, Advertised return, and others.`,
         alternates: {
             canonical: `${process.env.DOMAIN}/platform/${params.name}/`
