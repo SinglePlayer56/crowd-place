@@ -5,6 +5,9 @@ import {ContextRedux} from "@/components";
 export const metadata: Metadata = {
     title: 'Crowdfunding Platforms for Investors and Startups | Crowd-Place.com',
     description: 'Discover a comprehensive compilation of diverse crowdfunding platforms for Investors and Start Ups at Crowd-Place.com.',
+    manifest: '/manifest.json',
+    icons: {apple: '/icon.png'},
+    themeColor: '#009dee',
     alternates: {
         canonical: `${process.env.DOMAIN}/`
     }

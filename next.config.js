@@ -1,9 +1,15 @@
 const dns = require("dns");
+const withPWA = require('next-pwa');
 
 dns.setDefaultResultOrder("ipv4first")
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    ...withPWA({
+        dest: 'public',
+        register: true,
+        skipWaiting: true
+    }),
     trailingSlash: true,
     async redirects() {
         return [
@@ -36,10 +42,6 @@ const nextConfig = {
                 destination: `${process.env.SERVER}/api/:path*`, // Прокси на Express сервер
             }
         ]
-    },
-    api: {
-        bodyParser: false,
-        externalResolver: true,
     }
 };
 
