@@ -1,6 +1,7 @@
 import {notFound, usePathname} from "next/navigation";
 import {FilterPageParams} from "@/types";
 import {store} from "@/store";
+import {linkGc} from "next/dist/client/app-link-gc";
 
 export function createFilterObject(obj: Record<string, string>, keysArray: string[]) {
     return keysArray.reduce((filteredObject: Record<any, any>, key) => {
@@ -56,42 +57,45 @@ export function isActiveLink(href: string) {
 
 
 // Filter params validation
-function filterParamsValidation(params: FilterPageParams) {
+function filterParamsValidation(params: FilterPageParams, typesFilters: string[], sortedValue: (string | undefined)[]) {
     const filters = store.getState().filters.filtersFields;
     let notCount = 0;
+    let index = 0;
 
-    for (const key in params) {
-        const filterIndex = filters.findIndex((filter) => filter.type === key);
+    for (const type of typesFilters) {
+        const filterIndex = filters.findIndex((filter) => filter.type === type);
+        const currentKeyParams = Object.keys(params)[index];
         let count = 0;
         filters[filterIndex].options.forEach((option) => {
             // @ts-ignore
-            if (decodeURIComponent(params[key]).split('+').includes(option.slug)) {
+            if (sortedValue.join(' + ').includes(option.title)) {
                 count++;
             }
         });
         // @ts-ignore
-        if (count !== decodeURIComponent(params[key]!).split('+').length) {
+        if (count !== decodeURIComponent(params[currentKeyParams]).split('+').length) {
             // notFound();
             notCount++;
         }
 
+        index++;
     }
 
     return !notCount;
 }
 
 function generateParamsData(params: FilterPageParams) {
-    if (filterParamsValidation(params)) {
-        const paramsValues = Object.values(params).map((param) => decodeURIComponent(param).split('+'))
-        const valueObjects = paramsValues.map(convertToObjectValue);
-        const sortedValues = valueObjects.map((obj) => {
-            if (obj) {
-                return Object.values(obj).sort().join(', ');
-            }
-        })
+    const paramsValues = Object.values(params).map((param) => decodeURIComponent(param).split('+'))
+    const valueObjects = paramsValues.map(convertToObjectValue);
+    const sortedValues = valueObjects.map((obj) => {
+        if (obj) {
+            return Object.values(obj).sort().join(', ');
+        }
+    })
 
-        const typesArray = paramsValues.map(searchTypeFilter);
+    const typesArray = paramsValues.map(searchTypeFilter);
 
+    if (filterParamsValidation(params, typesArray, sortedValues)) {
         return {sortedValues, typesArray}
     } else {
         return notFound();
@@ -107,6 +111,7 @@ export function getMetadataValues(params: FilterPageParams, currentPage: string)
         const allPath = Object.values(params).map((value) => decodeURIComponent(value)).join('/')
         const currentPageNumber = currentPage ? ` | page ${currentPage} ` : '';
         const canonicalSearchParams = `${process.env.DOMAIN}/platforms/${allPath}/?page=${currentPage}`
+
 
         if (typesArray.length === 1 && !typesArray.includes('country') && sortedValues[0]) {
 
