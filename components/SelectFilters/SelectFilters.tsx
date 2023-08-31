@@ -77,11 +77,11 @@ const SelectFilters = memo(({className}: SelectFiltersProps) => {
     const licenseNumberPath = useMemo(() => processFilterArray(allFilters.licenseNumber.final), [allFilters.licenseNumber.final]);
 
     const tagFiltersList = useMemo(() => [
-        { title: 'Investment type', options: allFilters.investmentType.final },
-        { title: 'Industry', options: allFilters.industry.final },
-        { title: 'Country', options: allFilters.country.final },
-        { title: 'Years on market', options: allFilters.yearFounded.final },
-        { title: 'Regulated?', options: allFilters.licenseNumber.final }
+        {title: 'Investment type', options: allFilters.investmentType.final},
+        {title: 'Industry', options: allFilters.industry.final},
+        {title: 'Country', options: allFilters.country.final},
+        {title: 'Years on market', options: allFilters.yearFounded.final},
+        {title: 'Regulated?', options: allFilters.licenseNumber.final}
     ], [
         allFilters.investmentType.final,
         allFilters.industry.final,

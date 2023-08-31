@@ -1,4 +1,4 @@
-import {usePathname} from "next/navigation";
+import {notFound, usePathname} from "next/navigation";
 import {FilterPageParams} from "@/types";
 import {store} from "@/store";
 
@@ -17,7 +17,7 @@ export function searchTypeFilter(arrayParams: string[]) {
     arrayParams.forEach((value) => {
         store.getState().filters.filtersFields.forEach((filter, index) => {
             filter.options.forEach((option) => {
-                if (option.slug.includes(value)) {
+                if (option.slug === value) {
                     filterType = store.getState().filters.filtersFields[index].type
                 }
             })
@@ -55,179 +55,196 @@ export function isActiveLink(href: string) {
 }
 
 
-
 // Filter params validation
-// function filterParamsValidation(params: Record<FilterType, string>) {
-//     const filters = store.getState().filters.filtersFields;
-//
-//     for (const key in params) {
-//         const filterIndex = filters.findIndex((filter) => filter.type === key);
-//         let count = 0;
-//         filters[filterIndex].options.forEach((option) => {
-//             if (decodeURIComponent(params[key] as string).split('+').includes(option.slug)) {
-//                 count++;
-//             }
-//         });
-//         if (count !==  decodeURIComponent(params[key] as string).split('+').length) {
-//             redirect('/platforms/')
-//         }
-//     }
-// }
+function filterParamsValidation(params: FilterPageParams) {
+    const filters = store.getState().filters.filtersFields;
+    let notCount = 0;
+
+    for (const key in params) {
+        const filterIndex = filters.findIndex((filter) => filter.type === key);
+        let count = 0;
+        filters[filterIndex].options.forEach((option) => {
+            // @ts-ignore
+            if (decodeURIComponent(params[key]).split('+').includes(option.slug)) {
+                count++;
+            }
+        });
+        // @ts-ignore
+        if (count !== decodeURIComponent(params[key]!).split('+').length) {
+            // notFound();
+            notCount++;
+        }
+
+    }
+
+    return !notCount;
+}
 
 function generateParamsData(params: FilterPageParams) {
-    const paramsValues = Object.values(params).map((param) => decodeURIComponent(param).split('+'))
-    const valueObjects = paramsValues.map(convertToObjectValue);
-    const sortedValues = valueObjects.map((obj) => {
-        if (obj) {
-            return Object.values(obj).sort().join(', ');
-        }
-    })
+    if (filterParamsValidation(params)) {
+        const paramsValues = Object.values(params).map((param) => decodeURIComponent(param).split('+'))
+        const valueObjects = paramsValues.map(convertToObjectValue);
+        const sortedValues = valueObjects.map((obj) => {
+            if (obj) {
+                return Object.values(obj).sort().join(', ');
+            }
+        })
 
-    const typesArray = paramsValues.map(searchTypeFilter);
+        const typesArray = paramsValues.map(searchTypeFilter);
 
-    return {sortedValues, typesArray}
+        return {sortedValues, typesArray}
+    } else {
+        return notFound();
+    }
 }
 
 export function getMetadataValues(params: FilterPageParams, currentPage: string) {
-    const {sortedValues, typesArray} = generateParamsData(params);
+    const paramsData = generateParamsData(params);
 
-    let allValue = sortedValues.join(' - ').replace('Yes', 'Regulated').replace('No', 'No regulated');
-    const allPath = Object.values(params).map((value) => decodeURIComponent(value)).join('/')
-    const currentPageNumber = currentPage ? ` | page ${currentPage} ` : '';
-    const canonicalSearchParams = `${process.env.DOMAIN}/platforms/${allPath}/?page=${currentPage}`
+    if (paramsData) {
+        const {sortedValues, typesArray} = paramsData;
+        let allValue = sortedValues.join(' - ').replace('Yes', 'Regulated').replace('No', 'No regulated');
+        const allPath = Object.values(params).map((value) => decodeURIComponent(value)).join('/')
+        const currentPageNumber = currentPage ? ` | page ${currentPage} ` : '';
+        const canonicalSearchParams = `${process.env.DOMAIN}/platforms/${allPath}/?page=${currentPage}`
 
-    if (typesArray.length === 1 && !typesArray.includes('country') && sortedValues[0]) {
+        if (typesArray.length === 1 && !typesArray.includes('country') && sortedValues[0]) {
 
-        const type = sortedValues[0];
-        if (type === 'P2P lending') {
+            const type = sortedValues[0];
+            if (type === 'P2P lending') {
+                return {
+                    title: `Peer-to-Peer (P2P) Lending platforms${currentPageNumber}`,
+                    description: `List of the best Peer-to-Peer lending platforms. Compare P2P lending platforms and choose the best one for you.`,
+                    alternates: {
+                        canonical: !currentPage ? `${process.env.DOMAIN}/platforms/${allPath}/` : canonicalSearchParams
+                    }
+                }
+            } else {
+                return {
+                    title: `${type} Crowdfunding platforms${currentPageNumber}`,
+                    description: `List of the best ${type} crowdfunding platforms. Compare ${type} crowdfunding platforms and choose the best one for you.`,
+                    alternates: {
+                        canonical: !currentPage ? `${process.env.DOMAIN}/platforms/${allPath}/` : canonicalSearchParams
+                    }
+                }
+            }
+        } else if (typesArray.length === 1 && typesArray.includes('country') && sortedValues[0]) {
+            const country = sortedValues[0];
+
             return {
-                title: `Peer-to-Peer (P2P) Lending platforms${currentPageNumber}`,
-                description: `List of the best Peer-to-Peer lending platforms. Compare P2P lending platforms and choose the best one for you.`,
+                title: `Crowdfunding platforms in ${country}${currentPageNumber}`,
+                description: ` List of the best crowdfunding platforms in ${country}. Compare crowdfunding platforms in ${country} and choose the best one for you.`,
+                alternates: {
+                    canonical: !currentPage ? `${process.env.DOMAIN}/platforms/${allPath}/` : canonicalSearchParams
+                }
+            }
+        } else if (typesArray.length === 2 && typesArray.includes('country') && sortedValues[0] && sortedValues[1]) {
+            const type = sortedValues[0];
+            const country = sortedValues[1];
+
+            if (sortedValues[0] === 'P2P lending') {
+                return {
+                    title: `Peer-to-Peer (P2P) Lending platforms in ${country}${currentPageNumber}`,
+                    description: ` List of the best Peer-to-Peer lending platforms in ${country}. Compare P2P lending platforms in ${country} and choose the best one for you.`,
+                    alternates: {
+                        canonical: !currentPage ? `${process.env.DOMAIN}/platforms/${allPath}/` : canonicalSearchParams
+                    }
+                }
+            } else {
+                return {
+                    title: `${type} Crowdfunding platforms in ${country}${currentPageNumber}`,
+                    description: `List of the best ${type} Crowdfunding platforms in ${country}. Compare ${type} Crowdfunding platforms in ${country} and choose the best one for you.`,
+                    alternates: {
+                        canonical: !currentPage ? `${process.env.DOMAIN}/platforms/${allPath}/` : canonicalSearchParams
+                    }
+                }
+            }
+
+        } else if (typesArray.length > 2 && typesArray.includes('country')) {
+            const countryIndex = typesArray.findIndex((type) => type === 'country');
+            const country = sortedValues[countryIndex];
+            let valueNotCountry = sortedValues
+                .filter((_, index) => index !== countryIndex)
+                .join(' - ').replace('Yes', 'Regulated').replace('No', 'No regulated');
+            const isAllRegulated = (valueNotCountry.includes('Regulated') && valueNotCountry.includes('No regulated')) && 'Regulated and no regulated';
+
+            if (isAllRegulated) {
+                valueNotCountry = valueNotCountry.replace('No regulated, Regulated', isAllRegulated);
+            }
+
+            return {
+                title: `${valueNotCountry} Crowdfunding platforms in ${country}${currentPageNumber}`,
+                description: `${valueNotCountry} Crowdfunding platforms in ${country}${currentPageNumber}`,
                 alternates: {
                     canonical: !currentPage ? `${process.env.DOMAIN}/platforms/${allPath}/` : canonicalSearchParams
                 }
             }
         } else {
+            const isAllRegulated = (allValue.includes('Regulated') && allValue.includes('No regulated')) && 'Regulated and no regulated';
+
+            if (isAllRegulated) {
+                allValue = allValue.replace('No regulated, Regulated', isAllRegulated);
+            }
+
             return {
-                title: `${type} Crowdfunding platforms${currentPageNumber}`,
-                description: `List of the best ${type} crowdfunding platforms. Compare ${type} crowdfunding platforms and choose the best one for you.`,
+                title: `${allValue} Crowdfunding platforms ${currentPageNumber}`,
+                description: `${allValue} Crowdfunding platforms ${currentPageNumber}`,
                 alternates: {
                     canonical: !currentPage ? `${process.env.DOMAIN}/platforms/${allPath}/` : canonicalSearchParams
                 }
-            }
-        }
-    } else if (typesArray.length === 1 && typesArray.includes('country') && sortedValues[0]) {
-        const country = sortedValues[0];
-
-        return {
-            title: `Crowdfunding platforms in ${country}${currentPageNumber}`,
-            description: ` List of the best crowdfunding platforms in ${country}. Compare crowdfunding platforms in ${country} and choose the best one for you.`,
-            alternates: {
-                canonical: !currentPage ? `${process.env.DOMAIN}/platforms/${allPath}/` : canonicalSearchParams
-            }
-        }
-    } else if (typesArray.length === 2 && typesArray.includes('country') && sortedValues[0] && sortedValues[1]) {
-        const type = sortedValues[0];
-        const country = sortedValues[1];
-
-        if (sortedValues[0] === 'P2P lending') {
-            return {
-                title: `Peer-to-Peer (P2P) Lending platforms in ${country}${currentPageNumber}`,
-                description: ` List of the best Peer-to-Peer lending platforms in ${country}. Compare P2P lending platforms in ${country} and choose the best one for you.`,
-                alternates: {
-                    canonical: !currentPage ? `${process.env.DOMAIN}/platforms/${allPath}/` : canonicalSearchParams
-                }
-            }
-        } else {
-            return {
-                title: `${type} Crowdfunding platforms in ${country}${currentPageNumber}`,
-                description: `List of the best ${type} Crowdfunding platforms in ${country}. Compare ${type} Crowdfunding platforms in ${country} and choose the best one for you.`,
-                alternates: {
-                    canonical: !currentPage ? `${process.env.DOMAIN}/platforms/${allPath}/` : canonicalSearchParams
-                }
-            }
-        }
-
-    } else if (typesArray.length > 2 && typesArray.includes('country')) {
-        const countryIndex = typesArray.findIndex((type) => type === 'country');
-        const country = sortedValues[countryIndex];
-        let valueNotCountry = sortedValues
-            .filter((_, index) => index !== countryIndex)
-            .join(' - ').replace('Yes', 'Regulated').replace('No', 'No regulated');
-        const isAllRegulated = (valueNotCountry.includes('Regulated') && valueNotCountry.includes('No regulated')) && 'Regulated and no regulated';
-
-        if (isAllRegulated) {
-            valueNotCountry = valueNotCountry.replace('No regulated, Regulated', isAllRegulated);
-        }
-
-        return {
-            title: `${valueNotCountry} Crowdfunding platforms in ${country}${currentPageNumber}`,
-            description: `${valueNotCountry} Crowdfunding platforms in ${country}${currentPageNumber}`,
-            alternates: {
-                canonical: !currentPage ? `${process.env.DOMAIN}/platforms/${allPath}/` : canonicalSearchParams
-            }
-        }
-    } else {
-        const isAllRegulated = (allValue.includes('Regulated') && allValue.includes('No regulated')) && 'Regulated and no regulated';
-
-        if (isAllRegulated) {
-            allValue = allValue.replace('No regulated, Regulated', isAllRegulated);
-        }
-
-        return {
-            title: `${allValue} Crowdfunding platforms ${currentPageNumber}`,
-            description: `${allValue} Crowdfunding platforms ${currentPageNumber}`,
-            alternates: {
-                canonical: !currentPage ? `${process.env.DOMAIN}/platforms/${allPath}/` : canonicalSearchParams
             }
         }
     }
 }
 
 export function getTitleForPage(params: FilterPageParams) {
-    const {sortedValues, typesArray} = generateParamsData(params);
+    const paramsData = generateParamsData(params);
 
-    if (typesArray.length === 1 && !typesArray.includes('country') && sortedValues[0]) {
-        const type = sortedValues[0];
-        if (type === 'P2P lending') {
-            return `Peer-to-Peer (P2P) Lending platforms`
+    if (paramsData) {
+        const {sortedValues, typesArray} = paramsData;
+
+        if (typesArray.length === 1 && !typesArray.includes('country') && sortedValues[0]) {
+            const type = sortedValues[0];
+            if (type === 'P2P lending') {
+                return `Peer-to-Peer (P2P) Lending platforms`
+            } else {
+                return `${type} Crowdfunding platforms`
+            }
+        } else if (typesArray.length === 1 && typesArray.includes('country') && sortedValues[0]) {
+            const country = sortedValues[0];
+            return `Crowdfunding platforms in ${country}`
+        } else if (typesArray.length === 2 && typesArray.includes('country') && sortedValues[0] && sortedValues[1]) {
+            const type = sortedValues[0];
+            const country = sortedValues[1];
+
+            if (sortedValues[0] === 'P2P lending') {
+                return `Peer-to-Peer (P2P) Lending platforms in ${country}`
+            } else {
+                return `${type} Crowdfunding platforms in ${country}`
+            }
+
+        } else if (typesArray.length > 2 && typesArray.includes('country')) {
+            const countryIndex = typesArray.findIndex((type) => type === 'country');
+            const country = sortedValues[countryIndex];
+            let valueNotCountry = sortedValues
+                .filter((_, index) => index !== countryIndex)
+                .join(' and ').replace('Yes', 'Regulated').replace('No', 'No regulated');
+            const isAllRegulated = (valueNotCountry.includes('Regulated') && valueNotCountry.includes('No regulated')) && 'Regulated and no regulated';
+
+            if (isAllRegulated) {
+                valueNotCountry = valueNotCountry.replace('No regulated, Regulated', isAllRegulated);
+            }
+
+            return `${valueNotCountry} Crowdfunding platforms in ${country}`
         } else {
-            return `${type} Crowdfunding platforms`
+            let allValue = sortedValues.join(' and ').replace('Yes', 'Regulated').replace('No', 'No regulated');
+            const isAllRegulated = (allValue.includes('Regulated') && allValue.includes('No regulated')) && 'Regulated and no regulated';
+
+            if (isAllRegulated) {
+                allValue = allValue.replace('No regulated, Regulated', isAllRegulated);
+            }
+            return `${allValue} Crowdfunding platforms`
         }
-    } else if (typesArray.length === 1 && typesArray.includes('country') && sortedValues[0]) {
-        const country = sortedValues[0];
-        return `Crowdfunding platforms in ${country}`
-    } else if (typesArray.length === 2 && typesArray.includes('country') && sortedValues[0] && sortedValues[1]) {
-        const type = sortedValues[0];
-        const country = sortedValues[1];
-
-        if (sortedValues[0] === 'P2P lending') {
-            return `Peer-to-Peer (P2P) Lending platforms in ${country}`
-        } else {
-            return `${type} Crowdfunding platforms in ${country}`
-        }
-
-    } else if (typesArray.length > 2 && typesArray.includes('country')) {
-        const countryIndex = typesArray.findIndex((type) => type === 'country');
-        const country = sortedValues[countryIndex];
-        let valueNotCountry = sortedValues
-            .filter((_, index) => index !== countryIndex)
-            .join(' and ').replace('Yes', 'Regulated').replace('No', 'No regulated');
-        const isAllRegulated = (valueNotCountry.includes('Regulated') && valueNotCountry.includes('No regulated')) && 'Regulated and no regulated';
-
-        if (isAllRegulated) {
-            valueNotCountry = valueNotCountry.replace('No regulated, Regulated', isAllRegulated);
-        }
-
-        return `${valueNotCountry} Crowdfunding platforms in ${country}`
-    } else {
-        let allValue = sortedValues.join(' and ').replace('Yes', 'Regulated').replace('No', 'No regulated');
-        const isAllRegulated = (allValue.includes('Regulated') && allValue.includes('No regulated')) && 'Regulated and no regulated';
-
-        if (isAllRegulated) {
-            allValue = allValue.replace('No regulated, Regulated', isAllRegulated);
-        }
-        return `${allValue} Crowdfunding platforms`
     }
 }
 

@@ -8,7 +8,13 @@ import {redirect} from "next/navigation";
 
 
 export async function generateMetadata({params, searchParams}: PageProps): Promise<Metadata> {
-    return getMetadataValues(params, searchParams.page);
+    const metadataValue = getMetadataValues(params, searchParams.page);
+
+    if (metadataValue) {
+        return metadataValue;
+    } else {
+        return {}
+    }
 }
 
 interface PageProps {

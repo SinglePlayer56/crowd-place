@@ -58,33 +58,39 @@ const LangSwitcher = () => {
 
 
     return (
-        <div ref={refSwitcher} onClick={toggleHandler} className={cn(styles.switcher, {
-            [styles.switcher__off]: !isBlogPage
-        })}>
-            <div className={styles.switcher__currentLang_wrapper}>
-                <span className={styles.switcher__currentLang}>{langPage[0]}</span>
-                <Image
-                    src={'/icons/angle.svg'}
-                    alt={'angle-icon'}
-                    width={14}
-                    height={9}
-                    className={cn(styles.switcher__icon, {
-                        [styles.open]: isOpen
-                    })}
-                />
-            </div>
-            <div className={cn(styles.switcher__langList, {
-                [styles.switcher__langList_open]: isOpen
-            })}>
-                {arrLink.map((href, index) => {
-                    return (
-                        <Link key={href}
-                              className={styles.switcher__langList_item}
-                              href={href}>{langList[index]}</Link>
-                    )
-                })}
-            </div>
-        </div>
+        <>
+            {isBlogPage &&
+                <div ref={refSwitcher} onClick={toggleHandler} className={cn(styles.switcher)}>
+                    <div className={styles.switcher__currentLang_wrapper}>
+                        <span className={styles.switcher__currentLang}>{langPage[0]}</span>
+                        <Image
+                            src={'/icons/angle.svg'}
+                            alt={'angle-icon'}
+                            width={14}
+                            height={9}
+                            className={cn(styles.switcher__icon, {
+                                [styles.open]: isOpen
+                            })}
+                        />
+                    </div>
+                    <div className={cn(styles.switcher__langList, {
+                        [styles.switcher__langList_open]: isOpen
+                    })}>
+                        {arrLink.map((href, index) => {
+                            return (
+                                <Link
+                                    key={href}
+                                    className={styles.switcher__langList_item}
+                                    href={href}
+                                >
+                                    {langList[index]}
+                                </Link>
+                            )
+                        })}
+                    </div>
+                </div>
+            }
+        </>
     );
 };
 

@@ -7,7 +7,13 @@ import styles from './platforms.module.css';
 import {redirect} from "next/navigation";
 
 export async function generateMetadata({params, searchParams}: PageProps): Promise<Metadata> {
-    return getMetadataValues(params, searchParams.page);
+    const metadataValue = getMetadataValues(params, searchParams.page);
+
+    if (metadataValue) {
+        return metadataValue;
+    } else {
+        return {}
+    }
 }
 
 interface PageProps {
@@ -21,7 +27,6 @@ export const dynamic = "force-dynamic";
 
 const Platforms = async ({searchParams, params}: PageProps) => {
     const paramsValues = Object.values(params).map(param => decodeURIComponent(param).split('+'));
-    const filters = paramsValues.map(searchTypeFilter);
 
     const perPage = 12;
     let currentPage = 1;

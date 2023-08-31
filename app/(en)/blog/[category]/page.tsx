@@ -1,6 +1,6 @@
 import styles from '../blog.module.css'
 import {BreadCrumbs, FilterPosts, HTag, ListingPosts, PTag} from "@/components";
-import {redirect} from "next/navigation";
+import {notFound, redirect} from "next/navigation";
 import {SearchParams} from "@/types";
 import {getPosts} from "@/helpers/fetch";
 import {Metadata} from "next";
@@ -18,13 +18,17 @@ export async function generateMetadata({searchParams, params}: SearchParams<Page
         }
     });
 
-    return {
-        title: `Posts ${currentCategory} ${currentPage} | Crowd Place`,
-        description: `Posts ${currentCategory} ${currentPage} | Crowd Place`,
-        alternates: {
-            canonical: !searchParams.page ? `${process.env.DOMAIN}/blog/${params.category}/` : canonicalSearchParams
-        }
-    };
+    if (currentCategory.length > 0) {
+        return {
+            title: `Posts ${currentCategory} ${currentPage} | Crowd Place`,
+            description: `Posts ${currentCategory} ${currentPage} | Crowd Place`,
+            alternates: {
+                canonical: !searchParams.page ? `${process.env.DOMAIN}/blog/${params.category}/` : canonicalSearchParams
+            }
+        };
+    } else {
+        return notFound();
+    }
 }
 
 export const dynamic = "force-dynamic";

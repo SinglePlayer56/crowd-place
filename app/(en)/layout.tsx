@@ -5,6 +5,9 @@ import {ContextRedux} from "@/components";
 export const metadata: Metadata = {
     title: 'Crowdfunding Platforms for Investors and Startups | Crowd-Place.com',
     description: 'Discover a comprehensive compilation of diverse crowdfunding platforms for Investors and Start Ups at Crowd-Place.com.',
+    alternates: {
+        canonical: `${process.env.DOMAIN}/`
+    }
 }
 
 export default function RootLayout({

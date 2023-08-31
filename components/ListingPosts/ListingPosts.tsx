@@ -1,7 +1,7 @@
 import styles from "./ListingPosts.module.css";
 import {BlogCard, HTag} from "@/components";
 import Pagination from "@/components/Pagination/Pagination";
-import {ListingPostsProps} from "@/components/ListingPosts/ListingPosts.props";
+import {ListingPostsProps} from "./ListingPosts.props";
 
 const ListingPosts = async ({typePaginator, perPage, page, totalCount, posts, searchParams, title}: ListingPostsProps) => {
 

@@ -12,15 +12,14 @@ import styles from './Platform.module.css';
 import Image from 'next/image';
 import {CrowdfundingCardProps} from "@/components/CrowdfundingCard/CrowdfundingCard.props";
 import {IPlatform} from "@/types";
+import {notFound} from "next/navigation";
 
 type Props = {
     params: { name: string, slug: string }
 }
 
 export async function generateMetadata({params}: Props): Promise<Metadata> {
-
     const data: IPlatform = await getPlatform(params.name);
-
 
     return {
         title: `${data.name} review ${data.yearFounded}`,
@@ -235,19 +234,25 @@ export async function generateStaticParams() {
     const platforms: IPlatform[] = await response.json();
 
     return platforms.map((platform) => ({
-        name: platform.slug,
+        name: platform.slug
     }))
 }
 
 async function getPlatform(name: string): Promise<IPlatform> {
+
     const response = await fetch(`${process.env.SERVER}/api/get-platform/${name}`,
         {
             method: 'GET',
 
         })
 
+    const data = await response.json();
 
-    return await response.json() as Promise<IPlatform>;
+    if (!data) {
+        return notFound();
+    }
+
+    return data;
 }
 
 async function getRelatedPlatform(industry: string, name?: string): Promise<IPlatform[]> {

@@ -17,17 +17,6 @@ const Footer = () => {
                             className={styles.footer__logo}
                         />
                     </Link>
-
-                    {/*<div className={styles.footer__socials}>*/}
-                    {/*    <Link href={'#'}>*/}
-                    {/*        <SocialIcon iconPath={'/icons/instagram.svg'} />*/}
-                    {/*    </Link>*/}
-                    {/*    <Link href={'#'}>*/}
-                    {/*        <SocialIcon iconPath={'/icons/linkedin.svg'} />*/}
-                    {/*    </Link>*/}
-                    {/*    <span className={styles.footer__link}>English version</span>*/}
-                    {/*</div>*/}
-
                     <div className={styles.footer__nav}>
                         <Link className={styles.footer__link} href={'/contacts/'}>Contacts</Link>
                         <Link className={styles.footer__link} href={'/about-us/'}>About Us</Link>
