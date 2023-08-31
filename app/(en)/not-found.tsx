@@ -43,7 +43,7 @@ const NotFound = () => {
                             <Link className={styles.footer__link} href={'/blog/'}>Blog</Link>
                             <Link className={styles.footer__link} href={'/platforms/'}>Platforms</Link>
                             <Link className={styles.footer__link} href={'/privacy/'}>Privacy</Link>
-                            <Link className={styles.footer__link} href={'/terms/'}>Terms</Link>
+                            {/*<Link className={styles.footer__link} href={'/_terms/'}>Terms</Link>*/}
                             <Link className={styles.footer__link} href={'/cookies/'}>Cookies</Link>
                         </div>
                     </div>

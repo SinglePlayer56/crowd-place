@@ -125,4 +125,25 @@ h6 {
 
 .link {
   color: #009dee;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.link:before {
+  position: absolute;
+  content: '';
+  bottom: -4px;
+  left: 0;
+  height: 2.5px;
+  border-radius: 10px;
+  background-color: #009dee;
+  width: 0;
+}
+
+.link:hover:before {
+  width: 100%;
+}
+
+.link:active {
+  transform: scale(0.95);
 }

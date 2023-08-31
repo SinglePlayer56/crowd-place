@@ -5,7 +5,7 @@ import cn from 'classnames';
 const Terms = () => {
     const paramsBreadCrumbs = [
         {name: 'Main', href: ''},
-        {name: 'Terms', href: 'terms'},
+        {name: 'Terms', href: '_terms'},
     ];
 
     return (
