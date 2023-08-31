@@ -22,7 +22,7 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
     const data: IPlatform = await getPlatform(params.name);
 
     return {
-        title: `${data.name} review ${data.yearFounded}`,
+        title: `${data.name} Platform review ${data.yearFounded}`,
         description: `${data.name} crowdfunding platform review: Minimum investment, Advertised return, and others.`,
         alternates: {
             canonical: `${process.env.DOMAIN}/platform/${params.name}/`
